@@ -20,8 +20,8 @@ class Collecte
 
   def parse_scenes
     log "PARSING DES SCÈNES…"
-    # film.scenes.parse
-    # film.scenes.save
+    film.scenes.parse
+    film.scenes.save
   rescue Exception => e
     log "au cours du parsing des scènes", error: e
   end

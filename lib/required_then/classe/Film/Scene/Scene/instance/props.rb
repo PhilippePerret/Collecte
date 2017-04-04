@@ -15,6 +15,9 @@ class Scene
   # {String} Résumé de la scène
   attr_reader :resume
 
+  # {Array de String} Liste des paragraphes
+  attr_reader :paragraphes
+
   # {String} Fonction de la scène
   attr_reader :fonction
 
