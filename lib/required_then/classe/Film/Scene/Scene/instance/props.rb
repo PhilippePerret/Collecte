@@ -12,10 +12,22 @@ class Scene
   # {Fixnum} Numéro de la scène
   attr_reader :numero
 
-  # {String} Résumé de la scène
+  # {Film::Horloge} Horloge de la scène
+  attr_reader :horloge
+
+  # {String} Effet
+  attr_reader :effet, :effet_alt
+
+  # {String} Lieu
+  attr_reader :lieu, :lieu_alt
+
+  # {String} Décor
+  attr_reader :decor, :decor_alt
+
+  # {Film::TextObjet} Résumé de la scène
   attr_reader :resume
 
-  # {Array de String} Liste des paragraphes
+  # {Array de Film::TextObjet} Liste des paragraphes
   attr_reader :paragraphes
 
   # {String} Fonction de la scène

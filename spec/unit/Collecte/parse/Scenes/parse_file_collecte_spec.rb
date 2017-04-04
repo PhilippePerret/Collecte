@@ -17,7 +17,7 @@ describe 'Parsing du collecte des scènes' do
       expect(collecte).to respond_to :parse_scenes
     end
     it 'dispatche les scènes dans le film' do
-      expect(film.scenes.count).to be > 0
+      expect(film.scenes.count).to be > 2
     end
     it 'créer le dossier `data` dans le dossier de collecte' do
       expect(File.exist? collecte.data_folder).to eq true

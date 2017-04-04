@@ -13,7 +13,7 @@ describe 'Parse des textes-objets' do
 
     context 'sans argument' do
       it 'produit une erreur' do
-        expect{fto.parse}.to raise_error
+        expect{fto.parse}.to raise_error StandardError
       end
     end
 

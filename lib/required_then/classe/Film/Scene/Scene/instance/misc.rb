@@ -5,15 +5,27 @@ class Scene
   # Les données qui seront enregistrées dans le fichier
   # marshal.
   def hash_data
+    hor = horloge.nil? ? nil : horloge.horloge
     {
       id:               id,
       numero:           numero,
-      time:             time,
-      resume:           resume,
+      horloge:          hor,
+      resume:           resume.hash_data,
+      effet:            effet,
+      effet_alt:        effet_alt,
+      lieu:             lieu,
+      lieu_alt:         lieu_alt,
+      decor:            decor,
+      decor_alt:        decor_alt,
       fonction:         fonction,
       brins_ids:        brins_ids,
-      personnages_ids:  personnages_ids
+      personnages_ids:  personnages_ids,
+      paragraphes:      paragraphes_as_hash_data
     }
+  end
+
+  def paragraphes_as_hash_data
+    (@paragraphes||[]).collect{|p| p.hash_data}
   end
 
 end #/Scene
