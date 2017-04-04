@@ -13,7 +13,7 @@ class TextObjet
 
   # {Fixnum} Identifiant de la scène auquel appartient le
   # texte-objet
-  attr_reader :scene_id
+  attr_accessor :scene_id
 
   # {Array de Fixnum}
   attr_reader :scenes_ids

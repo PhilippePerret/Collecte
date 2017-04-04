@@ -59,16 +59,16 @@ class Scene
       #
       # L I G N E   D E   N O T E
       #
-      tout, index_note, description_note = line.match(/^\([0-9]+\) (.*?)$/).to_a
-      index_note = index_note.to_i
-      lanote = film.notes[index_note]
-      lanote.parse description_note
+      tout, index_note, description_note = line.match(/^\(([0-9]+)\) (.*?)$/).to_a
+      lanote = film.notes[index_note.to_i]
+      lanote.parse(tout)
     else
       #
       # A U T R E   L I G N E
       #
       fo = Film::TextObjet.new(film)
       fo.parse(line)
+      fo.scene_id = self.id
       return fo
     end
   end

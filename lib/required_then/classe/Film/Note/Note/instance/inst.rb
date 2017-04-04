@@ -6,5 +6,8 @@ class Note
   # brins, les scènes, les personnages, les notes, etc.
   include RelativeObjectMethods
 
+  def initialize film
+    @film = film
+  end
 end #/Note
 end #/Film
