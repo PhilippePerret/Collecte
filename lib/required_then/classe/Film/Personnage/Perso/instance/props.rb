@@ -2,11 +2,9 @@
 class Film
 class Personnage
 
-  # {Film} Instance du film auquel appartient le personnage
-  attr_reader :film
-
-  # {String} Identifiant absolu du personnage
-  attr_reader :id
+  # ------------------------------------------------------
+  # Voir les propriétés héritées des RelativeObjectMethods
+  # ------------------------------------------------------
 
   # {String} Prénom, nom et pseudo du personnage
   attr_reader :prenom, :nom
@@ -14,9 +12,6 @@ class Personnage
 
   # {String} Fonction du personnage
   attr_reader :fonction
-
-  # {String} Description du brin
-  attr_reader :description
 
   # {String} Prénom et nom de l'acteur
   attr_reader :prenom_acteur, :nom_acteur

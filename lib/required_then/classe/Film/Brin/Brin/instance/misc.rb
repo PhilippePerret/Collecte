@@ -9,7 +9,7 @@ class Brin
       id:           id,
       libelle:      libelle,
       description:  description,
-      scenes_ids:   nil
+      scenes_ids:   scenes_ids
     }
   end
 
