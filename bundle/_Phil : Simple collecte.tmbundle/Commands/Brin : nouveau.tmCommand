@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby
+
+# Recherche de prochain identifiant pour un brin
+RC = &lt;&lt;-EOT
+
+EOT
+
+cont = RC + STDIN.read
+
+next_brin_id = 1
+cont.scan(/#{RC}([0-9]+)#{RC}/m).to_a.each do |found|
+  brin_id = found[0].to_i
+  next_brin_id &gt; brin_id || next_brin_id = brin_id + 1
+end
+
+# Snippet à écrire
+STDOUT.write "#{next_brin_id}" + RC +
+  "${1:INTITULÉ DU BRIN}" + RC + RC +
+  "$0"
+</string>
+	<key>input</key>
+	<string>document</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>keyEquivalent</key>
+	<string>@b</string>
+	<key>name</key>
+	<string>Brin : nouveau</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>snippet</string>
+	<key>outputLocation</key>
+	<string>atCaret</string>
+	<key>scope</key>
+	<string>source.simple_collecte</string>
+	<key>tabTrigger</key>
+	<string>brin</string>
+	<key>uuid</key>
+	<string>987AE56E-42BB-4D3D-A9D8-73E6E8C83B53</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>

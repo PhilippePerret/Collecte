@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>PERSONNAGE:${1:IDENTIFIANT}
+  PRENOM:   ${2:PRENOM}
+  NOM:      ${3:NOM}
+  SEXE_AGE: ${4|Femme,Homme,Fille,Garçon|}
+  ANNEE:    ${5:ANNEE NAISSANCE}
+  FONCTION: ${6|Protagoniste,Antagoniste,Adjuvant,Mentor,Objet de la quête,Autre…|}
+  DESCRIPTION: ${7:DESCRIPTION}
+  PRENOM_ACTEUR:  nil
+  NOM_ACTEUR:     nil
+$0</string>
+	<key>name</key>
+	<string>Personnage : Nouveau</string>
+	<key>scope</key>
+	<string>source.simple_collecte</string>
+	<key>tabTrigger</key>
+	<string>perso</string>
+	<key>uuid</key>
+	<string>A1064FCC-1F36-4154-B2AF-CFC1BD6DF35B</string>
+</dict>
+</plist>

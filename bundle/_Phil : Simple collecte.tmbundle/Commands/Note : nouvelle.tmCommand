@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>saveActiveFile</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby -wU
+=begin
+Insertion d'une note dans la collecte.
+Cette insertion doit placer un « (&lt;index note&gt;) » à la fin 
+du paragraphe et la même marque pour un texte d'explication
+à la fin de la scène. Pour le moment, l'explication est
+simplement mise en dessous.
+=end
+RC = &lt;&lt;-EOT
+
+EOT
+last_index_note = 0
+STDIN.read.scan(/\(([0-9]+)\)/).to_a.each do |found|
+  inote = found.first.to_i
+  inote &lt; last_index_note || last_index_note = inote
+end
+
+index_note = last_index_note + 1
+
+STDOUT.write "(#{index_note})#{RC}(#{index_note}) ${0:Description de la note}"
+</string>
+	<key>input</key>
+	<string>document</string>
+	<key>name</key>
+	<string>Note : nouvelle</string>
+	<key>outputFormat</key>
+	<string>snippet</string>
+	<key>outputLocation</key>
+	<string>atCaret</string>
+	<key>scope</key>
+	<string>source.simple_collecte</string>
+	<key>tabTrigger</key>
+	<string>n</string>
+	<key>uuid</key>
+	<string>C36F12C3-FCD0-42D3-8DEA-FA0E76220A15</string>
+</dict>
+</plist>

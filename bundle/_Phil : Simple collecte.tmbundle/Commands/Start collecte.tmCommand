@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby
+=begin
+  Commande démarrant la collecte.
+
+  Le principe est que :
+  Dès que l'on joue le snippet start
+=end
+require "#{ENV['TM_BUNDLE_SUPPORT']}/required"
+SimpleCollecte.start</string>
+	<key>input</key>
+	<string>line</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>name</key>
+	<string>Start collecte</string>
+	<key>outputCaret</key>
+	<string>selectOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>replaceInput</string>
+	<key>scope</key>
+	<string>source.simple_collecte</string>
+	<key>tabTrigger</key>
+	<string>start</string>
+	<key>uuid</key>
+	<string>3C8EB236-A623-4E64-9DEB-EB9D3DA2DA20</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>

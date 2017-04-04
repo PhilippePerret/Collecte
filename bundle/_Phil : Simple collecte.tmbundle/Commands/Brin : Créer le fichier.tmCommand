@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>saveActiveFile</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby -wU
+=begin
+
+Créer le fichier BRINS du film s'il n'existe pas
+
+=end
+fp = ENV['TM_FILEPATH']
+dossier_film = File.dirname(fp)
+affixe_film = File.basename(fp, File.extname(fp))
+
+file_path = File.join(dossier_film, "brins.simple_collecte")
+
+File.exists?(file_path) || begin
+  str = &lt;&lt;-TXT
+# = Fichier des BRINS du film `#{affixe_film}' =
+# Taper `brin[TAB] pour initier un nouveau brin'
+  TXT
+  File.open(file_path,'wb'){|f| f.write str}
+end
+
+`mate "#{file_path}"`
+
+puts ''
+
+</string>
+	<key>input</key>
+	<string>none</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>name</key>
+	<string>Brin : Créer le fichier</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>replaceInput</string>
+	<key>scope</key>
+	<string>source.simple_collecte</string>
+	<key>tabTrigger</key>
+	<string>brins</string>
+	<key>uuid</key>
+	<string>4C4CAFE0-6D57-42A1-906B-CFCD8B5DC099</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>

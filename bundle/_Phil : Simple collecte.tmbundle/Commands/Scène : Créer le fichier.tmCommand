@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby -wU
+=begin
+
+Créer le fichier SCENES du film s'il n'existe pas
+
+=end
+dossier_film  = ENV['TM_PROJECT_DIRECTORY']
+affixe_film   = File.basename(dossier_film)
+file_path     = File.join(dossier_film, "scenes.simple_collecte")
+
+File.exists?(file_path) || begin
+  fref = File.open(file_path,'a')
+  [
+    '='*58,
+    '',
+    "= FICHIER DES SCÈNES DU FILM « #{affixe_film} » =",
+    "",
+    "Mise en route",
+    "=============",
+    '   * Caler le film quelques secondes avant le début',
+    '     de la portion à collecter.',
+    '   * Écrire le temps plus bas sous forme d’horloge',
+    '     suivi de "start" : "H:MM:SS:start"',
+    '   * Se placer derrière ce "start" et jouer la ',
+    '     tabulation en même temps qu’en démarrant le film.',
+    '   * À la première scène, jouer le snippet `s\'',
+    '     pour ajouter une nouvelle scène.',
+    '',
+    ' Poursuite de la collecte',
+    ' ========================',
+    '   * Taper `s[TAB]` à chaque nouvelle scène à collecter',
+    '',
+    ' Arrêt de la collecte',
+    ' ====================',
+    '   La collecte s’arrête simplement lorsque l’on arrête',
+    '   de relever les scènes.',
+    '',
+    ' Aide',
+    ' ====',
+    '   Pour obtenir plus d’aide, taper CMD + H (comme "Help")',
+    '',
+    '='*58
+  ].each do |line|
+    fref.puts "# #{line}"
+  end
+  
+  fref.puts ""
+  fref.puts "0:00:00:start"
+    
+end
+
+puts "Fichier scènes créé."
+
+sleep 2
+
+`mate "#{file_path}"`
+</string>
+	<key>input</key>
+	<string>none</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>name</key>
+	<string>Scène : Créer le fichier</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>toolTip</string>
+	<key>scope</key>
+	<string>source.simple_collecte</string>
+	<key>uuid</key>
+	<string>2B52CA12-FA11-4BCB-BC8F-E09A066298F2</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>

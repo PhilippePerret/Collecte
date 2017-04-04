@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby
+=begin
+L'aide est définie et construite dans le dossier support
+de l'application.
+
+TODO
+
+=end
+require "#{ENV['TM_BUNDLE_SUPPORT']}/lib/SimpleCollecte/Aide/required"
+SimpleCollecte::Aide.print</string>
+	<key>input</key>
+	<string>none</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>keyEquivalent</key>
+	<string>@h</string>
+	<key>name</key>
+	<string>Aide</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>html</string>
+	<key>outputLocation</key>
+	<string>newWindow</string>
+	<key>scope</key>
+	<string>source.simple_collecte</string>
+	<key>tabTrigger</key>
+	<string>aide</string>
+	<key>uuid</key>
+	<string>B44B67CB-5713-4900-B72F-0218AFC73DB2</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>

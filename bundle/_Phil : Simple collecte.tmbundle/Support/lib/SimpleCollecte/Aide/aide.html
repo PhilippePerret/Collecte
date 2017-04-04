@@ -1,0 +1,314 @@
+<script type="text/javascript">
+/* Pour ouvrir un lien dans Firefox plutôt que dans TextMate */
+function open_url(url) {TextMate.system("open '" + url + "'")}
+
+</script>
+<style type="text/css">
+body{font-size:16pt;margin:4em}a{text-decoration:none;font-family:Arial,Helvetica;font-size:.85em}p,note{text-align:justify}blockquote{margin-left:4em;font-size:.88em;font-style:italic;color:#555}code{font-size:.81em;background-color:#EEE;padding:0 4px 1px 4px}ul{list-style:square}nav#tdm{display:inline-block;width:auto;border:1px solid #ccc;padding:2em;margin-left:4em}nav#tdm a{display:block;font-size:12pt}nav#tdm a.level2{margin-left:1.5em}nav#tdm a.level3{margin-left:3em}h2{margin-top:4em;margin-left:2em;font-size:1.4em;margin-left:-1.4em}h3{font-size:1.2em;margin-left:-1em}document{display:block;margin:2em 4em;font-size:.82em;background-color:#FEFEFE;border:1px solid #000;padding:2em}
+
+</style>
+<h1>Analyse de film<br>Manuel de collecte simple</h1>
+<nav id="tdm">
+<a href="#presentation"  class="level1">Présentation de la collecte simple</a>
+<a href="#resume_procedure"  class="level1">Résumé de la procédure de collecte simple</a>
+<a href="#dossier_collecte_film"  class="level1">Dossier de collecte du film</a>
+<a href="#creer_dossier_film"  class="level2">Créer le dossier du film</a>
+<a href="#fichier_scenes"  class="level1">Le fichier des scènes</a>
+<a href="#composition_fichier"  class="level2">Composition du fichier</a>
+<a href="#create_file_scenes"  class="level2">Créer le fichier des scènes</a>
+<a href="#snippet_ligne_info"  class="level2">Définir facilement la ligne d'info de la scène</a>
+<a href="#suivre_automatiquement_temps"  class="level2">Définir les temps de façon automatique</a>
+<a href="#introduire_dans_brin"  class="level2">Introduire la scène dans des brins</a>
+<a href="#inserer_personnage"  class="level2">Utiliser un personnage dans le résumé</a>
+<a href="#inserer_note"  class="level2">Ajouter une note</a>
+<a href="#fichier_brins"  class="level1">Le fichier des brins</a>
+<a href="#create_file_brins"  class="level2">Créer le fichier des brins</a>
+<a href="#create_brin"  class="level2">Définir les brins</a>
+<a href="#fichier_personnages"  class="level1">Le fichier des personnages</a>
+<a href="#create_file_persos"  class="level2">Créer le fichier personnages</a>
+<a href="#create_personnage"  class="level2">Définir les personnages</a>
+<a href="#extraction_data"  class="level1">Extraire les données</a>
+<a href="#emplacement_extraction"  class="level2">Emplacement des données extraites</a>
+<a href="#data_extraites"  class="level2">Données extraites</a>
+<a href="#annexes"  class="level1">Annexes</a>
+<a href="#divisions_temporelles"  class="level2">Divisions temporelles</a>
+</nav>
+<h2 id="presentation">Présentation de la collecte simple</h2>
+
+<p>La <em>collecte simple</em> permet de collecter les scènes, les brins et les personnages d’un film de façon simple, avec un format de fichier simplifié.</p>
+
+<p>Ces données simples sont :</p>
+
+<ul>
+  <li>le temps,</li>
+  <li>le lieu, l’effet et le décor,</li>
+  <li>le résumé,</li>
+  <li>les personnages,</li>
+  <li>les brins auxquels appartient la scène ou ses parties.</li>
+</ul>
+
+<blockquote>
+  <p>Pour une version plus complète d’une collecte des scènes d’un film, utiliser plutôt les outils du bundle <code>__Phil_Film</code>.</p>
+</blockquote>
+
+<p>Les données collectées peuvent être ensuite traitées par l’outils de la Boite à outils de l’auteur (cf. <a href="#extraction_data">Extraction des données</a>).</p>
+
+<!--
+
+      RÉSUMÉ DE LA PROCÉDURE
+
+-->
+
+<h2 id="resume_procedure">Résumé de la procédure de collecte simple</h2>
+
+<ul>
+  <li>Créer un dossier pour mettre les fichiers (cf. <a href="#creer_dossier_film">Créer le dossier du film</a>) ;</li>
+  <li>ouvrir ce dossier dans Textmate ;</li>
+  <li><a href="#create_file_persos">créer le fichier des personnages</a> (commande <code>Personnage : Créer le fichier</code>) et <a href="#create_personnage">définir les personnages</a> (snippet <code>perso</code>) ;</li>
+  <li><a href="#create_file_brins">créer le fichier des brins</a> (commande <code>Brin : Créer le fichier</code>) et <a href="#create_brin">définir les brins</a> (snippet <code>brin</code>) ;</li>
+  <li><a href="#create_file_scenes">créer le fichier des scènes</a> ;</li>
+  <li>caler le film quelques secondes avant la portion à collecter ;</li>
+  <li><a href="#suivre_automatiquement_temps">régler le temps de début de collecte au temps du film</a> (<code>H:MM:SS:start</code>) et <a href="#start_collecte">lancer l’horloge de suivi</a> (<code>...:start[TAB]</code>) en même temps que le film ;</li>
+  <li>créer une nouvelle scène (snippet <code>s</code>) ;</li>
+  <li>répéter la création de nouvelles scènes pour chaque nouvelle scène ;</li>
+  <li>finir la collecte ;</li>
+  <li>procéder à l’<a href="#extraction_data">extraction des données</a>.</li>
+</ul>
+
+<!--
+
+          DOSSIER DU FILM
+
+-->
+
+<h2 id="dossier_collecte_film">Dossier de collecte du film</h2>
+
+<h3 id="creer_dossier_film">Créer le dossier du film</h3>
+
+<p>On peut créer le dossier de collecte n’importe où.</p>
+
+<p>C’est ce dossier qui contiendra tous les fichiers de la collecte simple, à commencer par le <a href="#fichier_scenes">fichier des scènes</a>, le <a href="#fichier_personnages">fichier des personnages</a> et le <a href="#fichier_brins">fichier des brins</a>.</p>
+
+<p>Donner à ce dossier le nom-identifiant du film.</p>
+
+<p>Puis l’ouvrir dans TextMate en le glissant sur son icône dans le dock par exemple.</p>
+
+<!--
+
+          FICHIER DES SCÈNES
+
+-->
+
+<h2 id="fichier_scenes">Le fichier des scènes</h2>
+
+<p>Son nom doit être impérativement <code>scenes.simple_collecte</code>.</p>
+
+<h3 id="composition_fichier">Composition du fichier</h3>
+
+<p>Le fichier de collecte des scènes en version simple est composé de trois éléments :</p>
+
+<ul>
+  <li>Une ligne d’information contenant le temps, le lieu, l’effet et le décor ;</li>
+  <li>Une ligne avec le résumé de la scène ;</li>
+  <li>Optionnellement : des paragraphes servant de synopsis détaillé ;</li>
+  <li>Optionnellement : les brins auxquels appartient la scène (cf. <a href="#introduire_dans_brin">Insérer la scène dans des brins</a>).</li>
+</ul>
+
+<p>Dans un fichier peut ressembler à :</p>
+
+<document>
+  <div>0:12:23 EXT. JOUR COUR D'ÉCOLE</div>
+  <div>PERSO[Patrick] rentre dans l'école.</div>
+  <div>PERSO[Patrick] se gare sur le parking de l'école et sort de sa voiture.</div>
+  <div>PERSO[Patrick] traverse le parking et disparait dans l'école.</div>
+  <div>B12 B25</div>
+  <div> </div>
+  <div>0:13:45 INT. JOUR SALLE DE CLASSE</div>
+  <div>Une salle de classe déserte.</div>
+  <div>B25</div>
+  <div> </div>
+  <div>etc.</div>
+</document>
+
+<h3 id="create_file_scenes">Créer le fichier des scènes</h3>
+
+<p>Le plus simple, pour créer le fichier des scènes, est d’utiliser la commande <code>Scène : Créer le fichier</code>.</p>
+
+<p>Pour se faire, il suffit de se trouver dans le <a href="#dossier_collecte_film">dossier de collecte</a> ouvert dans TextMate.</p>
+
+<h3 id="snippet_ligne_info">Définir facilement la ligne d’info de la scène</h3>
+
+<p>Le snippet <code>int[TAB]</code> permet d’entrer facilement la ligne d’info de la scène comportant le temps, le lieu, l’effet, le décor et le résumé de la scène.</p>
+
+<p>On peut même faire que TextMate se charge de définir le temps lui-même (cf. <a href="#suivre_automatiquement_temps">Définir les temps de façon automatique</a>).</p>
+
+<p>Sinon, on peut aussi définir cette ligne en ajoutant chaque élément dans le bon ordre :</p>
+
+<center>`TEMPS LIEU EFFET DÉCOR`</center>
+
+<p>Par exemple :</p>
+
+<document>
+  <div>0:12 INT. JOUR MAISON</div>
+  <div>Le résumé de la scène.</div>
+  ...
+</document>
+
+<h3 id="suivre_automatiquement_temps">Définir les temps de façon automatique</h3>
+
+<p>La procédure rapide est la suivante :</p>
+
+<ul id="start_collecte">
+  <li>Caler la lecture du film à un temps donné (quelques secondes avant la portion à collecter) ;</li>
+  <li>Écrire ce temps de calage à la fin du <a href="#fichier_scenes">fichier des scènes</a> puis ajouter le snippet <code>:start</code>. Par exemple : <code>0:00:30:start</code> (si le film est calé sur sa 30<sup>ème</sup> seconde) ;</li>
+  <li>Se placer juste après <code>start</code> et jouer la tabulation en déclenchant le film en même temps ;</li>
+</ul>
+<ul>
+  <li>Insérer les scènes de la même manière en tapant <code>s[TAB]</code>.</li>
+</ul>
+
+<blockquote>
+  <p>Par défaut, le programme retire 3 secondes au temps, en considérant que la scène a été créée environ 3 secondes après son départ à l’écran.</p>
+</blockquote>
+
+<blockquote>
+  <p>Attention, ce snippet <strong>n’ajoute pas de scène</strong> au fichier. Au moment où la scène arrive, il faut jouer <code>s[TAB]</code> pour qu’une nouvelle scène soit initiée.</p>
+</blockquote>
+
+<!--
+    I N T R O D U I R E   S C È N E   D A N S   U N   B R I N
+-->
+
+<h3 id="introduire_dans_brin">Introduire la scène dans des brins</h3>
+
+<p>Pour introduire la scène dans un brin, on ajoute des marques <code>B&amp;lt;id du brin&amp;gt;</code> sur la dernière ligne de la scène.</p>
+
+<p>On peut également ajouter ces marques à la fin de chaque paragraphe de la scène pour les introduire dans des brins.</p>
+
+<h3 id="inserer_personnage">Utiliser un personnage dans le résumé</h3>
+
+<p>Si le <a href="#fichier_personnages">fichier des personnages</a> est défini, on peut entrer facilement des personnages à l’aide du snippet <code>p[TAB]</code>.</p>
+
+<p>À l’endroit voulu, taper ce snippet fera apparaitre la liste des personnages et il suffira de choisir celui qu’on veut insérer.</p>
+
+<h3 id="inserer_note">Ajouter une note</h3>
+
+<p>On peut ajouter une note à la scène complète ou à un paragraphe seulement. Pour l’ajouter à la scène complète, il faut mettre sa marque à la fin de la seconde ligne (donc la ligne de résumé), sinon, il faut l’ajouter à la fin du paragraphe concernant la note.</p>
+
+<p>Cette note s’ajoute grâce au snippet <code>n</code>, qui cherche un indice de note unique pour créer la marque <code>N&lt;indice de note&gt;</code>.</p>
+
+<p>Ensuite, cette note doit être définie dans les lignes suivantes, par une ligne commençant par <code>(&lt;indice de note&gt;) &lt;La note&gt;</code>. Cette ligne doit être placée avant la dernière ligne qui comprend les relatifs de la scène (principalement les brins).</p>
+
+<p>Par exemple :</p>
+
+<document>
+  <div>0:12:23 INT. JOUR MAISON DE JOE</div>
+  <div>Joe rentre chez lui. (12)</div>
+  <div>On entend la voiture de Joe arriver, ses phrases éclairent la pièce.</div>
+  <div>On entend le bruit d'une portière, puis des pas hésitant. (45)</div>
+  <div>La porte s'ouvre, Joe apparait, en sang.</div>
+  <div>(12) C'est une note concernant toute la scène.</div>
+  <div>(45) C'est une note concernant seulement le deuxième paragraphe.</div>
+  <div>b4 b15</div>
+</document>
+
+<!--
+
+        B R I N S
+
+-->
+
+<h2 id="fichier_brins">Le fichier des brins</h2>
+
+<p>Le fichier des brins permet de consigner tous les brins du film.</p>
+
+<p>Son nom doit être impérativement <code>brins.simple_collecte</code>.</p>
+
+<h3 id="create_file_brins">Créer le fichier des brins</h3>
+
+<p>La commande <code>Brin : Créer le fichier</code> permet de créer le fichier brin. Il suffit d’ouvrir le dossier de la collecte dans TextMate puis d’activer cette commande pour le créer.</p>
+
+<p>Sinon, créer le fichier <code>brins.simple_collecte</code> dans le <a href="#dossier_collecte_film">dossier de collecte</a>.</p>
+
+<h3 id="create_brin">Définir les brins</h3>
+
+<p>Le snippet <code>brin</code> permet de créer un brin dans le <a href="#fichier_brins">fichier des brins</a>. Il suffit donc d’activer ou de <a href="#create_file_brins">créer ce fichier</a> puis de taper <code>brin</code> suivi d’une tabulation pour créer un nouveau brin.</p>
+
+<blockquote>
+  <p>Noter que les brins s’incrémenteront automatiquement, il est inutile de préciser l’identifiant.</p>
+</blockquote>
+
+<!--
+
+          P E R S O N N A G E S
+
+-->
+
+<h2 id="fichier_personnages">Le fichier des personnages</h2>
+
+<p>Le fichier personnages permet de consigner tous les personnages du film. Grâce à cette consignation, des brins et des statistiques automatiques peuvent être générées à l’<a href="#extraction_data">extraction des données</a>.</p>
+
+<p>Le nom de ce fichier doit être impérativement : <code>persos.simple_collecte</code>.</p>
+
+<h3 id="create_file_persos">Créer le fichier personnages</h3>
+
+<p>La commande de bundle <code>Personnage : Créer fichier</code> permet de crérer le fichier.</p>
+
+<p>Il suffit donc d’ouvrir le dossier du projet dans TextMate si ça n’est pas fait, d’afficher un de ses fichiers, puis d’activer cette commande.</p>
+
+<p>Il suffit ensuite de <a href="#create_personnage">définir les personnages</a> en suivant la procédure décrite.</p>
+
+<!--
+    C R É A T I O N   D ' U N   P E R S O N N A G E
+-->
+
+<h3 id="create_personnage">Définir les personnages</h3>
+
+<p>Pour créer un personnage dans le <a href="#fichier_personnages">fichier des personnages</a>, il suffit de taper <code>perso[TAB]</code> à l’endroit voulu, en général à la fin du fichier. Utiliser ensuite la touche tabulation pour passer d’une rubrique à l’autre et les renseigner.</p>
+
+<!--
+
+    E X T R A C T I O N   D E S   D O N N É E S
+
+-->
+
+<h2 id="extraction_data">Extraire les données</h2>
+
+<p>Pour extraire les données, il suffit de se rendre dans la partie “Dépôt” des analyses de la boite à outils de l’auteur : <a href="#" onclick="open_url('http://localhost/WriterToolbox/analyse_build/depot')">version OFFLINE</a> (<a href="#" onclick="open_url('http://www.laboiteaoutilsdelauteur.fr/analyse_build/depot')">version ONLINE</a>) et de soumettre les fichiers de simple collecte.</p>
+
+<h3 id="emplacement_extraction">Emplacement des données extraites</h3>
+
+<p>Pour le moment, les données extraites se trouve dans le dossier <code>tmp/analyse/&lt;ID user&gt;/&lt;ID film&gt;/</code> de la boite à outils de l’auteur.</p>
+
+<h3 id="data_extraites">Données extraites</h3>
+
+<p>Par défaut, le parse des fichiers de collecte produira deux fichiers très intéressants :</p>
+
+<ul>
+  <li>le fichier <code>scenes.html</code> qui contient la liste des scènes sous forme d’évènemencier/chemin de fer ;</li>
+  <li>le fichier <code>brins.html</code> qui contient la liste des brins, avec l’indication de la position des scènes.</li>
+</ul>
+
+<p>D’autres formats sont également disponible en utilisant la page d’extraction des données. On peut notamment n’extraire qu’une partie seulement du film.</p>
+
+<h2 id="annexes">Annexes</h2>
+
+<h3 id="divisions_temporelles">Divisions temporelles</h3>
+
+<p>On peut obtenir les divisions temporelles du film, c’est-à-dire la position des quarts, des tiers, etc., en utilisant la commande <code>Divisions</code>. Cette commande crée le fichier <code>divisions.txt</code> qui contient tous les temps.</p>
+
+<p>On peut également utiliser le raccourci <code>CMD + D</code> (« D » comme Divisions). Ajouter la touche <code>MAJ</code> pour forcer l’actualisation de ce fichier (<code>CDM + MAJ + D</code>).</p>
+
+<blockquote>
+  <p>Ces temps sont exprimés d’abord par rapport aux temps de la collecte, puis par rapport aux temps réels du film (entendu que le film ne commence pas au temps <code>0:00:00</code>).</p>
+</blockquote>
+
+<p>Pour actualiser ce fichier, si des temps sont modifiés, il suffit de détruire le fichier <code>divisions.txt</code> dans le <a href="#dossier_collecte_film">dossier de collecte</a>.</p>
+
+<p>On peut également utiliser <code>CMD + MAJ + D</code> pour forcer cette actualisation.</p>
+
+<!--  
+  Ce fichier définit les liens référérencés qui seront
+  ajoutés en bas du fichier `aide.md`
+-->
+

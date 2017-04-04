@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>saveActiveFile</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby
+
+def tab_index
+  @current_tab_index ||= 0
+  @current_tab_index += 1
+end
+require "#{ENV['TM_BUNDLE_SUPPORT']}/required"
+
+# Le texte complet de la collecte
+TEXTE_COLLECTE = STDIN.read
+
+# Instancier une nouvelle scène, ce qui permettra
+# d'avoir son temps (horloge) de façon automatique
+# Si aucun fichier de démarrage n'est trouvé, on donne le snippet
+# simple d'une horloge (H:MM:SS)
+scene = SimpleCollecte::Scene.new
+horloge = scene.horloge || "${#{tab_index}:0}:${#{tab_index}:00}:${#{tab_index}:00}"
+
+
+STDOUT.write &lt;&lt;-EOT
+#{horloge} ${#{tab_index}|INT.,EXT.,INT./EXT.,NOIR|} ${#{tab_index}|JOUR,NUIT,MATIN,SOIR|} #{SimpleCollecte::Scene.decors_as_snippet(tab_index)}
+${#{tab_index}:RÉSUMÉ}
+${#{tab_index}:PARAGRAPHE}
+$0
+EOT
+</string>
+	<key>input</key>
+	<string>document</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>name</key>
+	<string>Scène : Nouvelle</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>snippet</string>
+	<key>outputLocation</key>
+	<string>atCaret</string>
+	<key>scope</key>
+	<string>source.simple_collecte</string>
+	<key>tabTrigger</key>
+	<string>s</string>
+	<key>uuid</key>
+	<string>DCB3EFCE-D333-47A4-9F84-6AEECEC47283</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>

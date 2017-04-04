@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>saveActiveFile</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby -wU
+require "#{ENV['TM_BUNDLE_SUPPORT']}/required"
+Film.open_file_divisions(forcer = true)
+puts "Fichiers divisions construit et ouvert."</string>
+	<key>input</key>
+	<string>document</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>keyEquivalent</key>
+	<string>@D</string>
+	<key>name</key>
+	<string>Divisions : forcer l'actualisation</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>discard</string>
+	<key>scope</key>
+	<string>source.simple_collecte</string>
+	<key>uuid</key>
+	<string>094B5CBE-A7FF-428D-A53F-D0F840773D3B</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>
