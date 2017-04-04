@@ -2,7 +2,9 @@
 class Film
 
   # +collecte+ Instance {Collecte} de la collecte du film
-  def initialize collecte
+  # NOTE +collecte+ peut être nil pour simplifier les
+  # tests.
+  def initialize collecte = nil
     @collecte = collecte
   end
 

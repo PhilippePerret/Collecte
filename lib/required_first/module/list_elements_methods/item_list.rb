@@ -19,7 +19,10 @@ module ListElementsMethods
   # Retourne l'élément d'identifiant +element_id+
   # Par exemple le brin, par `film.brins[12] #=> brin #12`
   def [] element_id
-    @hash != nil || raise("Aucun élément de type #{self.class.name} n'est défini.")
+    # Ne pas utiliser la ligne suivante, pour simplifier les
+    # test. Sinon, il faudrait toujours créer les éléments.
+    # @hash != nil || raise("Aucun élément de type #{self.class.name} n'est défini.")
+    @hash != nil || (return nil)
     @hash[element_id]
   end
 
