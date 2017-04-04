@@ -58,19 +58,63 @@ describe 'Parsing du collecte des scènes' do
       end
     end
 
-    it 'définit correctement la troisième scène (à trois décors)' do
-      scene3 = datam[:items][3]
-      puts "scène 3 : #{scene3.inspect}"
-      expect(scene3).not_to eq nil
-      {
-        id: 3, numero: 3,
-        horloge: '0:03:20',
-        lieu: 'INT.', lieu_alt: 'EXIT.',
-        effet:'JOUR', effet_alt: nil,
-        decor: 'MAISON DE JOE', decor_alt:'JARDIN PUBLIC'
-      }.each do |prop, expected|
-        expect(scene3[prop]).to eq expected
+    describe 'troisième scène' do
+      let(:scene3) { @scene3 ||= datam[:items][3] }
+      it 'définit bien la scène' do
+        # puts "scène 3 : #{scene3.inspect}"
+        expect(scene3).not_to eq nil
+        {
+          id: 3, numero: 3,
+          horloge: '0:03:20',
+          lieu: 'INT.', lieu_alt: 'EXT.',
+          effet:'JOUR', effet_alt: nil,
+          decor: 'MAISON DE JOE', decor_alt:'JARDIN PUBLIC',
+        }.each do |prop, expected|
+          expect(scene3[prop]).to eq expected
+        end
+      end
+
+      it 'définit bien les paragraphes' do
+        # Les paragraphes
+        paragraphes = scene3[:paragraphes]
+        expect(paragraphes).not_to eq nil
+        expect(paragraphes.count).to eq 2
+        parag1 = paragraphes[0]
+        # puts "paragraphe 1 : #{parag1.inspect}"
+        {
+          raw: 'Paragraphe 1 de troisième. Avec première note. (1)',
+          to_str: 'Paragraphe 1 de troisième. Avec première note.',
+          scene_id: 3
+        }.each do |prop, expected|
+          expect(parag1[prop]).to eq expected
+        end
+        parag2 = paragraphes[1]
+        # puts "Paragraphe 2 : #{parag2.inspect}"
+        {
+          raw:    'Paragraphe 2 de troisième. Avec deuxième brin. b2',
+          to_str: 'Paragraphe 2 de troisième. Avec deuxième brin.',
+          brins_ids: [2],
+          scene_id: 3
+        }.each do |prop, expected|
+          expect(parag2[prop]).to eq expected
+        end
+      end
+
+      it 'définit bien les notes' do
+        notes = scene3[:notes]
+        note1 = notes.first
+        {
+          id: 1,
+        }.each do |prop, expected|
+          expect(note1[prop]).to eq expected
+        end
+        {
+          raw: "La première note."
+        }.each do |prop, expected|
+          expect(note1[:content][prop]).to eq expected
+        end
       end
     end
+
   end
 end

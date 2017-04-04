@@ -17,8 +17,11 @@ class Scene
     parse_first_line
     @resume       = parse_line(second_line)
     @paragraphes  = Array.new
+    @notes        = Array.new
     other_lines.each do |line|
-      @paragraphes << parse_line(line)
+      fto = parse_line(line)
+      fto.nil? || @paragraphes << fto
+
     end
   end
 
@@ -62,6 +65,8 @@ class Scene
       tout, index_note, description_note = line.match(/^\(([0-9]+)\) (.*?)$/).to_a
       lanote = film.notes[index_note.to_i]
       lanote.parse(tout)
+      @notes << lanote
+      return nil
     else
       #
       # A U T R E   L I G N E

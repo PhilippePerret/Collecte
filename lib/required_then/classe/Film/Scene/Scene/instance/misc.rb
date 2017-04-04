@@ -20,12 +20,16 @@ class Scene
       fonction:         fonction,
       brins_ids:        brins_ids,
       personnages_ids:  personnages_ids,
-      paragraphes:      paragraphes_as_hash_data
+      paragraphes:      paragraphes_as_hash_data,
+      notes:            notes_as_hash_data
     }
   end
 
   def paragraphes_as_hash_data
     (@paragraphes||[]).collect{|p| p.hash_data}
+  end
+  def notes_as_hash_data
+    (@notes||[]).collect{|n|n.hash_data}
   end
 
 end #/Scene
