@@ -102,4 +102,10 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
+
+  # À faire avant chaque module de test (donc chaque fichier)
+  config.before :all do
+    Collecte.current = nil
+  end
+
 end

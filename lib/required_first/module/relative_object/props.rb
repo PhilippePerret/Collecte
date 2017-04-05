@@ -41,12 +41,10 @@ module RelativeObjectMethods
   # {Array de String} Liste des identifiants de personnages
   # que contient l'objet
   attr_reader :personnages_ids
+
   # {Array de Fixnum} Liste des identifiants de notes
   # auquel l'objet appartient
   # Note : une note est aussi un Objet Relatif.
-  # TODO Pour le moment, les notes sont enregistrées seulement
-  # avec les scènes dans lesquelles elles sont définies. Il faudrait
-  # les enregistrer avec le film.
   attr_reader :notes_ids
 
   # Propriétés volatiles

@@ -10,10 +10,16 @@ Ce fichier est produit à la collecte du film, il contient absolument toutes les
           Le titre du film, pour mémoire et simplification de
           l'affichage et l'autonomie du fichier marshal.
 
-    @auteurs {Array de String|Fixnum}
-          Liste des auteurs ayant participé à cette collecte,
-          soit leur nom, soit leur identifiant sur la boite
-          à outils par exemple.
+    @metadata {Hash}
+          Hash de méta-données de la collecte.
+        @auteurs {Array de String|Fixnum}
+              Liste des auteurs ayant participé à cette
+              collecte, soit leur nom, soit leur identifiant
+              sur la boite à outils par exemple.
+        @debut {String JJ/MM/AAAA}
+            Date du début de la collecte
+        @fin   {String JJ/MM/AAAA}
+            Date de fin de la collecte, ou nil
 
     @note {String}
           Une note générale sur la collecte ou le film.
@@ -53,9 +59,6 @@ Ce fichier est produit à la collecte du film, il contient absolument toutes les
     # ------------------------------------------------
     #   D A T E S
     # ------------------------------------------------
-    @date_last_collecte {Fixnum}
-          Timestamp de la date de dernière collecte.
-
     @created_at {Fixnum}
           Toute première création du fichier
     @updated_at {Fixnum}

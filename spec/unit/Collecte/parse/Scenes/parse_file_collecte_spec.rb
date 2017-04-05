@@ -37,9 +37,10 @@ describe 'Parsing du collecte des scènes' do
     it 'définit correctement la première scène' do
       dscenes = datam[:items]
       scene1 = dscenes[1]
+      puts "scene1 : #{scene1.inspect}"
       expect(scene1).not_to eq nil
-      puts "scene 1 :#{scene1.inspect}"
       {
+        numero:   1,
         lieu: 'INT.',
         effet: 'JOUR', decor: 'MAISON DE JOE',
 
@@ -53,7 +54,7 @@ describe 'Parsing du collecte des scènes' do
         brins_id: nil,
         notes_ids: []
       }.each do |prop, expected|
-        puts "prop: #{prop.inspect}"
+        puts "#{prop} -> #{expected.inspect}"
         expect(scene1[:resume][prop]).to eq expected
       end
     end
@@ -84,6 +85,7 @@ describe 'Parsing du collecte des scènes' do
         {
           raw: 'Paragraphe 1 de troisième. Avec première note. (1)',
           to_str: 'Paragraphe 1 de troisième. Avec première note.',
+          notes_ids: [1],
           scene_id: 3
         }.each do |prop, expected|
           expect(parag1[prop]).to eq expected
@@ -101,17 +103,16 @@ describe 'Parsing du collecte des scènes' do
       end
 
       it 'définit bien les notes' do
-        notes = scene3[:notes]
-        note1 = notes.first
+        note1 = film.notes[1]
         {
           id: 1,
         }.each do |prop, expected|
-          expect(note1[prop]).to eq expected
+          expect(note1.send(prop)).to eq expected
         end
         {
           raw: "La première note."
         }.each do |prop, expected|
-          expect(note1[:content][prop]).to eq expected
+          expect(note1.content.send(prop)).to eq expected
         end
       end
     end

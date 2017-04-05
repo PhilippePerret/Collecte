@@ -75,6 +75,17 @@ describe 'Parse des textes-objets' do
     context 'avec un texte et des personnages' do
       before(:all) do
         @film = Film.new
+        hpersos = {
+          'joe' => Film::Personnage.new(@film),
+          'jan' => Film::Personnage.new(@film)
+        }
+        @film.personnages.instance_variable_set('@hash', hpersos)
+        @film.personnages.hash['joe'].dispatch(
+          id: 'joe', prenom: 'Joe'
+        )
+        @film.personnages.hash['jan'].dispatch(
+          id: 'jan', prenom: 'Jan'
+        )
         @fto = Film::TextObjet.new(@film)
         @fto.parse "[PERSO#joe] rentre avec [PERSO#jan]."
       end

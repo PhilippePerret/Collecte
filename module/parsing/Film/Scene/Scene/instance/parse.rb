@@ -17,11 +17,10 @@ class Scene
     parse_first_line
     @resume       = parse_line(second_line)
     @paragraphes  = Array.new
-    @notes        = Array.new
+    @notes_ids    = Array.new
     other_lines.each do |line|
       fto = parse_line(line)
       fto.nil? || @paragraphes << fto
-
     end
   end
 
@@ -46,6 +45,12 @@ class Scene
 
   end
 
+  RELATIVE_MARK_TO_RELATIVE = {
+    'b' => :brins,
+    'p' => :personnages,
+    'n' => :notes,
+    's' => :scenes
+  }
   # Méthode qui permet de parser une ligne.
   # La méthode retourne un objet FilmObjet
   def parse_line line
@@ -57,6 +62,15 @@ class Scene
       # C'est la dernière ligne possible de la scène.
 
       # TODO
+      line.split(' ').each do |relmark|
+        tout, rel_mark, rel_id = relmark.match(/^(b|n|p|s)([0-9]+)$/i).to_a
+        rel_id = rel_id.to_i
+        prop = RELATIVE_MARK_TO_RELATIVE[rel_mark]
+        liste = self.send("#{prop}_ids".to_sym)
+        liste << rel_id
+      end
+
+      return nil
 
     when /^\([0-9]+\) /
       #
@@ -65,7 +79,10 @@ class Scene
       tout, index_note, description_note = line.match(/^\(([0-9]+)\) (.*?)$/).to_a
       lanote = film.notes[index_note.to_i]
       lanote.parse(tout)
-      @notes << lanote
+      # On peut définir une note dans une scène sans l'utiliser,
+      # même si c'est un peu absurde. Mais cette note sera
+      # surtout ajoutée par une autre marque.
+      # @notes_ids << lanote.id
       return nil
     else
       #

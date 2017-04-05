@@ -24,11 +24,12 @@ class Scene
   # {Array de Film::TextObjet} Liste des paragraphes
   attr_reader :paragraphes
 
-  # {Array de Film::Note}
-  attr_reader :notes
-
   # {String} Fonction de la scène
   attr_reader :fonction
 
+  def notes
+    @notes ||= Film::Notes.new(self.film)
+  end
+  
 end #/Scene
 end #/Film
