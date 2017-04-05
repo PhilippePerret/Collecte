@@ -17,7 +17,7 @@ Ce fichier est produit à la collecte du film, il contient absolument toutes les
 
     @note {String}
           Une note générale sur la collecte ou le film.
-          
+
     # ------------------------------------------------
     #   É L É M E N T S   C O L L E C T É S
     # ------------------------------------------------
@@ -29,7 +29,7 @@ Ce fichier est produit à la collecte du film, il contient absolument toutes les
 
     @personnages {Hash de Hash}
           Tableau de tous les personnages récoltés dans le
-          fichier de collecte `personnages.simple_collecte`
+          fichier de collecte `personnages.collecte`
           Key: {String} Identifiant du personnage
                C'est l'ID utilisé notamment dans la balise
                `[PERSO#<id personnage>]`
@@ -37,7 +37,7 @@ Ce fichier est produit à la collecte du film, il contient absolument toutes les
 
     @brins {Hash de Hash}
           Tableau de tous les brins récoltés dans le fichier
-          de collecte `brins.simple_collecte`
+          de collecte `brins.collecte`
           Key: {Fixnum} Identifiant du brin
                C'est l'ID utilisé dans la marque `b<id brin>`
                utilisé dans les résumés de scènes, les

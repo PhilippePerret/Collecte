@@ -2,6 +2,6 @@ Une `liste d’éléments` est une liste comme la liste des scènes, des brins o
 
 Ces listes sont définies obligatoirement dans des fichiers de collecte qui sont pour le moment :
 
-    scenes.simple_collecte          Liste des scènes
-    brins.simple_collecte           Liste des brins
-    personnages.simple_collecte     Liste des personnages
+    scenes.collecte          Liste des scènes
+    brins.collecte           Liste des brins
+    personnages.collecte     Liste des personnages

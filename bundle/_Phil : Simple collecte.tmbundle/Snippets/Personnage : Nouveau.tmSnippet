@@ -6,10 +6,11 @@
 	<string>PERSONNAGE:${1:IDENTIFIANT}
   PRENOM:   ${2:PRENOM}
   NOM:      ${3:NOM}
-  SEXE_AGE: ${4|Femme,Homme,Fille,Garçon|}
-  ANNEE:    ${5:ANNEE NAISSANCE}
-  FONCTION: ${6|Protagoniste,Antagoniste,Adjuvant,Mentor,Objet de la quête,Autre…|}
-  DESCRIPTION: ${7:DESCRIPTION}
+	PSEUDO:		${4:PSEUDONYME}
+  SEXE:     ${5|Femme,Homme,Fille,Garçon|}
+  ANNEE:    ${6:ANNEE NAISSANCE}
+  FONCTION: ${7|Protagoniste,Antagoniste,Adjuvant,Mentor,Objet de la quête,Autre…|}
+  DESCRIPTION: ${8:DESCRIPTION}
   PRENOM_ACTEUR:  nil
   NOM_ACTEUR:     nil
 $0</string>
