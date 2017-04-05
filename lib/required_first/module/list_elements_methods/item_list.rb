@@ -59,14 +59,16 @@ module ListElementsMethods
     File.open(marshal_file,'wb'){|f| f.write Marshal.dump(data2save)}
   end
   def data2save
-    d2s = Hash.new
-    @hash.each do |k, inst|
-      d2s.merge!(k => inst.hash_data)
+    @data2save ||= begin
+      d2s = Hash.new
+      @hash.each do |k, inst|
+        d2s.merge!(k => inst.hash_data)
+      end
+      {
+        created_at: Time.now.to_i,
+        film_id:    film.id,
+        items:      d2s
+      }
     end
-    return {
-      created_at: Time.now.to_i,
-      film_id:    film.id,
-      items:      d2s
-    }
   end
 end

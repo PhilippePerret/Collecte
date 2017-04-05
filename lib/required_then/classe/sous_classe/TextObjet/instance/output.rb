@@ -14,6 +14,14 @@ class TextObjet
     return h
   end
 
+  # Distpatch dans le texte-objet les données +hdata+ et
+  # retourne l'instance Film::TextObjet
+  def dispatch hdata
+    hdata.each{|k,v|instance_variable_set("@#{k}",v)}
+    @horloge.nil? || @horloge = Film::Horloge.new(film, @horloge)
+    return self # Pour chainer
+  end
+
   # Version String du texte-objet
   #
   # Par rapport au texte original (@raw), les balises

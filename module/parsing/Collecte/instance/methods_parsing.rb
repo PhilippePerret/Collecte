@@ -1,6 +1,29 @@
 # encoding: UTF-8
 class Collecte
 
+  # Méthode principale, appelé par `Collecte#parse`, pour
+  # parser entièrement la collecte
+  def parse_all
+    prepare_parsing
+    parse_metadata
+    parse_brins
+    parse_personnages
+    parse_scenes
+  end
+
+  # ---------------------------------------------------------------------
+  #   Sous-méthodes de parsing
+  # ---------------------------------------------------------------------
+
+  # Méthode qui lance le parsing des métadonnées
+  def parse_metadata
+    log "PARSING DES MÉTADONNÉES…"
+    metadata.exist? || return
+    metadata.parse
+  rescue Exception => e
+    log "au cours du parsing des métadonnées", error: e
+  end
+
   # Méthode qui lance le parsing des brins
   def parse_brins
     log 'PARSING DES BRINS…'

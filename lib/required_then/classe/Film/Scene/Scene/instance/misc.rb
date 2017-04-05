@@ -25,8 +25,21 @@ class Scene
     }
   end
 
+  alias :top_dispatch :dispatch
+  def dispatch hdata
+    top_dispatch hdata
+    @resume       = Film::TextObjet.new(film).dispatch(@resume)
+    @horloge      = Film::Horloge.new(film, horloge)
+    @paragraphes  = paragraphes.collect do |hparagraphe|
+      Film::TextObjet.new(film).dispatch(hparagraphe)
+    end
+    @notes = notes.collect do |hnote|
+      Film::Note.new(film).dispatch(hnote)
+    end
+  end
+
   def paragraphes_as_hash_data
-    (@paragraphes||[]).collect{|p| p.hash_data}
+    (@paragraphes||[]).collect{|p|p.hash_data}
   end
   def notes_as_hash_data
     (@notes||[]).collect{|n|n.hash_data}

@@ -8,7 +8,7 @@ class Scene
   # Méthode pour parser un bloc de définition
   # de scène
   def parse bloc
-    @bunch_code = bloc
+    @bunch_code = bloc.strip
     # Il faut un identifiant
     @id = self.class.new_id
     # Il faut le numéro

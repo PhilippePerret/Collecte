@@ -12,5 +12,13 @@ class Note
     }
   end
 
+  
+  alias :top_dispatch :dispatch
+  def dispatch hdata
+    top_dispatch hdata
+    @content = Film::TextObjet.new(film).dispatch(@content)
+    return self # Pour le chainage
+  end
+
 end #/Note
 end #/Film
