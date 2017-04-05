@@ -15,7 +15,7 @@ fp = ENV['TM_FILEPATH']
 dossier_film = File.dirname(fp)
 affixe_film = File.basename(fp, File.extname(fp))
 
-file_path = File.join(dossier_film, "brins.simple_collecte")
+file_path = File.join(dossier_film, "brins.collecte")
 
 File.exists?(file_path) || begin
   str = &lt;&lt;-TXT

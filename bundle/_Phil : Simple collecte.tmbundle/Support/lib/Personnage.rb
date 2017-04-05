@@ -38,7 +38,7 @@ class Personnage
       end
     end
     def path_simple_collecte
-      @path_simple_collecte ||= File.join(Film.folder, "personnages.simple_collecte")      
+      @path_simple_collecte ||= File.join(Film.folder, "personnages.collecte")      
     end
   end
 end # class Personnage

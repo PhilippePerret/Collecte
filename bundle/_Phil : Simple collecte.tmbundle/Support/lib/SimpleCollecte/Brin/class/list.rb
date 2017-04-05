@@ -37,7 +37,7 @@ class << self
   end
   
   def file_path
-    @file_path ||= File.join(Film.folder, 'brins.simple_collecte')
+    @file_path ||= File.join(Film.folder, 'brins.collecte')
   end
 
 end #/<< self

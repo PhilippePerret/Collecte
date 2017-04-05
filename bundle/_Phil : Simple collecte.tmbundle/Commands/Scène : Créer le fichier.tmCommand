@@ -13,7 +13,7 @@ Créer le fichier SCENES du film s'il n'existe pas
 =end
 dossier_film  = ENV['TM_PROJECT_DIRECTORY']
 affixe_film   = File.basename(dossier_film)
-file_path     = File.join(dossier_film, "scenes.simple_collecte")
+file_path     = File.join(dossier_film, "scenes.collecte")
 
 File.exists?(file_path) || begin
   fref = File.open(file_path,'a')

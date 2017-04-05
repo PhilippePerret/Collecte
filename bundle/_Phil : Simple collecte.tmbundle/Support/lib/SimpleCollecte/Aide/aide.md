@@ -63,7 +63,7 @@ Puis l'ouvrir dans TextMate en le glissant sur son icône dans le dock par exemp
 
 ## Le fichier des scènes {#fichier_scenes}
 
-Son nom doit être impérativement `scenes.simple_collecte`.
+Son nom doit être impérativement `scenes.collecte`.
 
 ### Composition du fichier {#composition_fichier}
 
@@ -191,13 +191,13 @@ Ci-dessus, on définit la note `15` qui fait référence à la note `12`.
 
 Le fichier des brins permet de consigner tous les brins du film.
 
-Son nom doit être impérativement `brins.simple_collecte`.
+Son nom doit être impérativement `brins.collecte`.
 
 ### Créer le fichier des brins {#create_file_brins}
 
 La commande `Brin : Créer le fichier` permet de créer le fichier brin. Il suffit d'ouvrir le dossier de la collecte dans TextMate puis d'activer cette commande pour le créer.
 
-Sinon, créer le fichier `brins.simple_collecte` dans le [dossier de collecte].
+Sinon, créer le fichier `brins.collecte` dans le [dossier de collecte].
 
 ### Définir les brins {#create_brin}
 
@@ -215,7 +215,7 @@ Le snippet `brin` permet de créer un brin dans le [fichier des brins]. Il suffi
 
 Le fichier personnages permet de consigner tous les personnages du film. Grâce à cette consignation, des brins et des statistiques automatiques peuvent être générées à l'[extraction des données].
 
-Le nom de ce fichier doit être impérativement : `persos.simple_collecte`.
+Le nom de ce fichier doit être impérativement : `persos.collecte`.
 
 ### Créer le fichier personnages {#create_file_persos}
 
