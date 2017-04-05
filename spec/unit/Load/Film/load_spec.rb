@@ -57,7 +57,7 @@ describe 'Chargement des données film' do
       expect(film.brins.count).to eq 5
     end
     it 'charge les notes' do
-      expect(film.notes.count).to eq 3
+      expect(film.notes.count).to eq 6
     end
   end
 end

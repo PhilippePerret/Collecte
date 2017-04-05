@@ -60,6 +60,8 @@ class Collecte
     FileUtils.rm_rf(data_folder)     if File.exist?(data_folder)
     build_parsing_folder
     build_data_folder
+    # Initialisation des scènes
+    Film::Scene.init
     log "Parsing préparé avec succès."
   rescue Exception => e
     log "ERREUR AU COURS DE LA PRÉPARATION DU PARSING", fatal_error: e
