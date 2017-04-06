@@ -9,9 +9,11 @@ class Extractor
   # C'est le texte qui sera extrait, contenant toutes les
   # données extraites.
   attr_reader :file_content
-  
+
   # {Symbol} Format de sortie des données
-  attr_reader :format
+  attr_accessor :format
+
+  def film ; @film ||= collecte.film end
 
 end #/Extractor
 end #/Collect

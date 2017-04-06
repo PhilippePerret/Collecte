@@ -13,6 +13,11 @@ class Personnage
   # {String} Fonction du personnage
   attr_reader :fonction
 
+  # {String} "Homme" ou "Femme"
+  attr_reader :sexe
+  # {Fixnum} Année de naissance
+  attr_reader :annee
+
   # {String} Prénom et nom de l'acteur
   attr_reader :prenom_acteur, :nom_acteur
 
