@@ -1,13 +1,6 @@
 # encoding: UTF-8
 class Collecte
 
-  # Métadonnées
-  # ===========
-  # Liste des auteurs (pour le moment, array de pseudos)
-  attr_accessor :auteurs
-  # Date JJ/MM/AAAA de début et de fin de la collecte
-  attr_accessor :debut, :fin
-
   # L'instance {Film} du film de la collecte
   def film ; @film ||= Film.new(self) end
 

@@ -12,3 +12,4 @@ FOLDER_COLLECTE_PATH = "/Users/philippeperret/Desktop/Everest_collect"
 require_relative 'lib/required'
 collecte = Collecte.new(FOLDER_COLLECTE_PATH)
 collecte.parse
+collecte.extract(format: :text, open_file: false)

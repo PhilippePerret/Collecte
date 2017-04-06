@@ -2,7 +2,6 @@ describe 'Test du parsing des personnages' do
   before(:all) do
     @collecte = Collecte.new(folder_test_1)
     # On purge le dossier `data` et le dossier `parsing`
-    FileUtils.rm_rf @collecte.parsing_folder
     FileUtils.rm_rf @collecte.data_folder
     expect(@collecte.film.personnages.count).to eq 0
     # On procède au parse des brins

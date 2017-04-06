@@ -2,7 +2,7 @@
 class Film
 class Scene
 
-  # Le bloc de code
+  # Le bloc de code qui permet de définir la scène
   attr_reader :bunch_code
 
   # Méthode pour parser un bloc de définition
@@ -28,7 +28,6 @@ class Scene
     /^((?:[0-9]:)?(?:[0-9]?[0-9]:[0-9]?[0-9])) (EXT\.|INT\.|NOIR)(?: ?\/ ?(EXT\.|INT\.|NOIR))? (JOUR|NUIT|MATIN|SOIR|NOIR)(?: ?\/ ?(JOUR|NUIT|MATIN|SOIR|NOIR))? (.*?)(?: ?\/ ?(.*?))?$/
 
   def parse_first_line
-    tout,
     @horloge,
     @lieu,
     @lieu_alt,
@@ -36,7 +35,12 @@ class Scene
     @effet_alt,
     @decor,
     @decor_alt =
-      first_line.match(REG_FIRST_LINE_SCENE).to_a
+      first_line.match(REG_FIRST_LINE_SCENE).to_a[1..-1]
+
+    # Erreur de mauvais formatage.
+    if @horloge.nil? || @lieu.nil? || @effet.nil?
+      raise BadBlocData, "La première ligne de la scène #{bunch_code.inspect} est mal formatée. Impossible de décomposer l'intitulé."
+    end
 
     @horloge = Film::Horloge.new(film, @horloge)
 
@@ -63,11 +67,12 @@ class Scene
 
       # TODO
       line.split(' ').each do |relmark|
-        tout, rel_mark, rel_id = relmark.match(/^(b|n|p|s)([0-9]+)$/i).to_a
+        rel_mark, rel_id = relmark.match(/^(b|n|p|s)([0-9]+)$/i).to_a[1..-1]
         rel_id = rel_id.to_i
         prop = RELATIVE_MARK_TO_RELATIVE[rel_mark]
-        liste = self.send("#{prop}_ids".to_sym)
+        liste = self.send("#{prop}_ids".to_sym) || Array.new
         liste << rel_id
+        instance_variable_set("@#{prop}_ids", liste)
       end
 
       return nil
@@ -76,7 +81,7 @@ class Scene
       #
       # L I G N E   D E   N O T E
       #
-      tout, index_note, description_note = line.match(/^\(([0-9]+)\) (.*?)$/).to_a
+      tout, index_note = line.match(/^\(([0-9]+)\) (.*?)$/).to_a[0..1]
       lanote = film.notes[index_note.to_i]
       lanote.parse(tout)
       # On peut définir une note dans une scène sans l'utiliser,

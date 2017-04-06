@@ -9,6 +9,7 @@ class Collecte
     parse_brins
     parse_personnages
     parse_scenes
+    termine_parsing
   end
 
   # ---------------------------------------------------------------------
@@ -56,9 +57,7 @@ class Collecte
   def prepare_parsing
     # Il faut préparer le dossier `parsing` et le
     # dossier `data`
-    FileUtils.rm_rf(parsing_folder)  if File.exist?(parsing_folder)
     FileUtils.rm_rf(data_folder)     if File.exist?(data_folder)
-    build_parsing_folder
     build_data_folder
     # Initialisation des scènes
     Film::Scene.init
@@ -68,9 +67,21 @@ class Collecte
   end
   # /prepare_parsing
 
-  def build_parsing_folder
-    Dir.mkdir(parsing_folder, 0755)
+
+  # Méthode pour terminer le parsing des fichiers de
+  # collecte.
+  # Cette méthode fait principalement deux choses :
+  #   1. Elle affiche un message final (par le biais
+  #      d'un message HTML sur le browser)
+  #   2. Elle construit un listing de toutes les données
+  #      obtenues. Pour vérification.
+  #
+  # NOTES
+  #   * On ne fait la confirmation
+  def termine_parsing
+    confirmation_parsing
   end
+
   def build_data_folder
     Dir.mkdir(data_folder, 0755)
   end

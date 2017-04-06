@@ -6,11 +6,17 @@ class Scene
   # marshal.
   def hash_data
     hor = horloge.nil? ? nil : horloge.horloge
+    res = resume.nil? ? nil : resume.hash_data
+    # TODO Mais contrôler la ligne ci-dessus car ça ne
+    # devrait pas arriver que le résumé n'existe pas.
+    if resume.nil?
+      raise BadBlocData, "Le bloc de scène ne définit pas de résumé :#{RC}#{bunch_code.inspect}"
+    end
     {
       id:               id,
       numero:           numero,
       horloge:          hor,
-      resume:           resume.hash_data,
+      resume:           res,
       effet:            effet,
       effet_alt:        effet_alt,
       lieu:             lieu,

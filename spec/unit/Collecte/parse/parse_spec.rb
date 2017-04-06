@@ -11,9 +11,9 @@ describe 'Le parse…' do
   it 'définit correction le dossier @folder de la collecte' do
     expect(collecte.folder).to eq folder_test
   end
-  it 'produit un dossier `parsing`' do
-    expect(collecte).to respond_to :parsing_folder
-    expect(collecte.parsing_folder).to eq File.join(folder_test, 'parsing')
-    expect(File.exist? collecte.parsing_folder).to eq true
+  it 'produit un dossier `data`' do
+    expect(collecte).to respond_to :data_folder
+    expect(collecte.data_folder).to eq File.join(folder_test, 'data')
+    expect(File.exist? collecte.data_folder).to eq true
   end
 end

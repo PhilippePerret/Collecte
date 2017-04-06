@@ -1,4 +1,5 @@
+* Traiter les décors (Film::Decor, film.decors)
 
-* Mettre en place la propriété @notes_ids des objets relatifs (l'utiliser pour les scènes). Au lieu d'enregistrer les notes elles-mêmes, n'enregistrer que les identifiants (la propriété @notes_ids commune à tous les objets relatifs) et enregistrer ces notes dans un fichier `film.msh` où seraient consignées absoluement toutes les données (cf. ci-dessus).
+* Copier le fichier `process.log` dans le dossier de collecte
 
 * [Log] Mémoriser le nombre d'erreurs non fatales, les enregistrer à part, et les indiquer à la fin des processus.
