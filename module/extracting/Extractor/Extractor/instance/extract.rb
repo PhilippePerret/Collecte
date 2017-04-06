@@ -49,9 +49,9 @@ class Extractor
   end
 
   def extract_personnages_data
-    write RC*2 + '=== PERSONNAGES ==='
+    write "#{format == :text ? RC*2 : ''}=== PERSONNAGES ==="
     film.personnages.each do |perso_id, perso|
-      write "#{RC}Personnage #{perso.id}"
+      write "#{format == :text ? RC : ''}Personnage #{perso.id}"
       Film::Personnage::PROPERTIES.each do |prop|
         write "#{prop}", "#{perso.send(prop)}", {before_label: "\t"}
       end
@@ -60,9 +60,9 @@ class Extractor
   end
 
   def extract_brins_data
-    write RC*2 + '=== BRINS ==='
+    write "#{format == :text ? RC*2 : ''}=== BRINS ==="
     film.brins.each do |brin_id, brin|
-      write "#{RC}Brin #{brin_id}"
+      write "#{format == :text ? RC : ''}Brin #{brin_id}"
       [:id, :libelle, :description].each do |prop|
         write "#{prop}", "#{brin.send(prop)}", {before_label: "\t"}
       end
@@ -73,7 +73,7 @@ class Extractor
   def extract_scenes_data
     write RC*2 + '=== SCENES ==='
     film.scenes.each do |scene_id, scene|
-      write "#{RC}Scene #{scene.numero}"
+      write "#{format == :text ? RC : ''}Scene #{scene.numero}"
       Film::Scene::PROPERTIES.each do |prop, dprop|
         val_init = scene.send(prop)
         if val_init != nil && dprop[:value]

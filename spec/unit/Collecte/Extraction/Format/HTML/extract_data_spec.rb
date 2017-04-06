@@ -1,4 +1,12 @@
-describe 'Extraction' do
+describe 'Extraction au format :html' do
+
+  # Méthode principale pour construire le div qui contient
+  # un label et une valeur
+  def div_libval label, valeur
+    "<div class='libval'><span class='label'>#{label}</span><span class='value'>#{valeur}</span></div>"
+  end
+
+
   before(:all) do
     @collecte = Collecte.new(folder_test_2)
     @collecte.parse
@@ -7,41 +15,41 @@ describe 'Extraction' do
   let(:film) { @film ||= collecte.film }
   let(:code) { @code }
 
-  describe 'de toutes les données sous forme Texte' do
+  describe 'de toutes les données' do
     before(:all) do
-      File.unlink(@collecte.extractor(:text).path) if File.exist?(@collecte.extractor(:text).path)
-      expect(File.exist? @collecte.extractor(:text).path).to eq false
-      @collecte.extract(format: :text, open_file: false)
+      File.unlink(@collecte.extractor(:html).path) if File.exist?(@collecte.extractor(:html).path)
+      expect(File.exist? @collecte.extractor(:html).path).to eq false
+      @collecte.extract(format: :html, open_file: false)
 
       col = Collecte.new(folder_test_2)
       col.film.load
-      col.extract(format: :text, open_file: false)
-      @code = File.read(col.extractor(:text).path)
+      col.extract(format: :html, open_file: false)
+      @code = File.read(col.extractor(:html).path)
 
     end
     it 'produit le fichier contenant les données extraites' do
-      expect(File.exist? collecte.extractor(:text).path).to eq true
+      expect(File.exist? collecte.extractor(:html).path).to eq true
     end
 
     describe 'contenant' do
       it 'la marque principale du film' do
-        expect(code).to include 'Film : Everest2016'
+        expect(code).to include div_libval('Film', 'Everest2016')
       end
       describe 'la métadonnée ' do
         it 'identifiant du film' do
-          expect(code).to match /^id(.*?)Everest2016$/
+          expect(code).to include div_libval('id', 'Everest2016')
         end
         it 'titre du film' do
-          expect(code).to match /^titre(.*?)Éverest$/
+          expect(code).to include div_libval('titre', 'Éverest')
         end
         it 'auteurs de la collecte' do
-          expect(code).to match /^auteurs(.*?)Phil et Benoit$/
+          expect(code).to include div_libval('auteurs', 'Phil et Benoit')
         end
         it 'date de début de collecte' do
-          expect(code).to match /^debut(.*?)25\/4\/2017/
+          expect(code).to include div_libval('debut', '25/4/2017')
         end
         it 'date de fin de collecte' do
-          expect(code).to match /^fin(.*?)30\/4\/2017/
+          expect(code).to include div_libval('fin', '30/4/2017')
         end
       end
       # /describe la métadonnée
@@ -63,9 +71,9 @@ describe 'Extraction' do
               fonction:'Antagoniste', description:'Description de l\'antagoniste.'
             }
           ].each do |hperso|
-            expect(code).to match /^Personnage #{hperso[:id]}$/
+            expect(code).to match /^<div(.*?)>Personnage #{hperso[:id]}<\/div>$/
             hperso.each do |prop,valu|
-              expect(code).to match /^\t#{prop}(.*?)#{valu}$/
+              expect(code).to include div_libval(prop, valu)
             end
           end
         end
@@ -91,9 +99,9 @@ describe 'Extraction' do
               description:''
             }
           ].each do |hbrin|
-            expect(code).to match /^Brin #{hbrin[:id]}$/
+            expect(code).to match /<div(.*?)>Brin #{hbrin[:id]}<\/div>/
             hbrin.each do |prop,valu|
-              expect(code).to match /^\t#{prop}(.*?)#{valu}$/
+              expect(code).to include div_libval(prop, valu)
             end
           end
         end
@@ -138,29 +146,26 @@ describe 'Extraction' do
           }
         ].each do |hscene|
           it "les données de la scène ##{hscene[:id]}" do
-            expect(code).to match /^Scene #{hscene[:numero]}$/
+            expect(code).to match /<div(.*?)>Scene #{hscene[:numero]}<\/div>/
             hscene.each do |prop,valu|
               valu =
                 case prop
                 when :resume then Regexp::escape(valu)
                 else valu
                 end
-              expect(code).to match /^\t#{prop}(.*?)#{valu}$/
+              expect(code).to include div_libval(prop, valu)
             end
 
             # Test sur les paragraphes
             if hscene.key?(:paragraphes)
               hscene[:paragraphes].each do |hparag|
-                expect(code).to match /^\tParagraphe #{hparag[:index]}$/
-                expect(code).to match /^\t\traw(.*?)#{hparag[:raw]}$/
+                expect(code).to match /<span(.*?)>Paragraphe #{hparag[:index]}<\/span>/
+                expect(code).to include div_libval( 'raw', hparag[:raw] )
               end
             end
-
           end
         end
       end
-
     end
-
   end
 end

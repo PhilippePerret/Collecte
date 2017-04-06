@@ -11,14 +11,17 @@ class Extractor
     options ||= Hash.new
 
     label = "#{options[:before_label]}#{label}"
-    
+
     line_extract =
       if valeur.nil?
-        label
+        case format
+        when :html then "<div>#{label}</div>"
+        else label
+        end
       else
         case format
         when :html
-          '<div class="">'+
+          '<div class=\'libval\'>'+
             html_span_label(label)+
             html_span_value(valeur)+
           '</div>'
