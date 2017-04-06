@@ -1,3 +1,5 @@
+* Quand le résumé de la scène est déterminé, on doit mettre ses relatifs dans la scène (rappel : le résumé est un TextObjet)
+
 * Traiter les décors (Film::Decor, film.decors)
 
 * Copier le fichier `process.log` dans le dossier de collecte

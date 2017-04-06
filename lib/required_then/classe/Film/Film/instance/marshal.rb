@@ -10,7 +10,7 @@ class Film
       # --------
       id:             id,
       titre:          titre,
-      data_collecte:  metadata, # = collecte.metadata.data
+      metadata:       metadata, # = collecte.metadata.data
       # ÉLÉMENTS
       # --------
       scenes:         scenes.data2save,

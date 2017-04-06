@@ -20,13 +20,14 @@ class Film
 
   def dispatch
 
-    log "donnee_totale = #{donnee_totale.inspect}"
+    # log "donnee_totale = #{donnee_totale.inspect}"
 
     # METADATA
     # --------
     # Elles seront ensuite dispatchées progressivement à l'aide
     # des raccourcis qui font tous appels à collecte.metadata.data
-    collecte.metadata.instance_variable_set('@data', donnee_totale[:metadata])
+    collecte.metadata.data = donnee_totale[:metadata]
+    # log "#{RC}donnee_totale[:metadata]: #{donnee_totale[:metadata].inspect}"
 
     # ÉLÉMENTS
     # --------

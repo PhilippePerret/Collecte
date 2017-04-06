@@ -10,6 +10,8 @@ class Personnage
       prenom:         prenom,
       nom:            nom,
       pseudo:         pseudo,
+      sexe:           sexe,
+      annee:          annee,
       fonction:       fonction,
       description:    description,
       nom_acteur:     nom_acteur,

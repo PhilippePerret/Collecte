@@ -5,6 +5,10 @@ class Scene
   # Le bloc de code qui permet de définir la scène
   attr_reader :bunch_code
 
+  OBJECTS_PROPERTIES = [
+    :brins_ids, :notes_ids, :personnages_ids, :scenes_ids
+  ]
+
   # Méthode pour parser un bloc de définition
   # de scène
   def parse bloc
@@ -12,16 +16,41 @@ class Scene
     # Il faut un identifiant
     @id = self.class.new_id
     # Il faut le numéro
-    @numero = self.class.new_numero
-    # On pase la première ligne
+    @numero     = self.class.new_numero
+
+    # Initialisation des relatifs
+    @notes_ids        = Array.new
+    @brins_ids        = Array.new
+    @scenes_ids       = Array.new
+    @personnages_ids  = Array.new
+
+    # On passe la première ligne
     parse_first_line
     @resume       = parse_line(second_line)
+    # Si le résumé possède des objets relatifs, il faut
+    # les mettre dans la scène elle-même.
+    OBJECTS_PROPERTIES.each do |prop|
+      instance_variable_set("@#{prop}", @resume.send(prop))
+    end
     @paragraphes  = Array.new
-    @notes_ids    = Array.new
     other_lines.each do |line|
       fto = parse_line(line)
       fto.nil? || @paragraphes << fto
     end
+    # On récupère tous les relatifs des paragraphes
+    @paragraphes.each do |paragraphe|
+      paragraphe.brins_ids.nil? || @brins_ids += paragraphe.brins_ids
+      paragraphe.notes_ids.nil? || @notes_ids += paragraphe.notes_ids
+      paragraphe.scenes_ids.nil? || @scenes_ids += paragraphe.scenes_ids
+      paragraphe.personnages_ids.nil? || @personnages_ids += paragraphe.personnages_ids
+    end
+
+    # On mets les relatifs à nil quand il sont vides
+    @brins_ids        = @brins_ids.nil_if_empty
+    @notes_ids        = @notes_ids.nil_if_empty
+    @scenes_ids       = @scenes_ids.nil_if_empty
+    @personnages_ids  = @personnages_ids.nil_if_empty
+    
   end
 
   REG_FIRST_LINE_SCENE =
@@ -65,7 +94,6 @@ class Scene
       #
       # C'est la dernière ligne possible de la scène.
 
-      # TODO
       line.split(' ').each do |relmark|
         rel_mark, rel_id = relmark.match(/^(b|n|p|s)([0-9]+)$/i).to_a[1..-1]
         rel_id = rel_id.to_i

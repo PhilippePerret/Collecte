@@ -1,0 +1,178 @@
+#
+# Extraction de 06 04 2017 - 16:58
+# ================================
+# Film : Everest2016
+#
+
+id :                    Everest2016
+titre :                 Éverest
+auteurs :               Phil et Benoit
+debut :                 25/4/2017
+fin :                   30/4/2017
+
+
+=== PERSONNAGES ===
+
+Personnage prota
+	id :                   prota
+	prenom :               Prénom1
+	nom :                  Nom Du Protagoniste
+	pseudo :               Le Protagoniste
+	sexe :                 Homme
+	annee :                2000
+	fonction :             Protagoniste
+	description :          Description du protagoniste.
+	prenom_acteur :        
+	nom_acteur :           
+
+Personnage anta
+	id :                   anta
+	prenom :               Prénom2
+	nom :                  Nom De l'Antagoniste
+	pseudo :               Prénom2 Nom De l'Antagoniste
+	sexe :                 Femme
+	annee :                
+	fonction :             Antagoniste
+	description :          Description de l'antagoniste.
+	prenom_acteur :        
+	nom_acteur :           
+
+
+=== BRINS ===
+
+Brin 1
+	id :                   1
+	libelle :              Premier brin
+	description :          Description du premier brin.
+
+Brin 2
+	id :                   2
+	libelle :              Deuxième brin
+	description :          Une description du deuxième brin.
+
+Brin 3
+	id :                   3
+	libelle :              Troisième brin
+	description :          
+
+Brin 4
+	id :                   4
+	libelle :              Quatrième brin
+	description :          
+
+Brin 5
+	id :                   5
+	libelle :              Cinquième brin inutilisé par la collecte.
+	description :          
+
+
+=== SCENES ===
+
+Scene 1
+	id :                   1
+	numero :               1
+	horloge :              0:00:30
+	resume :               {:raw=>"Résumé de la première scène. b1 (6)", :to_str=>nil, :personnages_ids=>[], :notes_ids=>[6], :brins_ids=>[1], :scene_id=>1, :scenes_ids=>nil, :horloge=>nil}
+	effet :                JOUR
+	effet_alt :            
+	lieu :                 INT.
+	lieu_alt :             
+	decor :                MAISON DE JOE
+	decor_alt :            
+	personnages_ids :      
+	brins_ids :            1
+	notes_ids :            6
+	scenes_ids :           
+
+Scene 2
+	id :                   2
+	numero :               2
+	horloge :              0:01:40
+	resume :               {:raw=>"Résumé de la deuxième scène. b2 b1", :to_str=>nil, :personnages_ids=>[], :notes_ids=>[], :brins_ids=>[2, 1], :scene_id=>2, :scenes_ids=>nil, :horloge=>nil}
+	effet :                NUIT
+	effet_alt :            
+	lieu :                 EXT.
+	lieu_alt :             
+	decor :                JARDIN PUBLIC
+	decor_alt :            
+	personnages_ids :      
+	brins_ids :            2,1
+	notes_ids :            4,5,6
+	scenes_ids :           
+	Paragraphe 0
+		raw :                 Premier beat de la deuxième scène.
+		to_str :              
+		personnages_ids :     []
+		notes_ids :           []
+		brins_ids :           []
+		scene_id :            2
+		scenes_ids :          
+		horloge :             
+	Paragraphe 1
+		raw :                 Deuxième beat de la deuxième scène. (4)(5)(6)
+		to_str :              
+		personnages_ids :     []
+		notes_ids :           [4, 5, 6]
+		brins_ids :           []
+		scene_id :            2
+		scenes_ids :          
+		horloge :             
+	Paragraphe 2
+		raw :                 Troisième beat de la deuxième scène.
+		to_str :              
+		personnages_ids :     []
+		notes_ids :           []
+		brins_ids :           []
+		scene_id :            2
+		scenes_ids :          
+		horloge :             
+
+Scene 3
+	id :                   3
+	numero :               3
+	horloge :              0:03:20
+	resume :               {:raw=>"Résumé de la troisième. (3) b1 b3", :to_str=>nil, :personnages_ids=>[], :notes_ids=>[3], :brins_ids=>[1, 3], :scene_id=>3, :scenes_ids=>nil, :horloge=>nil}
+	effet :                JOUR
+	effet_alt :            
+	lieu :                 INT.
+	lieu_alt :             EXT.
+	decor :                MAISON DE JOE
+	decor_alt :            JARDIN PUBLIC
+	personnages_ids :      
+	brins_ids :            1,3,2
+	notes_ids :            3,1
+	scenes_ids :           
+	Paragraphe 0
+		raw :                 Paragraphe 1 de troisième. Avec première note. (1)
+		to_str :              
+		personnages_ids :     []
+		notes_ids :           [1]
+		brins_ids :           []
+		scene_id :            3
+		scenes_ids :          
+		horloge :             
+	Paragraphe 1
+		raw :                 Paragraphe 2 de troisième. Avec deuxième brin. b2
+		to_str :              
+		personnages_ids :     []
+		notes_ids :           []
+		brins_ids :           [2]
+		scene_id :            3
+		scenes_ids :          
+		horloge :             
+
+Scene 4
+	id :                   4
+	numero :               4
+	horloge :              0:4:53
+	resume :               {:raw=>"Résumé de la quatrième scène. (2) b4", :to_str=>nil, :personnages_ids=>[], :notes_ids=>[2], :brins_ids=>[4], :scene_id=>4, :scenes_ids=>nil, :horloge=>nil}
+	effet :                NUIT
+	effet_alt :            
+	lieu :                 INT.
+	lieu_alt :             
+	decor :                MAISON DE JOE
+	decor_alt :            
+	personnages_ids :      
+	brins_ids :            4
+	notes_ids :            2
+	scenes_ids :           

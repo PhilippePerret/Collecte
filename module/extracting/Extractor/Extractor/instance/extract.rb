@@ -61,13 +61,39 @@ class Extractor
 
   def extract_brins_data
     write RC*2 + '=== BRINS ==='
-
+    film.brins.each do |brin_id, brin|
+      write "#{RC}Brin #{brin_id}"
+      [:id, :libelle, :description].each do |prop|
+        write "#{prop}", "#{brin.send(prop)}", {before_label: "\t"}
+      end
+    end
     flush_file_content
   end
 
   def extract_scenes_data
     write RC*2 + '=== SCENES ==='
+    film.scenes.each do |scene_id, scene|
+      write "#{RC}Scene #{scene.numero}"
+      Film::Scene::PROPERTIES.each do |prop, dprop|
+        val_init = scene.send(prop)
+        if val_init != nil && dprop[:value]
+          if dprop[:args]
+            val_init = val_init.send(dprop[:value], dprop[:args])
+          else
+            val_init = val_init.send(dprop[:value])
+          end
+        end
+        write "#{prop}", "#{val_init}", {before_label: "\t"}
+      end
 
+      # Sauvegarde des paragraphes de la scène
+      (scene.paragraphes|[]).each_with_index do |paragraphe, i|
+        write "\tParagraphe #{i}"
+        paragraphe.hash_data.each do |prop, valeur|
+          write "#{prop}", "#{valeur}", {before_label: "\t\t"}
+        end
+      end
+    end
     flush_file_content
   end
 
