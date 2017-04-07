@@ -3,7 +3,7 @@ describe 'Extraction au format :html' do
   # Méthode principale pour construire le div qui contient
   # un label et une valeur
   def div_libval label, valeur
-    "<div class='libval'><span class='label'>#{label}</span><span class='value'>#{valeur}</span></div>"
+    "<div class=\"libval\"><span class=\"label\">#{label}</span><span class=\"value\">#{valeur}</span></div>"
   end
 
 
@@ -33,7 +33,7 @@ describe 'Extraction au format :html' do
 
     describe 'contenant' do
       it 'la marque principale du film' do
-        expect(code).to include div_libval('Film', 'Everest2016')
+        expect(code).to include 'FILM : Everest2016'
       end
       describe 'la métadonnée ' do
         it 'identifiant du film' do
@@ -67,7 +67,7 @@ describe 'Extraction au format :html' do
             },
             {
               id: 'anta', prenom:'Prénom2', nom:'Nom De l\'Antagoniste',
-              pseudo:nil, sexe:'Femme', annee:nil,
+              sexe:'Femme',
               fonction:'Antagoniste', description:'Description de l\'antagoniste.'
             }
           ].each do |hperso|
@@ -115,14 +115,14 @@ describe 'Extraction au format :html' do
         [
           {
             id:1, numero:1,
-            resume: '{:raw=>"Résumé de la première scène. b1 (6)", :to_str=>nil, :personnages_ids=>[], :notes_ids=>[6], :brins_ids=>[1], :scene_id=>1, :scenes_ids=>nil, :horloge=>nil}',
+            resume: {:raw=>"Résumé de la première scène. b1 (6)", :notes_ids=>'6', :brins_ids=>'1', :scene_id=>'1'},
             horloge:'0:00:30',
             lieu:'INT.', effet:'JOUR', decor:'MAISON DE JOE',
             brins_ids: '1', notes_ids: '6'
           },
           {
             id:2, numero:2,
-            resume:'{:raw=>"Résumé de la deuxième scène. b2 b1", :to_str=>nil, :personnages_ids=>[], :notes_ids=>[], :brins_ids=>[2, 1], :scene_id=>2, :scenes_ids=>nil, :horloge=>nil}',
+            resume:{:raw=>'Résumé de la deuxième scène. b2 b1', :brins_ids=>'2,1', :scene_id=>'2'},
             horloge: '0:01:40', lieu:'EXT.', effet:'NUIT', decor:'JARDIN PUBLIC',
             brins_ids: '2,1', notes_ids: '4,5,6',
             paragraphes: [
@@ -133,7 +133,7 @@ describe 'Extraction au format :html' do
           },
           {
             id:3, numero:3,
-            resume:'{:raw=>"Résumé de la troisième. (3) b1 b3", :to_str=>nil, :personnages_ids=>[], :notes_ids=>[3], :brins_ids=>[1, 3], :scene_id=>3, :scenes_ids=>nil, :horloge=>nil}',
+            resume:{:raw=>'Résumé de la troisième. (3) b1 b3', :notes_ids=>'3', :brins_ids=>'1,3', :scene_id=>3},
             horloge:'0:03:20',
             lieu:'INT.', lieu_alt:'EXT.',
             effet:'JOUR',
@@ -147,19 +147,22 @@ describe 'Extraction au format :html' do
         ].each do |hscene|
           it "les données de la scène ##{hscene[:id]}" do
             expect(code).to match /<div(.*?)>Scene #{hscene[:numero]}<\/div>/
+
+            data_resume       = hscene.delete(:resume)
+            data_paragraphes  = hscene.delete(:paragraphes)
+
+            data_resume.each do |prop,valu|
+              expect(code).to include div_libval(prop, valu)
+            end
+
             hscene.each do |prop,valu|
-              valu =
-                case prop
-                when :resume then Regexp::escape(valu)
-                else valu
-                end
               expect(code).to include div_libval(prop, valu)
             end
 
             # Test sur les paragraphes
-            if hscene.key?(:paragraphes)
-              hscene[:paragraphes].each do |hparag|
-                expect(code).to match /<span(.*?)>Paragraphe #{hparag[:index]}<\/span>/
+            if data_paragraphes
+              data_paragraphes.each do |hparag|
+                expect(code).to match /<div(.*?)>Paragraphe #{hparag[:index]}<\/div>/
                 expect(code).to include div_libval( 'raw', hparag[:raw] )
               end
             end

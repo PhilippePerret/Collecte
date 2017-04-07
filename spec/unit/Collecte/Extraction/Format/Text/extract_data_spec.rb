@@ -139,6 +139,9 @@ describe 'Extraction au format :text' do
         ].each do |hscene|
           it "les données de la scène ##{hscene[:id]}" do
             expect(code).to match /^Scene #{hscene[:numero]}$/
+
+            dparagraphes = hscene.delete(:paragraphes)
+
             hscene.each do |prop,valu|
               valu =
                 case prop
@@ -149,10 +152,11 @@ describe 'Extraction au format :text' do
             end
 
             # Test sur les paragraphes
-            if hscene.key?(:paragraphes)
-              hscene[:paragraphes].each do |hparag|
+            if dparagraphes
+              dparagraphes.each do |hparag|
                 expect(code).to match /^\tParagraphe #{hparag[:index]}$/
-                expect(code).to match /^\t\traw(.*?)#{hparag[:raw]}$/
+                raw = Regexp.escape(hparag[:raw])
+                expect(code).to match /^\t\traw(.*?)#{raw}$/
               end
             end
 

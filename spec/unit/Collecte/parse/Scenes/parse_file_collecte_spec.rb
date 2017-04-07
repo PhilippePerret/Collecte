@@ -36,7 +36,6 @@ describe 'Parsing du collecte des scènes' do
     it 'définit correctement la première scène' do
       dscenes = datam[:items]
       scene1 = dscenes[1]
-      puts "scene1 : #{scene1.inspect}"
       expect(scene1).not_to eq nil
       {
         numero:   1,
@@ -53,7 +52,6 @@ describe 'Parsing du collecte des scènes' do
         brins_id: nil,
         notes_ids: []
       }.each do |prop, expected|
-        puts "#{prop} -> #{expected.inspect}"
         expect(scene1[:resume][prop]).to eq expected
       end
     end

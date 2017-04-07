@@ -10,6 +10,7 @@ class << self
       raise "Impossible de trouver le module #{module_path}…"
     end
   end
+  alias :require_module :load_module
 
 
   def module_folder
