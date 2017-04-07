@@ -18,7 +18,7 @@ class Extractor
         end
       write prop, valu
     end
-    flush_file_content
+    final_file.flush
   end
 
   def extract_personnages_data
@@ -31,6 +31,7 @@ class Extractor
       write '</personnage>'
     end
     write '</personnages>'
+    final_file.flush
   end
   #/extract_personnages_data
 
@@ -44,7 +45,7 @@ class Extractor
       write "\t</brin>"
     end
     write '</brins>'
-    flush_file_content
+    final_file.flush
   end
 
   def extract_scenes_data
@@ -76,7 +77,7 @@ class Extractor
       write "\t</scene>"
     end
     write '</scenes>'
-    flush_file_content
+    final_file.flush
   end
 
 end #/Extractor

@@ -19,7 +19,7 @@ class Extractor
         end
       write prop, valu
     end
-    flush_file_content
+    final_file.flush
   end
   # /extract_meta_data
 
@@ -33,7 +33,7 @@ class Extractor
       end
     end
     write '</personnages>'
-    flush_file_content
+    final_file.flush
   end
   # /extract_personnages_data
 
@@ -48,7 +48,7 @@ class Extractor
       end
     end
     write '</brins>'
-    flush_file_content
+    final_file.flush
   end
   # /extract_brins_data
 
@@ -101,7 +101,7 @@ class Extractor
       end
       write '</scenes>'
     end
-    flush_file_content
+    final_file.flush
   end
   # /extract_scenes_data
 

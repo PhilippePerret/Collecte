@@ -8,6 +8,7 @@ class Extractor
   # +options+
   #   :before_label     Texte à mettre avant le label
   #   :class_span       {String} La classe à donner au span
+  # 
   def write label, valeur = nil, options = nil
     options ||= Hash.new
 
@@ -30,7 +31,7 @@ class Extractor
         )
       end
     # On ajoute cette donnée au contenu complet du fichier
-    @file_content << (line_extract + RC)
+    final_file << (line_extract + RC)
   end
 
 end #/Extractor

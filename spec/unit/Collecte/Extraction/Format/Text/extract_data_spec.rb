@@ -9,8 +9,8 @@ describe 'Extraction au format :text' do
 
   describe 'de toutes les données' do
     before(:all) do
-      File.unlink(@collecte.extractor(:text).path) if File.exist?(@collecte.extractor(:text).path)
-      expect(File.exist? @collecte.extractor(:text).path).to eq false
+      File.unlink(@collecte.extractor(:text).final_file.path) if File.exist?(@collecte.extractor(:text).final_file.path)
+      expect(File.exist? @collecte.extractor(:text).final_file.path).to eq false
       @collecte.extract(format: :text, open_file: false)
 
       col = Collecte.new(folder_test_2)

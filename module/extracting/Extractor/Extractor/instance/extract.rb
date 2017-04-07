@@ -35,6 +35,7 @@ class Extractor
   def default_options opts
     opts ||= Hash.new
     opts.key?(:open_file) || opts.merge!(open_file: false)
+    opts.key?(:full_file) || opts.merge!(full_file: true)
     return opts
   end
 

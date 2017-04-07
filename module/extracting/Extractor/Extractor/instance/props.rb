@@ -5,15 +5,14 @@ class Extractor
   # {Collecte} L'instance de la collecte courante
   attr_reader :collecte
 
-  # {String} Contenu du fichier
-  # C'est le texte qui sera extrait, contenant toutes les
-  # données extraites.
-  attr_reader :file_content
-
   # {Symbol} Format de sortie des données
   attr_accessor :format
 
   def film ; @film ||= collecte.film end
 
+  def date
+    @date ||= Time.now.strftime("%d %m %Y - %H:%M")
+  end
+  
 end #/Extractor
 end #/Collect

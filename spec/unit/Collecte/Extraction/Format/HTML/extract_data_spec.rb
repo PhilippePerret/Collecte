@@ -17,8 +17,8 @@ describe 'Extraction au format :html' do
 
   describe 'de toutes les données' do
     before(:all) do
-      File.unlink(@collecte.extractor(:html).path) if File.exist?(@collecte.extractor(:html).path)
-      expect(File.exist? @collecte.extractor(:html).path).to eq false
+      File.unlink(@collecte.extractor(:html).final_file.path) if File.exist?(@collecte.extractor(:html).final_file.path)
+      expect(File.exist? @collecte.extractor(:html).final_file.path).to eq false
       @collecte.extract(format: :html, open_file: false)
 
       col = Collecte.new(folder_test_2)

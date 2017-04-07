@@ -24,7 +24,7 @@ class Extractor
         EOT
       end
     # On ajoute cette donnée au contenu complet du fichier
-    @file_content << (line_extract + RC)
+    final_file << (line_extract + RC)
   end
 
 end #/Extractor
