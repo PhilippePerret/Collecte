@@ -48,7 +48,7 @@ describe 'Parsing du collecte des scènes' do
       {
         raw:      'Résumé de la première scène.',
         scene_id: 1,
-        to_str:   'Résumé de la première scène.',
+        only_str:   'Résumé de la première scène.',
         brins_id: nil,
         notes_ids: []
       }.each do |prop, expected|
@@ -81,7 +81,7 @@ describe 'Parsing du collecte des scènes' do
         # puts "paragraphe 1 : #{parag1.inspect}"
         {
           raw: 'Paragraphe 1 de troisième. Avec première note. (1)',
-          to_str: 'Paragraphe 1 de troisième. Avec première note.',
+          only_str: 'Paragraphe 1 de troisième. Avec première note.',
           notes_ids: [1],
           scene_id: 3
         }.each do |prop, expected|
@@ -91,7 +91,7 @@ describe 'Parsing du collecte des scènes' do
         # puts "Paragraphe 2 : #{parag2.inspect}"
         {
           raw:    'Paragraphe 2 de troisième. Avec deuxième brin. b2',
-          to_str: 'Paragraphe 2 de troisième. Avec deuxième brin.',
+          only_str: 'Paragraphe 2 de troisième. Avec deuxième brin.',
           brins_ids: [2],
           scene_id: 3
         }.each do |prop, expected|
