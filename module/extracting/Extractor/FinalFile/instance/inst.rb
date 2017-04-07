@@ -3,8 +3,9 @@ class Collecte
 class Extractor
 class FinalFile
 
-  def initialise collecte
+  def initialize collecte, options = nil
     @collecte = collecte
+    @options  = options
   end
 
 end #/FinalFile

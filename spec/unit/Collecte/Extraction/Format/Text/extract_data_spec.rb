@@ -16,11 +16,11 @@ describe 'Extraction au format :text' do
       col = Collecte.new(folder_test_2)
       col.film.load
       col.extract(format: :text, open_file: false)
-      @code = File.read(col.extractor(:text).path)
+      @code = File.read(col.extractor(:text).final_file.path)
 
     end
     it 'produit le fichier contenant les données extraites' do
-      expect(File.exist? collecte.extractor(:text).path).to eq true
+      expect(File.exist? collecte.extractor(:text).final_file.path).to eq true
     end
 
     describe 'contenant' do

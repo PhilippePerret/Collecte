@@ -12,6 +12,15 @@ class FinalFile
     return true # pour dire de continuer
   end
 
+  # Finalisation du fichier
+  # Cette méthode sert juste pour les formats :XML et
+  # :TEXT qui pour le moment ne font rien d'autre. Pour
+  # :HTML, une méthode propre permet de finaliser complètement
+  # le fichier HTML.
+  def finalise
+    return true # pour dire de continuer
+  end
+
 end #/FinalFile
 end #/Extractor
 end #/Collecte

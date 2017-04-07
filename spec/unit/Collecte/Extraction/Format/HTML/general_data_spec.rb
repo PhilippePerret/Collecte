@@ -6,7 +6,6 @@ describe 'Extraction au format :html' do
     "<div class=\"libval\"><span class=\"label\">#{label}</span><span class=\"value\">#{valeur}</span></div>"
   end
 
-
   before(:all) do
     @collecte = Collecte.new(folder_test_2)
     @collecte.parse
@@ -24,14 +23,26 @@ describe 'Extraction au format :html' do
       col = Collecte.new(folder_test_2)
       col.film.load
       col.extract(format: :html, open_file: false)
-      @code = File.read(col.extractor(:html).path)
+      @code = File.read(col.extractor(:html).final_file.path)
 
     end
     it 'produit le fichier contenant les données extraites' do
-      expect(File.exist? collecte.extractor(:html).path).to eq true
+      expect(File.exist? collecte.extractor(:html).final_file.path).to eq true
     end
 
-    describe 'contenant' do
+    describe 'produit un fichier contenant' do
+      it 'la balise générale du doctype' do
+        expect(code).to include '<!DOCTYPE'
+      end
+      it 'la balise générale <html>' do
+        expect(code).to include '<html lang="fr">'
+        expect(code).to include '</html>'
+      end
+      it 'la balise <head>' do
+        expect(code).to include '<head>'
+        expect(code).to include '</head>'
+      end
+      
       it 'la marque principale du film' do
         expect(code).to include 'FILM : Everest2016'
       end
