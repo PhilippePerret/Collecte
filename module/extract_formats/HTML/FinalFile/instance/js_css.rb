@@ -8,26 +8,39 @@ class Collecte
 class Extractor
 class FinalFile
 
+
+  def whole_css_code
+    cssise_all_sass
+    '<style type="text/css">' +
+      Dir["#{folder_css}/**/*.css"].collect do |css|
+        File.read(css)
+      end.join(RC) +
+    '</style>'
+  end
+  def cssise_all_sass
+    require 'sass'
+    Dir["#{folder_css}/**/*.sass"].each do |sass|
+      code_css = Sass.compile(File.read(sass), sass_options)
+      css_name = File.basename(sass, File.extname(sass)) + '.css'
+      css_path = File.join(File.dirname(sass), css_name)
+      File.open(css_path,'wb'){|f| f.write code_css}
+    end
+  end
+  # Options de transformation SASS->CSS
+  def sass_options
+    @sass_options ||= {
+      line_comments:  false,
+      syntax:         :sass,
+      style:          :compressed
+    }
+  end
+
   FEUILLES_DE_STYLES = [
     # l'id doit être une clé de
     {id: 'evenemencier',  affixe: 'evenemencier',   title: 'Évènemencier'},
     {id: 'chemindefer',   affixe: 'chemin_de_fer',  title: 'Chemin_de_fer'},
     {id: 'sequencier',    affixe: 'sequencier',     title: 'Séquencier'}
   ]
-
-
-  # Méthode qui permet de produire le code pour charger une feuille de styles
-  # qui se trouve dans le dossier lib/css du dossier analyse.
-  # Ce code CSS est "accroché" au document produit.
-  def balise_styles affixe_file
-    '<style type="text/css">' +
-      File.read(css_file)     +
-    '</style>'
-  end
-
-  def css_file
-    @css_file ||= File.join(folder_css, 'all.css')
-  end
 
   # Données javascript a donner au programme d'extraction
   def data_javascript

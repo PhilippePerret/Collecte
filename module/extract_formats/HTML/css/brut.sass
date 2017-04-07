@@ -1,0 +1,33 @@
+/**
+  * Quand les données sont brutes
+  *
+  */
+body
+  font-family     : Open-sans
+  font-size       : 13.8pt
+  padding         : 2em
+
+.liste_objets_relatifs
+  .titre
+    font-size       : 1.2em
+    margin-top      : 2em
+    margin-bottom   : 1em
+  .stitre
+    font-size       : 1.05em
+    text-decoration : underline
+    margin-top      : 1em
+    margin-bottom   : 0.5em
+
+  div.libval
+    &:nth-child(even)
+      background  : #FFF
+    &:nth-child(odd)
+      background  : #CCF
+    span
+      &.label
+        display     : inline-block
+        width       : 200px
+        color       : #555
+        font-style  : italic
+      &.value
+        color       : black

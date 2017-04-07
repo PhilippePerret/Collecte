@@ -64,11 +64,7 @@ FILM : #{collecte.film.id}
     File.read(path)
   end
 
-  def feuilles_css
-    '<!-- TODO Feuilles CSS -->'
-  end
-
-  def scripts_javascript
+  def whole_javascript_code
     '<!-- SCRIPTS JAVASCRIPT -->'
   end
 

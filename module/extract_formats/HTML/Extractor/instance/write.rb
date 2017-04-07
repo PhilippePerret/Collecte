@@ -8,7 +8,7 @@ class Extractor
   # +options+
   #   :before_label     Texte à mettre avant le label
   #   :class_span       {String} La classe à donner au span
-  # 
+  #
   def write label, valeur = nil, options = nil
     options ||= Hash.new
 
@@ -21,7 +21,7 @@ class Extractor
         elsif options[:div_class]
           div(label, {class: options[:div_class]})
         else
-          div(label)
+          label
         end
       else
         div(
