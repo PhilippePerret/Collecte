@@ -18,7 +18,7 @@ class Extractor
     final_file.prepare || return
 
     case options[:as]
-    when :outline, :sequencier
+    when :sequencier
       extract_data_as_sequencier
     else # ou :whole
       # Sans précision du format de sortie voulu
@@ -53,6 +53,13 @@ class Extractor
     opts.key?(:full_file) || opts.merge!(full_file: true)
     opts.key?(:as)        || opts.merge!(as: :whole)
     opts[:as] != :outline || opts[:as] = :sequencier
+
+    # Les temps sont transformés en secondes
+    [:from_time, :to_time].each do |prop|
+      if opts.key?(prop) && opts[prop].instance_of?(String)
+        opts[prop] = opts[prop].h2s
+      end
+    end
 
     return opts
   end

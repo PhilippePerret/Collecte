@@ -18,21 +18,34 @@ class Extractor
     write div(titre, id: 'titre')
     write '<section id="sequencier" class="scenes">'
     from_time = options[:from_time] || 0
-    to_time   = options[:to_time]   || 100*3600
+    to_time   = options[:to_time]   || Float::INFINITY
+    nombre_de_scenes = 0
     film.scenes.each do |scene_id, scene|
       scene.time >= from_time || next
       scene.time <= to_time   || next
       # La scène doit être prise
       write scene.as_sequence
+      nombre_de_scenes += 1
     end
     write '</section>'
+
+    if nombre_de_scenes == 0
+      # => Aucune scène n'a été inscrite
+      begin
+        entrela = from_time > 0 ? from_time.s2h : 'le début du film'
+        etla  = to_time < Float::INFINITY ? to_time.s2h : 'la fin du film'
+        raise "Aucune scène n'est comprise entre #{entrela} et #{etla}."
+      rescue Exception => e
+        log '', error: e
+      end
+    end
 
     final_file.flush
 
     extract_fiches_personnages
     extract_fiches_brins
     extract_fiches_notes
-    
+
   end
 
   def extract_fiches_personnages

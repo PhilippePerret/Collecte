@@ -1,8 +1,8 @@
 * Traiter le type du fichier à sortir, c'est-à-dire une liste de brins, un évènemencier, etc. (options :type)
 
-* Quand le résumé de la scène est déterminé, on doit mettre ses relatifs dans la scène (rappel : le résumé est un TextObjet)
+* Traiter la propriété `duree` d'une scène, en la calculant avec le temps de la scène suivante ou la fin du film.
 
-* Traiter les décors (Film::Decor, film.decors)
+* Traiter les décors (Film::Decor, film.decors) (utile ?)
 
 * Copier le fichier `process.log` dans le dossier de collecte
 
