@@ -7,6 +7,35 @@ Collecte.require_module 'html_methods'
 class Collecte
 class Extractor
 
+  # ---------------------------------------------------------------------
+  #   Méthodes utilisées quand on doit extraire un
+  #   séquencier
+  # ---------------------------------------------------------------------
+  def extract_sequencier
+
+    titre = "Séquencier du film “#{film.titre}”"
+    final_file.title = titre # balise title
+    write div(titre, id: 'titre')
+    write '<section id="sequencier" class="scenes">'
+    from_time = options[:from_time] || 0
+    to_time   = options[:to_time]   || 100*3600
+    film.scenes.each do |scene_id, scene|
+      scene.time >= from_time || next
+      scene.time <= to_time   || next
+      # La scène doit être prise
+      write scene.as_sequence
+    end
+    write '</section>'
+
+    final_file.flush
+
+  end
+
+  # ---------------------------------------------------------------------
+  #   Méthodes utilisées quand on doit extraire toutes
+  #   les données
+  # ---------------------------------------------------------------------
+
   def extract_meta_data
     write '<metadata class="liste_objets_relatifs">'
     write '=== MÉTADONNÉES ===', nil, {div_class: 'titre'}

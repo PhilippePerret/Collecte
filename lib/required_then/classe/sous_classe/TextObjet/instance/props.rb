@@ -8,6 +8,10 @@ class TextObjet
   # {String} Texte initial de la ligne.
   attr_reader :raw
 
+  # {String} Seulement le texte (sans les marques
+  # de relatifs à la fin)
+  attr_reader :only_str
+
   # {Film::Horloge} Horloge éventuelle du texte-objet
   attr_reader :horloge
 

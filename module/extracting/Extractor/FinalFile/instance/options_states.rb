@@ -10,6 +10,14 @@ class FinalFile
     @is_full_file ||= options[:full_file] == true
   end
 
+  def whole?
+    @whole_data ||= options[:as] == :whole
+  end
+  def sequencier?
+    @as_sequencier ||= options[:as] == :sequencier
+  end
+  alias :outline? :sequencier?
+
 
 end #/FinalFile
 end #/Extractor

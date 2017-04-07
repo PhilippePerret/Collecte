@@ -5,6 +5,9 @@ class Extractor
   # {Collecte} L'instance de la collecte courante
   attr_reader :collecte
 
+  # {Hash} Options d'extraction
+  attr_reader :options
+  
   # {Symbol} Format de sortie des données
   attr_accessor :format
 
@@ -13,6 +16,6 @@ class Extractor
   def date
     @date ||= Time.now.strftime("%d %m %Y - %H:%M")
   end
-  
+
 end #/Extractor
 end #/Collect

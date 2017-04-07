@@ -1,5 +1,26 @@
-#
-# Extraction de 07 04 2017 - 12:34
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>
+    Extraction des données du 07 04 2017 - 15:17
+  </title>
+  <style type="text/css">div.simple_brin{border:1px solid #777;padding:2em;line-height:1.3em}div.simple_brin div.brin_titre{font-weight:bold;font-variant:small-caps}div.simple_brin ul.brin_events{position:relative;font-size:.92em;list-style:square;line-height:1.3em;padding-top:40px}div.simple_brin ul.brin_events div.timeline{position:absolute;top:8px;left:0;height:4px;background-color:blue;z-index:-1}div.simple_brin ul.brin_events li div.btm{position:absolute;top:0;height:20px;width:4px;background-color:#daa520;z-index:0}div.simple_brin ul.brin_events li span.infos{font-size:.85em}div.simple_brin ul.brin_events li:hover div.btm{background-color:red;z-index:10}
+
+body{font-family:Open-sans;font-size:13.8pt;padding:2em}.liste_objets_relatifs .titre{font-size:1.2em;margin-top:2em;margin-bottom:1em}.liste_objets_relatifs .stitre{font-size:1.05em;text-decoration:underline;margin-top:1em;margin-bottom:.5em}.liste_objets_relatifs div.libval:nth-child(even){background:#FFF}.liste_objets_relatifs div.libval:nth-child(odd){background:#CCF}.liste_objets_relatifs div.libval span.label{display:inline-block;width:200px;color:#555;font-style:italic}.liste_objets_relatifs div.libval span.value{color:#000}
+
+div.chemin_de_fer{font-size:15pt;line-height:1.3em;border:1px solid #777;padding:2em}div.chemin_de_fer div.scene{margin-bottom:12px}div.chemin_de_fer div.scene span.numero{font-size:1em;font-weight:bold;float:left;display:inline-block;width:50px}div.chemin_de_fer div.scene span.resume{display:block;margin-left:50px}div.chemin_de_fer div.scene span.horloge{float:right;font-size:11pt;margin-left:2em}
+
+div.events{font-size:15pt;line-height:1.3em;border:1px solid #777;padding:2em}div.events div.scene{line-height:1.15em;margin-bottom:12px}div.events div.scene span.horloge{width:80px;font-size:11pt}div.events div.scene span.intitule{font-size:.65em;margin-left:0;font-weight:bold}div.events div.scene span.intitule span.numero{font-size:1.3em}div.events div.scene span.resume{display:block;margin-left:80px}
+
+body{margin:2em;font-size:11.8pt}div#titre{font-size:1.4em;margin-top:2em;margin-bottom:2em}section#sequencier{padding:2em;border:1px solid #ccc;border-radius:1em}section#sequencier div.scene{margin-top:1em}section#sequencier div.scene div.intitule{font-weight:bold;font-variant:small-caps;font-size:1.12em;clear:both}section#sequencier div.scene div.intitule span.lieu,section#sequencier div.scene div.intitule span.effet,section#sequencier div.scene div.intitule span.decor{margin-left:12px}section#sequencier div.scene div.intitule span.horloge{display:inline-block;width:60px;font-weight:normal;font-family:Georgia;font-size:.8em;vertical-align:middle}section#sequencier div.scene div.resume{margin-left:72px;font-size:1.1em}
+</style>
+  <!-- SCRIPTS JAVASCRIPT -->
+</head>
+<body>
+  
+  #
+# Extraction de 07 04 2017 - 15:17
 # ================================
 # Film : Everest2016
 #
@@ -164,7 +185,7 @@ Scene 3
 Scene 4
 	id                     4
 	numero                 4
-	horloge                0:4:53
+	horloge                0:04:53
 	resume                 {:raw=>"Résumé de la quatrième scène. (2) b4", :to_str=>nil, :personnages_ids=>[], :notes_ids=>[2], :brins_ids=>[4], :scene_id=>4, :scenes_ids=>nil, :horloge=>nil}
 	effet                  NUIT
 	effet_alt              
@@ -176,3 +197,6 @@ Scene 4
 	brins_ids              4
 	notes_ids              2
 	scenes_ids             
+
+</body>
+</html>

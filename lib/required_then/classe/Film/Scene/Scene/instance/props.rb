@@ -30,6 +30,13 @@ class Scene
   def notes
     @notes ||= Film::Notes.new(self.film)
   end
-  
+
+  # === Raccourcis ===
+  def time
+    @time ||= begin
+      horloge.nil? ? nil : horloge.time
+    end
+  end
+
 end #/Scene
 end #/Film

@@ -31,11 +31,6 @@ class TextObjet
     @only_str
   end
 
-  # Version HTML du texte-objet
-  def to_html options = nil
-
-  end
-
 
 end #/TextObjet
 end #/Film

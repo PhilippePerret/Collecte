@@ -1,8 +1,7 @@
-{:created_atl+‡ÅÁX:film_idI"sequences2017:ET:
-items{I"
-prota;T{:idI"
-prota;T:prenomI"Pr√©nom1;T:nomI"Nom Du Protagoniste;T:pseudoI"Le Protagoniste;T:	sexeI"
+{:created_atl+ìÁX:film_idI"sequences2017:ET:
+items{I"joe;T{:idI"joe;T:prenomI"Joe;T:nomI"
+Prota;T:pseudoI"Joe Prota;T:	sexeI"
 Homme;T:
-anneeI"	2000;T:fonctionI"Protagoniste;T:descriptionI"!Description du protagoniste.;T:nom_acteur0:prenom_acteur0:scenes_ids0I"	anta;T{;	I"	anta;T;
-I"Pr√©nom2;T;I"Nom De l'Antagoniste;T;I""Pr√©nom2 Nom De l'Antagoniste;T;I"
-Femme;T;0;I"Antagoniste;T;I""Description de l'antagoniste.;T;0;0;0
+anneeI"	2000;T:fonctionI"Protagoniste;T:descriptionI"%Description du protagoniste Joe.;T:nom_acteur0:prenom_acteur0:scenes_ids0I"jan;T{;	I"jan;T;
+I"Jan;T;I"	Anta;T;I"Jan;T;I"
+Femme;T;0;I"Antagoniste;T;I"&Description de l'antagoniste Jan.;T;0;0;0

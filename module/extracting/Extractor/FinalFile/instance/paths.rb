@@ -3,7 +3,7 @@ class Collecte
 class Extractor
 class FinalFile
 
-  def extension
+  def fextension
     case format
     when :html  then 'html'
     when :text  then 'txt'
@@ -11,8 +11,20 @@ class FinalFile
     end
   end
 
+  def fname
+    @name ||= begin
+      case options[:as]
+      when :sequencier
+        # TODO Tenir compte des valeurs :from_time, :to_time
+        "sequencier.#{fextension}"
+      else
+        "extract_data.#{fextension}"
+      end
+    end
+  end
+
   def path
-    @path ||= File.join(folder, "extract_data.#{extension}")
+    @path ||= File.join(folder, fname)
   end
 
   def folder

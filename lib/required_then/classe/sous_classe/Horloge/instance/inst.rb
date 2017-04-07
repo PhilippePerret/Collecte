@@ -4,7 +4,8 @@ class Horloge
 
   def initialize film, horl
     @film     = film
-    @horloge  = horl
+    @time     = horl.h2s
+    @horloge  = @time.s2h # pour l'avoir toujours complète
   end
 
 end #/Horloge

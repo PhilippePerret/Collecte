@@ -49,9 +49,11 @@ FILM : #{collecte.film.id}
 
   def bind; binding() end
 
+  def title= value ; @title = value end
   def title
-    # TODO À définir
-    "Extraction des données du #{collecte.extractor.date}"
+    @title ||= begin
+      "Extraction des données du #{collecte.extractor.date}"
+    end
   end
 
   def bandeau_superieur

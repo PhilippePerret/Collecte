@@ -11,8 +11,15 @@ class FinalFile
 
   def whole_css_code
     cssise_all_sass
+    liste_feuilles_styles =
+      case options[:as]
+      when :sequencier, :outline
+        ["#{folder_css}/sequencier.css"]
+      else
+        Dir["#{folder_css}/**/*.css"]
+      end
     '<style type="text/css">' +
-      Dir["#{folder_css}/**/*.css"].collect do |css|
+      liste_feuilles_styles.collect do |css|
         File.read(css)
       end.join(RC) +
     '</style>'
@@ -20,12 +27,21 @@ class FinalFile
   def cssise_all_sass
     require 'sass'
     Dir["#{folder_css}/**/*.sass"].each do |sass|
-      code_css = Sass.compile(File.read(sass), sass_options)
       css_name = File.basename(sass, File.extname(sass)) + '.css'
       css_path = File.join(File.dirname(sass), css_name)
+      outofdate(sass, css_path) || next
+      code_css = Sass.compile(File.read(sass), sass_options)
       File.open(css_path,'wb'){|f| f.write code_css}
     end
   end
+  # Un fichier est out-of-date si le fichier source est
+  # plus récent que le fichier destination ou si le fichier
+  # destination n'existe pas
+  def outofdate src, dst
+    File.exist?(dst) || (return true)
+    return File.stat(src).mtime > File.stat(dst).mtime
+  end
+
   # Options de transformation SASS->CSS
   def sass_options
     @sass_options ||= {
