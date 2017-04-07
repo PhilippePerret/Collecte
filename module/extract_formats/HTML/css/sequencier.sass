@@ -1,15 +1,21 @@
 body
   margin    : 2em
   font-size : 11.8pt
+  position  : relative
+
+a
+  text-decoration   : none
+  color             : #007
+
 div#titre
-  font-size     : 1.4em
-  margin-top    : 2em
-  margin-bottom : 2em
+  font-size     : 1.9em
+  margin-top    : 1em
+  margin-bottom : 1em
 
 section#sequencier
-  padding       : 2em
+  padding       : 1em 2em 2em 2em
   border        : 1px solid #ccc
-  border-radius : 1em
+  border-radius : 0.5em
 
   div.scene
     margin-top      : 1em
@@ -33,3 +39,31 @@ section#sequencier
     div.resume
       margin-left       : 72px // largeur horloge + mg
       font-size         : 1.1em
+
+
+div.fiche
+  position          : absolute
+  width             : 280px
+  top               : 12px
+  right             : 12px
+  background-color  : #000069
+  color             : white
+  border-radius     : 1em
+  padding           : 2em
+  &.hidden
+    display           : none
+
+  div.titre
+    font-size         : 1.1em
+    font-weight       : bold
+    margin-bottom     : 1em
+
+  a.closebox
+    position          : absolute
+    font-family       : Helvetica, Arial
+    top               : 12px
+    right             : 12px
+    background-color  : red
+    color             : white
+    padding           : 0 5px 1px
+    border-radius     : 5px

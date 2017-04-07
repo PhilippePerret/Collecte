@@ -29,6 +29,32 @@ class Extractor
 
     final_file.flush
 
+    extract_fiches_personnages
+    extract_fiches_brins
+    extract_fiches_notes
+    
+  end
+
+  def extract_fiches_personnages
+    film.personnages || return
+    film.personnages.each do |perso_id, perso|
+      write perso.as_fiche
+    end
+    final_file.flush
+  end
+  def extract_fiches_brins
+    film.brins || return
+    film.brins.each do |bid, brin|
+      write brin.as_fiche
+    end
+    final_file.flush
+  end
+  def extract_fiches_notes
+    film.notes || return
+    film.notes.each do |nid, note|
+      write note.as_fiche
+    end
+    final_file.flush
   end
 
   # ---------------------------------------------------------------------

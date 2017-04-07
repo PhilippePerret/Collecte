@@ -2,13 +2,13 @@ describe 'Sortie sous forme de séquencier complet' do
   before(:all) do
     # On force le parsing dans le cas où il y ait des
     # modifications.
-    Collecte.new(folder_test_3).parse
+    # Collecte.new(folder_test_3).parse
 
     # Nouvelle instance pour forcer le chargement
     @collecte = Collecte.new(folder_test_3)
     @collecte.extract(format: :html, as: :sequencier)
     @code = File.read(@collecte.extractor(:html).final_file.path)
-    puts "@code = #{RC}#{@code}"
+    # puts "@code = #{RC}#{@code}"
   end
 
   let(:collecte) { @collecte }

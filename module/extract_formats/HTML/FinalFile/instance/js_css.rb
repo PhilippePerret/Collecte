@@ -8,12 +8,23 @@ class Collecte
 class Extractor
 class FinalFile
 
+  def whole_javascript_code
+    '<script type="text/javascript">' +
+    case options[:as]
+    when :sequencier
+      ["#{folder_js}/sequencier.js"]
+    else
+      []
+    end.collect do |js_path|
+      File.read(js_path).gsub(/#{RC}/,'')
+    end.join(RC) + '</script>'
+  end
 
   def whole_css_code
     cssise_all_sass
     liste_feuilles_styles =
       case options[:as]
-      when :sequencier, :outline
+      when :sequencier
         ["#{folder_css}/sequencier.css"]
       else
         Dir["#{folder_css}/**/*.css"]
@@ -80,6 +91,10 @@ const FEUILLES_DE_STYLES  = [#{liste_feuille_de_styles}];
 
   def folder_css
     @folder_css ||= File.join(MAIN_FOLDER,'module','extract_formats','HTML','css')
+  end
+
+  def folder_js
+    @folder_js ||= File.join(MAIN_FOLDER,'module','extract_formats','HTML','js')
   end
 
 end #/FinalFile

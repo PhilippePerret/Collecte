@@ -8,6 +8,17 @@ def span content, attrs = nil
   "#{opened_tag 'span', attrs}#{content}</span>"
 end
 
+def link content, attrs = nil
+  "#{opened_tag 'a', attrs}#{content}</a>"
+end
+
+# Retourne un code type pour une boite de fermeture
+# de petite fenetre
+def closebox js_method, attrs = nil
+  attrs ||= Hash.new
+  attrs.merge!({href: '#', onclick: js_method, class: 'closebox'})
+  link('x', attrs)
+end
 # ---------------------------------------------------------------------
 #   Méthodes fonctionnelles
 # ---------------------------------------------------------------------

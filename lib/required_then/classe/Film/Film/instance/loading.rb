@@ -5,8 +5,15 @@ class Film
 
   # Charger les données, mais seulement si elles
   # existent
+  # Retourne TRUE si le fichier marshal existe et FALSE
+  # dans le cas contraire.
   def load_if_exist
-    File.exist?(marshal_file) && load
+    if File.exist?(marshal_file)
+      load
+      return true
+    else
+      return false
+    end
   end
 
   # Charger les données du fichier Marshal
@@ -19,6 +26,7 @@ class Film
   end
 
   def dispatch
+    log "-> Film#dispatch"
 
     # log "donnee_totale = #{donnee_totale.inspect}"
 
@@ -53,7 +61,7 @@ class Film
         log "Pas de #{elkey} définis"
         next
       end
-      log "Loading les #{elkey}…"
+      log "Loading des #{elkey}…"
       lesitems.each do |item_id, hitem|
         el = classe.new(self)
         el.dispatch hitem
@@ -66,6 +74,8 @@ class Film
     # DATES
     # -----
     @created_at = donnee_totale[:created_at]
+
+    log "<- Film#dispatch"
   end
 
 end #/Film

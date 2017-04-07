@@ -66,10 +66,6 @@ FILM : #{collecte.film.id}
     File.read(path)
   end
 
-  def whole_javascript_code
-    '<!-- SCRIPTS JAVASCRIPT -->'
-  end
-
 end #/FinalFile
 end #/Extractor
 end #/Collecte
