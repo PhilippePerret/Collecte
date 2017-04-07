@@ -3,7 +3,7 @@ class Film
 class Note
 
   def as_link
-    link("<sup>#{id}</sup>", {href: '#', onclick:"return ShowNote(#{id})"})
+    link("note #{id}", {href: '#', onclick:"return ShowNote(#{id})"})
   end
 
   # Retourne le code HTML de la note comme fiche

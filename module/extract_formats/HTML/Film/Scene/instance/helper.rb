@@ -8,7 +8,7 @@ class Scene
     div(
       intitule_html +
       resume_html,
-      {class: 'scene'}
+      {class: 'scene', id: "scene-#{id}"}
     )
   end
 

@@ -2,6 +2,10 @@
 class Film
 class Brin
 
+  def as_link
+    link("brin #{id}", {href: '#', onclick:"return ShowBrin(#{id})"})
+  end
+
   # Retourne le code HTML pour la fiche du brin
   def as_fiche
     div(
