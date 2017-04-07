@@ -13,6 +13,10 @@ class Extractor
   # ---------------------------------------------------------------------
   def extract_sequencier
 
+    # On calcule le template de l'intitulé en fonction
+    # des choix d'options
+    Film::Scene.build_template_intitule(options)
+    
     titre = "Séquencier du film “#{film.titre}”"
     final_file.title = titre # balise title
     write div(titre, id: 'titre')
@@ -42,6 +46,8 @@ class Extractor
 
     final_file.flush
 
+    # On extrait toutes les fiches des éléments pour
+    # les voir.
     extract_fiches_personnages
     extract_fiches_brins
     extract_fiches_notes
