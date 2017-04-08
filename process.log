@@ -1,58 +1,14 @@
-08/04 22:42:04 Fin du chargement des librairies (lib/required.rb)
-08/04 22:42:04 Parsing préparé avec succès.
-08/04 22:42:04 PARSING DES MÉTADONNÉES…
-08/04 22:42:04 Métadata parsées ({:id=>"Everest2016", :titre=>"Éverest", :auteurs=>["Phil"], :debut=>"3/04/2017", :fin=>nil})
-08/04 22:42:04 PARSING DES BRINS…
-08/04 22:42:04 PARSING DES PERSONNAGES…
-08/04 22:42:04 PARSING DES SCÈNES…
-08/04 22:42:04 	Parsing des scènes
-08/04 22:42:04 ### ERREUR Mauvaises données pour un bloc de scène : La première ligne de la scène "0:01:10 NOIR JOUR\nPetit historique des expéditions au sommet de l'Everest\nPetit historique blanc sur noir des expéditions au sommet de l'Everest, depuis la première expédition en 1953. \nPendant 40 ans, 1 alpiniste professionnel sur 4 meurt en tentant l'aventure à son tour. b10 b11\nEn 1992, Rob Hall (protagoniste) inaugure le concept d'expédition commerciales sur l'Everest pour des amateurs. Jusqu'à l'année du film, 1996.\nFenêtre de deux semaines pour atteindre le sommet.\nb5" est mal formatée. Impossible de décomposer l'intitulé.
-/Users/philippeperret/Programmation/Collecte/module/parsing/Film/Scene/Scene/instance/parse.rb:71:in `parse_first_line'
-/Users/philippeperret/Programmation/Collecte/module/parsing/Film/Scene/Scene/instance/parse.rb:28:in `parse'
-/Users/philippeperret/Programmation/Collecte/module/parsing/Film/Scene/Scenes/instance/parse.rb:14:in `add'
-/Users/philippeperret/Programmation/Collecte/module/parsing/_first_required_/CollecteFile/parse.rb:15:in `block in parse'
-/Users/philippeperret/Programmation/Collecte/module/parsing/_first_required_/CollecteFile/parse.rb:15:in `each'
-/Users/philippeperret/Programmation/Collecte/module/parsing/_first_required_/CollecteFile/parse.rb:15:in `parse'
-/Users/philippeperret/Programmation/Collecte/module/parsing/Collecte/instance/parsing.rb:48:in `parse_scenes'
-/Users/philippeperret/Programmation/Collecte/module/parsing/Collecte/instance/parsing.rb:11:in `parse_all'
-/Users/philippeperret/Programmation/Collecte/lib/required_then/classe/Collecte/Collecte/instance/parse.rb:14:in `parse'
-/Users/philippeperret/Programmation/Collecte/extract.rb:17:in `<main>'
-08/04 22:42:04 ### ERREUR Mauvaises données pour un bloc de scène : La première ligne de la scène "1:13:37 EXT. PUMORI / HAUT DU RESSAUT HILLARY\n(suite) [PERSO#guy] veut que [PERSO#rob] redescende seul. [PERSO#rob] ne veut pas abandonner [PERSO#doug].\n[PERSO#guy] demande à Rob de redescendre seul, qu'ils enverront des gars pour Doug.\n[PERSO#rob] répond qu'ils parlent de la vie d'un homme. Il ne l'abandonne pas." est mal formatée. Impossible de décomposer l'intitulé.
-/Users/philippeperret/Programmation/Collecte/module/parsing/Film/Scene/Scene/instance/parse.rb:71:in `parse_first_line'
-/Users/philippeperret/Programmation/Collecte/module/parsing/Film/Scene/Scene/instance/parse.rb:28:in `parse'
-/Users/philippeperret/Programmation/Collecte/module/parsing/Film/Scene/Scenes/instance/parse.rb:14:in `add'
-/Users/philippeperret/Programmation/Collecte/module/parsing/_first_required_/CollecteFile/parse.rb:15:in `block in parse'
-/Users/philippeperret/Programmation/Collecte/module/parsing/_first_required_/CollecteFile/parse.rb:15:in `each'
-/Users/philippeperret/Programmation/Collecte/module/parsing/_first_required_/CollecteFile/parse.rb:15:in `parse'
-/Users/philippeperret/Programmation/Collecte/module/parsing/Collecte/instance/parsing.rb:48:in `parse_scenes'
-/Users/philippeperret/Programmation/Collecte/module/parsing/Collecte/instance/parsing.rb:11:in `parse_all'
-/Users/philippeperret/Programmation/Collecte/lib/required_then/classe/Collecte/Collecte/instance/parse.rb:14:in `parse'
-/Users/philippeperret/Programmation/Collecte/extract.rb:17:in `<main>'
-08/04 22:42:04 ### ERREUR Mauvaises données pour un bloc de scène : La première ligne de la scène "1:28:10 INT./EXT. CAMP DE BASE : TENTE D'ADVENTURE CONSULTANTS / PETITE MARCHE SOUS LE SOMMET SUD\n[PERSO#rob] se réveille et appelle [PERSO#guy], [PERSO#helen] au camp de base. Il a besoin d'aide. [PERSO#guy] essaie de le convaincre de redescendre, en vain.\nIls se précipitent à la radio lorsqu'ils entendent une sorte d'appel comme un gémissement. C'est [PERSO#rob], coincé sous la neige.\n[PERSO#rob] dit qu'il ne peut plus bouger. [PERSO#guy] prend le talkie et lui dit qu'il faut qu'il bouge. [PERSO#rob] pleure presque en disant que ses mains sont gelées.\n[PERSO#rob] dit qu'il essaie de dégeler son masque. [PERSO#guy] lui répond que c'est bien. Il le motive en lui disant qu'avec le soleil il va se réchauffer et ce sera reparti.\n[PERSO#rob] demande à [PERSO#guy] où se trouve Harold, qui était avec lui.\n[PERSO#helen] prend le talkie pour demander si Doug est avec lui. [PERSO#rob] lui annonce que Doug est mort, comme Harold. Sous la tente, ils sont sous le choc.\n[PERSO#rob] demande un peu d'aide. [PERSO#guy] lui dit qu'il faut qu'il redescende, il lui demande où il est. [PERSO#rob] regarde en bas et dit qu'il se trouve sur la petite marche sous le sommet Sud.\n[PERSO#guy] semble retrouver espoir. Il lui dit de sortir de là, de descendre un peu puis de se laisser glisser.\n[PERSO#rob] demande d'envoyer les gars. Il a besoin d'aide. [PERSO#guy] lui répond qu'ils lui apportent le thé et l'oxygène. Mais il faut qu'il redescende.\n[PERSO#rob] ne répond pas.\n1:30:10 [PERSO#guy] demande à [PERSO#helen] de lui passer sa femme Jan." est mal formatée. Impossible de décomposer l'intitulé.
-/Users/philippeperret/Programmation/Collecte/module/parsing/Film/Scene/Scene/instance/parse.rb:71:in `parse_first_line'
-/Users/philippeperret/Programmation/Collecte/module/parsing/Film/Scene/Scene/instance/parse.rb:28:in `parse'
-/Users/philippeperret/Programmation/Collecte/module/parsing/Film/Scene/Scenes/instance/parse.rb:14:in `add'
-/Users/philippeperret/Programmation/Collecte/module/parsing/_first_required_/CollecteFile/parse.rb:15:in `block in parse'
-/Users/philippeperret/Programmation/Collecte/module/parsing/_first_required_/CollecteFile/parse.rb:15:in `each'
-/Users/philippeperret/Programmation/Collecte/module/parsing/_first_required_/CollecteFile/parse.rb:15:in `parse'
-/Users/philippeperret/Programmation/Collecte/module/parsing/Collecte/instance/parsing.rb:48:in `parse_scenes'
-/Users/philippeperret/Programmation/Collecte/module/parsing/Collecte/instance/parsing.rb:11:in `parse_all'
-/Users/philippeperret/Programmation/Collecte/lib/required_then/classe/Collecte/Collecte/instance/parse.rb:14:in `parse'
-/Users/philippeperret/Programmation/Collecte/extract.rb:17:in `<main>'
-08/04 22:42:04 ### ERREUR Mauvaises données pour un bloc de scène : La première ligne de la scène "1:49:40 EXT. DANS LES AIRS\nL'hélico plonge au-dessus de la crête, [PERSO#beck] à son bord. L'engin manque de percuter un bloc de glace." est mal formatée. Impossible de décomposer l'intitulé.
-/Users/philippeperret/Programmation/Collecte/module/parsing/Film/Scene/Scene/instance/parse.rb:71:in `parse_first_line'
-/Users/philippeperret/Programmation/Collecte/module/parsing/Film/Scene/Scene/instance/parse.rb:28:in `parse'
-/Users/philippeperret/Programmation/Collecte/module/parsing/Film/Scene/Scenes/instance/parse.rb:14:in `add'
-/Users/philippeperret/Programmation/Collecte/module/parsing/_first_required_/CollecteFile/parse.rb:15:in `block in parse'
-/Users/philippeperret/Programmation/Collecte/module/parsing/_first_required_/CollecteFile/parse.rb:15:in `each'
-/Users/philippeperret/Programmation/Collecte/module/parsing/_first_required_/CollecteFile/parse.rb:15:in `parse'
-/Users/philippeperret/Programmation/Collecte/module/parsing/Collecte/instance/parsing.rb:48:in `parse_scenes'
-/Users/philippeperret/Programmation/Collecte/module/parsing/Collecte/instance/parsing.rb:11:in `parse_all'
-/Users/philippeperret/Programmation/Collecte/lib/required_then/classe/Collecte/Collecte/instance/parse.rb:14:in `parse'
-/Users/philippeperret/Programmation/Collecte/extract.rb:17:in `<main>'
-08/04 22:42:04 	Calcul de la durée des scènes
-08/04 22:42:04 	Sauvegarde des scènes
-08/04 22:42:04 ### ERREUR au cours du parsing des scènes : undefined method `-' for nil:NilClass
+08/04 23:04:43 Fin du chargement des librairies (lib/required.rb)
+08/04 23:04:43 Parsing préparé avec succès.
+08/04 23:04:43 PARSING DES MÉTADONNÉES…
+08/04 23:04:43 Métadata parsées ({:id=>"Everest2016", :titre=>"Éverest", :auteurs=>["Phil"], :debut=>"3/04/2017", :fin=>nil})
+08/04 23:04:43 PARSING DES BRINS…
+08/04 23:04:43 PARSING DES PERSONNAGES…
+08/04 23:04:43 PARSING DES SCÈNES…
+08/04 23:04:43 	Parsing des scènes
+08/04 23:04:43 	Calcul de la durée des scènes
+08/04 23:04:43 	Sauvegarde des scènes
+08/04 23:04:43 ### ERREUR au cours du parsing des scènes : undefined method `-' for nil:NilClass
 /Users/philippeperret/Programmation/Collecte/lib/required_then/classe/sous_classe/Horloge/instance/props.rb:31:in `real_end_time'
 /Users/philippeperret/Programmation/Collecte/lib/required_then/classe/sous_classe/Horloge/instance/hash_data.rb:12:in `hash_data'
 /Users/philippeperret/Programmation/Collecte/lib/required_then/classe/sous_classe/TextObjet/instance/output.rb:13:in `hash_data'
@@ -69,8 +25,8 @@
 /Users/philippeperret/Programmation/Collecte/module/parsing/Collecte/instance/parsing.rb:52:in `parse_scenes'
 /Users/philippeperret/Programmation/Collecte/module/parsing/Collecte/instance/parsing.rb:11:in `parse_all'
 /Users/philippeperret/Programmation/Collecte/lib/required_then/classe/Collecte/Collecte/instance/parse.rb:14:in `parse'
-/Users/philippeperret/Programmation/Collecte/extract.rb:17:in `<main>'
-08/04 22:42:04 ### ERREUR à la fin de Collecte#parse : undefined method `-' for nil:NilClass
+/Users/philippeperret/Programmation/Collecte/parse.rb:14:in `<main>'
+08/04 23:04:43 ### ERREUR à la fin de Collecte#parse : undefined method `-' for nil:NilClass
 /Users/philippeperret/Programmation/Collecte/lib/required_then/classe/sous_classe/Horloge/instance/props.rb:31:in `real_end_time'
 /Users/philippeperret/Programmation/Collecte/lib/required_then/classe/sous_classe/Horloge/instance/hash_data.rb:12:in `hash_data'
 /Users/philippeperret/Programmation/Collecte/lib/required_then/classe/sous_classe/TextObjet/instance/output.rb:13:in `hash_data'
@@ -84,4 +40,4 @@
 /Users/philippeperret/Programmation/Collecte/lib/required_then/classe/Film/Film/instance/marshal.rb:16:in `donnee_totale'
 /Users/philippeperret/Programmation/Collecte/lib/required_then/classe/Film/Film/instance/marshal.rb:28:in `save'
 /Users/philippeperret/Programmation/Collecte/lib/required_then/classe/Collecte/Collecte/instance/parse.rb:16:in `parse'
-/Users/philippeperret/Programmation/Collecte/extract.rb:17:in `<main>'
+/Users/philippeperret/Programmation/Collecte/parse.rb:14:in `<main>'

@@ -50,24 +50,35 @@ class Scene
     @notes_ids        = @notes_ids.nil_if_empty
     @scenes_ids       = @scenes_ids.nil_if_empty
     @personnages_ids  = @personnages_ids.nil_if_empty
-    
+
   end
 
   REG_FIRST_LINE_SCENE =
     /^((?:[0-9]:)?(?:[0-9]?[0-9]:[0-9]?[0-9])) (EXT\.|INT\.|NOIR)(?: ?\/ ?(EXT\.|INT\.|NOIR))? (JOUR|NUIT|MATIN|SOIR|NOIR)(?: ?\/ ?(JOUR|NUIT|MATIN|SOIR|NOIR))? (.*?)(?: ?\/ ?(.*?))?$/
 
+  REG_FIRST_LINE_SCENE_SIMPLE =
+    /^((?:[0-9]:)?(?:[0-9]?[0-9]:[0-9]?[0-9])) (NOIR)( GENERIQUE| GÉNÉRIQUE)?$/
+
   def parse_first_line
-    @horloge,
-    @lieu,
-    @lieu_alt,
-    @effet,
-    @effet_alt,
-    @decor,
-    @decor_alt =
-      first_line.match(REG_FIRST_LINE_SCENE).to_a[1..-1]
+    if first_line.match(REG_FIRST_LINE_SCENE)
+      @horloge,
+      @lieu,
+      @lieu_alt,
+      @effet,
+      @effet_alt,
+      @decor,
+      @decor_alt =
+        first_line.match(REG_FIRST_LINE_SCENE).to_a[1..-1]
+    elsif first_line.match(REG_FIRST_LINE_SCENE_SIMPLE)
+      @horloge,
+      @lieu =
+        first_line.match(REG_FIRST_LINE_SCENE_SIMPLE).to_a[1..-1]
+    else
+      raise "La première ligne de scène est mal formatée (#{first_line.inspect})"
+    end
 
     # Erreur de mauvais formatage.
-    if @horloge.nil? || @lieu.nil? || @effet.nil?
+    if @horloge.nil? || @lieu.nil? || (@lieu != 'NOIR' && @effet.nil?)
       raise BadBlocData, "La première ligne de la scène #{bunch_code.inspect} est mal formatée. Impossible de décomposer l'intitulé."
     end
 
