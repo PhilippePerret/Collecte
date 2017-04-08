@@ -1,3 +1,6 @@
+* Documenter la timeline
+  Option :no_timelline pour ne pas l'afficher
+  
 * Gérer la sortie des brins
 
 * Traiter le type du fichier à sortir, c'est-à-dire une liste de brins, un évènemencier, etc. (options :type)

@@ -10,7 +10,7 @@ class TextObjet
       :scene_id, :scenes_ids
     ].each{|prop|h.merge!(prop => self.send(prop))}
     # Autres propriétés
-    h.merge!(horloge: (horloge ? horloge.horloge : nil))
+    h.merge!(horloge: (horloge ? horloge.hash_data : nil))
     return h
   end
 

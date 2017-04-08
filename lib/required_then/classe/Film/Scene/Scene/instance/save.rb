@@ -5,7 +5,7 @@ class Scene
   # Les données qui seront enregistrées dans le fichier
   # marshal.
   def hash_data
-    hor = horloge.nil? ? nil : horloge.horloge
+    hor = horloge.nil? ? nil : horloge.hash_data
     res = resume.nil? ? nil : resume.hash_data
     # TODO Mais contrôler la ligne ci-dessus car ça ne
     # devrait pas arriver que le résumé n'existe pas.

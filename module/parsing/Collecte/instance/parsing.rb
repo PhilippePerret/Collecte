@@ -46,6 +46,8 @@ class Collecte
     log "PARSING DES SCÈNES…"
     log "\tParsing des scènes"
     film.scenes.parse
+    log "\tCalcul de la durée des scènes"
+    film.scenes.each{|ks, s| s.set_duree}
     log "\tSauvegarde des scènes"
     film.scenes.save
   rescue Exception => e

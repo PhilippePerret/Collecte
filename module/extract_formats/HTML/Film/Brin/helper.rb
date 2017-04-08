@@ -16,5 +16,10 @@ class Brin
     )
   end
 
+  # Code HTML de la ligne de temps du brin
+  def timeline
+    div('', {class: 'timeline', style: "left:#{Film::Timeline::TIMELINE_LEFT}px;width:#{Film::Timeline::TIMELINE_WIDTH}px"} )
+  end
+
 end #/Brin
 end #/Film

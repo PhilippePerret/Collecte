@@ -31,6 +31,10 @@ class Extractor
         log '', error: e
       end
     else
+      # ÉCRITURE DE LA TIMELINE
+      write(film.timeline.as_div)
+
+      # LISTE DES SCÈNES
       write '<section id="sequencier" class="scenes">'
       scenes.each do |scene|
         write scene.as_sequence

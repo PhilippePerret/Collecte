@@ -9,7 +9,7 @@ describe 'Extraction des brins' do
       [1,2,3,4,5].each do |num|
         expect(code).to have_tag("div#scene-#{num}")
       end
-      [6].each do |num|
+      [6,7].each do |num|
         expect(code).not_to have_tag("div#scene-#{num}")
       end
     end

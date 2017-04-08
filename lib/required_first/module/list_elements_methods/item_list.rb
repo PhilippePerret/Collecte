@@ -46,6 +46,14 @@ module ListElementsMethods
     @hash.collect { |k, e| yield k, e }
   end
 
+  # Retourne le premier élément de la liste ou nil
+  def first
+    (@hash||{}).values.first
+  end
+  # Retourne le dernier élément de la liste ou nil
+  def last
+    (@hash||{}).values.last
+  end
 
   # Sauver les données dans le fichier marshal
   #

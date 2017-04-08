@@ -23,4 +23,22 @@ class Film
   # peut faire `film.collecte.folder`
   attr_reader :collecte
 
+  # {Film::Horloge} Temps de fin du film
+  def fin ; @fin ||= scenes.last.horloge end
+  alias :end :fin
+
+  # {Film::Horloge} Temps de départ du film
+  # Note : ce temps correspond au temps de la première
+  # scène de la collecte
+  def start ; @debut ||= scenes.first.horloge end
+  alias :debut :start
+
+  # {Fixnum} Durée du film
+  def duree
+    @duree ||= begin
+      scenes.last.horloge.time - scenes.first.horloge.time
+    end
+  end
+
+
 end #/Film
