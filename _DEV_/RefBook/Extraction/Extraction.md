@@ -43,8 +43,20 @@ Cette propriété peut avoir les valeurs :
 
 * Aucune. C'est alors une sortie brute des données, qui peut servir pour des vérifications.
 * `:sequencier`. Sort un séquencier, en HTML principalement.
+* `:brin`. Sort un brin, c'est-à-dire toutes les scènes appartenant à ce ou ces brins. En vérité, ce format consiste à sortir un séquencier avec un filtre sur les brins
 
 ### Sortie des brins {#brinsensortie}
+
+Pour sortir un brin :
+
+~~~
+
+  coll = Collecte.new('mon/dossier/collecte')
+  coll.parse # si nécessaire
+  coll.extract(as: :brin, brin: 12)
+  # => Extrait le fichier "brin_12.html"
+
+~~~
 
 Sortir un brin correspond à définir une sortie en séquencier avec un filtre sur les brins. Donc :
 
@@ -63,36 +75,6 @@ Sortir un brin correspond à définir une sortie en séquencier avec un filtre s
 
 ~~~
 
-#### Définition du filtre
-
-Les filtres fonctionnent en définissant un `String` composé de `+` (brin requis), `,` (brin alternatif) et `()`.
-
-Exemple :
-
-~~~
-  options = {
-    filter: {
-      brins: <valeur du filtre>
-    }
-  }
-~~~
-
-
-~~~
-  Valeur du filtre
-
-  2,45    Toutes les scènes des brins 2 OU 45
-          sont conservées (la virgule est OU).
-
-  2+45    Les scènes doivent appartenir aux brins
-          2 ET au brin 45.
-
-  (2,45)+12
-
-          Signifie que les scènes doivent appartenir
-          au brin 2 OU au brin 45 (mais obligatoirement
-          à au moins 1) ET toujours au brin 12.
-~~~
 
 
 ## Options de formatage (#optionsformatage)

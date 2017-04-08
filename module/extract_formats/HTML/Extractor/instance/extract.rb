@@ -17,9 +17,8 @@ class Extractor
     # des choix d'options
     Film::Scene.build_template_intitule(options)
 
-    titre = "Séquencier du film “#{film.titre}”"
-    final_file.title = titre # balise title
-    write div(titre, id: 'titre')
+    final_file.title = final_file.titre_final # balise title
+    write div(final_file.titre_final, id: 'titre')
 
     if scenes.count == 0
       # => Aucune scène n'a été inscrite

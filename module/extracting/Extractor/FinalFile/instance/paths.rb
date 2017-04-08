@@ -17,6 +17,8 @@ class FinalFile
       when :sequencier
         # TODO Tenir compte des valeurs :from_time, :to_time
         "sequencier.#{fextension}"
+      when :brin
+        "brin_#{options[:filter][:brins].gsub(/[\(\),\+]/,'_')}.#{fextension}"
       else
         "extract_data.#{fextension}"
       end

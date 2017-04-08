@@ -14,8 +14,26 @@ class FinalFile
 
   def format ; @format ||= options[:format] end
 
-  # {Symbol} Type du fichier 
+  # {Symbol} Type du fichier
   def type ; @type ||= options[:type] end
+
+  # Raccourcis
+  def options ; @options  ||= collecte.extractor.options  end
+  def film    ; @film     ||= collecte.film               end
+  
+  # Le titre final, en fonction du type
+  def titre_final
+    @main_titre ||= begin
+      case options[:as]
+      when :sequencier
+        "Séquencier"
+      when :brin
+        "Brin #{options[:filter][:brins].gsub(/[\(\),\+]/,' ')}"
+      when :whole
+        "Données complètes"
+      end + " du film “#{film.titre}”"
+    end
+  end
 
 end #/FinalFile
 end #/Extractor

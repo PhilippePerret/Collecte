@@ -12,9 +12,17 @@ class Scene
       {class: 'scene', id: "scene-#{id}"}
     )
   end
-
+  
+  # Le bloc pour visualiser la scène sur la Timeline.
+  # Cf. le fichier RefBook > Timeline.md pour bien comprendre
+  # le fonctionnement (ce bloc, en vérité, n'est pas dans la
+  # Timeline)
   def bloc_timeline
-    div('', {class:'btm', id: "tl-sc-#{id}", style: "left:#{horloge.left}px;width:#{horloge.width}px;"})
+    if self.class.options_extraction[:no_timeline]
+      ''
+    else
+      div('', {class:'btm', id: "tl-sc-#{id}", style: "left:#{horloge.left}px;width:#{horloge.width}px;"})
+    end
   end
 
   # ---------------------------------------------------------------------

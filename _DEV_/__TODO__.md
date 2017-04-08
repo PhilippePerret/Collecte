@@ -1,14 +1,15 @@
+
+* Changer le nom du fichier en fonction des options
+  Séquencier complet, partiel, Brins, etc.
+
 * Documenter la timeline
-  Option :no_timelline pour ne pas l'afficher
-  
-* Gérer la sortie des brins
+  Option :no_timeline pour ne pas l'afficher
+  Tester : on ne doit pas avoir la timeline ni les scènes
 
-* Traiter le type du fichier à sortir, c'est-à-dire une liste de brins, un évènemencier, etc. (options :type)
-
-* Traiter la propriété `duree` d'une scène, en la calculant avec le temps de la scène suivante ou la fin du film.
-
-* Traiter les décors (Film::Decor, film.decors) (utile ?)
+* Faire un module de sortie de tous les brins (chacun
+  génère un fichier propre)
 
 * Copier le fichier `process.log` dans le dossier de collecte
+  à la fin de l'opération.
 
 * [Log] Mémoriser le nombre d'erreurs non fatales, les enregistrer à part, et les indiquer à la fin des processus.

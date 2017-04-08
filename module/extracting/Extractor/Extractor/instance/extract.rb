@@ -10,10 +10,19 @@ class Extractor
   # de `./module/extract_formats` correspondant au format.
   def extract_data options = nil
     @options = default_options(options)
-    final_file.options= @options
+
+    # On passe les options aux classes qui en ont
+    # besoin
+    Film::Scene.options_extraction = @options
+
+    # On construit le titre final en fonction des options
+    # Il faut le faire maintenant, parce que ce titre dépend des
+    # options, et notamment du filtre, et dans ce filtre, les
+    # valeurs string seront remplacées par des processus.
+    final_file.titre_final
 
     # Requérir le dossier correspondant au format
-    require_folder File.join(MAIN_FOLDER,'module',"extract_formats", "#{format.to_s.upcase}")
+    require_folder File.join(MAIN_FOLDER,'module','extract_formats', "#{format.to_s.upcase}")
 
     final_file.prepare || return
 
@@ -21,7 +30,7 @@ class Extractor
     options.key?(:filter) && analyze_filter
 
     case options[:as]
-    when :sequencier
+    when :sequencier, :brin
       extract_data_as_sequencier
     else # ou :whole
       # Sans précision du format de sortie voulu
@@ -54,8 +63,18 @@ class Extractor
     opts.key?(:format)    || opts.merge!(format: format)
     opts.key?(:open_file) || opts.merge!(open_file: false)
     opts.key?(:full_file) || opts.merge!(full_file: true)
-    opts.key?(:as)        || opts.merge!(as: :whole)
-    opts[:as] != :outline || opts[:as] = :sequencier
+
+    case opts[:as]
+    when NilClass
+      opts.merge!(as: :whole)
+    when :brin
+      if opts.key?(:brin)
+        opts.key?(:filter) || opts.merge!(filter: Hash.new)
+        opts[:filter].merge!(brins: opts.delete(:brin).to_s)
+      end
+    when :outline
+      opts.merge!(as: :sequencier)
+    end
 
     # Les temps sont transformés en secondes
     [:from_time, :to_time].each do |prop|
