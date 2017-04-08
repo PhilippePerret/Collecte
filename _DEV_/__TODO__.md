@@ -1,3 +1,5 @@
+* Gérer la sortie des brins
+
 * Traiter le type du fichier à sortir, c'est-à-dire une liste de brins, un évènemencier, etc. (options :type)
 
 * Traiter la propriété `duree` d'une scène, en la calculant avec le temps de la scène suivante ou la fin du film.
