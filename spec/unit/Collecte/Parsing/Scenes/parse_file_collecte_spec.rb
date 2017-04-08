@@ -63,12 +63,17 @@ describe 'Parsing du collecte des scènes' do
         expect(scene3).not_to eq nil
         {
           id: 3, numero: 3,
-          horloge: '0:03:20',
           lieu: 'INT.', lieu_alt: 'EXT.',
           effet:'JOUR', effet_alt: nil,
           decor: 'MAISON DE JOE', decor_alt:'JARDIN PUBLIC',
         }.each do |prop, expected|
           expect(scene3[prop]).to eq expected
+        end
+        {
+          horloge: '0:03:20', time: 200, real_time: 170,
+          end_time: 170, real_end_time: 140, duree: -30
+        }.each do |prop, expected|
+          expect(scene3[:horloge][prop]).to eq expected
         end
       end
 
