@@ -22,7 +22,7 @@ class Collecte
       # On peut ensuite faire l'extracteur
       Collecte.load_module('extracting')
       inst = Extractor.new(self)
-      inst.format= (frmt || :html)
+      inst.options = {format: (frmt||:html)}
       inst
     end
   end

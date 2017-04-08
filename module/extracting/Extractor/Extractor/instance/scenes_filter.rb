@@ -30,7 +30,7 @@ class Extractor
         elsif item.match(/,/)
           item.split(',').collect{|i|i.strip.to_i}
         else
-          [item.to_i]
+          [item.strip.to_i]
         end
       end.collect do |cond|
         cond.collect{|v| "a.include?(#{v})"}.join(' || ') + ' || raise'

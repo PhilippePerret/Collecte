@@ -124,21 +124,32 @@ describe 'Extraction d’un brin avec option as: :brin' do
   context 'avec deux brins sans timeline' do
     before(:all) do
       @collecte = Collecte.new(folder_test_4)
-      @collecte.extract(as: :brin, brin: '2+4', no_timeline: true)
-      @code = File.read(File.join(@collecte.extraction_folder, 'brin_2_4.html'))
+      @collecte.extract(as: :brin, brin: '2,4', no_timeline: true)
+      extracteur = @collecte.extractor
+      @brin_path = File.join(extracteur.final_file.folder, 'brin_2_4.html')
     end
     it 'crée le fichier `brin_2_4.html`' do
       expect(File.exist? brin_path).to eq true
     end
-    it 'sort un fichier correct' do
-      pending
+    describe 'la code du fichier' do
+      it 'contient les scènes des deux brins' do
+        [2,4,7].each do |num|
+          expect(code).to have_tag("div#scene-#{num}")
+        end
+      end
+      it 'ne contient pas les scènes des autres brins' do
+        [1,3,5,6].each do |num|
+          expect(code).not_to have_tag("div#scene-#{num}")
+        end
+      end
+      it 'ne contient pas la timeline' do
+        expect(code).not_to have_tag('div.timeline')
+      end
+      it 'ne contient aucune des blocs scènes de timeline' do
+        (1..7).each do |num|
+          expect(code).not_to have_tag("div#tl-sc-#{num}")
+        end
+      end
     end
-    it 'ne contient pas la timeline' do
-      expect(code).not_to have_code('div.timeline')
-    end
-    it 'ne contient pas les blocs scène de timeline' do
-      pending
-    end
-
   end
 end

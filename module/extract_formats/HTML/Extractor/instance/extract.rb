@@ -30,8 +30,8 @@ class Extractor
         log '', error: e
       end
     else
-      # ÉCRITURE DE LA TIMELINE
-      write(film.timeline.as_div)
+      # ÉCRITURE DE LA TIMELINE (if any)
+      options[:no_timeline] || write(film.timeline.as_div)
 
       # LISTE DES SCÈNES
       write '<section id="sequencier" class="scenes">'

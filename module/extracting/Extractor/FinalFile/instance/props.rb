@@ -20,7 +20,7 @@ class FinalFile
   # Raccourcis
   def options ; @options  ||= collecte.extractor.options  end
   def film    ; @film     ||= collecte.film               end
-  
+
   # Le titre final, en fonction du type
   def titre_final
     @main_titre ||= begin
@@ -29,7 +29,7 @@ class FinalFile
         "Séquencier"
       when :brin
         "Brin #{options[:filter][:brins].gsub(/[\(\),\+]/,' ')}"
-      when :whole
+      else
         "Données complètes"
       end + " du film “#{film.titre}”"
     end

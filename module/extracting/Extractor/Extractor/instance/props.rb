@@ -6,10 +6,10 @@ class Extractor
   attr_reader :collecte
 
   # {Hash} Options d'extraction
-  attr_reader :options
-  
+  attr_accessor :options
+
   # {Symbol} Format de sortie des données
-  attr_accessor :format
+  def format ; @format ||= options[:format] end
 
   def film ; @film ||= collecte.film end
 
