@@ -20,9 +20,22 @@ def extract_sequencier options_sup, dossier = nil
   extraction_with_option(dossier, opts)
 end
 
+def extract_brin liste_brins, options_sup = nil, dossier = nil
+  dossier ||= folder_test_4
+  liste_brins.instance_of?(Array) || liste_brins = [liste_brins]
+  opts = {
+    format:     :html,
+    as:         :sequencier,
+    filter:     {brins: liste_brins}
+  }
+  options_sup.nil? || opts.merge!(options_sup)
+  extraction_with_option(dossier, opts)
+end
+
 def extraction_with_option dossier, options
   options[:format] ||= :html
   @collecte = Collecte.new(dossier)
+  # Si le dossier data n'existe pas, il faut par
   @collecte.extract(options)
   @code = File.read(@collecte.extractor(options[:format]).final_file.path)
   @nombre_de_scenes = @nombre_scenes = @collecte.film.scenes.count

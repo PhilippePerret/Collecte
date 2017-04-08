@@ -11,9 +11,16 @@ class Collecte
   #     dans le fichier data/film.msh qui contient tout.
   def parse
     Collecte.load_module 'parsing'
+    log '--> collecte.parse_all'
     parse_all
     # On sauve tout
+    log '--> film.save'
     film.save
+    # Si le fichier `film.msh` n'a pas été produit,
+    # il faut signaler une erreur
+    File.exist?(film.marshal_file) || raise('Le fichier data `film.msh` n’a pas été produit. La collecte n’a pas abouti.')
+  rescue Exception => e
+    log 'à la fin de Collecte#parse', fatal_error: e
   end
 
 end

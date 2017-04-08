@@ -10,3 +10,6 @@ end
 def folder_test_3
   @folder_test_3 ||= File.join(MAIN_FOLDER, 'spec', 'asset', 'folder_test_3')
 end
+def folder_test_4
+  @folder_test_4 ||= File.join(MAIN_FOLDER, 'spec', 'asset', 'folder_test_4')
+end

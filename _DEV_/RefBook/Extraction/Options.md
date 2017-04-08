@@ -17,6 +17,26 @@ Ce fichier contient la description des options qu'on peut passer à la méthode 
 
 ~~~
 
+## Portion temporelle seulement {#optionstimes}
+
+Pour définir le temps de départ et le temps de fin de l'extraction, on utilise respectivement `:from_time` et `:to_time` en options.
+
+Ces deux propriétés peuvent être exprimées en horloge (complète ou non) ou en secondes.
+
+Par exemple, pour extraire des données de la 10e minutes à 1 heure :
+
+~~~
+
+  coll = Collecte.new('mon/dossier/collecte')
+  coll.parse # si ça n'est pas encore fait
+  coll.extract(
+    from_time: '10:00', to_time: 3600,
+    as: sequencier
+    )
+    
+~~~
+
+
 ## Options propres au format HTML {#optionsformathtml}
 
 C'est le format HTML qui permet de produire le plus de sorties différentes.
@@ -55,6 +75,8 @@ On peut décider des éléments à faire apparaitre dans l'intitulé à l'aide d
   :no_effet         Pas d'effet (JOUR/NUIT)
 
 ~~~
+
+### Intitulé personnalisé {#intitule_customised}
 
 Par défaut, l'intitulé est dans cet ordre :
 

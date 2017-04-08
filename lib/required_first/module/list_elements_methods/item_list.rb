@@ -39,8 +39,7 @@ module ListElementsMethods
   #     puts b.libelle
   #   end
   def each &block
-    @hash != nil || return
-    @hash.each { |k, e| yield k, e }
+    (@hash||{}).each { |k, e| yield k, e }
   end
   def collect &block
     @hash != nil || (return [])
@@ -55,14 +54,17 @@ module ListElementsMethods
   # Les instances des éléments doivent définir
   #   #hash_data      Hash des données à enregistrer
   def save
-    @hash != nil || return
     File.open(marshal_file,'wb'){|f| f.write Marshal.dump(data2save)}
   end
   def data2save
     @data2save ||= begin
-      d2s = Hash.new
-      @hash.each do |k, inst|
-        d2s.merge!(k => inst.hash_data)
+      if @hash.nil?
+        d2s = nil
+      else
+        d2s = Hash.new
+        @hash.each do |k, inst|
+          d2s.merge!(k => inst.hash_data)
+        end
       end
       {
         created_at: Time.now.to_i,

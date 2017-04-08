@@ -44,7 +44,9 @@ class Collecte
 
   def parse_scenes
     log "PARSING DES SCÈNES…"
+    log "\tParsing des scènes"
     film.scenes.parse
+    log "\tSauvegarde des scènes"
     film.scenes.save
   rescue Exception => e
     log "au cours du parsing des scènes", error: e
@@ -80,6 +82,9 @@ class Collecte
   #   * On ne fait la confirmation
   def termine_parsing
     confirmation_parsing
+  rescue Exception => e
+    log 'à la fin du parsing', fatal_error: e
+    raise e.message
   end
 
   def build_data_folder
