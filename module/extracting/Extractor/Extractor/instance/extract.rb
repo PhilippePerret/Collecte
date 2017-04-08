@@ -17,6 +17,9 @@ class Extractor
 
     final_file.prepare || return
 
+    # Préparer le filtre si nécessaire
+    options.key?(:filter) && analyze_filter
+
     case options[:as]
     when :sequencier
       extract_data_as_sequencier

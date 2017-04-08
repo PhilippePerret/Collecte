@@ -16,24 +16,12 @@ class Extractor
     # On calcule le template de l'intitulé en fonction
     # des choix d'options
     Film::Scene.build_template_intitule(options)
-    
+
     titre = "Séquencier du film “#{film.titre}”"
     final_file.title = titre # balise title
     write div(titre, id: 'titre')
-    write '<section id="sequencier" class="scenes">'
-    from_time = options[:from_time] || 0
-    to_time   = options[:to_time]   || Float::INFINITY
-    nombre_de_scenes = 0
-    film.scenes.each do |scene_id, scene|
-      scene.time >= from_time || next
-      scene.time <= to_time   || next
-      # La scène doit être prise
-      write scene.as_sequence
-      nombre_de_scenes += 1
-    end
-    write '</section>'
 
-    if nombre_de_scenes == 0
+    if scenes.count == 0
       # => Aucune scène n'a été inscrite
       begin
         entrela = from_time > 0 ? from_time.s2h : 'le début du film'
@@ -42,6 +30,12 @@ class Extractor
       rescue Exception => e
         log '', error: e
       end
+    else
+      write '<section id="sequencier" class="scenes">'
+      scenes.each do |scene|
+        write scene.as_sequence
+      end
+      write '</section>'
     end
 
     final_file.flush

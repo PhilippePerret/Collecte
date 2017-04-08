@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-type" content="text/html; charset=utf-8">
   <title>
-    Extraction des données du 08 04 2017 - 07:23
+    Extraction des données du 08 04 2017 - 11:47
   </title>
   <style type="text/css">div.simple_brin{border:1px solid #777;padding:2em;line-height:1.3em}div.simple_brin div.brin_titre{font-weight:bold;font-variant:small-caps}div.simple_brin ul.brin_events{position:relative;font-size:.92em;list-style:square;line-height:1.3em;padding-top:40px}div.simple_brin ul.brin_events div.timeline{position:absolute;top:8px;left:0;height:4px;background-color:blue;z-index:-1}div.simple_brin ul.brin_events li div.btm{position:absolute;top:0;height:20px;width:4px;background-color:#daa520;z-index:0}div.simple_brin ul.brin_events li span.infos{font-size:.85em}div.simple_brin ul.brin_events li:hover div.btm{background-color:red;z-index:10}
 
@@ -20,7 +20,7 @@ body{margin:2em;font-size:11.8pt;position:relative}a{text-decoration:none;color:
 <body>
   
   #
-# Extraction de 08 04 2017 - 07:23
+# Extraction de 08 04 2017 - 11:47
 # ================================
 # Film : Everest2016
 #
