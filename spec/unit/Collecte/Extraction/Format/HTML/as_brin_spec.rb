@@ -8,7 +8,6 @@ describe 'Extraction d’un brin avec option as: :brin' do
       @collecte = Collecte.new(folder_test_4)
       @collecte.extract(as: :brin, brin: 3)
       extracteur = @collecte.extractor
-      puts "Fichier final : #{extracteur.final_file.path}"
       @brin_path = File.join(extracteur.final_file.folder, 'brin_3.html')
     end
     it 'crée le fichier brin brin_3.html' do
@@ -44,45 +43,81 @@ describe 'Extraction d’un brin avec option as: :brin' do
     end
   end
 
-  context 'avec un seul brin, en string ((@collecte.extract(as: :brin, brin: \'4\')))' do
+  context 'avec un seul brin, en string ((@collecte.extract(as: :brin, brin: \'3\')))' do
     before(:all) do
       @collecte = Collecte.new(folder_test_4)
-      @collecte.extract(as: :brin, brin: '4')
-      @brin_path = File.join(@collecte.extraction_folder, 'brin_4.html')
-      @code = File.read(@brin_path)
+      @collecte.extract(as: :brin, brin: '3')
+      extracteur = @collecte.extractor
+      @brin_path = File.join(extracteur.final_file.folder, 'brin_3.html')
     end
-    it 'crée le fichier brin_4.html' do
+    it 'crée le fichier brin_3.html' do
       expect(File.exist?(brin_path)).to eq true
     end
-    it 'sort un fichier correct' do
-      pending
-    end
-    it 'contient la timeline' do
-      pending
-    end
-    it 'contient les blocs scène de timeline' do
-      pending
+    describe 'le code du fichier' do
+      it 'contient le bon titre' do
+        expect(code).to have_tag('div#titre', text: "Brin 3 du film “Film pour brins”")
+      end
+      it 'contient les scènes du brin' do
+        [3,4,5].each do |num|
+          expect(code).to have_tag("div#scene-#{num}")
+        end
+      end
+      it 'ne contient pas les scènes hors du brin' do
+        [1,2,6,7].each do |num|
+          expect(code).not_to have_tag("div#scene-#{num}")
+        end
+      end
+      it 'contient la timeline' do
+        expect(code).to have_tag('div.timeline')
+      end
+      it 'contient les blocs de scènes timeline des scènes du brin' do
+        [3,4,5].each do |num|
+          expect(code).to have_tag("div#tl-sc-#{num}")
+        end
+      end
+      it 'ne contient pas les blocs de scènes timeline des scènes hors brin' do
+        [1,2,6,7].each do |num|
+          expect(code).not_to have_tag("div#tl-sc-#{num}")
+        end
+      end
     end
   end
 
 
-  context "avec deux brins (@collecte.extract(as: :brin, brin: '2+4'))" do
+  context "avec deux brins (@collecte.extract(as: :brin, brin: '2,4'))" do
     before(:all) do
       @collecte = Collecte.new(folder_test_4)
-      @collecte.extract(as: :brin, brin: '2+4')
-      @brin_path = File.join(@collecte.extraction_folder, 'brin_2_4.html')
+      @collecte.extract(as: :brin, brin: '2, 4')
+      extracteur = @collecte.extractor
+      @brin_path = File.join(extracteur.final_file.folder, 'brin_2_4.html')
     end
     it 'crée le fichier brin_2_4.html' do
       expect(File.exist?(brin_path)).to eq true
     end
-    it 'sort un fichier correct' do
-      pending
-    end
-    it 'contient la timeline' do
-      pending
-    end
-    it 'contient les blocs scène de timeline' do
-      pending
+    describe 'le code du fichier' do
+      it 'contient les scènes des deux brins' do
+        [2,4,7].each do |num|
+          expect(code).to have_tag("div#scene-#{num}")
+        end
+      end
+      it 'ne contient pas les scènes des autres brins' do
+        [1,3,5,6].each do |num|
+          expect(code).not_to have_tag("div#scene-#{num}")
+        end
+      end
+      it 'contient la timeline' do
+        expect(code).to have_tag('div.timeline')
+      end
+      it 'contient les blocs scène de timeline' do
+        [2,4,7].each do |num|
+          expect(code).to have_tag("div#tl-sc-#{num}")
+        end
+      end
+      it 'ne contient pas les blocs scènes timeline des scènes hors brins' do
+        [1,3,5,6].each do |num|
+          expect(code).not_to have_tag("div#tl-sc-#{num}")
+        end
+      end
     end
   end
 
