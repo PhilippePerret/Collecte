@@ -84,6 +84,7 @@ class Collecte
   #   * On ne fait la confirmation
   def termine_parsing
     confirmation_parsing
+    copie_process_log
   rescue Exception => e
     log 'à la fin du parsing', fatal_error: e
     raise e.message
