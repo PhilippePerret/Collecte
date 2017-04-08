@@ -7,9 +7,12 @@
 #
 
 FOLDER_COLLECTE_PATH = "/Users/philippeperret/Desktop/Everest_collect"
-
+options = {
+  format:       :html,
+  open_file:    true
+}
 # On parse le dossier de collecte
 require_relative 'lib/required'
-collecte = Collecte.new(FOLDER_COLLECTE_PATH)
-collecte.parse
-collecte.extract(format: :text, open_file: false)
+coll = Collecte.new(FOLDER_COLLECTE_PATH)
+coll.parse
+coll.extract(options)

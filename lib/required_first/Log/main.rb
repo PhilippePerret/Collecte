@@ -17,6 +17,8 @@ end
 class Log
 class << self
 
+  attr_reader :nombre_erreurs
+
   def add mess, options = nil
     options ||= Hash.new
     if options.key?(:error) || options.key?(:fatal_error)
