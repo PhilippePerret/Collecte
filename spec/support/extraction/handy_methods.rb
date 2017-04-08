@@ -25,5 +25,5 @@ def extraction_with_option dossier, options
   @collecte = Collecte.new(dossier)
   @collecte.extract(options)
   @code = File.read(@collecte.extractor(options[:format]).final_file.path)
-  @nombre_de_scenes = @collecte.film.scenes.count
+  @nombre_de_scenes = @nombre_scenes = @collecte.film.scenes.count
 end
