@@ -6,9 +6,10 @@ $top_timeline_scene_hover: 0px // top_timeline - 4
 $top_parts: 16px // top_timeline + hauteur timeline
 
 body
-  margin    : 2em
-  font-size : 11.8pt
-  position  : relative
+  margin      : 2em
+  margin-top  : 3em
+  font-size   : 11.8pt
+  position    : relative
 
 a
   text-decoration   : none
@@ -16,8 +17,7 @@ a
 
 div#titre
   font-size     : 1.9em
-  margin-top    : 1em
-  margin-bottom : 1em
+  margin        : 1em 0 0.3em 0.5em
 
 
 section#sequencier
@@ -86,23 +86,20 @@ div.timeline
     opacity           : 1
 
   div
-    &.tl-exposition, &.tl-developpement, &.tl-denouement
+    &.acte
       position          : fixed
       top               : $top_parts
-      height            : 20px
+      height            : 14px
+      line-height       : 12pt
+      font-size         : 11pt
+      text-align        : center
       color             : white
       background-color  : black
-      border            : 1px solid blue
-  div.tl-exposition
-    width     : 25%
-    left      : 0
-  div.tl-developpement
-    width     : 50%
-    left      : 25%
-  div.tl-denouement
-    width     : 25%
-    left      : 75%
-
+      padding           : 0
+    &.tl-developpement, &.tl-denouement
+      border-width      : 0 0 0 2px
+      border-style      : solid
+      border-color      : white
 /**
   * Style des fiches
   *

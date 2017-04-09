@@ -6,8 +6,9 @@ function ShowBrin(oid){return TraiteFiche(oid, 'brin')}
 
 function TraiteFiche(oid, otype){
   var fid = 'fiche-'+otype+'-'+oid;
+  var other_fiche = fid != curfid;
   if(curfid){HideCurFiche()}
-  if(fid != curfid){ShowFiche(fid, otype)}
+  if(other_fiche){ShowFiche(fid, otype)}
   return false;
 }
 

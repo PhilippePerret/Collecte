@@ -14,19 +14,19 @@ end #/Fixnum
 class Film
 
   def div_exposition
-    div('EXPOSITION', {style: "left:#{Timeline::TIMELINE_LEFT}px;width:#{real_quart.to_pixels}", class:'tl-exposition'})
+    div('EXPOSITION', {style: "left:#{Timeline::TIMELINE_LEFT}px;width:#{real_quart.to_pixels}px", class:'tl-exposition acte'})
   end
   def div_developpement
-    div('DÉVELOPPEMENT', {style:"left:#{left_developpement};width:#{moitie.to_pixels}", class:'tl-developpement'})
+    div('DÉVELOPPEMENT', {style:"left:#{left_developpement};width:#{moitie.to_pixels}px", class:'tl-developpement acte'})
   end
   def left_developpement
     "#{(Timeline::TIMELINE_LEFT + real_quart.to_pixels)}px"
   end
   def div_denouement
-    div('DÉNOUEMENT', {style:"left:#{left_denouement};width:#{real_quart.to_pixels}", class:'tl-denouement'})
+    div('DÉNOUEMENT', {style:"left:#{left_denouement};width:#{real_quart.to_pixels}px", class:'tl-denouement acte'})
   end
   def left_denouement
-    "#{Timeline::TIMELINE_LEFT + real_trois_quarts.to_pixels}px"
+    "#{Timeline::TIMELINE_LEFT + real_trois_quarts.to_pixels + 2}px"
   end
   def div_pivot_1
     div("PVT1", {left:""})
