@@ -2,6 +2,9 @@
 class Collecte
 class Extractor
 
+  # Pour initialiser l'extracteur lorsque plusieurs fichiers
+  # sont demandés en sortie, par exemple lorsque l'argument
+  # :all_brins est utilisé.
   def init
     @scenes     = nil
     @from_time  = nil

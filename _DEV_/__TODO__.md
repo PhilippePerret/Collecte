@@ -1,8 +1,3 @@
-* Faire un module de sortie de tous les brins (chacun
-  génère un fichier propre)
-  => Le premier argument de extract doit pouvoir être :
-  :sequencier ou :all_brins
-
 * Faire des propositions de découpe (position/divisions des scènes clés, etc.). options: :suggest_divisions (documenter)
 
 * Pouvoir mettre des balises [SCENE#<horloge>]. Bien préciser dans le manuel que c'est l'horloge de la collecte, pas l'horloge réelle (bien qu'une vérification pourra être faite quand la scène ne sera pas trouvée).
