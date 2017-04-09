@@ -2,6 +2,7 @@
 class Collecte
 class Extractor
 
+
   # {Array de Film::Scene} Liste des scènes qu'il faut
   # extraire, après filtrage par le temps et les autres
   # options

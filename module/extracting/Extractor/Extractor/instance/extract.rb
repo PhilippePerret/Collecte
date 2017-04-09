@@ -11,9 +11,30 @@ class Extractor
   def extract_data options = nil
     @options = default_options(options)
 
+    if @options[:as].to_s.start_with?('all_')
+      objet = @options[:as].to_s.split('_')[1]
+      log "Traitement d'un ensemble d'objets #{objet}"
+      case objet
+      when 'brins'
+        @options[:as] = :brin
+        @options.key?(:filter) || @options.merge!(filter: Hash.new)
+        film.brins.each do |brin_id, brin|
+          log "\tTraitement de l'objet Brin ##{brin_id}"
+          init # pour forcer les recalculs
+          @options[:filter][:brins] = brin_id.to_s
+          proceed_extract_data
+        end
+      end
+    else
+      proceed_extract_data
+    end
+  end
+
+
+  def proceed_extract_data
     # On passe les options aux classes qui en ont
     # besoin
-    Film::Scene.options_extraction = @options
+    Film::Scene.options_extraction = options
 
     # On construit le titre final en fonction des options
     # Il faut le faire maintenant, parce que ce titre dépend des
