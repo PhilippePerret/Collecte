@@ -33,7 +33,7 @@ Par exemple, pour extraire des données de la 10e minutes à 1 heure :
     from_time: '10:00', to_time: 3600,
     as: sequencier
     )
-    
+
 ~~~
 
 
@@ -114,3 +114,19 @@ On peut bien entendu définir tout ce qu'on veut dans ce template, pourvu que ç
 ~~~
 
 > Note : il est inutile de mettre les éléments de l'intitulé dans leur span (par exemple `<span class="horloge">`) car ils sont ajoutés automatiquement. À partir du moment où le programme voit `%{propriété intitulé}`, il l'entoure de son span en HTML.
+
+
+### Ne pas afficher la timeline {#option_no_timeline}
+
+Par défaut, une `Timeline` est affichée, qui permet de visualiser l'emplacement des scènes.
+
+Pour ne pas afficher cette timeline, utiliser l'option `:no_timeline` et la mettre à `true`.
+
+~~~
+  coll = Collecte.new('ma/collecte')
+  coll.extract(
+    format:       :html,
+    as:           :sequencier,
+    no_timeline:  true
+    )
+~~~
