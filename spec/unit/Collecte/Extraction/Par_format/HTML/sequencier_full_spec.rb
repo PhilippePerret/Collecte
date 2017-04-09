@@ -95,6 +95,13 @@ describe 'Sortie sous forme de séquencier complet' do
       it 'contient le bon titre' do
         expect(code).to have_tag('div#titre', text: "Séquencier complet du film “Film pour brins”")
       end
+      it 'contient la timeline' do
+        expect(code).to have_tag('div.timeline') do
+          with_tag('div.tl-exposition')
+          with_tag('div.tl-developpement')
+          with_tag('div.tl-denouement')
+        end
+      end
       it 'contient sa section des scènes' do
         expect(code).to have_tag('section#sequencier', with:{class: 'scenes'})
       end

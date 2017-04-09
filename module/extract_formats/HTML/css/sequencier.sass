@@ -3,6 +3,7 @@ $couleur_violet: #585482
 $couleur_brun: #896953
 $top_timeline: 4px
 $top_timeline_scene_hover: 0px // top_timeline - 4
+$top_parts: 16px // top_timeline + hauteur timeline
 
 body
   margin    : 2em
@@ -84,6 +85,23 @@ div.timeline
   &:hover
     opacity           : 1
 
+  div
+    &.tl-exposition, &.tl-developpement, &.tl-denouement
+      position          : fixed
+      top               : $top_parts
+      height            : 20px
+      color             : white
+      background-color  : black
+      border            : 1px solid blue
+  div.tl-exposition
+    width     : 25%
+    left      : 0
+  div.tl-developpement
+    width     : 50%
+    left      : 25%
+  div.tl-denouement
+    width     : 25%
+    left      : 75%
 
 /**
   * Style des fiches
