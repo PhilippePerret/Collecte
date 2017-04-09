@@ -9,10 +9,11 @@
 FOLDER_COLLECTE_PATH = "/Users/philippeperret/Desktop/Everest_collect"
 options = {
   format:       :html,
+  as:           :sequencier,
   open_file:    true
 }
 # On parse le dossier de collecte
 require_relative 'lib/required'
 coll = Collecte.new(FOLDER_COLLECTE_PATH)
-coll.parse
+# coll.parse
 coll.extract(options)

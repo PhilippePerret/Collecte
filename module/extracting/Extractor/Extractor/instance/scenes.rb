@@ -22,7 +22,7 @@ class Extractor
       end
     end
     return true
-  rescue Exception => e
+  rescue
     return false
   end
 

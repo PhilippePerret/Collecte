@@ -12,6 +12,15 @@ def link content, attrs = nil
   "#{opened_tag 'a', attrs}#{content}</a>"
 end
 
+def libval label, value, div_attrs = nil
+  div(
+    span(label, class: 'label')+
+    span(value, class: 'value'),
+    div_attrs
+  )
+end
+
+
 # Retourne un code type pour une boite de fermeture
 # de petite fenetre
 def closebox js_method, attrs = nil

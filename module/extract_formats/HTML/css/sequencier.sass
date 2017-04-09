@@ -1,3 +1,9 @@
+$couleur_vert: #006B69
+$couleur_violet: #585482
+$couleur_brun: #896953
+$top_timeline: 4px
+$top_timeline_scene_hover: 0px // top_timeline - 4
+
 body
   margin    : 2em
   font-size : 11.8pt
@@ -12,6 +18,7 @@ div#titre
   margin-top    : 1em
   margin-bottom : 1em
 
+
 section#sequencier
   padding       : 1em 2em 2em 2em
   border        : 1px solid #ccc
@@ -25,21 +32,21 @@ section#sequencier
     div.intitule
       font-weight     : bold
       font-variant    : small-caps
-      font-size       : 1.12em
+      font-size       : 0.92em
       clear           : both
       span
         &.lieu, &.effet, &.decor
           margin-left : 12px
         &.horloge
-          display       : inline-block
-          width         : 60px
-          font-weight   : normal
-          font-family   : Georgia
-          font-size     : 0.8em
+          display         : inline-block
+          width           : 68px
+          font-weight     : normal
+          font-family     : Georgia
+          font-size       : 1.05em
           vertical-align  : middle
     // Div du résumé
     div.resume
-      margin-left       : 72px // largeur horloge + mg
+      margin-left       : 68px // largeur horloge
       font-size         : 1.1em
       sup
         margin-left       : 1em
@@ -54,34 +61,60 @@ section#sequencier
     div.btm
       position          : fixed
       height            : 12px
-      top               : 12px
+      top               : $top_timeline
       background-color  : red
-      z-index           : -1
+      z-index           : 1000
       opacity           : 0.8
     &:hover
       border            : 2px solid blue
       div.btm
         background-color    : blue
+        top                 : $top_timeline_scene_hover
+        height              : 20px
 
 
 div.timeline
   position          : fixed
-  top               : 12px
+  top               : $top_timeline
   left              : 12px
   height            : 12px
   background-color  : blue
-  z-index           : -1
+  z-index           : 1000
   opacity           : 0.3
+  &:hover
+    opacity           : 1
 
+
+/**
+  * Style des fiches
+  *
+  */
 div.fiche
-  position          : absolute
+  position          : fixed
   width             : 280px
   top               : 12px
   right             : 12px
-  background-color  : #000069
+  // background-color  : #000069
   color             : white
   border-radius     : 1em
   padding           : 2em
+  letter-spacing    : 2.3px
+  line-height       : 1.3em
+  text-align        : justify
+
+  // Couleur des liens
+  a
+    &:link, &:hover, &:visited
+      color     : #B5B5FF
+
+  // Couleur de fond pour les types de fiche
+  &.personnage
+    background-color  : $couleur_violet
+  &.brin
+    background-color  : $couleur_brun
+  &.note
+    background-color  : $couleur_vert
+
   &.hidden
     display           : none
 
@@ -89,6 +122,16 @@ div.fiche
     font-size         : 1.1em
     font-weight       : bold
     margin-bottom     : 1em
+    text-align        : left !important
+
+  span.label
+    display         : inline-block
+    width           : 120px
+    color           : #CCC
+    font-style      : italic
+
+  span.value
+    color               : inherit
 
   a.closebox
     position          : absolute

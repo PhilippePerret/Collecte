@@ -9,11 +9,17 @@ class Note
   # Retourne le code HTML de la note comme fiche
   def as_fiche
     div(
-      closebox("return HideNote(#{id})") +
+      closebox("return HideCurFiche()") +
       div("Note #{id}", class: 'titre') +
-      div(content.to_html, class: 'description'),
+      libval('Description', content_displayed, class: 'description'),
       {class: 'fiche note hidden', id: "fiche-note-#{id}"}
     )
   end
+
+  def content_displayed
+    # Note : content est un Film::TextObjet
+    content.to_html
+  end
+
 end #/Note
 end #/Film

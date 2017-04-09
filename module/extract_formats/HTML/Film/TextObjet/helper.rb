@@ -5,13 +5,8 @@ class TextObjet
   def to_html
     c = only_str.dup
 
-    # Traitement des personnages de la scène
-    c.gsub!(/\[PERSO\#(.*?)\]/){
-      pid = $1
-      perso = film.personnages[pid]
-      perso != nil || raise("Impossible d'obtenir le personnage ##{pid}. Il faut le définir impérativement.")
-      perso.as_link
-    }
+    # Traitement des personnages de l'objet
+    c = Film::Personnage.traite_balises_in(c)
 
     objets_relatifs = Array.new
 

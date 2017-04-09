@@ -9,11 +9,17 @@ class Brin
   # Retourne le code HTML pour la fiche du brin
   def as_fiche
     div(
-      closebox("return HideBrin(#{id})") +
-      div(libelle, class: 'titre') +
-      div(description, class: 'description'),
+      closebox("return HideCurFiche()") +
+      div(libelle_displayed, class: 'titre') +
+      to_html,
       {class: 'fiche brin hidden', id: "fiche-brin-#{id}"}
     )
+  end
+  def to_html
+    c = String.new
+    c << libval('Brin', id)
+    description && c << libval('Description', description_displayed, class: 'description')
+    return c
   end
 
   # Code HTML de la ligne de temps du brin

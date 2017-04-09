@@ -16,7 +16,10 @@ class FinalFile
     else
       []
     end.collect do |js_path|
-      File.read(js_path).gsub(/#{RC}/,'')
+      File.read(js_path)
+        .gsub(/\/\*(.*?)\*\//,'') # commentaires /* ... */
+        .gsub(/\/\/(.*?)$/,'')    # commentaires // ...
+        .gsub(/#{RC}/,'')
     end.join(RC) + '</script>'
   end
 
