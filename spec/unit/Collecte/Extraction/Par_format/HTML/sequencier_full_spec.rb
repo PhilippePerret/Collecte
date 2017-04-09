@@ -34,7 +34,7 @@ describe 'Sortie sous forme de séquencier complet' do
 
     describe 'contient pour le séquencier' do
       it 'son titre' do
-        expect(code).to have_tag('div#titre', text: "Séquencier du film “Séquences”")
+        expect(code).to have_tag('div#titre', text: "Séquencier complet du film “Séquences”")
       end
       it 'sa section des scènes' do
         expect(code).to have_tag('section#sequencier', with:{class: 'scenes'})
@@ -48,7 +48,7 @@ describe 'Sortie sous forme de séquencier complet' do
       it 'avec son intitulé correct' do
         expect(code).to have_tag('div#scene-1') do
           with_tag('div.intitule') do
-            with_tag('span.horloge', text: '0:00:30')
+            with_tag('span.horloge', text: '0:00:00')
             with_tag('span.lieu', text: 'INT.')
             with_tag('span.effet', text: 'JOUR')
             with_tag('span.decor', text: 'MAISON DE JOE')
@@ -79,6 +79,28 @@ describe 'Sortie sous forme de séquencier complet' do
               with_tag('a', text: 'brin 1', with: {href: '#', onclick: 'return ShowBrin(1)'})
             end
           end
+        end
+      end
+    end
+  end
+
+  context 'en utilisant extract(:sequencier_html)' do
+    before(:all) do
+      @collecte = Collecte.new(folder_test_4)
+      @collecte.extract(:sequencier_html)
+      extracteur = @collecte.extractor
+      @code = File.read(extracteur.final_file.path)
+    end
+    describe 'le code final' do
+      it 'contient le bon titre' do
+        expect(code).to have_tag('div#titre', text: "Séquencier complet du film “Film pour brins”")
+      end
+      it 'contient sa section des scènes' do
+        expect(code).to have_tag('section#sequencier', with:{class: 'scenes'})
+      end
+      it 'contient toutes ses scènes' do
+        (1..7).each do |num|
+          expect(code).to have_tag("div#scene-#{num}")
         end
       end
     end

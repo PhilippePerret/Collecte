@@ -26,7 +26,9 @@ class FinalFile
     @main_titre ||= begin
       case options[:as]
       when :sequencier
-        "Séquencier"
+        tit = "Séquencier"
+        options.key?(:filter) || tit << " complet"
+        tit
       when :brin
         "Brin #{options[:filter][:brins].gsub(/[\(\),\+]/,' ')}"
       else

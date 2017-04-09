@@ -1,5 +1,7 @@
 * Faire un module de sortie de tous les brins (chacun
   génère un fichier propre)
+  => Le premier argument de extract doit pouvoir être :
+  :sequencier ou :all_brins
 
 * Faire des propositions de découpe (position/divisions des scènes clés, etc.). options: :suggest_divisions (documenter)
 

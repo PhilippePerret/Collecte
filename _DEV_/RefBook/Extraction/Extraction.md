@@ -75,6 +75,32 @@ Sortir un brin correspond à définir une sortie en séquencier avec un filtre s
 
 ~~~
 
+## Raccourcis pour extraction
+
+On peut transmettre à la méthode `Collecte#extract` un `Symbol` au lieu d'un `Hash` pour certaines sorties.
+
+Par exemple :
+
+~~~
+  coll = Collecte.new('mon/dossier/collecte')
+  coll.extract(:sequencier_html)
+  # => Produit le séquencier complet HTML du film
+~~~
+
+Les valeurs possibles sont :
+
+~~~
+
+  :sequencier         Version TEXT du séquencier complet
+  :sequencier_html    Version HTML du séquencier complet
+  :all_brins          Version TEXT de tous les brins
+                      (un seul fichier)
+  :all_brins_html     Versions HTML de tous les brins
+                      (un fichier par brin, avec le nom
+                       contenant l'id du brin)
+~~~
+
+Ces formats sont définis dans le fichier `.lib/required_then/classe/Collecte/Collecte/instance/extract_methods.rb`, méthode `options_arg_to_real_options`.
 
 
 ## Options de formatage (#optionsformatage)

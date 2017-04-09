@@ -39,7 +39,7 @@ describe 'Intitulé défini en option' do
           with_tag('span.decor')
           without_tag('span.numero')
           without_tag('span.lieu')
-          with_tag('div.intitule', text: "#{scene.horloge.horloge}#{scene.decors} / #{scene.effets}")
+          with_tag('div.intitule', text: "#{scene.horloge.real_horloge}#{scene.decors} / #{scene.effets}")
         end
       end
     end
