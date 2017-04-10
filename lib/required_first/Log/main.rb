@@ -10,6 +10,8 @@
 # +options+
 #   Si :error est défini, c'est l'erreur rencontrée.
 #   Son message sera affichée ainsi que son backtrace enregistré
+#   Si :error est simplement true, c'est un message d'erreur simple,
+#   sans backtrace
 def log mess, options = nil
   Log.add mess, options
 end
@@ -21,9 +23,16 @@ class << self
 
   def add mess, options = nil
     options ||= Hash.new
+    @nombre_erreurs ||= 0
+
     if options.key?(:error) || options.key?(:fatal_error)
       e = options[:error] || options[:fatal_error]
-      mess = "### ERREUR #{mess} : #{e.message}#{RC}#{e.backtrace.join(RC)}"
+      if e === true
+        mess = "### ERREUR : #{mess}"
+      else
+        mess = "### ERREUR #{mess} : #{e.message}#{RC}#{e.backtrace.join(RC)}"
+      end
+      @nombre_erreurs += 1
     end
     ref.puts "#{now} #{mess}"
     # Si c'est une erreur fatale qui est envoyée, il faut

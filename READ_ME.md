@@ -1,6 +1,6 @@
-# Simple Collecte
+# Collecte
 
-*Simple Collecte* est une application pour les analyses de film composé de trois modules :
+*Collecte* est une application pour les analyses de film composé de trois modules :
 
 * un bundle TextMate pour procéder à la collecte des scènes du film,
 * un module pour parser les fichiers de collecte (scènes, brins, personnages) et produire une base de données du film,

@@ -116,7 +116,7 @@ On peut bien entendu définir tout ce qu'on veut dans ce template, pourvu que ç
 > Note : il est inutile de mettre les éléments de l'intitulé dans leur span (par exemple `<span class="horloge">`) car ils sont ajoutés automatiquement. À partir du moment où le programme voit `%{propriété intitulé}`, il l'entoure de son span en HTML.
 
 
-### Ne pas afficher la timeline {#option_no_timeline}
+### Option pour ne pas afficher la timeline {#option_no_timeline}
 
 Par défaut, une `Timeline` est affichée, qui permet de visualiser l'emplacement des scènes.
 
@@ -130,3 +130,23 @@ Pour ne pas afficher cette timeline, utiliser l'option `:no_timeline` et la mett
     no_timeline:  true
     )
 ~~~
+
+### Option “suggestion de structure”
+
+Cette option permet au programme de suggérer l'emplacement des éléments structurels que sont les pivots, la clé de voûte, etc.
+
+Il suffit de mettre l'option `:suggest_structure` à true.
+
+> Cette option ne fonctionne que pour un séquencier complet.
+
+~~~
+
+  coll = Collecte.new('mon/dossier/collecte')
+  coll.extract(
+    as:                 :sequencier,
+    suggest_structure:  true
+    )
+
+~~~
+
+Cette option va mettre en exergue les scènes possibles pour les différents points en s'appuyant sur un paradigme de Field augmenté.

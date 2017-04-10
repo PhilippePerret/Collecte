@@ -10,6 +10,7 @@ FOLDER_COLLECTE_PATH = "/Users/philippeperret/Desktop/Everest_collect"
 options = {
   format:       :html,
   as:           :sequencier,
+  suggest_structure: true,  # Pour suggérer la structure
   open_file:    true
 }
 # On parse le dossier de collecte
