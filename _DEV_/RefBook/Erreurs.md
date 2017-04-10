@@ -1,3 +1,8 @@
+# Gestion des erreurs
+
+## Erreurs affichées en fichier HTML
+
+Cf. le fichier `Messages.md`
 
 ## Produire une erreur non fatale {#erreur_non_fatale}
 

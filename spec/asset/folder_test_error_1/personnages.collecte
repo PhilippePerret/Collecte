@@ -1,0 +1,16 @@
+PERSONNAGE:prota
+  PRENOM:   Prénom1
+  NOM:      Nom Du Protagoniste
+  PSEUDO:   Le Protagoniste
+  SEXE:     Homme
+  ANNEE:    2000
+  FONCTION: Protagoniste
+  DESCRIPTION: Description du protagoniste.
+
+PERSONNAGE:anta
+  PRENOM:   Prénom2
+  NOM:      Nom De l'Antagoniste
+  SEXE:     Femme
+  ANNEE:
+  FONCTION: Antagoniste
+  DESCRIPTION: Description de l'antagoniste.

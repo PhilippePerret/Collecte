@@ -8,6 +8,10 @@ class Collecte
   def extract options = nil
     options = options_arg_to_real_options(options)
     extractor(options.delete(:format)).extract_data(options)
+  ensure
+    if (errors != nil && errors.count > 0) || options[:debug]
+      Log.build_and_open_html_file
+    end
   end
 
   # La méthode principale Collecte#extract peut recevoir

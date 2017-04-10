@@ -9,7 +9,14 @@ class Collecte
   # NOTES
   #   * En fin de parsing, on sauve toutes les données
   #     dans le fichier data/film.msh qui contient tout.
-  def parse
+  #
+  # +options+
+  #     :debug      Si true, on ouvre le fichier journal
+  #                 à la fin du parsing.
+  #                 Noter qu'il sera de toutes façon toujours
+  #                 ouvert lorsqu'une erreur survient.
+  def parse options = nil
+    options ||= Hash.new
     Collecte.load_module 'parsing'
     parse_all
     # On sauve tout
@@ -20,8 +27,8 @@ class Collecte
   rescue Exception => e
     log 'à la fin de Collecte#parse', fatal_error: e
   ensure
-    if errors != nil && errors.count > 0
-      puts "Des erreurs ont été produites (#{errors.count}). Consulter le fichier `process.log`"
+    if (errors != nil && errors.count > 0) || options[:debug]
+      Log.build_and_open_html_file
     end
   end
 

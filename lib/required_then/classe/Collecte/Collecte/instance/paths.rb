@@ -1,6 +1,13 @@
 # encoding: UTF-8
 class Collecte
 
+  # Ce n'est pas un path, c'est un HTMLFile qui permet
+  # d'afficher le journal de bord de la collecte, lorsque
+  # l'option `debug: true` a été spécifiée
+  def log_file
+    @log_file ||= HTMLFile.new(self, File.join(folder,'log.html'))
+  end
+
   # L'instance {Film} du film de la collecte
   def folder
     @folder

@@ -74,7 +74,7 @@ class Scene
       @lieu =
         first_line.match(REG_FIRST_LINE_SCENE_SIMPLE).to_a[1..-1]
     else
-      raise "La première ligne de scène est mal formatée (#{first_line.inspect})"
+      raise "L’intitulé de la scène #{numero} est mal formaté (#{first_line.inspect})"
     end
 
     # Erreur de mauvais formatage.

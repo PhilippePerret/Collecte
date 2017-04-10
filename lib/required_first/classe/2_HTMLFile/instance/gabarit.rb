@@ -41,6 +41,12 @@ class HTMLFile < CFile
   def css
     @css ||= String.new
   end
+  # Pour pouvoir utiliser `html_file.js << "<code js>"` pour
+  # ajouter du code javascript. Le contenu d'un fichier par
+  # exemple.
+  def js
+    @js ||= String.new
+  end
 
   def css_code
     @css_code ||= css || ''
