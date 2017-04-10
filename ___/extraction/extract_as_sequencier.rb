@@ -5,12 +5,18 @@
 #
 # Le path absolu du dossier doit être défini ci-dessous.
 #
-
+# =============================================================
 FOLDER_COLLECTE_PATH = "/Users/philippeperret/Desktop/Everest_collect"
+# Mettre à true la constante ci-dessous si on veut que
+# le programme suggère les divisions de la structure
+SUGGEST_STRUCTURE = false
+
+# / ne rien toucher sous cette ligne
+# =============================================================
 options = {
   format:       :html,
   as:           :sequencier,
-  suggest_structure: true,  # Pour suggérer la structure
+  suggest_structure: SUGGEST_STRUCTURE,  # Pour suggérer la structure
   open_file:    true
 }
 # On parse le dossier de collecte

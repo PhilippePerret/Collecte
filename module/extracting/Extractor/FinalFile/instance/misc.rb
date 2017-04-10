@@ -5,10 +5,12 @@ class FinalFile
 
   # Préparation du fichier
   def prepare
+    log "  -> prepare [path=#{path.inspect}]"
     File.exist?(folder) || Dir.mkdir(folder, 0755)
     @file_content = String.new
     File.exist?(path) && File.unlink(path)
     File.open(path,'wb'){|f| f.write code_depart}
+    log "  <- prepare"
     return true # pour dire de continuer
   end
 

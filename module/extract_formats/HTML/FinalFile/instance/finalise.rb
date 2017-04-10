@@ -30,6 +30,8 @@ FILM : #{collecte.film.id}
     file_full_code
     # On écrit finalement le code assemblé dans le fichier
     # final.
+    log "Finalisation de #{path.inspect}"
+    log "Code complet : #{file_full_code.inspect}"
     File.open(path,'wb'){ |f| f.write file_full_code }
     return true # pour dire de continuer
   end
@@ -63,7 +65,10 @@ FILM : #{collecte.film.id}
   # Le contenu complet, sous le bandeau supérieur
   # Ce contenu se trouve dans le fichier final provisoire
   def full_content
-    File.read(path)
+    @read_path = File.read(path)
+    log "-> full_content, on lit le fichier #{path.inspect}"
+    log "   #{@read_path.inspect}"
+    return @read_path
   end
 
 end #/FinalFile

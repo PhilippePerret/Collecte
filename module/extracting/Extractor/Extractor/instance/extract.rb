@@ -52,7 +52,9 @@ class Extractor
 
     case options[:as]
     when :sequencier, :brin
-      extract_data_as_sequencier
+      extract_sequencier
+    when :synopsis
+      extract_synopsis
     else # ou :whole
       # Sans précision du format de sortie voulu
       extract_data_as_whole
@@ -69,9 +71,6 @@ class Extractor
 
   end
 
-  def extract_data_as_sequencier
-    extract_sequencier
-  end
   def extract_data_as_whole
     extract_meta_data
     extract_personnages_data

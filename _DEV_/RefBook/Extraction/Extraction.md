@@ -2,6 +2,14 @@
 
 Après avoir procédé à la collecte des informations, puis à leur parsing (`Collecte#parse`), on peut extraire les données pour en tirer des fichiers.
 
+## Utilisation des scripts d'extraction {#scriptsextraction}
+
+Pour ne pas passer par la programmation, on peut se servir des scripts prêts-à-l'emploi dans le dossier `___/extraction/`.
+
+Il suffit de choisir le type d'extraction (vers séquencier, synopsis, etc.) puis de définir les constantes voulues.
+
+## Extraction par programmation {#extractionparprogrammation}
+
 La forme de base est :
 
 ~~~
@@ -43,7 +51,8 @@ Cette propriété peut avoir les valeurs :
 
 * Aucune. C'est alors une sortie brute des données, qui peut servir pour des vérifications.
 * `:sequencier`. Sort un séquencier, en HTML principalement.
-* `:brin`. Sort un brin, c'est-à-dire toutes les scènes appartenant à ce ou ces brins. En vérité, ce format consiste à sortir un séquencier avec un filtre sur les brins
+* `:brin`. Sort un brin, c'est-à-dire toutes les scènes appartenant à ce ou ces brins. En vérité, ce format consiste à sortir un séquencier avec un filtre sur les brins.
+* `:synopsis`. Sort un synopsis. Un synopsis consiste en un listing simple des résumés et/ou des paragraphes de scènes, sans horloge (sans indications contraire, mais discrètes).
 
 ### Sortie des brins {#brinsensortie}
 

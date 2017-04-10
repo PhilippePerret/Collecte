@@ -48,9 +48,7 @@ class Film
 
       #
       data_items = donnee_totale[elkey]
-      log "data_items de #{elkey.inspect} : #{data_items.inspect}"
       data_items != nil || begin
-        log "Donnée #{elkey.inspect} non définie"
         next
       end
 
@@ -58,7 +56,6 @@ class Film
       # seulement si elle existe.
       lesitems = data_items[:items]
       lesitems.instance_of?(Hash) || begin
-        log "Pas de #{elkey} définis"
         next
       end
       log "Loading des #{elkey}…"

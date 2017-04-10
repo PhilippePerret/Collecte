@@ -29,6 +29,10 @@ class FinalFile
         tit = "Séquencier"
         options.key?(:filter) || tit << " complet"
         tit
+      when :synopsis
+        tit = "Synopsis"
+        options.key?(:filter) || tit << " complet"
+        tit
       when :brin
         "Brin #{options[:filter][:brins].gsub(/[\(\),\+]/,' ')}"
       else

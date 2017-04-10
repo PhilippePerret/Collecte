@@ -29,6 +29,8 @@ class FinalFile
       case options[:as]
       when :sequencier
         ["#{folder_css}/sequencier.css"]
+      when :synopsis
+        ["#{folder_css}/synopsis.css"]
       else
         Dir["#{folder_css}/**/*.css"]
       end

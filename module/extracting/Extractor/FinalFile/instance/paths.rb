@@ -7,7 +7,7 @@ class FinalFile
     @faffixe ||= begin
       case (options||{})[:as]
       when :sequencier
-        af = "sequencier"
+        af = 'sequencier'
         options[:suggest_structure] && af << "_suggest_stt"
         if options[:from_time] || options[:to_time]
           af = add_from_to_to_affixe(af)
@@ -15,6 +15,8 @@ class FinalFile
           af = "full_#{af}"
         end
         af
+      when :synopsis
+        af = 'synopsis'
       when :brin
         af = "brin_#{options[:filter][:brins].gsub(/[\(\),\+]/,'_').gsub(/ /,'')}"
         add_from_to_to_affixe(af)
