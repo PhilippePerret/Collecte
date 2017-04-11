@@ -1,6 +1,5 @@
 @import 'charte', 'fiches', 'commons'
 
-
 section#sequencier
   padding       : 1em 2em 2em 2em
   border        : 1px solid #ccc
@@ -63,29 +62,38 @@ section#sequencier
     color             : white
     padding           : 6px 24px
 
-div.timeline
+div#timeline_container
   position          : fixed
-  top               : $top_timeline
-  left              : 12px
-  height            : 12px
-  background-color  : blue
+  width             : 100%
+  top               : 0
+  background-color  : white
+  height            : 50px
+  opacity           : 0.9
   z-index           : 1000
-  opacity           : 0.3
-  &:hover
-    opacity           : 1
 
-  div
-    &.acte
-      position          : fixed
-      top               : $top_parts
-      height            : 14px
-      line-height       : 12pt
-      font-size         : 11pt
-      text-align        : center
-      color             : white
-      background-color  : black
-      padding           : 0
-    &.tl-developpement, &.tl-denouement
-      border-width      : 0 0 0 2px
-      border-style      : solid
-      border-color      : white
+  div.timeline
+    position          : fixed
+    top               : $top_timeline
+    left              : 12px
+    height            : 12px
+    background-color  : blue
+    z-index           : 1000
+    opacity           : 0.3
+    &:hover
+      opacity           : 1
+
+    div
+      &.acte
+        position          : fixed
+        top               : $top_parts
+        height            : 14px
+        line-height       : 12pt
+        font-size         : 11pt
+        text-align        : center
+        color             : white
+        background-color  : black
+        padding           : 0
+      &.tl-developpement, &.tl-denouement
+        border-width      : 0 0 0 2px
+        border-style      : solid
+        border-color      : white

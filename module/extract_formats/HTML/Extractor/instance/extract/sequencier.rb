@@ -95,7 +95,9 @@ class Extractor
 
   def write_point_structurel index_ptstt
     ptstt = points_structurels[index_ptstt]
-    write div("#{ptstt[:time].s2h} #{ptstt[:name]} (absolu : #{(ptstt[:time]-film.start.time).s2h})", {class: 'stt'})
+    str = "#{(ptstt[:time]-film.start.time).s2h} #{ptstt[:name]} (tps collecte : #{ptstt[:time].s2h})"
+    ptstt[:exact_time].nil? || str += " Position exacte : #{(ptstt[:exact_time]-film.start.time).s2h} (#{ptstt[:exact_time].s2h})"
+    write div(str, {class: 'stt'})
     ptstt[:written] = true
   end
 
@@ -112,7 +114,7 @@ class Extractor
         {time: film.quart, name: 'Début du Développement'},
         {time: film.zone_tiers.time, name: 'Début de la Zone du tiers'},
         {time: film.zone_tiers.end_time, name: 'Fin de la Zone du tiers'},
-        {time: film.zone_cle_de_voute.time, name: 'Début de la Zone Clé de voûte'},
+        {time: film.zone_cle_de_voute.time, exact_time: film.moitie, name: 'Début de la Zone Clé de voûte'},
         {time: film.zone_cle_de_voute.end_time, name: 'Fin de la Zone Clé de voûte'},
         {time: film.zone_deux_tiers.time, name: 'Début de la Zone des deux-tiers'},
         {time: film.zone_deux_tiers.end_time, name: 'Fin de la Zone des deux-tiers'},
