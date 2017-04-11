@@ -16,16 +16,15 @@ class FinalFile
         .gsub(/\/\*(.*?)\*\//,'') # commentaires /* ... */
         .gsub(/\/\/(.*?)$/,'')    # commentaires // ...
         .gsub(/#{RC}/,'')
-    end.join(RC) + '</script>'
+    end.join(RC) +
+    '</script>'
   end
 
   def whole_css_code
     cssise_all_sass
     css_files || (return '')
     '<style type="text/css">' +
-      css_files.collect do |css|
-        File.read(css)
-      end.join(RC) +
+      css_files.collect{|css|File.read(css)}.join(RC) +
     '</style>'
   end
   def cssise_all_sass

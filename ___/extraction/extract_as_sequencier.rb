@@ -6,7 +6,8 @@
 # Le path absolu du dossier doit être défini ci-dessous.
 #
 # =============================================================
-FOLDER_COLLECTE_PATH = "/Users/philippeperret/Desktop/Everest_collect"
+FOLDER_COLLECTE_PATH =
+"/Users/philippeperret/Desktop/Everest_collect"
 # Choisir le format :html, :text ou :xml
 OUTPUT_FORMAT = :html
 # Mettre à true la constante ci-dessous si on veut que
