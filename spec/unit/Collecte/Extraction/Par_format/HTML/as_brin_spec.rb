@@ -8,14 +8,14 @@ describe 'Extraction d’un brin avec option as: :brin' do
       @collecte = Collecte.new(folder_test_4)
       @collecte.extract(as: :brin, brin: 3)
       extracteur = @collecte.extractor
-      @brin_path = File.join(extracteur.final_file.folder, 'brin_3.html')
+      @brin_path = File.join(extracteur.final_file.folder, 'full_brin_3.html')
     end
     it 'crée le fichier brin brin_3.html' do
       expect(File.exist? brin_path).to eq true
     end
     describe 'le code du fichier' do
       it 'contient le bon titre' do
-        expect(code).to have_tag('div#titre', text: "Brin 3 du film “Film pour brins”")
+        expect(code).to have_tag('div#titre', text: "Brin 3 complet du film “Film pour brins”")
       end
       it 'contient les scènes du brin' do
         [3,4,5].each do |num|
@@ -48,14 +48,14 @@ describe 'Extraction d’un brin avec option as: :brin' do
       @collecte = Collecte.new(folder_test_4)
       @collecte.extract(as: :brin, brin: '3')
       extracteur = @collecte.extractor
-      @brin_path = File.join(extracteur.final_file.folder, 'brin_3.html')
+      @brin_path = File.join(extracteur.final_file.folder, 'full_brin_3.html')
     end
     it 'crée le fichier brin_3.html' do
       expect(File.exist?(brin_path)).to eq true
     end
     describe 'le code du fichier' do
       it 'contient le bon titre' do
-        expect(code).to have_tag('div#titre', text: "Brin 3 du film “Film pour brins”")
+        expect(code).to have_tag('div#titre', text: "Brin 3 complet du film “Film pour brins”")
       end
       it 'contient les scènes du brin' do
         [3,4,5].each do |num|
@@ -89,7 +89,7 @@ describe 'Extraction d’un brin avec option as: :brin' do
       @collecte = Collecte.new(folder_test_4)
       @collecte.extract(as: :brin, brin: '2, 4')
       extracteur = @collecte.extractor
-      @brin_path = File.join(extracteur.final_file.folder, 'brin_2_4.html')
+      @brin_path = File.join(extracteur.final_file.folder, 'full_brin_2_4.html')
     end
     it 'crée le fichier brin_2_4.html' do
       expect(File.exist?(brin_path)).to eq true
@@ -126,7 +126,7 @@ describe 'Extraction d’un brin avec option as: :brin' do
       @collecte = Collecte.new(folder_test_4)
       @collecte.extract(as: :brin, brin: '2,4', no_timeline: true)
       extracteur = @collecte.extractor
-      @brin_path = File.join(extracteur.final_file.folder, 'brin_2_4.html')
+      @brin_path = File.join(extracteur.final_file.folder, 'full_brin_2_4.html')
     end
     it 'crée le fichier `brin_2_4.html`' do
       expect(File.exist? brin_path).to eq true

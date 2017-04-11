@@ -17,7 +17,7 @@ class Extractor
     # des choix d'options
     Film::Scene.build_template_intitule(options)
 
-    final_file.title = final_file.titre_final # balise title
+    # Le titre du document
     write div(final_file.titre_final, id: 'titre')
 
     if scenes.count == 0
@@ -79,7 +79,6 @@ class Extractor
   def franchir_next_structure_time scene
     write div(@next_point_structurel[:name], {class: 'stt'})
     @next_point_structurel = @points_structurels.shift
-    puts "@next_point_structurel: #{@next_point_structurel.inspect}"
     @next_structure_time  = @next_point_structurel[:time]
   end
   # Liste des points structurels

@@ -30,8 +30,6 @@ FILM : #{collecte.film.id}
     file_full_code
     # On écrit finalement le code assemblé dans le fichier
     # final.
-    log "Finalisation de #{path.inspect}"
-    log "Code complet : #{file_full_code.inspect}"
     File.open(path,'wb'){ |f| f.write file_full_code }
     return true # pour dire de continuer
   end
@@ -51,12 +49,7 @@ FILM : #{collecte.film.id}
 
   def bind; binding() end
 
-  def title= value ; @title = value end
-  def title
-    @title ||= begin
-      "Extraction des données du #{collecte.extractor.date}"
-    end
-  end
+  attr_accessor :title
 
   def bandeau_superieur
     ''
@@ -66,8 +59,6 @@ FILM : #{collecte.film.id}
   # Ce contenu se trouve dans le fichier final provisoire
   def full_content
     @read_path = File.read(path)
-    log "-> full_content, on lit le fichier #{path.inspect}"
-    log "   #{@read_path.inspect}"
     return @read_path
   end
 

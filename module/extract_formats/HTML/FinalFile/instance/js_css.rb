@@ -42,12 +42,14 @@ class FinalFile
   end
   def cssise_all_sass
     require 'sass'
-    Dir["#{folder_css}/**/*.sass"].each do |sass|
-      css_name = File.basename(sass, File.extname(sass)) + '.css'
-      css_path = File.join(File.dirname(sass), css_name)
-      outofdate(sass, css_path) || next
-      code_css = Sass.compile(File.read(sass), sass_options)
-      File.open(css_path,'wb'){|f| f.write code_css}
+    Dir["#{folder_css}/**/*.sass"].each do |sass_path|
+      affixe   = File.basename(sass_path, File.extname(sass_path))
+      # On passe les fichier inclus
+      affixe.start_with?('_') && next
+      css_name = affixe + '.css'
+      css_path = File.join(File.dirname(sass_path), css_name)
+      outofdate(sass_path, css_path) || next
+      Sass.compile_file(sass_path, css_path, sass_options)
     end
   end
   # Un fichier est out-of-date si le fichier source est
@@ -62,7 +64,7 @@ class FinalFile
   def sass_options
     @sass_options ||= {
       line_comments:  false,
-      syntax:         :sass,
+      # syntax:         :sass,
       style:          :compressed
     }
   end

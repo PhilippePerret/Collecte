@@ -1,0 +1,59 @@
+@import 'charte'
+
+/**
+  * Style des fiches
+  *
+  */
+div.fiche
+  position          : fixed
+  width             : 280px
+  top               : 12px
+  right             : 12px
+  // background-color  : #000069
+  color             : white
+  border-radius     : 1em
+  padding           : 2em
+  letter-spacing    : 2.3px
+  line-height       : 1.3em
+  text-align        : justify
+
+  // Couleur des liens
+  a
+    &:link, &:hover, &:visited
+      color     : #B5B5FF
+
+  // Couleur de fond pour les types de fiche
+  &.personnage
+    background-color  : $couleur_violet
+  &.brin
+    background-color  : $couleur_brun
+  &.note
+    background-color  : $couleur_vert
+
+  &.hidden
+    display           : none
+
+  div.titre
+    font-size         : 1.1em
+    font-weight       : bold
+    margin-bottom     : 1em
+    text-align        : left !important
+
+  span.label
+    display         : inline-block
+    width           : 120px
+    color           : #CCC
+    font-style      : italic
+
+  span.value
+    color               : inherit
+
+  a.closebox
+    position          : absolute
+    font-family       : Helvetica, Arial
+    top               : 12px
+    right             : 12px
+    background-color  : red
+    color             : white
+    padding           : 0 5px 1px
+    border-radius     : 5px

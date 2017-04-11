@@ -1,3 +1,5 @@
+@import 'charte', 'fiches'
+
 section.synopsis
   margin-left       : 1em
   div.scene
@@ -5,6 +7,12 @@ section.synopsis
     font-size         : 15.1pt
     text-align        : justify
     width             : 640px
+    a
+      &:link, &:visited
+        // On ne doit pas voir que c'est des liens
+        color     : inherit
+      &:hover
+        color     : #007
   span.horloge
     margin-left       : 0
     font-size         : 8.9pt

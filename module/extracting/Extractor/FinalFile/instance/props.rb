@@ -22,24 +22,9 @@ class FinalFile
   def film    ; @film     ||= collecte.film               end
 
   # Le titre final, en fonction du type
-  def titre_final
-    @main_titre ||= begin
-      case options[:as]
-      when :sequencier
-        tit = "Séquencier"
-        options.key?(:filter) || tit << " complet"
-        tit
-      when :synopsis
-        tit = "Synopsis"
-        options.key?(:filter) || tit << " complet"
-        tit
-      when :brin
-        "Brin #{options[:filter][:brins].gsub(/[\(\),\+]/,' ')}"
-      else
-        "Données complètes"
-      end + " du film “#{film.titre}”"
-    end
-  end
+  attr_accessor :titre_final
+  # La balise TITLE pour le format HTML
+  attr_accessor :title
 
 end #/FinalFile
 end #/Extractor

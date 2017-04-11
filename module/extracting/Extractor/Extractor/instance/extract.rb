@@ -32,18 +32,21 @@ class Extractor
 
 
   def proceed_extract_data
+
     # On passe les options aux classes qui en ont
     # besoin
     Film::Scene.options_extraction = options
 
-    # On construit le titre final en fonction des options
-    # Il faut le faire maintenant, parce que ce titre dépend des
-    # options, et notamment du filtre, et dans ce filtre, les
-    # valeurs string seront remplacées par des processus.
-    final_file.titre_final
+    # On définit tous les éléments en fonction du type
+    # de document produit (séquencier, brin, etc.) et des
+    # filtres et options choisis
+    set_by_type
 
     # Requérir le dossier correspondant au format
     require_folder File.join(MAIN_FOLDER,'module','extract_formats', "#{format.to_s.upcase}")
+
+    # Reset
+    Film::TextObjet.init if format == :html
 
     final_file.prepare || return
 

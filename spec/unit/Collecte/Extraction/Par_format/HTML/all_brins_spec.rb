@@ -16,7 +16,7 @@ describe 'Extraction HTML de tous les brins' do
       collecte.extract(:all_brins_html)
       expect(File.exist?(dossier_extraction)).to eq true
       (1..6).each do |bid|
-        expect(File.exist?(File.join(dossier_extraction,"brin_#{bid}.html"))).to eq true
+        expect(File.exist?(File.join(dossier_extraction,"full_brin_#{bid}.html"))).to eq true
       end
     end
     it 'chaque fichier brin contient bien ses scènes' do
@@ -29,7 +29,7 @@ describe 'Extraction HTML de tous les brins' do
         6 => [4]
       }.each do |brin_id, scenes_in|
         scenes_out = (1..7).reject{|i| scenes_in.include?(i)}
-        path = File.join(dossier_extraction,"brin_#{brin_id}.html")
+        path = File.join(dossier_extraction,"full_brin_#{brin_id}.html")
         code = File.read(path)
         if scenes_in.count > 0
           expect(code).to have_tag('section#sequencier.scenes')do
