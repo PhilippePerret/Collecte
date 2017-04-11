@@ -49,28 +49,30 @@ class Film
     @deux_tiers ||= real_deux_tiers + start.time
   end
 
+
+  def build_zone_from temps, duree = nil
+    h = Film::Horloge.new(self,(temps - vingtquatrieme).s2h)
+    h.duree = duree || vingtquatrieme
+    h
+  end
+
   def zone_pivot_1
-    @zone_pivot_1 ||= begin
-      h = Film::Horloge.new(self,(quart - vingtquatrieme).s2h)
-      h.duree = vingtquatrieme
-      h
-    end
+    @zone_pivot_1 ||= build_zone_from(quart)
   end
-
   def zone_pivot_2
-    @zone_pivot_2 ||= begin
-      h = Film::Horloge.new(self,(trois_quarts - vingtquatrieme).s2h)
-      h.duree = vingtquatrieme
-      h
-    end
+    @zone_pivot_2 ||= build_zone_from(trois_quarts)
   end
-
   def zone_cle_de_voute
-    @zone_cle_de_voute ||= begin
-      h = Film::Horloge.new(self,(moitie - vingtquatrieme).s2h)
-      h.duree = 2 * vingtquatrieme
-      h
-    end
+    @zone_cle_de_voute ||= build_zone_from(moitie, 2*vingtquatrieme)
+  end
+  def zone_tiers
+    @zone_tiers ||= build_zone_from(tiers)
+  end
+  def zone_deux_tiers
+    @zone_deux_tiers ||= build_zone_from(deux_tiers)
+  end
+  def zone_climax
+    @zone_climax ||= build_zone_from(fin.time)
   end
 
 

@@ -91,5 +91,6 @@ describe 'Extraction avec options pour l’intitulé' do
       end
     end
   end
+  # /sans décor
 
 end

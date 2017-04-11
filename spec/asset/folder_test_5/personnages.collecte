@@ -1,0 +1,16 @@
+PERSONNAGE:joe
+  PRENOM:   Joe
+  NOM:      Prota
+  SEXE:     Homme
+  ANNEE:    2000
+  FONCTION: Protagoniste
+  DESCRIPTION: Description du protagoniste Joe.
+
+PERSONNAGE:jan
+  PRENOM:   Jan
+  NOM:      Anta
+  PSEUDO:   Jan
+  SEXE:     Femme
+  ANNEE:
+  FONCTION: Antagoniste
+  DESCRIPTION: Description de l'antagoniste Jan.

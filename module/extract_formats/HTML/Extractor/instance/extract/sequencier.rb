@@ -20,6 +20,8 @@ class Extractor
     # Le titre du document
     write div(final_file.titre_final, id: 'titre')
 
+    log "Nombre de scènes passant le filtre : #{scenes.count}"
+
     if scenes.count == 0
       # => Aucune scène n'a été inscrite
       begin
@@ -30,6 +32,8 @@ class Extractor
         log '', error: e
       end
     else
+      # => S'il y a des scènes
+      #
       # ÉCRITURE DE LA TIMELINE (if any)
       options[:no_timeline] || write(film.timeline.as_div)
 
@@ -37,11 +41,37 @@ class Extractor
       # -----------------------------
       write '<section id="sequencier" class="scenes">'
       if options[:suggest_structure]
+        #
+        # => Suggestion de la structure
+        #
+        @index_cur_pointstt = 0
+        @next_pointstt = points_structurels[@index_cur_pointstt]
+        # Le temps recherché
+        next_pointstt_time = @next_pointstt[:time]
+
         scenes.each do |scene|
-          if scene.time > next_structure_time
-            # On passe le prochain temps structurel,
-            # on doit le marquer.
-            franchir_next_structure_time(scene)
+          # On boucle tant que le temps de la scène
+          # est inférieur au prochain temps structurel
+          # Par exemple, on attend de trouver le premier temps qui
+          # correspond au temps de la zone du pivot 1.
+          if scene.time > next_pointstt_time
+
+            # Il faut écrire le point structurel courant
+            write_point_structurel( @index_cur_pointstt )
+
+            # On boucle jusqu'à trouver le prochain point temps
+            # suivant, en écrivant dans le fichier tous les points
+            # structurels se trouvant avant la scène courante.
+            while scene.time > next_pointstt_time
+              @index_cur_pointstt += 1
+              @next_pointstt = points_structurels[@index_cur_pointstt]
+              next_pointstt_time = @next_pointstt[:time]
+              # Si le prochain point temps et encore inférieur au
+              # temps de la scène, il faut le marquer
+              if scene.time > next_pointstt_time
+                write_point_structurel(@index_cur_pointstt)
+              end
+            end
           end
           write scene.as_sequence
         end
@@ -63,35 +93,36 @@ class Extractor
 
   end
 
-  # Retourne le prochain temps structure attendu lorsqu'on
-  # demande des suggestions concernant la structure.
-  def next_structure_time
-    @next_structure_time ||= begin
-      @points_structurels = points_structurels
-      @next_point_structurel = @points_structurels.shift
-      # Le premier point est calculé par cette méthode, les
-      # points suivants sont mis en fonction du passage au
-      # point suivant
-      @next_point_structurel[:time]
-    end
+  def write_point_structurel index_ptstt
+    ptstt = points_structurels[index_ptstt]
+    write div("#{ptstt[:time].s2h} #{ptstt[:name]} (absolu : #{(ptstt[:time]-film.start.time).s2h})", {class: 'stt'})
+    ptstt[:written] = true
   end
-  # Appelé lorsque le prochain temps structurel est dépassé
-  def franchir_next_structure_time scene
-    write div(@next_point_structurel[:name], {class: 'stt'})
-    @next_point_structurel = @points_structurels.shift
-    @next_structure_time  = @next_point_structurel[:time]
+
+  # Indice du point structure courant
+  def index_cur_pointstt
+    @index_cur_pointstt ||= 0
   end
+
   # Liste des points structurels
   def points_structurels
-    [
-      {time: film.zone_pivot_1.time, name: 'Début de la Zone Pivot 1'},
-      {time: film.quart, name: 'Début du Développement'},
-      {time: film.zone_cle_de_voute.time, name: 'Début de la Zone Clé de voûte'},
-      {time: film.zone_cle_de_voute.end_time, name: 'Fin de la Zone Clé de voûte'},
-      {time: film.zone_pivot_2.time, name: 'Début de la Zone Pivot 2'},
-      {time: film.trois_quarts, name: 'Début du Dénouement'},
-      {time: film.fin.time + 100, name: 'Fin du film'}
-    ]
+    @points_structurels ||= begin
+      [
+        {time: film.zone_pivot_1.time, name: 'Début de la Zone du Pivot 1'},
+        {time: film.quart, name: 'Début du Développement'},
+        {time: film.zone_tiers.time, name: 'Début de la Zone du tiers'},
+        {time: film.zone_tiers.end_time, name: 'Fin de la Zone du tiers'},
+        {time: film.zone_cle_de_voute.time, name: 'Début de la Zone Clé de voûte'},
+        {time: film.zone_cle_de_voute.end_time, name: 'Fin de la Zone Clé de voûte'},
+        {time: film.zone_deux_tiers.time, name: 'Début de la Zone des deux-tiers'},
+        {time: film.zone_deux_tiers.end_time, name: 'Fin de la Zone des deux-tiers'},
+        {time: film.zone_pivot_2.time, name: 'Début de la Zone du Pivot 2'},
+        {time: film.trois_quarts, name: 'Début du Dénouement'},
+        {time: film.zone_climax.time, name: 'Début de la Zone du Climax'},
+        # Juste pour pouvoir toujours prendre le temps suivant :
+        {time: film.fin.time + 100, name: 'Fin du film'}
+      ]
+    end
   end
 
 end #/Extractor

@@ -13,6 +13,9 @@ end
 def folder_test_4
   @folder_test_4 ||= File.join(MAIN_FOLDER, 'spec', 'asset', 'folder_test_4')
 end
+def folder_test_5
+  @folder_test_5 ||= File.join(MAIN_FOLDER, 'spec', 'asset', 'folder_test_5')
+end
 def folder_test_error_1
   @folder_test_error_1 ||= File.join(MAIN_FOLDER, 'spec', 'asset', 'folder_test_error_1')
 end

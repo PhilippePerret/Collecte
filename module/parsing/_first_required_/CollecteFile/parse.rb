@@ -18,7 +18,17 @@ module CollecteFileMethods
   # Tous les blocs du code définissant normalement un élément (i.e.
   # un brin, un personnage, etc.)
   def blocs
-    @blocs ||= File.read(collecte_file).strip.split(RC*2).collect{|b| b.strip}
+    @blocs ||= begin
+      # On supprime tous les commentaires
+      cf = File.read(collecte_file).strip.split(RC).collect do |line|
+        if line.strip.start_with?('#')
+          nil
+        else
+          line
+        end
+      end.compact.join(RC)
+      cf.split(RC*2).collect{|b| b.strip}
+    end
   end
 
 end
