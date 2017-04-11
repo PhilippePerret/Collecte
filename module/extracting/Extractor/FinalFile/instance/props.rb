@@ -25,6 +25,13 @@ class FinalFile
   attr_accessor :titre_final
   # La balise TITLE pour le format HTML
   attr_accessor :title
+  # Liste des fichiers javascript à charger (en dur),
+  # défini par `set_by_type`
+  attr_accessor :javascript_files
+  # Liste des fichiers CSS à charger (en dur), défini
+  # par `set_by_type`
+  attr_accessor :css_files
+
 
 end #/FinalFile
 end #/Extractor

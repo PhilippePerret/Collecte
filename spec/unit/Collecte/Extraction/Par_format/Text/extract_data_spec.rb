@@ -114,12 +114,12 @@ describe 'Extraction au format :text' do
           },
           {
             id:2, numero:2,
-            resume:'{:raw=>"Résumé de la deuxième scène. b2 b1", :only_str=>"Résumé de la deuxième scène.", :personnages_ids=>[], :notes_ids=>[], :brins_ids=>[2, 1], :scene_id=>2, :scenes_ids=>nil, :horloge=>nil}',
+            resume:'{:raw=>"Résumé de la deuxième scène avec [PERSO#prota]. b2 b1", :only_str=>"Résumé de la deuxième scène avec [PERSO#prota].", :personnages_ids=>["prota"], :notes_ids=>[], :brins_ids=>[2, 1], :scene_id=>2, :scenes_ids=>nil, :horloge=>nil}',
             horloge: '0:01:40', lieu:'EXT.', effet:'NUIT', decor:'JARDIN PUBLIC',
             brins_ids: '2,1', notes_ids: '4,5,6',
             paragraphes: [
-              {index:0, raw:'Premier beat de la deuxième scène.'},
-              {index:1, raw:'Deuxième beat de la deuxième scène. (4)(5)(6)'},
+              {index:0, raw:'Premier beat de la deuxième scène avec [PERSO#anta].'},
+              {index:1, raw:'Deuxième beat de la deuxième scène avec [PERSO#prota]. (4)(5)(6)'},
               {index:2, raw:'Troisième beat de la deuxième scène.'}
             ]
           },

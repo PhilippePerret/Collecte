@@ -41,7 +41,7 @@ class Scene
       resume_html
     else
       paragraphes.collect do |paragraphe|
-        paragraphe.only_str
+        paragraphe.to_html
       end.join(' ')
     end
   end

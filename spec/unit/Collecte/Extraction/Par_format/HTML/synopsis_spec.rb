@@ -6,6 +6,7 @@ describe 'Extration sous forme de synopsis' do
   context 'sans horloge demandé' do
     before(:all) do
       @collecte = Collecte.new(folder_test_2)
+      # @collecte.parse
       @collecte.extract(
         format:  :html,
         as: :synopsis,
@@ -29,10 +30,13 @@ describe 'Extration sous forme de synopsis' do
       it 'contient les styles pour les fiches' do
         expect(code).to include 'div.fiche{'
       end
+      it 'contient le javascript pour les fiches' do
+        expect(code).to include 'function ShowPersonnage(oid)'
+      end
       it 'ne contient pas les fiches brins' do
         expect(code).not_to have_tag('div.fiche.brin')
       end
-      it 'ne contient plus de balises [PERSO]' do
+      it 'ne contient plus de balises [PERSO#...]' do
         expect(code).not_to include '[PERSO#'
       end
       it 'contient les paragraphes quand la scène en a, les résumés dans le cas contraire' do
@@ -43,7 +47,8 @@ describe 'Extration sous forme de synopsis' do
           if scene.paragraphes.count > 0
             expect(code).not_to have_tag('div.scene', text: scene.resume.to_html)
             scene.paragraphes.each do |paragraphe|
-              par = Regexp.escape(paragraphe.to_html)
+              par = paragraphe.to_html.gsub(/<(.*?)>/,'')
+              par = Regexp.escape(par)
               expect(code).to have_tag('div.scene', with:{id: "scene-#{sid}"}, text: /#{par}/)
             end
           else

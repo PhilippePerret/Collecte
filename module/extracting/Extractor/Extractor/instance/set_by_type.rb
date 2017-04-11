@@ -13,6 +13,10 @@ class Extractor
   def set_by_type
     set_title
     set_file_affixe
+    if format == :html
+      set_javascripts_by_type
+      set_css_by_type
+    end
   end
 
   # Le titre (balise title en HTML + div) en fonction
@@ -43,6 +47,28 @@ class Extractor
     # document sont identiques.
     final_file.title        = tit
     final_file.titre_final  = tit
+  end
+
+  def set_javascripts_by_type
+    js_files = Array.new
+    case options[:as]
+    when :sequencier, :synopsis
+      js_files << "#{folder_js}/fiches.js"
+    end
+    js_files.empty? || final_file.javascript_files = js_files
+  end
+
+  def set_css_by_type
+    final_file.css_files =
+      case options[:as]
+      when :sequencier
+        ["#{folder_css}/sequencier.css"]
+      when :synopsis
+        ["#{folder_css}/synopsis.css"]
+      else
+        # Dir["#{folder_css}/**/*.css"]
+        nil
+      end
   end
 
   def set_file_affixe

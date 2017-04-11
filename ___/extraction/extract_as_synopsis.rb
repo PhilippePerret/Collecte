@@ -7,21 +7,25 @@
 #
 
 # === PATH DU DOSSIER COLLECTE ===
-FOLDER_COLLECTE_PATH = "/Users/philippeperret/Desktop/Everest_collect"
+FOLDER_COLLECTE_PATH =
+"/Users/philippeperret/Desktop/Everest_collect"
 # === OPTIONS ===
-WITH_HORLOGE = true # mettre à false pour retirer les horloges
+# Choisir le format :html, :text ou :xml
+OUTPUT_FORMAT = :html
+# Si true, affiche les horloges dans la marge gauche
+WITH_HORLOGE = true
 
 # / NE RIEN TOUCHER SOUS CETTE LIGNE
 # ===========================================================
 
 options = {
-  format:       :html,
+  format:       OUTPUT_FORMAT,
   as:           :synopsis,
   horloge:      WITH_HORLOGE,
   open_file:    true
 }
 # On parse le dossier de collecte
-require_relative 'lib/required'
+require_relative '../../lib/required'
 coll = Collecte.new(FOLDER_COLLECTE_PATH)
 # coll.parse
 coll.extract(options)

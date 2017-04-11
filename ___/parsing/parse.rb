@@ -9,6 +9,6 @@
 FOLDER_COLLECTE_PATH = "/Users/philippeperret/Desktop/Everest_collect"
 
 # On parse le dossier de collecte
-require_relative 'lib/required'
+require_relative '../../lib/required'
 collecte = Collecte.new(FOLDER_COLLECTE_PATH)
 collecte.parse(debug: true)
