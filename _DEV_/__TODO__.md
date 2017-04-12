@@ -1,5 +1,8 @@
-* Voir comment mémoriser les lignes des éléments collectés pour pouvoir les retrouver en cliquant sur un picto et ouvrir le fichier à l'endroit voulu.
-  Note : c'est une possibilité qui ne doit être offerte qu'en OFFLINE.
+* Utiliser le lien TM pour les fiches personnages et les fiches brins
+* N'affiche le lien showinTM_link que lorsque l'on est ONLINE (faire ça par CSS ? C'est dangereux, il vaudrait mieux faire les fichiers définitifs sans ces liens-outils)
+
+* Faire une sortie de brin par personnage (ce sont les scènes d'un personnage). => Brins automatiques.
+  Essayer aussi de faire les brins automatiques de relation de personnages (lorsqu'ils se trouvent au moins ensemble dans deux scènes).
 
 * Faire la commande script `collecte`
 

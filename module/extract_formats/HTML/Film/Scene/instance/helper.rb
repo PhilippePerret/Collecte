@@ -9,6 +9,7 @@ class Scene
   # séquencier.
   def as_sequence
     div(
+      showinTM_link +
       intitule_html +
       resume_html +
       bloc_timeline,
@@ -38,6 +39,7 @@ class Scene
         resume_html + brins_paragraphes_html
       end
     div(
+      showinTM_link +
       intitule_html +
       final_resume +
       bloc_timeline,

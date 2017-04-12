@@ -54,6 +54,12 @@ module RelativeObjectMethods
   # Propriétés volatiles
   # --------------------
 
+  # Renvoie le type de l'élémen par exemple :brin,
+  # :personnage ou :scene
+  def type_element
+    @type_element ||= self.class.name.to_s.split('::').last.downcase.to_sym
+  end
+
   def scenes
     @scenes ||= begin
       a = Array.new

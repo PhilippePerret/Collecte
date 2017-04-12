@@ -5,17 +5,22 @@
 module RelativeObjectMethods
 
   def titre_displayed
-    c = Film::Personnage.traite_balises_in(titre)
-    return c
+    return Film::Personnage.traite_balises_in(titre)
   end
   def libelle_displayed
-    c = Film::Personnage.traite_balises_in(libelle)
-    return c
+    return Film::Personnage.traite_balises_in(libelle)
+  end
+  def description_displayed
+    return Film::Personnage.traite_balises_in(description)
   end
 
-  def description_displayed
-    c = Film::Personnage.traite_balises_in(description)
-    return c
+  # Retourne le lien pour voir l'objet dans TextMate si
+  # la donnée @line est définie.
+  def showinTM_link
+    @line != nil || (return '')
+    href = "txmt://open/?url=file://#{collecte_file}"
+    href += "&line=#{line}&column=1"
+    link('->TM', {href: href, class: 'tmlink'})
   end
 
 

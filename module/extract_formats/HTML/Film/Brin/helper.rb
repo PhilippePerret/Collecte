@@ -10,6 +10,7 @@ class Brin
   def as_fiche
     div(
       closebox("return HideCurFiche()") +
+      showinTM_link +
       div(libelle_displayed, class: 'titre') +
       to_html,
       {class: 'fiche brin hidden', id: "fiche-brin-#{id}"}

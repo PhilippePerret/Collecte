@@ -10,6 +10,7 @@ class Personnage
   def as_fiche
     div(
       closebox("return HideCurFiche()") +
+      showinTM_link +
       div(pseudo, class: 'titre') +
       div(self.to_html, class: 'description'),
       {class: 'fiche personnage hidden', id: "fiche-personnage-#{id}"}
