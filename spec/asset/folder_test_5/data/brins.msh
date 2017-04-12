@@ -1,9 +1,16 @@
-{:created_atl+��X:film_idI"divisions2017:ET:
-items{i{	:idi:libelleI"Premier brin;T:descriptionI"!Description du premier brin.;T:scenes_ids0i{	;	i;
-I"Deuxième brin;T;I"'Une description du deuxième brin.;T;0i{	;	i;
-I"Troisième brin;T;0;0i	{	;	i	;
-I"Quatrième brin;T;0;0i
-{	;	i
+{:created_atl+�S�X:film_idI"divisions2017:ET:
+items{i{
+:idi:	linei:libelleI"Premier brin;T:descriptionI"!Description du premier brin.;T:scenes_ids0i{
+;	i;
+i
+;I"Deuxième brin;T;I"'Une description du deuxième brin.;T;0i{
+;	i;
+i;I"Troisième brin;T;0;0i	{
+;	i	;
+i;I"Quatrième brin;T;0;0i
+{
+;	i
 ;
-I"0Cinquième brin inutilisé par la collecte.;T;0;0i{	;	i;
-I"-Sixième brin pour le dossier de test 4.;T;0;0
+i;I"0Cinquième brin inutilisé par la collecte.;T;0;0i{
+;	i;
+i;I"-Sixième brin pour le dossier de test 4.;T;0;0

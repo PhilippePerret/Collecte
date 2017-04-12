@@ -7,6 +7,7 @@ class Brin
   def hash_data
     {
       id:           id,
+      line:         line,
       libelle:      libelle,
       description:  description,
       scenes_ids:   scenes_ids

@@ -15,6 +15,7 @@ class Scene
     {
       id:               id,
       numero:           numero,
+      line:             line,
       horloge:          hor,
       resume:           res,
       effet:            effet,

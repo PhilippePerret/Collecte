@@ -19,15 +19,48 @@ module CollecteFileMethods
   # un brin, un personnage, etc.)
   def blocs
     @blocs ||= begin
-      # On supprime tous les commentaires
-      cf = File.read(collecte_file).strip.split(RC).collect do |line|
-        if line.strip.start_with?('#')
-          nil
+      # On va maintenant retourner des blocs qui définissent
+      # leur première ligne, pour la donnée `line` des scènes,
+      # des personnages et des brins
+      line_precedente_vide = false
+      liste_blocs   = Array.new
+      current_lines = Array.new
+      File.read(collecte_file).split(RC).each_with_index do |line, index_line|
+        # On passe les lignes de commentaire
+        false == line.strip.start_with?('#') || next
+        # Si la ligne est vide et que la précédente était
+        # vide aussi, c'est la définition d'un nouveau
+        # bloc.
+        if line.strip == ''
+          if current_lines.count > 0
+            #
+            # => Nouveau bloc
+            #
+            liste_blocs << Bloc.new(current_lines.join(RC), @first_index_line)
+            current_lines = Array.new
+            @first_index_line = nil
+          end
         else
-          line
+          #
+          # => Ligne non vide, on l'ajoute à la liste
+          #
+          @first_index_line ||= index_line + 1
+          current_lines << line
         end
-      end.compact.join(RC)
-      cf.split(RC*2).collect{|b| b.strip}
+      end
+      if current_lines.count > 0
+        liste_blocs << Bloc.new(current_lines.join(RC), @first_index_line)
+      end
+      liste_blocs
+    end
+  end
+
+  class Bloc
+    attr_reader :code, :line
+    def initialize code, line
+      log "Nouveau bloc à la ligne #{line.inspect}"
+      @code = code.strip
+      @line = line
     end
   end
 

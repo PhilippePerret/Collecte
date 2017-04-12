@@ -41,6 +41,7 @@ describe 'Parsing du collecte des scènes' do
         numero:   1,
         lieu: 'INT.',
         effet: 'JOUR', decor: 'MAISON DE JOE',
+        line: 1
 
       }.each do |prop, expected|
         expect(scene1[prop]).to eq expected
@@ -66,6 +67,7 @@ describe 'Parsing du collecte des scènes' do
           lieu: 'INT.', lieu_alt: 'EXT.',
           effet:'JOUR', effet_alt: nil,
           decor: 'MAISON DE JOE', decor_alt:'JARDIN PUBLIC',
+          line: 10
         }.each do |prop, expected|
           expect(scene3[prop]).to eq expected
         end

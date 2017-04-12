@@ -1,177 +1,41 @@
-12/04 13:50:55 Fin du chargement des librairies (lib/required.rb)
-12/04 13:50:55 INSTANCIATION COLLECTE "/Users/philippeperret/Desktop/Everest_collect"
-12/04 13:50:55 -> Film#load…
-12/04 13:50:55 -> Film#dispatch
-12/04 13:50:55 <- Film#dispatch OK
-12/04 13:50:55 <- Film#load OK
-12/04 13:50:55 tit : "Brins 1 OU 2 complets du film “Éverest”"
-12/04 13:50:55 tit : "Brins 1 OU 2 complets du film “Éverest”<div class=\"lib_brin\">1 : Les bouteilles d'oxygène</div><div class=\"lib_brin\">2 : Le journaliste Krakauer</div>"
-12/04 13:50:55   -> prepare [path="/Users/philippeperret/Desktop/Everest_collect/extraction/full_brin_1_2.html"]
-12/04 13:50:55   <- prepare
-12/04 13:50:55 Méthode d'extraction à utiliser : :extract_brin
-12/04 13:50:55 -> Film::Extractor#extract_brin
-12/04 13:50:55 -> extract_sequencier(as_brin = true)
-12/04 13:50:55 from_time: 0 / to_time: Infinity
-12/04 13:50:55 Scène 1 (0:01:10) filtrée : hors conditions
-12/04 13:50:55 Scène 2 (0:01:50) filtrée : hors conditions
-12/04 13:50:55 Scène 3 (0:02:20) filtrée : hors conditions
-12/04 13:50:55 Scène 4 (0:02:40) filtrée : hors conditions
-12/04 13:50:55 Scène 6 (0:04:10) filtrée : hors conditions
-12/04 13:50:55 Scène 8 (0:06:00) filtrée : hors conditions
-12/04 13:50:55 Scène 9 (0:07:10) filtrée : hors conditions
-12/04 13:50:55 Scène 10 (0:07:20) filtrée : hors conditions
-12/04 13:50:55 Scène 11 (0:09:40) filtrée : hors conditions
-12/04 13:50:55 Scène 12 (0:10:00) filtrée : hors conditions
-12/04 13:50:55 Scène 13 (0:10:30) filtrée : hors conditions
-12/04 13:50:55 Scène 14 (0:10:40) filtrée : hors conditions
-12/04 13:50:55 Scène 15 (0:11:00) filtrée : hors conditions
-12/04 13:50:55 Scène 16 (0:11:20) filtrée : hors conditions
-12/04 13:50:55 Scène 17 (0:12:00) filtrée : hors conditions
-12/04 13:50:55 Scène 18 (0:12:30) filtrée : hors conditions
-12/04 13:50:55 Scène 19 (0:13:50) filtrée : hors conditions
-12/04 13:50:55 Scène 20 (0:14:20) filtrée : hors conditions
-12/04 13:50:55 Scène 21 (0:15:00) filtrée : hors conditions
-12/04 13:50:55 Scène 22 (0:15:15) filtrée : hors conditions
-12/04 13:50:55 Scène 24 (0:17:00) filtrée : hors conditions
-12/04 13:50:55 Scène 25 (0:18:34) filtrée : hors conditions
-12/04 13:50:55 Scène 27 (0:19:20) filtrée : hors conditions
-12/04 13:50:55 Scène 28 (0:19:45) filtrée : hors conditions
-12/04 13:50:55 Scène 29 (0:20:10) filtrée : hors conditions
-12/04 13:50:55 Scène 30 (0:20:15) filtrée : hors conditions
-12/04 13:50:55 Scène 31 (0:20:25) filtrée : hors conditions
-12/04 13:50:55 Scène 32 (0:20:45) filtrée : hors conditions
-12/04 13:50:55 Scène 33 (0:20:50) filtrée : hors conditions
-12/04 13:50:55 Scène 34 (0:21:00) filtrée : hors conditions
-12/04 13:50:55 Scène 36 (0:22:00) filtrée : hors conditions
-12/04 13:50:55 Scène 37 (0:22:50) filtrée : hors conditions
-12/04 13:50:55 Scène 38 (0:23:25) filtrée : hors conditions
-12/04 13:50:55 Scène 39 (0:25:10) filtrée : hors conditions
-12/04 13:50:55 Scène 40 (0:25:35) filtrée : hors conditions
-12/04 13:50:55 Scène 41 (0:27:20) filtrée : hors conditions
-12/04 13:50:55 Scène 42 (0:30:10) filtrée : hors conditions
-12/04 13:50:55 Scène 43 (0:31:20) filtrée : hors conditions
-12/04 13:50:55 Scène 44 (0:31:45) filtrée : hors conditions
-12/04 13:50:55 Scène 46 (0:34:40) filtrée : hors conditions
-12/04 13:50:55 Scène 47 (0:35:00) filtrée : hors conditions
-12/04 13:50:55 Scène 48 (0:35:10) filtrée : hors conditions
-12/04 13:50:55 Scène 49 (0:38:10) filtrée : hors conditions
-12/04 13:50:55 Scène 50 (0:40:30) filtrée : hors conditions
-12/04 13:50:55 Scène 51 (0:41:00) filtrée : hors conditions
-12/04 13:50:55 Scène 52 (0:41:10) filtrée : hors conditions
-12/04 13:50:55 Scène 53 (0:41:30) filtrée : hors conditions
-12/04 13:50:55 Scène 54 (0:41:50) filtrée : hors conditions
-12/04 13:50:55 Scène 55 (0:42:40) filtrée : hors conditions
-12/04 13:50:55 Scène 56 (0:43:30) filtrée : hors conditions
-12/04 13:50:55 Scène 57 (0:44:30) filtrée : hors conditions
-12/04 13:50:55 Scène 58 (0:45:30) filtrée : hors conditions
-12/04 13:50:55 Scène 59 (0:46:00) filtrée : hors conditions
-12/04 13:50:55 Scène 60 (0:47:20) filtrée : hors conditions
-12/04 13:50:55 Scène 61 (0:47:50) filtrée : hors conditions
-12/04 13:50:55 Scène 62 (0:48:40) filtrée : hors conditions
-12/04 13:50:55 Scène 63 (0:49:30) filtrée : hors conditions
-12/04 13:50:55 Scène 64 (0:50:00) filtrée : hors conditions
-12/04 13:50:55 Scène 65 (0:51:15) filtrée : hors conditions
-12/04 13:50:55 Scène 66 (0:52:00) filtrée : hors conditions
-12/04 13:50:55 Scène 67 (0:52:15) filtrée : hors conditions
-12/04 13:50:55 Scène 68 (0:54:15) filtrée : hors conditions
-12/04 13:50:55 Scène 69 (0:54:30) filtrée : hors conditions
-12/04 13:50:55 Scène 70 (0:55:25) filtrée : hors conditions
-12/04 13:50:55 Scène 71 (0:55:35) filtrée : hors conditions
-12/04 13:50:55 Scène 72 (0:55:50) filtrée : hors conditions
-12/04 13:50:55 Scène 73 (0:56:40) filtrée : hors conditions
-12/04 13:50:55 Scène 74 (0:57:00) filtrée : hors conditions
-12/04 13:50:55 Scène 75 (0:57:20) filtrée : hors conditions
-12/04 13:50:55 Scène 76 (0:57:50) filtrée : hors conditions
-12/04 13:50:55 Scène 77 (0:58:50) filtrée : hors conditions
-12/04 13:50:55 Scène 78 (0:59:10) filtrée : hors conditions
-12/04 13:50:55 Scène 79 (0:59:20) filtrée : hors conditions
-12/04 13:50:55 Scène 80 (0:59:45) filtrée : hors conditions
-12/04 13:50:55 Scène 81 (0:59:55) filtrée : hors conditions
-12/04 13:50:55 Scène 82 (1:02:00) filtrée : hors conditions
-12/04 13:50:55 Scène 83 (1:03:00) filtrée : hors conditions
-12/04 13:50:55 Scène 84 (1:03:10) filtrée : hors conditions
-12/04 13:50:55 Scène 85 (1:03:30) filtrée : hors conditions
-12/04 13:50:55 Scène 86 (1:03:40) filtrée : hors conditions
-12/04 13:50:55 Scène 87 (1:04:30) filtrée : hors conditions
-12/04 13:50:55 Scène 88 (1:05:20) filtrée : hors conditions
-12/04 13:50:55 Scène 89 (1:06:45) filtrée : hors conditions
-12/04 13:50:55 Scène 90 (1:07:25) filtrée : hors conditions
-12/04 13:50:55 Scène 91 (1:08:05) filtrée : hors conditions
-12/04 13:50:55 Scène 92 (1:08:25) filtrée : hors conditions
-12/04 13:50:55 Scène 93 (1:08:55) filtrée : hors conditions
-12/04 13:50:55 Scène 94 (1:09:40) filtrée : hors conditions
-12/04 13:50:55 Scène 95 (1:09:50) filtrée : hors conditions
-12/04 13:50:55 Scène 96 (1:10:25) filtrée : hors conditions
-12/04 13:50:55 Scène 97 (1:10:50) filtrée : hors conditions
-12/04 13:50:55 Scène 98 (1:11:05) filtrée : hors conditions
-12/04 13:50:55 Scène 99 (1:11:35) filtrée : hors conditions
-12/04 13:50:55 Scène 100 (1:12:05) filtrée : hors conditions
-12/04 13:50:55 Scène 101 (1:12:50) filtrée : hors conditions
-12/04 13:50:55 Scène 102 (1:13:00) filtrée : hors conditions
-12/04 13:50:55 Scène 103 (1:13:37) filtrée : hors conditions
-12/04 13:50:55 Scène 104 (1:13:55) filtrée : hors conditions
-12/04 13:50:55 Scène 105 (1:14:00) filtrée : hors conditions
-12/04 13:50:55 Scène 106 (1:14:10) filtrée : hors conditions
-12/04 13:50:55 Scène 107 (1:15:00) filtrée : hors conditions
-12/04 13:50:55 Scène 108 (1:15:40) filtrée : hors conditions
-12/04 13:50:55 Scène 109 (1:16:00) filtrée : hors conditions
-12/04 13:50:55 Scène 110 (1:16:35) filtrée : hors conditions
-12/04 13:50:55 Scène 111 (1:17:00) filtrée : hors conditions
-12/04 13:50:55 Scène 112 (1:18:30) filtrée : hors conditions
-12/04 13:50:55 Scène 113 (1:18:45) filtrée : hors conditions
-12/04 13:50:55 Scène 114 (1:18:55) filtrée : hors conditions
-12/04 13:50:55 Scène 115 (1:19:15) filtrée : hors conditions
-12/04 13:50:55 Scène 116 (1:19:30) filtrée : hors conditions
-12/04 13:50:55 Scène 117 (1:20:05) filtrée : hors conditions
-12/04 13:50:55 Scène 118 (1:20:55) filtrée : hors conditions
-12/04 13:50:55 Scène 119 (1:21:05) filtrée : hors conditions
-12/04 13:50:55 Scène 120 (1:21:25) filtrée : hors conditions
-12/04 13:50:55 Scène 121 (1:21:45) filtrée : hors conditions
-12/04 13:50:55 Scène 122 (1:22:10) filtrée : hors conditions
-12/04 13:50:55 Scène 123 (1:22:15) filtrée : hors conditions
-12/04 13:50:55 Scène 124 (1:22:45) filtrée : hors conditions
-12/04 13:50:55 Scène 125 (1:23:25) filtrée : hors conditions
-12/04 13:50:55 Scène 126 (1:25:25) filtrée : hors conditions
-12/04 13:50:55 Scène 127 (1:26:00) filtrée : hors conditions
-12/04 13:50:55 Scène 128 (1:27:00) filtrée : hors conditions
-12/04 13:50:55 Scène 129 (1:27:20) filtrée : hors conditions
-12/04 13:50:55 Scène 130 (1:27:35) filtrée : hors conditions
-12/04 13:50:55 Scène 131 (1:27:40) filtrée : hors conditions
-12/04 13:50:55 Scène 132 (1:28:10) filtrée : hors conditions
-12/04 13:50:55 Scène 133 (1:30:20) filtrée : hors conditions
-12/04 13:50:55 Scène 134 (1:32:15) filtrée : hors conditions
-12/04 13:50:55 Scène 135 (1:32:40) filtrée : hors conditions
-12/04 13:50:55 Scène 136 (1:33:00) filtrée : hors conditions
-12/04 13:50:55 Scène 137 (1:33:20) filtrée : hors conditions
-12/04 13:50:55 Scène 138 (1:34:00) filtrée : hors conditions
-12/04 13:50:55 Scène 139 (1:34:30) filtrée : hors conditions
-12/04 13:50:55 Scène 140 (1:34:45) filtrée : hors conditions
-12/04 13:50:55 Scène 141 (1:35:00) filtrée : hors conditions
-12/04 13:50:55 Scène 142 (1:35:30) filtrée : hors conditions
-12/04 13:50:55 Scène 143 (1:36:30) filtrée : hors conditions
-12/04 13:50:55 Scène 144 (1:36:40) filtrée : hors conditions
-12/04 13:50:55 Scène 145 (1:38:20) filtrée : hors conditions
-12/04 13:50:55 Scène 146 (1:41:20) filtrée : hors conditions
-12/04 13:50:55 Scène 147 (1:41:40) filtrée : hors conditions
-12/04 13:50:55 Scène 148 (1:43:20) filtrée : hors conditions
-12/04 13:50:55 Scène 149 (1:44:05) filtrée : hors conditions
-12/04 13:50:55 Scène 150 (1:44:20) filtrée : hors conditions
-12/04 13:50:55 Scène 151 (1:44:50) filtrée : hors conditions
-12/04 13:50:55 Scène 152 (1:45:10) filtrée : hors conditions
-12/04 13:50:55 Scène 153 (1:45:35) filtrée : hors conditions
-12/04 13:50:55 Scène 154 (1:45:50) filtrée : hors conditions
-12/04 13:50:55 Scène 155 (1:46:50) filtrée : hors conditions
-12/04 13:50:55 Scène 156 (1:47:20) filtrée : hors conditions
-12/04 13:50:55 Scène 157 (1:47:55) filtrée : hors conditions
-12/04 13:50:55 Scène 158 (1:48:15) filtrée : hors conditions
-12/04 13:50:55 Scène 159 (1:49:40) filtrée : hors conditions
-12/04 13:50:55 Scène 160 (1:49:55) filtrée : hors conditions
-12/04 13:50:55 Scène 161 (1:50:05) filtrée : hors conditions
-12/04 13:50:55 Scène 162 (1:50:30) filtrée : hors conditions
-12/04 13:50:55 Scène 163 (1:51:25) filtrée : hors conditions
-12/04 13:50:55 Scène 164 (1:52:05) filtrée : hors conditions
-12/04 13:50:55 Scène 165 (1:52:25) filtrée : hors conditions
-12/04 13:50:55 Scène 166 (1:52:40) filtrée : hors conditions
-12/04 13:50:55 Scène 167 (1:54:00) filtrée : hors conditions
-12/04 13:50:55 Nombre de scènes passant le filtre : 6
-12/04 13:50:55 Méthode Scene à utiliser : :as_brin
+12/04 18:19:27 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+12/04 18:19:27 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+12/04 18:19:27 -> Film#load…
+12/04 18:19:27 -> Film#dispatch
+12/04 18:19:27 <- Film#dispatch OK
+12/04 18:19:27 <- Film#load OK
+12/04 18:19:27 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+12/04 18:19:27 -> Film#load…
+12/04 18:19:27 -> Film#dispatch
+12/04 18:19:27 <- Film#dispatch OK
+12/04 18:19:27 <- Film#load OK
+12/04 18:19:27 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+12/04 18:19:27 -> Film#load…
+12/04 18:19:27 -> Film#dispatch
+12/04 18:19:27 <- Film#dispatch OK
+12/04 18:19:27 <- Film#load OK
+12/04 18:19:27 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+12/04 18:19:27 -> Film#load…
+12/04 18:19:27 -> Film#dispatch
+12/04 18:19:27 <- Film#dispatch OK
+12/04 18:19:27 <- Film#load OK
+12/04 18:19:27 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+12/04 18:19:27 -> Film#load…
+12/04 18:19:27 -> Film#dispatch
+12/04 18:19:27 <- Film#dispatch OK
+12/04 18:19:27 <- Film#load OK
+12/04 18:19:27 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+12/04 18:19:27 -> Film#load…
+12/04 18:19:27 -> Film#dispatch
+12/04 18:19:27 <- Film#dispatch OK
+12/04 18:19:27 <- Film#load OK
+12/04 18:19:27 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+12/04 18:19:27 -> Film#load…
+12/04 18:19:27 -> Film#dispatch
+12/04 18:19:27 <- Film#dispatch OK
+12/04 18:19:27 <- Film#load OK
+12/04 18:19:27 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+12/04 18:19:27 -> Film#load…
+12/04 18:19:27 -> Film#dispatch
+12/04 18:19:27 <- Film#dispatch OK
+12/04 18:19:27 <- Film#load OK

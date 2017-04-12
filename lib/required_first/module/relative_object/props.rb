@@ -12,6 +12,10 @@ module RelativeObjectMethods
   # (scène, note, brin) ou un string (personnage)
   attr_accessor :id
 
+  # {Fixnum} Ligne où la scène est définie dans le fichier
+  # (pour pouvoir y aller depuis les fichiers HTML)
+  attr_accessor :line
+
   # {String} Le libellé de l'objet relatif, qui peut être son
   # résumé (scène), son contenu (note) ou son titre (brin)
   attr_accessor :libelle

@@ -22,8 +22,8 @@ class << self
         log "### ERREUR Personnage inconnu : `#{pid}'"
         # On tente de reparser le fichier personnage ?
         log '# PERSONNAGES COURANTS'
-        film.personnages.each do |pid, perso|
-          log "#   Perso ##{pid} (#{perso.prenom} #{perso.nom})"
+        film.personnages.each do |perid, per|
+          log "#   Perso ##{perid} (#{per.prenom} #{per.nom})"
         end
         log '# FIN PERSONNAGES'
         log "# Dossier de collecte : #{Collecte.current.path.inspect}"

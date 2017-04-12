@@ -7,6 +7,7 @@ class Personnage
   def hash_data
     {
       id:             id,
+      line:           line,
       prenom:         prenom,
       nom:            nom,
       pseudo:         pseudo,

@@ -11,7 +11,8 @@ class Scenes
   def add bloc
     @hash ||= Hash.new
     item = Film::Scene.new(self.film)
-    item.parse(bloc)
+    item.parse(bloc.code)
+    item.line = bloc.line
     @hash.merge!( item.id => item )
   rescue BadBlocData => e
     log "Mauvaises données pour un bloc de scène", error: e

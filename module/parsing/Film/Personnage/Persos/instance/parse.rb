@@ -11,7 +11,8 @@ class Personnages
   def add bloc
     @hash ||= Hash.new
     item = Film::Personnage.new(self.film)
-    item.parse(bloc)
+    item.parse(bloc.code)
+    item.line = bloc.line
     @hash.merge!( item.id => item )
   rescue BadBlocData => e
     log "Mauvaises données pour un bloc de personnage", error: e
