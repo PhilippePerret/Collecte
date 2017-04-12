@@ -1,130 +1,132 @@
-12/04 09:51:44 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
-12/04 09:51:44 -> Film#load…
-12/04 09:51:44 -> Film#dispatch
-12/04 09:51:44 <- Film#dispatch OK
-12/04 09:51:44 <- Film#load OK
-12/04 09:51:44   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_3.html"]
-12/04 09:51:44   <- prepare
-12/04 09:51:44 from_time: 0 / to_time: Infinity
-12/04 09:51:44 Scène 1 (0:00:30) filtrée : hors conditions
-12/04 09:51:44 Scène 2 (0:01:40) filtrée : hors conditions
-12/04 09:51:44 Scène 6 (0:11:45) filtrée : undefined method `passe_filtre?' for nil:NilClass
-12/04 09:51:44 Scène 7 (0:15:15) filtrée : hors conditions
-12/04 09:51:44 Scène 8 (0:45:00) filtrée : undefined method `passe_filtre?' for nil:NilClass
-12/04 09:51:44 Nombre de scènes passant le filtre : 3
-12/04 09:51:45 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
-12/04 09:51:45 -> Film#load…
-12/04 09:51:45 -> Film#dispatch
-12/04 09:51:45 <- Film#dispatch OK
-12/04 09:51:45 <- Film#load OK
-12/04 09:51:45   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_3.html"]
-12/04 09:51:45   <- prepare
-12/04 09:51:45 from_time: 0 / to_time: Infinity
-12/04 09:51:45 Scène 1 (0:00:30) filtrée : hors conditions
-12/04 09:51:45 Scène 2 (0:01:40) filtrée : hors conditions
-12/04 09:51:45 Scène 6 (0:11:45) filtrée : undefined method `passe_filtre?' for nil:NilClass
-12/04 09:51:45 Scène 7 (0:15:15) filtrée : hors conditions
-12/04 09:51:45 Scène 8 (0:45:00) filtrée : undefined method `passe_filtre?' for nil:NilClass
-12/04 09:51:45 Nombre de scènes passant le filtre : 3
-12/04 09:51:45 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
-12/04 09:51:45 -> Film#load…
-12/04 09:51:45 -> Film#dispatch
-12/04 09:51:45 <- Film#dispatch OK
-12/04 09:51:45 <- Film#load OK
-12/04 09:51:45   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_2_4.html"]
-12/04 09:51:45   <- prepare
-12/04 09:51:45 from_time: 0 / to_time: Infinity
-12/04 09:51:45 Scène 1 (0:00:30) filtrée : hors conditions
-12/04 09:51:45 Scène 3 (0:03:20) filtrée : hors conditions
-12/04 09:51:45 Scène 5 (0:07:23) filtrée : hors conditions
-12/04 09:51:45 Scène 6 (0:11:45) filtrée : undefined method `passe_filtre?' for nil:NilClass
-12/04 09:51:45 Scène 8 (0:45:00) filtrée : undefined method `passe_filtre?' for nil:NilClass
-12/04 09:51:45 Nombre de scènes passant le filtre : 3
-12/04 09:51:45 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
-12/04 09:51:45 -> Film#load…
-12/04 09:51:45 -> Film#dispatch
-12/04 09:51:45 <- Film#dispatch OK
-12/04 09:51:45 <- Film#load OK
-12/04 09:51:45   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_2_4.html"]
-12/04 09:51:45   <- prepare
-12/04 09:51:45 from_time: 0 / to_time: Infinity
-12/04 09:51:45 Scène 1 (0:00:30) filtrée : hors conditions
-12/04 09:51:45 Scène 3 (0:03:20) filtrée : hors conditions
-12/04 09:51:45 Scène 5 (0:07:23) filtrée : hors conditions
-12/04 09:51:45 Scène 6 (0:11:45) filtrée : undefined method `passe_filtre?' for nil:NilClass
-12/04 09:51:45 Scène 8 (0:45:00) filtrée : undefined method `passe_filtre?' for nil:NilClass
-12/04 09:51:45 Nombre de scènes passant le filtre : 3
-12/04 09:51:45 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
-12/04 09:51:45 -> Film#load…
-12/04 09:51:45 -> Film#dispatch
-12/04 09:51:45 <- Film#dispatch OK
-12/04 09:51:45 <- Film#load OK
-12/04 09:51:45   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_sequencier.html"]
-12/04 09:51:45   <- prepare
-12/04 09:51:45 from_time: 0 / to_time: Infinity
-12/04 09:51:45 Scène 6 (0:11:45) filtrée : undefined method `passe_filtre?' for nil:NilClass
-12/04 09:51:45 Scène 7 (0:15:15) filtrée : hors conditions
-12/04 09:51:45 Scène 8 (0:45:00) filtrée : undefined method `passe_filtre?' for nil:NilClass
-12/04 09:51:45 Nombre de scènes passant le filtre : 5
-12/04 09:51:45 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
-12/04 09:51:45 -> Film#load…
-12/04 09:51:45 -> Film#dispatch
-12/04 09:51:45 <- Film#dispatch OK
-12/04 09:51:45 <- Film#load OK
-12/04 09:51:45   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_sequencier.html"]
-12/04 09:51:45   <- prepare
-12/04 09:51:45 from_time: 0 / to_time: Infinity
-12/04 09:51:45 Scène 1 (0:00:30) filtrée : hors conditions
-12/04 09:51:45 Scène 3 (0:03:20) filtrée : hors conditions
-12/04 09:51:45 Scène 5 (0:07:23) filtrée : hors conditions
-12/04 09:51:45 Scène 6 (0:11:45) filtrée : undefined method `passe_filtre?' for nil:NilClass
-12/04 09:51:45 Scène 8 (0:45:00) filtrée : undefined method `passe_filtre?' for nil:NilClass
-12/04 09:51:45 Nombre de scènes passant le filtre : 3
-12/04 09:51:45 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
-12/04 09:51:45 -> Film#load…
-12/04 09:51:45 -> Film#dispatch
-12/04 09:51:45 <- Film#dispatch OK
-12/04 09:51:45 <- Film#load OK
-12/04 09:51:45   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_sequencier.html"]
-12/04 09:51:45   <- prepare
-12/04 09:51:45 from_time: 0 / to_time: Infinity
-12/04 09:51:45 Scène 1 (0:00:30) filtrée : hors conditions
-12/04 09:51:45 Scène 2 (0:01:40) filtrée : hors conditions
-12/04 09:51:45 Scène 6 (0:11:45) filtrée : undefined method `passe_filtre?' for nil:NilClass
-12/04 09:51:45 Scène 7 (0:15:15) filtrée : hors conditions
-12/04 09:51:45 Scène 8 (0:45:00) filtrée : undefined method `passe_filtre?' for nil:NilClass
-12/04 09:51:45 Nombre de scènes passant le filtre : 3
-12/04 09:51:45 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
-12/04 09:51:45 -> Film#load…
-12/04 09:51:45 -> Film#dispatch
-12/04 09:51:45 <- Film#dispatch OK
-12/04 09:51:45 <- Film#load OK
-12/04 09:51:45   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_sequencier.html"]
-12/04 09:51:45   <- prepare
-12/04 09:51:45 from_time: 0 / to_time: Infinity
-12/04 09:51:45 Scène 1 (0:00:30) filtrée : hors conditions
-12/04 09:51:45 Scène 6 (0:11:45) filtrée : undefined method `passe_filtre?' for nil:NilClass
-12/04 09:51:45 Scène 7 (0:15:15) filtrée : hors conditions
-12/04 09:51:45 Scène 8 (0:45:00) filtrée : undefined method `passe_filtre?' for nil:NilClass
-12/04 09:51:45 Nombre de scènes passant le filtre : 4
-12/04 09:51:45 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
-12/04 09:51:45 -> Film#load…
-12/04 09:51:45 -> Film#dispatch
-12/04 09:51:45 <- Film#dispatch OK
-12/04 09:51:45 <- Film#load OK
-12/04 09:51:45   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_sequencier.html"]
-12/04 09:51:45   <- prepare
-12/04 09:51:45 from_time: 0 / to_time: Infinity
-12/04 09:51:45 Scène 1 (0:00:30) filtrée : hors conditions
-12/04 09:51:45 Scène 6 (0:11:45) filtrée : undefined method `passe_filtre?' for nil:NilClass
-12/04 09:51:45 Scène 7 (0:15:15) filtrée : hors conditions
-12/04 09:51:45 Scène 8 (0:45:00) filtrée : undefined method `passe_filtre?' for nil:NilClass
-12/04 09:51:45 Nombre de scènes passant le filtre : 4
-12/04 09:51:45 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_5"
-12/04 09:51:45 Parsing préparé avec succès.
-12/04 09:51:45 PARSING DES MÉTADONNÉES…
-12/04 09:51:45 Métadata parsées ({:id=>"divisions2017", :titre=>"Film pour divisions", :auteurs=>["Phil", "Marion"], :debut=>"11/4/2017", :fin=>"11/4/2017"})
-12/04 09:51:45 PARSING DES BRINS…
-12/04 09:51:45 PARSING DES PERSONNAGES…
-12/04 09:51:45 PARSING DES SCÈNES…
-12/04 09:51:45 	Parsing des scènes
+12/04 13:42:46 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
+12/04 13:42:46 -> Film#load…
+12/04 13:42:46 -> Film#dispatch
+12/04 13:42:46 <- Film#dispatch OK
+12/04 13:42:46 <- Film#load OK
+12/04 13:42:46 tit : "Brin 3 (Troisième brin) complet du film “Film pour brins”"
+12/04 13:42:46 tit : "Brin 3 (Troisième brin) complet du film “Film pour brins”"
+12/04 13:42:46   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_3.html"]
+12/04 13:42:46   <- prepare
+12/04 13:42:46 Méthode d'extraction à utiliser : :extract_brin
+12/04 13:42:46 -> Film::Extractor#extract_brin
+12/04 13:42:46 -> extract_sequencier(as_brin = true)
+12/04 13:42:46 from_time: 0 / to_time: Infinity
+12/04 13:42:46 Scène 1 (0:00:30) filtrée : hors conditions
+12/04 13:42:46 Scène 2 (0:01:40) filtrée : hors conditions
+12/04 13:42:46 Scène 6 (0:11:45) filtrée : hors conditions
+12/04 13:42:46 Scène 7 (0:15:15) filtrée : hors conditions
+12/04 13:42:46 Scène 8 (0:45:00) filtrée : hors conditions
+12/04 13:42:46 Nombre de scènes passant le filtre : 3
+12/04 13:42:46 Méthode Scene à utiliser : :as_brin
+12/04 13:42:46 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
+12/04 13:42:46 -> Film#load…
+12/04 13:42:46 -> Film#dispatch
+12/04 13:42:46 <- Film#dispatch OK
+12/04 13:42:46 <- Film#load OK
+12/04 13:42:46 tit : "Brin 3 (Troisième brin) complet du film “Film pour brins”"
+12/04 13:42:46 tit : "Brin 3 (Troisième brin) complet du film “Film pour brins”"
+12/04 13:42:46   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_3.html"]
+12/04 13:42:46   <- prepare
+12/04 13:42:46 Méthode d'extraction à utiliser : :extract_brin
+12/04 13:42:46 -> Film::Extractor#extract_brin
+12/04 13:42:46 -> extract_sequencier(as_brin = true)
+12/04 13:42:46 from_time: 0 / to_time: Infinity
+12/04 13:42:46 Scène 1 (0:00:30) filtrée : hors conditions
+12/04 13:42:46 Scène 2 (0:01:40) filtrée : hors conditions
+12/04 13:42:46 Scène 6 (0:11:45) filtrée : hors conditions
+12/04 13:42:46 Scène 7 (0:15:15) filtrée : hors conditions
+12/04 13:42:46 Scène 8 (0:45:00) filtrée : hors conditions
+12/04 13:42:46 Nombre de scènes passant le filtre : 3
+12/04 13:42:46 Méthode Scene à utiliser : :as_brin
+12/04 13:42:46 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
+12/04 13:42:46 -> Film#load…
+12/04 13:42:46 -> Film#dispatch
+12/04 13:42:46 <- Film#dispatch OK
+12/04 13:42:46 <- Film#load OK
+12/04 13:42:46 tit : "Brins 2 OU 4 complets du film “Film pour brins”"
+12/04 13:42:46 tit : "Brins 2 OU 4 complets du film “Film pour brins”<div class=\"lib_brin\">2 : Deuxième brin</div><div class=\"lib_brin\">4 : Quatrième brin</div>"
+12/04 13:42:46   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_2_4.html"]
+12/04 13:42:46   <- prepare
+12/04 13:42:46 Méthode d'extraction à utiliser : :extract_brin
+12/04 13:42:46 -> Film::Extractor#extract_brin
+12/04 13:42:46 -> extract_sequencier(as_brin = true)
+12/04 13:42:46 from_time: 0 / to_time: Infinity
+12/04 13:42:46 Scène 1 (0:00:30) filtrée : hors conditions
+12/04 13:42:46 Scène 3 (0:03:20) filtrée : hors conditions
+12/04 13:42:46 Scène 5 (0:07:23) filtrée : hors conditions
+12/04 13:42:46 Scène 6 (0:11:45) filtrée : hors conditions
+12/04 13:42:46 Scène 8 (0:45:00) filtrée : hors conditions
+12/04 13:42:46 Nombre de scènes passant le filtre : 3
+12/04 13:42:46 Méthode Scene à utiliser : :as_brin
+12/04 13:42:46 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
+12/04 13:42:46 -> Film#load…
+12/04 13:42:46 -> Film#dispatch
+12/04 13:42:46 <- Film#dispatch OK
+12/04 13:42:46 <- Film#load OK
+12/04 13:42:46 tit : "Brins 2 OU 4 complets du film “Film pour brins”"
+12/04 13:42:46 tit : "Brins 2 OU 4 complets du film “Film pour brins”<div class=\"lib_brin\">2 : Deuxième brin</div><div class=\"lib_brin\">4 : Quatrième brin</div>"
+12/04 13:42:46   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_2_4.html"]
+12/04 13:42:46   <- prepare
+12/04 13:42:46 Méthode d'extraction à utiliser : :extract_brin
+12/04 13:42:46 -> Film::Extractor#extract_brin
+12/04 13:42:46 -> extract_sequencier(as_brin = true)
+12/04 13:42:46 from_time: 0 / to_time: Infinity
+12/04 13:42:46 Scène 1 (0:00:30) filtrée : hors conditions
+12/04 13:42:46 Scène 3 (0:03:20) filtrée : hors conditions
+12/04 13:42:46 Scène 5 (0:07:23) filtrée : hors conditions
+12/04 13:42:46 Scène 6 (0:11:45) filtrée : hors conditions
+12/04 13:42:46 Scène 8 (0:45:00) filtrée : hors conditions
+12/04 13:42:46 Nombre de scènes passant le filtre : 3
+12/04 13:42:46 Méthode Scene à utiliser : :as_brin
+12/04 13:42:46 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
+12/04 13:42:46 -> Film#load…
+12/04 13:42:46 -> Film#dispatch
+12/04 13:42:46 <- Film#dispatch OK
+12/04 13:42:46 <- Film#load OK
+12/04 13:42:46 tit : "Brin 1 (Premier brin) complet du film “Film pour brins”"
+12/04 13:42:46 tit : "Brin 1 (Premier brin) complet du film “Film pour brins”"
+12/04 13:42:46   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_1.html"]
+12/04 13:42:46   <- prepare
+12/04 13:42:46 Méthode d'extraction à utiliser : :extract_brin
+12/04 13:42:46 -> Film::Extractor#extract_brin
+12/04 13:42:46 -> extract_sequencier(as_brin = true)
+12/04 13:42:46 from_time: 0 / to_time: Infinity
+12/04 13:42:46 Scène 6 (0:11:45) filtrée : hors conditions
+12/04 13:42:46 Scène 7 (0:15:15) filtrée : hors conditions
+12/04 13:42:46 Scène 8 (0:45:00) filtrée : hors conditions
+12/04 13:42:46 Nombre de scènes passant le filtre : 5
+12/04 13:42:46 Méthode Scene à utiliser : :as_brin
+12/04 13:42:46 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
+12/04 13:42:46 -> Film#load…
+12/04 13:42:46 -> Film#dispatch
+12/04 13:42:46 <- Film#dispatch OK
+12/04 13:42:46 <- Film#load OK
+12/04 13:42:46 tit : "Brins 2 OU 4 complets du film “Film pour brins”"
+12/04 13:42:46 tit : "Brins 2 OU 4 complets du film “Film pour brins”<div class=\"lib_brin\">2 : Deuxième brin</div><div class=\"lib_brin\">4 : Quatrième brin</div>"
+12/04 13:42:46   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_2_4.html"]
+12/04 13:42:46   <- prepare
+12/04 13:42:46 Méthode d'extraction à utiliser : :extract_brin
+12/04 13:42:46 -> Film::Extractor#extract_brin
+12/04 13:42:46 -> extract_sequencier(as_brin = true)
+12/04 13:42:46 from_time: 0 / to_time: Infinity
+12/04 13:42:46 Scène 1 (0:00:30) filtrée : hors conditions
+12/04 13:42:46 Scène 3 (0:03:20) filtrée : hors conditions
+12/04 13:42:46 Scène 5 (0:07:23) filtrée : hors conditions
+12/04 13:42:46 Scène 6 (0:11:45) filtrée : hors conditions
+12/04 13:42:46 Scène 8 (0:45:00) filtrée : hors conditions
+12/04 13:42:46 Nombre de scènes passant le filtre : 3
+12/04 13:42:46 Méthode Scene à utiliser : :as_brin
+12/04 13:42:46 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
+12/04 13:42:46 -> Film#load…
+12/04 13:42:46 -> Film#dispatch
+12/04 13:42:46 <- Film#dispatch OK
+12/04 13:42:46 <- Film#load OK
+12/04 13:42:46 tit : "Brins 1 ET 3 complets du film “Film pour brins”"
+12/04 13:42:46 tit : "Brins 1 ET 3 complets du film “Film pour brins”<div class=\"lib_brin\">1 : Premier brin</div><div class=\"lib_brin\">3 : Troisième brin</div>"
+12/04 13:42:46   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_1_3.html"]
+12/04 13:42:46   <- prepare
+12/04 13:42:46 Méthode d'extraction à utiliser : :extract_brin
+12/04 13:42:46 -> Film::Extractor#extract_brin
+12/04 13:42:46 -> extract_sequencier(as_brin = true)
+12/04 13:42:46 from_time: 0 / to_time: Infinity
+12/04 13:42:46 Scène 1 (0:00:30) filtrée : hors conditions

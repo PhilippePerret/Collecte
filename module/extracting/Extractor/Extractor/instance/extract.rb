@@ -49,6 +49,7 @@ class Extractor
     # Reset (pour les tests, surtout)
     Film::TextObjet.init if format == :html
     Film::Personnage.init
+    Film::Brin.init
 
     final_file.prepare || return
 

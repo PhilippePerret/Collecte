@@ -27,16 +27,7 @@ class Extractor
   # de renvoyer la bonne valeur
   def filter_str_to_proc filtre
     code_filtre =
-      filtre.split('+').collect do |item|
-        item = item.strip
-        if item.start_with?('(') && item.end_with?(')')
-          item[1..-2].split(',').collect{|i|i.strip.to_i}
-        elsif item.match(/,/)
-          item.split(',').collect{|i|i.strip.to_i}
-        else
-          [item.strip.to_i]
-        end
-      end.collect do |cond|
+      filtre.as_filter_str_to_array.collect do |cond|
         cond.collect{|v| "a.include?(#{v})"}.join(' || ') + ' || raise'
       end.join(RC)
     # Fabrication du processus

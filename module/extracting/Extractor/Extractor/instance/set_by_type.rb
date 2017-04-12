@@ -22,28 +22,33 @@ class Extractor
   # Le titre (balise title en HTML + div) en fonction
   # des options.
   def set_title
-    tit =
-      case options[:as]
-      when :brin
-        "Brin #{(options[:filter][:brins]).gsub(/[\(\),\+]/,' ')}"
-      when :sequencier
-        "Séquencier"
-      when :synopsis
-        "Synopsis"
-      when :resume
-        "Résumé"
-      else
-        "Extraction des données du #{collecte.extractor.date}"
-      end
-    if options[:from_time] || options[:to_time]
-      tit << ' partiel'
+    if options[:as] == :brin
+      tit = Film::Brin.titre_with_options(options)
     else
-      tit << ' complet'
-    end
-    # S'il y a un titre de film défini, on l'ajoute à la fin
-    # du titre
-    if film.titre
-      tit << " du film “#{film.titre}”"
+      tit =
+        case options[:as]
+        when :brin
+          # Les brins ont des titres complexes traités
+          # ci-dessus
+        when :sequencier
+          "Séquencier"
+        when :synopsis
+          "Synopsis"
+        when :resume
+          "Résumé"
+        else
+          "Extraction des données du #{collecte.extractor.date}"
+        end
+      if options[:from_time] || options[:to_time]
+        hfrom = (options[:from_time]||0).s2h
+        hto   = (options[:to_time]||film.duree).s2h
+        tit << " partiel (#{hfrom} à #{hto})"
+      else
+        tit << ' complet'
+      end
+      # S'il y a un titre de film défini, on l'ajoute à la fin
+      # du titre
+      film.titre && tit << " du film “#{film.titre}”"
     end
     # Pour le moment, la balise title et le titre du
     # document sont identiques.

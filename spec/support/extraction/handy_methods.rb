@@ -26,7 +26,7 @@ def extract_brin cond_brins, options_sup = nil, dossier = nil
   dossier ||= folder_test_4
   opts = {
     format:     :html,
-    as:         :sequencier,
+    as:         :brin,
     filter:     {brins: cond_brins}
   }
   options_sup.nil? || opts.merge!(options_sup)

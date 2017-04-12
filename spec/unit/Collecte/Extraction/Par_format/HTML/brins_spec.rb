@@ -5,6 +5,9 @@ describe 'Extraction des brins' do
     before(:all) do
       extract_brin('1')
     end
+    it 'contient le bon titre' do
+      expect(code).to have_tag('div#titre', text: "Brin 1 (Premier brin) complet du film “Film pour brins”")
+    end
     it 'affiche seulement les scènes de ce brin' do
       [1,2,3,4,5].each do |num|
         expect(code).to have_tag("div#scene-#{num}")
@@ -18,6 +21,12 @@ describe 'Extraction des brins' do
   context 'avec un filtre sur 2 brins optionels : 2,4' do
     before(:all) do
       extract_brin('2,4')
+    end
+    it 'contient le bon titre' do
+      expect(code).to have_tag('div#titre') do
+        with_tag('div.lib_brin', text: "2 : Deuxième brin")
+        with_tag('div.lib_brin', text: "4 : Quatrième brin")
+      end
     end
     it 'affiche les scènes du brin 2 OU du brin 4' do
       [2,4,7].each do |num|

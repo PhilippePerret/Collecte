@@ -1,150 +1,148 @@
-12/04 09:51:46 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3"
-12/04 09:51:46 -> Film#load…
-12/04 09:51:46 -> Film#dispatch
-12/04 09:51:46 <- Film#dispatch OK
-12/04 09:51:46 <- Film#load OK
-12/04 09:51:46   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3/extraction/sequencier_to_180.html"]
-12/04 09:51:46   <- prepare
-12/04 09:51:46 from_time: 0 / to_time: 180
-12/04 09:51:46 Scène 3 (0:03:20) filtrée : < à to_time
-12/04 09:51:46 Scène 4 (0:04:53) filtrée : < à to_time
-12/04 09:51:46 Nombre de scènes passant le filtre : 2
-12/04 09:51:46 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3"
-12/04 09:51:46 -> Film#load…
-12/04 09:51:46 -> Film#dispatch
-12/04 09:51:46 <- Film#dispatch OK
-12/04 09:51:46 <- Film#load OK
-12/04 09:51:46   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3/extraction/sequencier_from_100_to_290.html"]
-12/04 09:51:46   <- prepare
-12/04 09:51:46 from_time: 100 / to_time: 290
-12/04 09:51:46 Scène 1 (0:00:30) filtrée : > à from_time
-12/04 09:51:46 Scène 4 (0:04:53) filtrée : < à to_time
-12/04 09:51:46 Nombre de scènes passant le filtre : 2
-12/04 09:51:46 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3"
-12/04 09:51:46 -> Film#load…
-12/04 09:51:46 -> Film#dispatch
-12/04 09:51:46 <- Film#dispatch OK
-12/04 09:51:46 <- Film#load OK
-12/04 09:51:46   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3/extraction/sequencier_from_60_to_180.html"]
-12/04 09:51:46   <- prepare
-12/04 09:51:46 from_time: 60 / to_time: 180
-12/04 09:51:46 Scène 1 (0:00:30) filtrée : > à from_time
-12/04 09:51:46 Scène 3 (0:03:20) filtrée : < à to_time
-12/04 09:51:46 Scène 4 (0:04:53) filtrée : < à to_time
-12/04 09:51:46 Nombre de scènes passant le filtre : 1
-12/04 09:51:46 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
-12/04 09:51:46 -> Film#load…
-12/04 09:51:46 -> Film#dispatch
-12/04 09:51:46 <- Film#dispatch OK
-12/04 09:51:46 <- Film#load OK
-12/04 09:51:46   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2/extraction/full_synopsis.html"]
-12/04 09:51:46   <- prepare
-12/04 09:51:46 from_time: 0 / to_time: Infinity
-12/04 09:51:46 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
-12/04 09:51:46 -> Film#load…
-12/04 09:51:46 -> Film#dispatch
-12/04 09:51:46 <- Film#dispatch OK
-12/04 09:51:46 <- Film#load OK
-12/04 09:51:46   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2/extraction/full_synopsis.html"]
-12/04 09:51:46   <- prepare
-12/04 09:51:46 from_time: 0 / to_time: Infinity
-12/04 09:51:46 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
-12/04 09:51:46 Parsing préparé avec succès.
-12/04 09:51:46 PARSING DES MÉTADONNÉES…
-12/04 09:51:46 Métadata parsées ({:id=>"Everest2016", :titre=>"Éverest", :auteurs=>["Phil", "Benoit"], :debut=>"25/4/2017", :fin=>"30/4/2017"})
-12/04 09:51:46 PARSING DES BRINS…
-12/04 09:51:46 PARSING DES PERSONNAGES…
-12/04 09:51:46 PARSING DES SCÈNES…
-12/04 09:51:46 	Parsing des scènes
-12/04 09:51:46 	Calcul de la durée des scènes
-12/04 09:51:46 	Sauvegarde des scènes
-12/04 09:51:46 -> Film#load…
-12/04 09:51:46 -> Film#dispatch
-12/04 09:51:46 <- Film#dispatch OK
-12/04 09:51:46 <- Film#load OK
-12/04 09:51:46   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2/extraction/.txt"]
-12/04 09:51:46   <- prepare
-12/04 09:51:46 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
-12/04 09:51:46 -> Film#load…
-12/04 09:51:46 -> Film#dispatch
-12/04 09:51:46 <- Film#dispatch OK
-12/04 09:51:46 <- Film#load OK
-12/04 09:51:46 -> Film#load…
-12/04 09:51:46 -> Film#dispatch
-12/04 09:51:46 <- Film#dispatch OK
-12/04 09:51:46 <- Film#load OK
-12/04 09:51:46   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2/extraction/full_extract_data.txt"]
-12/04 09:51:46   <- prepare
-12/04 09:51:46 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_1"
-12/04 09:51:46 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_1"
-12/04 09:51:46 Parsing préparé avec succès.
-12/04 09:51:46 PARSING DES MÉTADONNÉES…
-12/04 09:51:46 PARSING DES BRINS…
-12/04 09:51:46 PARSING DES PERSONNAGES…
-12/04 09:51:46 PARSING DES SCÈNES…
-12/04 09:51:46 	Parsing des scènes
-12/04 09:51:46 	Calcul de la durée des scènes
-12/04 09:51:46 	Sauvegarde des scènes
-12/04 09:51:46 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_1"
-12/04 09:51:46 Parsing préparé avec succès.
-12/04 09:51:46 PARSING DES MÉTADONNÉES…
-12/04 09:51:46 PARSING DES BRINS…
-12/04 09:51:46 PARSING DES PERSONNAGES…
-12/04 09:51:46 PARSING DES SCÈNES…
-12/04 09:51:46 	Parsing des scènes
-12/04 09:51:46 	Calcul de la durée des scènes
-12/04 09:51:46 	Sauvegarde des scènes
-12/04 09:51:46 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
-12/04 09:51:46 Parsing préparé avec succès.
-12/04 09:51:46 PARSING DES MÉTADONNÉES…
-12/04 09:51:46 Métadata parsées ({:id=>"Everest2016", :titre=>"Éverest", :auteurs=>["Phil", "Benoit"], :debut=>"25/4/2017", :fin=>"30/4/2017"})
-12/04 09:51:46 PARSING DES BRINS…
-12/04 09:51:46 PARSING DES PERSONNAGES…
-12/04 09:51:46 PARSING DES SCÈNES…
-12/04 09:51:46 	Parsing des scènes
-12/04 09:51:46 	Calcul de la durée des scènes
-12/04 09:51:46 	Sauvegarde des scènes
-12/04 09:51:46 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
-12/04 09:51:46 Parsing préparé avec succès.
-12/04 09:51:46 PARSING DES MÉTADONNÉES…
-12/04 09:51:46 Métadata parsées ({:id=>"Everest2016", :titre=>"Éverest", :auteurs=>["Phil", "Benoit"], :debut=>"25/4/2017", :fin=>"30/4/2017"})
-12/04 09:51:46 PARSING DES BRINS…
-12/04 09:51:46 PARSING DES PERSONNAGES…
-12/04 09:51:46 PARSING DES SCÈNES…
-12/04 09:51:46 	Parsing des scènes
-12/04 09:51:46 	Calcul de la durée des scènes
-12/04 09:51:46 	Sauvegarde des scènes
-12/04 09:51:46 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_1"
-12/04 09:51:46 Parsing préparé avec succès.
-12/04 09:51:46 PARSING DES MÉTADONNÉES…
-12/04 09:51:46 PARSING DES BRINS…
-12/04 09:51:46 PARSING DES PERSONNAGES…
-12/04 09:51:46 PARSING DES SCÈNES…
-12/04 09:51:46 	Parsing des scènes
-12/04 09:51:46 	Calcul de la durée des scènes
-12/04 09:51:46 	Sauvegarde des scènes
-12/04 09:51:46 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_1"
-12/04 09:51:46 Parsing préparé avec succès.
-12/04 09:51:46 PARSING DES MÉTADONNÉES…
-12/04 09:51:46 PARSING DES BRINS…
-12/04 09:51:46 PARSING DES PERSONNAGES…
-12/04 09:51:46 PARSING DES SCÈNES…
-12/04 09:51:46 	Parsing des scènes
-12/04 09:51:46 	Calcul de la durée des scènes
-12/04 09:51:46 	Sauvegarde des scènes
-12/04 09:51:46 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_1"
-12/04 09:51:46 Parsing préparé avec succès.
-12/04 09:51:46 PARSING DES MÉTADONNÉES…
-12/04 09:51:46 PARSING DES BRINS…
-12/04 09:51:46 PARSING DES PERSONNAGES…
-12/04 09:51:46 PARSING DES SCÈNES…
-12/04 09:51:46 	Parsing des scènes
-12/04 09:51:46 	Calcul de la durée des scènes
-12/04 09:51:46 	Sauvegarde des scènes
-12/04 09:51:46 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
-12/04 09:51:46 Parsing préparé avec succès.
-12/04 09:51:46 PARSING DES MÉTADONNÉES…
-12/04 09:51:46 Métadata parsées ({:id=>"Everest2016", :titre=>"Éverest", :auteurs=>["Phil", "Benoit"], :debut=>"25/4/2017", :fin=>"30/4/2017"})
-12/04 09:51:46 PARSING DES BRINS…
-12/04 09:51:46 PARSING DES PERSONNAGES…
-12/04 09:51:46 PARSING DES SCÈNES…
+12/04 13:42:48 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3"
+12/04 13:42:48 -> Film#load…
+12/04 13:42:48 -> Film#dispatch
+12/04 13:42:48 <- Film#dispatch OK
+12/04 13:42:48 <- Film#load OK
+12/04 13:42:48   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3/extraction/sequencier_to_180.html"]
+12/04 13:42:48   <- prepare
+12/04 13:42:48 Méthode d'extraction à utiliser : :extract_sequencier
+12/04 13:42:48 -> extract_sequencier(as_brin = false)
+12/04 13:42:48 from_time: 0 / to_time: 180
+12/04 13:42:48 Scène 3 (0:03:20) filtrée : < à to_time
+12/04 13:42:48 Scène 4 (0:04:53) filtrée : < à to_time
+12/04 13:42:48 Nombre de scènes passant le filtre : 2
+12/04 13:42:48 Méthode Scene à utiliser : :as_sequence
+12/04 13:42:48 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3"
+12/04 13:42:48 -> Film#load…
+12/04 13:42:48 -> Film#dispatch
+12/04 13:42:48 <- Film#dispatch OK
+12/04 13:42:48 <- Film#load OK
+12/04 13:42:48   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3/extraction/sequencier_from_100_to_290.html"]
+12/04 13:42:48   <- prepare
+12/04 13:42:48 Méthode d'extraction à utiliser : :extract_sequencier
+12/04 13:42:48 -> extract_sequencier(as_brin = false)
+12/04 13:42:48 from_time: 100 / to_time: 290
+12/04 13:42:48 Scène 1 (0:00:30) filtrée : > à from_time
+12/04 13:42:48 Scène 4 (0:04:53) filtrée : < à to_time
+12/04 13:42:48 Nombre de scènes passant le filtre : 2
+12/04 13:42:48 Méthode Scene à utiliser : :as_sequence
+12/04 13:42:48 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3"
+12/04 13:42:48 -> Film#load…
+12/04 13:42:48 -> Film#dispatch
+12/04 13:42:48 <- Film#dispatch OK
+12/04 13:42:48 <- Film#load OK
+12/04 13:42:48   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3/extraction/sequencier_from_60_to_180.html"]
+12/04 13:42:48   <- prepare
+12/04 13:42:48 Méthode d'extraction à utiliser : :extract_sequencier
+12/04 13:42:48 -> extract_sequencier(as_brin = false)
+12/04 13:42:48 from_time: 60 / to_time: 180
+12/04 13:42:48 Scène 1 (0:00:30) filtrée : > à from_time
+12/04 13:42:48 Scène 3 (0:03:20) filtrée : < à to_time
+12/04 13:42:48 Scène 4 (0:04:53) filtrée : < à to_time
+12/04 13:42:48 Nombre de scènes passant le filtre : 1
+12/04 13:42:48 Méthode Scene à utiliser : :as_sequence
+12/04 13:42:48 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+12/04 13:42:48 -> Film#load…
+12/04 13:42:48 -> Film#dispatch
+12/04 13:42:48 <- Film#dispatch OK
+12/04 13:42:48 <- Film#load OK
+12/04 13:42:48   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2/extraction/full_synopsis.html"]
+12/04 13:42:48   <- prepare
+12/04 13:42:48 Méthode d'extraction à utiliser : :extract_synopsis
+12/04 13:42:48 from_time: 0 / to_time: Infinity
+12/04 13:42:48 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+12/04 13:42:48 -> Film#load…
+12/04 13:42:48 -> Film#dispatch
+12/04 13:42:48 <- Film#dispatch OK
+12/04 13:42:48 <- Film#load OK
+12/04 13:42:48   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2/extraction/full_synopsis.html"]
+12/04 13:42:48   <- prepare
+12/04 13:42:48 Méthode d'extraction à utiliser : :extract_synopsis
+12/04 13:42:48 from_time: 0 / to_time: Infinity
+12/04 13:42:48 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+12/04 13:42:48 Parsing préparé avec succès.
+12/04 13:42:48 PARSING DES MÉTADONNÉES…
+12/04 13:42:48 Métadata parsées ({:id=>"Everest2016", :titre=>"Éverest", :auteurs=>["Phil", "Benoit"], :debut=>"25/4/2017", :fin=>"30/4/2017"})
+12/04 13:42:48 PARSING DES BRINS…
+12/04 13:42:48 PARSING DES PERSONNAGES…
+12/04 13:42:48 PARSING DES SCÈNES…
+12/04 13:42:48 	Parsing des scènes
+12/04 13:42:48 	Calcul de la durée des scènes
+12/04 13:42:48 	Sauvegarde des scènes
+12/04 13:42:48 -> Film#load…
+12/04 13:42:48 -> Film#dispatch
+12/04 13:42:48 <- Film#dispatch OK
+12/04 13:42:48 <- Film#load OK
+12/04 13:42:48   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2/extraction/.txt"]
+12/04 13:42:48   <- prepare
+12/04 13:42:48 Méthode d'extraction à utiliser : :extract_whole
+12/04 13:42:48 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+12/04 13:42:48 -> Film#load…
+12/04 13:42:48 -> Film#dispatch
+12/04 13:42:48 <- Film#dispatch OK
+12/04 13:42:48 <- Film#load OK
+12/04 13:42:48 -> Film#load…
+12/04 13:42:48 -> Film#dispatch
+12/04 13:42:48 <- Film#dispatch OK
+12/04 13:42:48 <- Film#load OK
+12/04 13:42:48   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2/extraction/full_extract_data.txt"]
+12/04 13:42:48   <- prepare
+12/04 13:42:48 Méthode d'extraction à utiliser : :extract_whole
+12/04 13:42:48 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_1"
+12/04 13:42:48 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_1"
+12/04 13:42:48 Parsing préparé avec succès.
+12/04 13:42:48 PARSING DES MÉTADONNÉES…
+12/04 13:42:48 PARSING DES BRINS…
+12/04 13:42:48 PARSING DES PERSONNAGES…
+12/04 13:42:48 PARSING DES SCÈNES…
+12/04 13:42:48 	Parsing des scènes
+12/04 13:42:48 	Calcul de la durée des scènes
+12/04 13:42:48 	Sauvegarde des scènes
+12/04 13:42:48 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_1"
+12/04 13:42:48 Parsing préparé avec succès.
+12/04 13:42:48 PARSING DES MÉTADONNÉES…
+12/04 13:42:48 PARSING DES BRINS…
+12/04 13:42:48 PARSING DES PERSONNAGES…
+12/04 13:42:48 PARSING DES SCÈNES…
+12/04 13:42:48 	Parsing des scènes
+12/04 13:42:48 	Calcul de la durée des scènes
+12/04 13:42:48 	Sauvegarde des scènes
+12/04 13:42:48 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+12/04 13:42:48 Parsing préparé avec succès.
+12/04 13:42:48 PARSING DES MÉTADONNÉES…
+12/04 13:42:48 Métadata parsées ({:id=>"Everest2016", :titre=>"Éverest", :auteurs=>["Phil", "Benoit"], :debut=>"25/4/2017", :fin=>"30/4/2017"})
+12/04 13:42:48 PARSING DES BRINS…
+12/04 13:42:48 PARSING DES PERSONNAGES…
+12/04 13:42:48 PARSING DES SCÈNES…
+12/04 13:42:48 	Parsing des scènes
+12/04 13:42:48 	Calcul de la durée des scènes
+12/04 13:42:48 	Sauvegarde des scènes
+12/04 13:42:48 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+12/04 13:42:48 Parsing préparé avec succès.
+12/04 13:42:48 PARSING DES MÉTADONNÉES…
+12/04 13:42:48 Métadata parsées ({:id=>"Everest2016", :titre=>"Éverest", :auteurs=>["Phil", "Benoit"], :debut=>"25/4/2017", :fin=>"30/4/2017"})
+12/04 13:42:48 PARSING DES BRINS…
+12/04 13:42:48 PARSING DES PERSONNAGES…
+12/04 13:42:48 PARSING DES SCÈNES…
+12/04 13:42:48 	Parsing des scènes
+12/04 13:42:48 	Calcul de la durée des scènes
+12/04 13:42:48 	Sauvegarde des scènes
+12/04 13:42:48 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_1"
+12/04 13:42:48 Parsing préparé avec succès.
+12/04 13:42:48 PARSING DES MÉTADONNÉES…
+12/04 13:42:48 PARSING DES BRINS…
+12/04 13:42:48 PARSING DES PERSONNAGES…
+12/04 13:42:48 PARSING DES SCÈNES…
+12/04 13:42:48 	Parsing des scènes
+12/04 13:42:48 	Calcul de la durée des scènes
+12/04 13:42:48 	Sauvegarde des scènes
+12/04 13:42:48 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_1"
+12/04 13:42:48 Parsing préparé avec succès.
+12/04 13:42:48 PARSING DES MÉTADONNÉES…
+12/04 13:42:48 PARSING DES BRINS…
+12/04 13:42:48 PARSING DES PERSONNAGES…
+12/04 13:42:48 PARSING DES SCÈNES…
+12/04 13:42:48 	Parsing des scènes
+12/04 13:42:48 	Calcul de la durée des scènes
+12/04 13:42:48 	Sauvegarde des scènes
+12/04 13:42:48 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_1"

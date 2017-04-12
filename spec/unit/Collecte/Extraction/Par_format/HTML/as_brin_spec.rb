@@ -15,7 +15,7 @@ describe 'Extraction d’un brin avec option as: :brin' do
     end
     describe 'le code du fichier' do
       it 'contient le bon titre' do
-        expect(code).to have_tag('div#titre', text: "Brin 3 complet du film “Film pour brins”")
+        expect(code).to have_tag('div#titre', text: "Brin 3 (Troisième brin) complet du film “Film pour brins”")
       end
       it 'contient les scènes du brin' do
         [3,4,5].each do |num|
@@ -55,7 +55,7 @@ describe 'Extraction d’un brin avec option as: :brin' do
     end
     describe 'le code du fichier' do
       it 'contient le bon titre' do
-        expect(code).to have_tag('div#titre', text: "Brin 3 complet du film “Film pour brins”")
+        expect(code).to have_tag('div#titre', text: "Brin 3 (Troisième brin) complet du film “Film pour brins”")
       end
       it 'contient les scènes du brin' do
         [3,4,5].each do |num|

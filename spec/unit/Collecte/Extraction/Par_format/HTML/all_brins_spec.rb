@@ -58,49 +58,54 @@ describe 'Extraction HTML de tous les brins' do
           expect(File.exist?fichier_brin2).to eq true
           @code = File.read(fichier_brin2)
         end
-        it 'le code contient les trois scènes du brin' do
-          [2,4,7].each do |sid|
-            expect(code).to have_tag("div#scene-#{sid}")
+        describe 'son code' do
+          it 'contient le bon titre' do
+            expect(code).to have_tag('div#titre', text: 'Brin 2 (Deuxième brin) complet du film “Film pour brins”')
           end
-        end
-        it 'NE contient PAS le résumé de la scène 2 (indirectement dans le brin)' do
-          expect(code).to have_tag('div#scene-2') do
-            without_tag('div.resume')
+          it 'contient les trois scènes du brin' do
+            [2,4,7].each do |sid|
+              expect(code).to have_tag("div#scene-#{sid}")
+            end
           end
-        end
-        it 'ne contient pas de div.paragraphes pour la scène 2' do
-          expect(code).to have_tag('div#scene-2') do
-            without_tag('div.paragraphes')
+          it 'NE contient PAS le résumé de la scène 2 (indirectement dans le brin)' do
+            expect(code).to have_tag('div#scene-2') do
+              without_tag('div.resume')
+            end
           end
-        end
-        it 'contient le paragraphe concerné de la scène 2 (le 2e)' do
-          expect(code).to have_tag('div#scene-2') do
-            with_tag('div#paragraphe-1', with:{class: 'paragraphe'}, text: /Le premier paragraphe appartient au brin 2/)
+          it 'ne contient pas de div.paragraphes pour la scène 2' do
+            expect(code).to have_tag('div#scene-2') do
+              without_tag('div.paragraphes')
+            end
           end
-        end
-        it 'NE contient PAS le résumé de la scène 4 (indirectement concernée)' do
-          expect(code).to have_tag('div#scene-4') do
-            without_tag('div.resume')
+          it 'contient le paragraphe concerné de la scène 2 (le 2e)' do
+            expect(code).to have_tag('div#scene-2') do
+              with_tag('div#paragraphe-1', with:{class: 'paragraphe'}, text: /Le premier paragraphe appartient au brin 2/)
+            end
           end
-        end
-        it 'ne contient pas de div.paragraphes pour la scène 4' do
-          expect(code).to have_tag('div#scene-4') do
-            without_tag('div.paragraphes')
+          it 'NE contient PAS le résumé de la scène 4 (indirectement concernée)' do
+            expect(code).to have_tag('div#scene-4') do
+              without_tag('div.resume')
+            end
           end
-        end
-        it 'contient le 5e paragraphe de la scène 4' do
-          expect(code).to have_tag('div#scene-4') do
-            with_tag('div#paragraphe-5', with:{class: 'paragraphe'}, text: /Paragraphe 5 de quatrième scène appartient au brin 2/)
+          it 'ne contient pas de div.paragraphes pour la scène 4' do
+            expect(code).to have_tag('div#scene-4') do
+              without_tag('div.paragraphes')
+            end
           end
-        end
-        it 'contient le résumé de la 7e scène (concernée directement)' do
-          expect(code).to have_tag('div#scene-7') do
-            with_tag('div.resume', text: /Septième scène dans le brin 2 seulement/)
+          it 'contient le 5e paragraphe de la scène 4' do
+            expect(code).to have_tag('div#scene-4') do
+              with_tag('div#paragraphe-5', with:{class: 'paragraphe'}, text: /Paragraphe 5 de quatrième scène appartient au brin 2/)
+            end
           end
-        end
-        it 'ne contient aucun des paragraphes de la 7e scène' do
-          expect(code).to have_tag('div#scene-7') do
-            without_tag('div.paragraphe')
+          it 'contient le résumé de la 7e scène (concernée directement)' do
+            expect(code).to have_tag('div#scene-7') do
+              with_tag('div.resume', text: /Septième scène dans le brin 2 seulement/)
+            end
+          end
+          it 'ne contient aucun des paragraphes de la 7e scène' do
+            expect(code).to have_tag('div#scene-7') do
+              without_tag('div.paragraphe')
+            end
           end
         end
       end
