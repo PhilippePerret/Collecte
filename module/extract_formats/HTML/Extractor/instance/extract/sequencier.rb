@@ -12,9 +12,15 @@ class Extractor
   #   séquencier
   # ---------------------------------------------------------------------
 
-  # alias :extract_brin pour simplification des appels de
-  # méthode d'extraction (cf dans set_by_type).
-  def extract_sequencier
+  def extract_brin
+    log "-> Film::Extractor#extract_brin"
+    extract_sequencier(true)
+  end
+  # +as_brin+ ne sert pour le moment que pour savoir s'il
+  # faut utiliser la méthode Scene#as_sequence ou Scene#as_brin
+  def extract_sequencier as_brin = nil
+    as_brin ||= false
+    log "-> extract_sequencier(as_brin = #{as_brin.inspect})"
 
     # On calcule le template de l'intitulé en fonction
     # des choix d'options
@@ -79,8 +85,10 @@ class Extractor
           write scene.as_sequence
         end
       else
+        methode_as = as_brin ? :as_brin : :as_sequence
+        log "Méthode Scene à utiliser : #{methode_as.inspect}"
         scenes.each do |scene|
-          write scene.as_sequence
+          write scene.send(methode_as)
         end
       end
       write '</section>'
@@ -95,7 +103,6 @@ class Extractor
     extract_fiches_notes
 
   end
-  alias :extract_brin :extract_sequencier
 
   def write_point_structurel index_ptstt
     ptstt = points_structurels[index_ptstt]

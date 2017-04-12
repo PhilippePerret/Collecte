@@ -45,5 +45,115 @@ describe 'Extraction HTML de tous les brins' do
         end
       end
     end
+
+    describe 'contenu des fichiers brins' do
+      context 'le fichier brin 2 quand tous les brins avec option :no_resume_when_paragraphes' do
+        before(:all) do
+          dossier_extraction = File.join(folder_test_4, 'extraction')
+          FileUtils.rm_rf(dossier_extraction) if File.exist?(dossier_extraction)
+          @collecte = Collecte.new(folder_test_4)
+          # @collecte.parse # Si modifications
+          @collecte.extract(:all_brins_html, :no_resume_when_paragraphes => true)
+          fichier_brin2 = File.join(dossier_extraction,'full_brin_2.html')
+          expect(File.exist?fichier_brin2).to eq true
+          @code = File.read(fichier_brin2)
+        end
+        it 'le code contient les trois scènes du brin' do
+          [2,4,7].each do |sid|
+            expect(code).to have_tag("div#scene-#{sid}")
+          end
+        end
+        it 'NE contient PAS le résumé de la scène 2 (indirectement dans le brin)' do
+          expect(code).to have_tag('div#scene-2') do
+            without_tag('div.resume')
+          end
+        end
+        it 'ne contient pas de div.paragraphes pour la scène 2' do
+          expect(code).to have_tag('div#scene-2') do
+            without_tag('div.paragraphes')
+          end
+        end
+        it 'contient le paragraphe concerné de la scène 2 (le 2e)' do
+          expect(code).to have_tag('div#scene-2') do
+            with_tag('div#paragraphe-1', with:{class: 'paragraphe'}, text: /Le premier paragraphe appartient au brin 2/)
+          end
+        end
+        it 'NE contient PAS le résumé de la scène 4 (indirectement concernée)' do
+          expect(code).to have_tag('div#scene-4') do
+            without_tag('div.resume')
+          end
+        end
+        it 'ne contient pas de div.paragraphes pour la scène 4' do
+          expect(code).to have_tag('div#scene-4') do
+            without_tag('div.paragraphes')
+          end
+        end
+        it 'contient le 5e paragraphe de la scène 4' do
+          expect(code).to have_tag('div#scene-4') do
+            with_tag('div#paragraphe-5', with:{class: 'paragraphe'}, text: /Paragraphe 5 de quatrième scène appartient au brin 2/)
+          end
+        end
+        it 'contient le résumé de la 7e scène (concernée directement)' do
+          expect(code).to have_tag('div#scene-7') do
+            with_tag('div.resume', text: /Septième scène dans le brin 2 seulement/)
+          end
+        end
+        it 'ne contient aucun des paragraphes de la 7e scène' do
+          expect(code).to have_tag('div#scene-7') do
+            without_tag('div.paragraphe')
+          end
+        end
+      end
+
+
+
+      context 'le fichier brin 2 quand tous les brins sans option particulière' do
+        before(:all) do
+          dossier_extraction = File.join(folder_test_4, 'extraction')
+          FileUtils.rm_rf(dossier_extraction) if File.exist?(dossier_extraction)
+          @collecte = Collecte.new(folder_test_4)
+          # @collecte.parse # Si modifications
+          @collecte.extract(:all_brins_html)
+          fichier_brin2 = File.join(dossier_extraction,'full_brin_2.html')
+          expect(File.exist?fichier_brin2).to eq true
+          @code = File.read(fichier_brin2)
+        end
+        it 'le code contient les trois scènes du brin' do
+          [2,4,7].each do |sid|
+            expect(code).to have_tag("div#scene-#{sid}")
+          end
+        end
+        it 'contient le résumé de la scène 2 (indirectement dans le brin)' do
+          expect(code).to have_tag('div#scene-2') do
+            with_tag('div.resume', text: /Deuxième scène dans brin 2 et 1/)
+          end
+        end
+        it 'contient le paragraphe concerné de la scène 2 (le 2e)' do
+          expect(code).to have_tag('div#scene-2') do
+            with_tag('div#paragraphe-1', with:{class: 'paragraphe'}, text: /Le premier paragraphe appartient au brin 2/)
+          end
+        end
+        it 'contient le résumé de la scène 4 (indirectement concernée)' do
+          expect(code).to have_tag('div#scene-4') do
+            with_tag('div.resume', text: /Quatrième scène dans brins 1, 2, 3, 4, 6/)
+          end
+        end
+        it 'contient le 5e paragraphe de la scène 4' do
+          expect(code).to have_tag('div#scene-4') do
+            with_tag('div#paragraphe-5', with:{class: 'paragraphe'}, text: /Paragraphe 5 de quatrième scène appartient au brin 2/)
+          end
+        end
+        it 'contient le résumé de la 7e scène' do
+          expect(code).to have_tag('div#scene-7') do
+            with_tag('div.resume', text: /Septième scène dans le brin 2 seulement/)
+          end
+        end
+        it 'ne contient aucun des paragraphes de la 7e scène' do
+          expect(code).to have_tag('div#scene-7') do
+            without_tag('div.paragraphe')
+          end
+        end
+      end
+    end
   end
 end

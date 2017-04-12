@@ -25,13 +25,28 @@ section#sequencier
           font-family     : Georgia
           font-size       : 1.05em
           vertical-align  : middle
+
+    div.resume, div.paragraphe
+      margin-left       : 68px // largeur horloge
+
     // Div du résumé
     div.resume
-      margin-left       : 68px // largeur horloge
       font-size         : 1.1em
       sup
         margin-left       : 1em
-    //
+
+    /** Pour les paragraphes, lorsque c'est un brin qui
+      * est extrait et que c'est seulement un paragraphe
+      * de la scène qui appartient à ce brin.
+      */
+    div.paragraphes
+      margin-left     : 6em
+    // NOTE : On ne met pas div.paragraphe à l'intérieur de
+    // div.paragraphes car il n'y a pas de div.paragraphes
+    // s'il n'y a pas de résumé de scène dans la scène
+    div.paragraphe
+      &:before
+        content : '> ' // marque de paragraphe
     /**
       * Un bloc de scène dans la timeline
       *
@@ -44,7 +59,7 @@ section#sequencier
       height            : 12px
       top               : $top_timeline
       background-color  : red
-      z-index           : 1000
+      z-index           : 101
       opacity           : 0.8
     &:hover
       border            : 2px solid blue
@@ -69,7 +84,7 @@ div#timeline_container
   background-color  : white
   height            : 50px
   opacity           : 0.9
-  z-index           : 1000
+  z-index           : 100
 
   div.timeline
     position          : fixed
@@ -77,7 +92,7 @@ div#timeline_container
     left              : 12px
     height            : 12px
     background-color  : blue
-    z-index           : 1000
+    z-index           : 100
     opacity           : 0.3
     &:hover
       opacity           : 1

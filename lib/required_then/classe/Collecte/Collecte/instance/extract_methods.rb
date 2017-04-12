@@ -5,8 +5,12 @@ class Collecte
   #
   # Méthode principale appelée pour extraire les
   # données collectées
-  def extract options = nil
+  # +options+   Défini les options
+  # +options_alt+ Lorsque +options+ est un raccourci-symbol,
+  # on peut mettre dans +options_alt+ les options habituelles
+  def extract options = nil, options_alt = nil
     options = options_arg_to_real_options(options)
+    options_alt.nil? || options.merge!(options_alt)
     extractor(options.delete(:format)).extract_data(options)
   ensure
     if (errors != nil && errors.count > 0) || options[:debug]

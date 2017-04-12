@@ -1,9 +1,14 @@
+* Revoir le titre quand brins pluriel
+  - Mettre en pretty liste (avec ET ou OU)
+  - Mettre la liste des libellés de brin
+* Revoir si la liste des brins filtrée est la bonne (ça ne semble pas fonctionner avec Everest)
+
 * Mettre en place le type :resume (c'est un :synopsis mais où on ne prend que les résumés, même lorsqu'il y a des paragraphes).
 
 * Voir comment mémoriser les lignes des éléments collectés pour pouvoir les retrouver en cliquant sur un picto et ouvrir le fichier à l'endroit voulu.
   Note : c'est une possibilité qui ne doit être offerte qu'en OFFLINE.
-  
-* Faire le script `collecte`
+
+* Faire la commande script `collecte`
 
 * Dans le RefBook, faire un manuel d'utilisation
 

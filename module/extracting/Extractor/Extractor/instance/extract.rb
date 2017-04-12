@@ -19,7 +19,8 @@ class Extractor
         @options[:as] = :brin
         @options.key?(:filter) || @options.merge!(filter: Hash.new)
         film.brins.each do |brin_id, brin|
-          log "\tTraitement de l'objet Brin ##{brin_id}"
+          log ''
+          log "TRAITEMENT DE L'OBJET BRIN ##{brin_id}"
           init # pour forcer les recalculs
           @options[:filter][:brins] = brin_id.to_s
           proceed_extract_data
@@ -87,9 +88,9 @@ class Extractor
     when NilClass
       opts.merge!(as: :whole)
     when :brin
-      if opts.key?(:brin)
+      if opts.key?(:brin) || opts.key?(:brins)
         opts.key?(:filter) || opts.merge!(filter: Hash.new)
-        opts[:filter].merge!(brins: opts.delete(:brin).to_s)
+        opts[:filter].merge!(brins: (opts.delete(:brin)||opts.delete(:brins)).to_s)
       end
     when :outline
       opts.merge!(as: :sequencier)

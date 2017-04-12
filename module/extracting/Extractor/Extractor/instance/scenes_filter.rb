@@ -6,6 +6,9 @@ class Array
     procedure.call(self)
   end
 end
+class NilClass
+  def passe_filtre?(p) ; false end
+end
 
 class Collecte
 class Extractor
@@ -21,6 +24,7 @@ class Extractor
 
   # Reçoit le filtre string (p.e. '2+45') et retourne
   # le processus qui permettra à la méthode passe_filtre?
+  # de renvoyer la bonne valeur
   def filter_str_to_proc filtre
     code_filtre =
       filtre.split('+').collect do |item|

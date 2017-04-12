@@ -25,7 +25,7 @@ class Extractor
     tit =
       case options[:as]
       when :brin
-        "Brin #{options[:filter][:brins].gsub(/[\(\),\+]/,' ')}"
+        "Brin #{(options[:filter][:brins]).gsub(/[\(\),\+]/,' ')}"
       when :sequencier
         "Séquencier"
       when :synopsis
@@ -54,11 +54,9 @@ class Extractor
   def set_javascripts_by_type
     js_files = Array.new
     case options[:as]
-    when :sequencier, :synopsis
+    when :sequencier, :synopsis, :brin
       js_files << "#{folder_js}/fiches.js"
     when :resume
-      # Rien du tout
-    when :brin
       # Rien du tout
     end
     js_files.empty? || final_file.javascript_files = js_files
@@ -67,7 +65,7 @@ class Extractor
   def set_css_by_type
     final_file.css_files =
       case options[:as]
-      when :sequencier
+      when :sequencier, :brin
         ["#{folder_css}/sequencier.css"]
       when :synopsis
         ["#{folder_css}/synopsis.css"]
@@ -105,6 +103,7 @@ class Extractor
   def call_extract_methode_by_type
 
     methode_name = "extract_#{options[:as]}".to_sym
+    log "Méthode d'extraction à utiliser : #{methode_name.inspect}"
 
     if respond_to?(methode_name)
       send(methode_name)
@@ -112,19 +111,6 @@ class Extractor
       # Sans précision de format
       extract_data_as_whole
     end
-
-    # case options[:as]
-    # when :sequencier, :brin
-    #   extract_sequencier
-    # when :synopsis
-    #   extract_synopsis
-    # when :resume
-    #   extract_resume
-    # else # ou :whole
-    #   # Sans précision du format de sortie voulu
-    #   extract_data_as_whole
-    # end
-
   end
 
 
