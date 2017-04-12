@@ -23,6 +23,19 @@ class FinalFile
     return true # pour dire de continuer
   end
 
+  # Pour simplifier l'écriture, lit le fichier
+  def read
+    if exist?
+      File.read(path)
+    else
+      nil
+    end
+  end
+
+  def exist?
+    File.exist? path
+  end
+
 end #/FinalFile
 end #/Extractor
 end #/Collecte

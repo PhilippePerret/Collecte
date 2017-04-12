@@ -1,22 +1,41 @@
-11/04 13:33:33 Fin du chargement des librairies (lib/required.rb)
-11/04 13:33:33 Parsing préparé avec succès.
-11/04 13:33:33 PARSING DES MÉTADONNÉES…
-11/04 13:33:33 Métadata parsées ({:id=>"Everest2016", :titre=>"Éverest", :auteurs=>["Phil"], :debut=>"3/04/2017", :fin=>nil})
-11/04 13:33:33 PARSING DES BRINS…
-11/04 13:33:33 PARSING DES PERSONNAGES…
-11/04 13:33:33 PARSING DES SCÈNES…
-11/04 13:33:33 	Parsing des scènes
-11/04 13:33:33 	Calcul de la durée des scènes
-11/04 13:33:33 	Sauvegarde des scènes
-11/04 13:33:33 ->LOADING FILM…
-11/04 13:33:33 -> Film#dispatch
-11/04 13:33:33 Loading des notes…
-11/04 13:33:33 Loading des personnages…
-11/04 13:33:33 Loading des brins…
-11/04 13:33:33 Loading des scenes…
-11/04 13:33:33 <- Film#dispatch
-11/04 13:33:33 <-LOADING OK
-11/04 13:33:33   -> prepare [path="/Users/philippeperret/Desktop/Everest_collect/extraction/full_sequencier_suggest_stt.html"]
-11/04 13:33:33   <- prepare
-11/04 13:33:33 from_time: 0 / to_time: Infinity
-11/04 13:33:33 Nombre de scènes passant le filtre : 167
+12/04 09:18:30 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+12/04 09:18:30 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+12/04 09:18:30 -> Film#load…
+12/04 09:18:30 -> Film#dispatch
+12/04 09:18:30 <- Film#dispatch OK
+12/04 09:18:30 <- Film#load OK
+12/04 09:18:30 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+12/04 09:18:30 -> Film#load…
+12/04 09:18:30 -> Film#dispatch
+12/04 09:18:30 <- Film#dispatch OK
+12/04 09:18:30 <- Film#load OK
+12/04 09:18:30 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+12/04 09:18:30 -> Film#load…
+12/04 09:18:30 -> Film#dispatch
+12/04 09:18:30 <- Film#dispatch OK
+12/04 09:18:30 <- Film#load OK
+12/04 09:18:30 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+12/04 09:18:30 -> Film#load…
+12/04 09:18:30 -> Film#dispatch
+12/04 09:18:30 <- Film#dispatch OK
+12/04 09:18:30 <- Film#load OK
+12/04 09:18:30 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+12/04 09:18:30 -> Film#load…
+12/04 09:18:30 -> Film#dispatch
+12/04 09:18:30 <- Film#dispatch OK
+12/04 09:18:30 <- Film#load OK
+12/04 09:18:30 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+12/04 09:18:30 -> Film#load…
+12/04 09:18:30 -> Film#dispatch
+12/04 09:18:30 <- Film#dispatch OK
+12/04 09:18:30 <- Film#load OK
+12/04 09:18:30 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+12/04 09:18:30 -> Film#load…
+12/04 09:18:30 -> Film#dispatch
+12/04 09:18:30 <- Film#dispatch OK
+12/04 09:18:30 <- Film#load OK
+12/04 09:18:30 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+12/04 09:18:30 -> Film#load…
+12/04 09:18:30 -> Film#dispatch
+12/04 09:18:30 <- Film#dispatch OK
+12/04 09:18:30 <- Film#load OK

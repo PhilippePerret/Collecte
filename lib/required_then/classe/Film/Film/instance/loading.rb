@@ -18,11 +18,11 @@ class Film
 
   # Charger les données du fichier Marshal
   def load
-    log "->LOADING FILM…"
+    log "-> Film#load…"
     File.exist?(marshal_file) || raise('Impossible de charger les données du film : le film `data/film.msh` n’existe pas.')
     @donnee_totale = Marshal.load(File.read(marshal_file))
     dispatch
-    log "<-LOADING OK"
+    log "<- Film#load OK"
   end
 
   def dispatch
@@ -58,7 +58,6 @@ class Film
       lesitems.instance_of?(Hash) || begin
         next
       end
-      log "Loading des #{elkey}…"
       lesitems.each do |item_id, hitem|
         el = classe.new(self)
         el.dispatch hitem
@@ -72,7 +71,7 @@ class Film
     # -----
     @created_at = donnee_totale[:created_at]
 
-    log "<- Film#dispatch"
+    log "<- Film#dispatch OK"
   end
 
 end #/Film

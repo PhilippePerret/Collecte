@@ -45,24 +45,20 @@ class Extractor
     # Requérir le dossier correspondant au format
     require_folder File.join(MAIN_FOLDER,'module','extract_formats', "#{format.to_s.upcase}")
 
-    # Reset
+    # Reset (pour les tests, surtout)
     Film::TextObjet.init if format == :html
+    Film::Personnage.init
 
     final_file.prepare || return
 
     # Préparer le filtre si nécessaire
     options.key?(:filter) && analyze_filter
 
-    case options[:as]
-    when :sequencier, :brin
-      extract_sequencier
-    when :synopsis
-      extract_synopsis
-    else # ou :whole
-      # Sans précision du format de sortie voulu
-      extract_data_as_whole
-    end
+    # Pour que tout soit mis dans set_by_type,
+    # on appelle la méthode utilise depuis là.
+    call_extract_methode_by_type
 
+    # Finalisation du fichier final
     final_file.finalise || return
 
     # S'il faut ouvrir le fichier à la fin

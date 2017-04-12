@@ -30,6 +30,8 @@ class Extractor
         "Séquencier"
       when :synopsis
         "Synopsis"
+      when :resume
+        "Résumé"
       else
         "Extraction des données du #{collecte.extractor.date}"
       end
@@ -54,6 +56,10 @@ class Extractor
     case options[:as]
     when :sequencier, :synopsis
       js_files << "#{folder_js}/fiches.js"
+    when :resume
+      # Rien du tout
+    when :brin
+      # Rien du tout
     end
     js_files.empty? || final_file.javascript_files = js_files
   end
@@ -65,8 +71,10 @@ class Extractor
         ["#{folder_css}/sequencier.css"]
       when :synopsis
         ["#{folder_css}/synopsis.css"]
+      when :resume
+        ["#{folder_css}/resume.css"]
       else
-        # Dir["#{folder_css}/**/*.css"]
+        # Rien du tout
         nil
       end
   end
@@ -78,6 +86,8 @@ class Extractor
         af = 'sequencier'
         options[:suggest_structure] && af << "_suggest_stt"
         af
+      when :resume
+        'resume'
       when :synopsis
         'synopsis'
       when :brin
@@ -89,11 +99,40 @@ class Extractor
     # On donne l'affixe au fichier final
     final_file.faffixe = af
   end
+
+
+  # Méthode d'extraction appelée par extract_data
+  def call_extract_methode_by_type
+
+    methode_name = "extract_#{options[:as]}".to_sym
+
+    if respond_to?(methode_name)
+      send(methode_name)
+    else
+      # Sans précision de format
+      extract_data_as_whole
+    end
+
+    # case options[:as]
+    # when :sequencier, :brin
+    #   extract_sequencier
+    # when :synopsis
+    #   extract_synopsis
+    # when :resume
+    #   extract_resume
+    # else # ou :whole
+    #   # Sans précision du format de sortie voulu
+    #   extract_data_as_whole
+    # end
+
+  end
+
+
   def add_from_to_to_affixe aff
     if options[:from_time] || options[:to_time]
       options[:from_time] && aff << "_from_#{options[:from_time]}"
       options[:to_time]   && aff << "_to_#{options[:to_time]}"
-    else
+    elsif options[:as] != :resume
       aff = "full_#{aff}"
     end
     return aff

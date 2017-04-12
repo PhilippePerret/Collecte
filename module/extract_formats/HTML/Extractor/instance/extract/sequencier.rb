@@ -11,6 +11,9 @@ class Extractor
   #   Méthodes utilisées quand on doit extraire un
   #   séquencier
   # ---------------------------------------------------------------------
+
+  # alias :extract_brin pour simplification des appels de
+  # méthode d'extraction (cf dans set_by_type).
   def extract_sequencier
 
     # On calcule le template de l'intitulé en fonction
@@ -92,6 +95,7 @@ class Extractor
     extract_fiches_notes
 
   end
+  alias :extract_brin :extract_sequencier
 
   def write_point_structurel index_ptstt
     ptstt = points_structurels[index_ptstt]

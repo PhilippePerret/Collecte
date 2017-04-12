@@ -53,6 +53,7 @@ Cette propriété peut avoir les valeurs :
 * `:sequencier`. Sort un séquencier, en HTML principalement.
 * `:brin`. Sort un brin, c'est-à-dire toutes les scènes appartenant à ce ou ces brins. En vérité, ce format consiste à sortir un séquencier avec un filtre sur les brins.
 * `:synopsis`. Sort un synopsis. Un synopsis consiste en un listing simple des résumés et/ou des paragraphes de scènes, sans horloge (sans indications contraire, mais discrètes).
+* `:resume`. Sort un résumé. C'est une simple liste des résumés de scène, sans rien d'autre, ni horloge, ni relatifs, etc.
 
 ### Sortie des brins {#brinsensortie}
 
