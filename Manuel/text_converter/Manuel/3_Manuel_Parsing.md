@@ -10,3 +10,5 @@ Ou de le faire par ruby :
 
     coll = Collecte.new('mon/dossier/collecte')
     coll.parse
+
+Pour tout savoir sur [la commande collecte].

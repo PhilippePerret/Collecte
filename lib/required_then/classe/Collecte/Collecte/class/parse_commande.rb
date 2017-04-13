@@ -18,7 +18,10 @@ class << self
     'seq'   => :sequencier,
     'syn'   => :synopsis,
     'stats' => :statistiques,
+    'ntm'   => :no_timeline,
+    'f'     => :from_time,
     'fp'    => :force_parsing,
+    't'     => :to_time,
     'v'     => :verbose,
     'stt'   => :suggest_structure,
     'open'  => :open_file
@@ -79,10 +82,10 @@ class << self
       when :statistiques
         log "Extraction des statistiques"
         opts.merge!(as: :statistiques)
-      when :from
+      when :from, :from_time
         log "Temps de départ : #{value}"
         opts.merge!(from_time: value.h2s)
-      when :to
+      when :to, :to_time
         log "Temps de fin : #{value}"
         opts.merge!(to_time: value.h2s)
       when :output_format

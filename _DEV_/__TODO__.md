@@ -1,6 +1,8 @@
-* Mettre en place l'extraction des statistiques
-  as: :statistiques
-  
+* Mettre en place l'utilisation (déjà documentée) des options -p (personnages) et -b (brins) pour la commande `collecte parse` qui permet de ne parser que les personnages ou que les brins.
+
+* Poursuivre l'extraction des statistiques
+
+
 * Poursuivre le manuel (./Manuel/Manuel.md) et le transformer avec TextConverter en fichier HTML et PDF.
 
 * Mettre en place l'application Collecte
