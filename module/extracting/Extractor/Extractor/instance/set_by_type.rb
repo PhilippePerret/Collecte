@@ -36,6 +36,8 @@ class Extractor
           "Synopsis"
         when :resume
           "Résumé"
+        when :statistiques
+          "Fichier statistiques"
         else
           "Extraction des données du #{collecte.extractor.date}"
         end
@@ -76,6 +78,8 @@ class Extractor
         ["#{folder_css}/synopsis.css"]
       when :resume
         ["#{folder_css}/resume.css"]
+      when :statistiques
+        ["#{folder_css}/statistiques.css"]
       else
         # Rien du tout
         nil
@@ -95,6 +99,8 @@ class Extractor
         'synopsis'
       when :brin
         "brin_#{options[:filter][:brins].gsub(/[\(\),\+]/,'_').gsub(/ /,'')}"
+      when :statistiques
+        'statistiques'
       else
         'extract_data'
       end

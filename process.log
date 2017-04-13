@@ -1,41 +1,22 @@
-13/04 09:15:45 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
-13/04 09:15:45 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
-13/04 09:15:45 -> Film#load…
-13/04 09:15:45 -> Film#dispatch
-13/04 09:15:45 <- Film#dispatch OK
-13/04 09:15:45 <- Film#load OK
-13/04 09:15:45 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
-13/04 09:15:45 -> Film#load…
-13/04 09:15:45 -> Film#dispatch
-13/04 09:15:45 <- Film#dispatch OK
-13/04 09:15:45 <- Film#load OK
-13/04 09:15:45 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
-13/04 09:15:45 -> Film#load…
-13/04 09:15:45 -> Film#dispatch
-13/04 09:15:45 <- Film#dispatch OK
-13/04 09:15:45 <- Film#load OK
-13/04 09:15:45 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
-13/04 09:15:45 -> Film#load…
-13/04 09:15:45 -> Film#dispatch
-13/04 09:15:45 <- Film#dispatch OK
-13/04 09:15:45 <- Film#load OK
-13/04 09:15:45 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
-13/04 09:15:45 -> Film#load…
-13/04 09:15:45 -> Film#dispatch
-13/04 09:15:45 <- Film#dispatch OK
-13/04 09:15:45 <- Film#load OK
-13/04 09:15:45 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
-13/04 09:15:45 -> Film#load…
-13/04 09:15:45 -> Film#dispatch
-13/04 09:15:45 <- Film#dispatch OK
-13/04 09:15:45 <- Film#load OK
-13/04 09:15:45 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
-13/04 09:15:45 -> Film#load…
-13/04 09:15:45 -> Film#dispatch
-13/04 09:15:45 <- Film#dispatch OK
-13/04 09:15:45 <- Film#load OK
-13/04 09:15:45 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
-13/04 09:15:45 -> Film#load…
-13/04 09:15:45 -> Film#dispatch
-13/04 09:15:45 <- Film#dispatch OK
-13/04 09:15:45 <- Film#load OK
+13/04 15:45:45 Fin du chargement des librairies (lib/required.rb)
+13/04 15:45:45 -> Collecte::parse_commande
+13/04 15:45:45 Analyse de la ligne de commande
+13/04 15:45:45 Extraction des statistiques
+13/04 15:45:45 Option :open_file mise à true
+13/04 15:45:45 Format de sortie : :html
+13/04 15:45:45 <- Collecte::parse_commande
+13/04 15:45:45 INSTANCIATION COLLECTE "/Users/philippeperret/Desktop/Everest_collect"
+13/04 15:45:45 EXTRACTION DEMANDÉE PAR LIGNE DE COMMANDE
+13/04 15:45:45 Commande : collecte.extract({:as=>:statistiques, :open_file=>true, :format=>:html})
+13/04 15:45:45 Parsing préparé avec succès.
+13/04 15:45:45 PARSING DES MÉTADONNÉES…
+13/04 15:45:45 Métadata parsées ({:id=>"Everest2016", :titre=>"Éverest", :auteurs=>["Phil"], :debut=>"3/04/2017", :fin=>nil})
+13/04 15:45:45 PARSING DES BRINS…
+13/04 15:45:45 PARSING DES PERSONNAGES…
+13/04 15:45:45 PARSING DES SCÈNES…
+13/04 15:45:45 	Parsing des scènes
+13/04 15:45:45 	Calcul de la durée des scènes
+13/04 15:45:45 	Sauvegarde des scènes
+13/04 15:45:45   -> prepare [path="/Users/philippeperret/Desktop/Everest_collect/extraction/full_statistiques.html"]
+13/04 15:45:45   <- prepare
+13/04 15:45:45 Méthode d'extraction à utiliser : :extract_statistiques

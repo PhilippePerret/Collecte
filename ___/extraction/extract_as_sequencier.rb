@@ -24,15 +24,15 @@ TO_TIME = nil
 # / ne rien toucher sous cette ligne
 # =============================================================
 options = {
-  format:     OUTPUT_FORMAT,
-  as:         :sequencier,
-  suggest_structure: SUGGEST_STRUCTURE,  # Pour suggérer la structure
-  open_file:  true
+  format:             OUTPUT_FORMAT,
+  as:                 :sequencier,
+  force_parsing:      FORCE_PARSING
+  suggest_structure:  SUGGEST_STRUCTURE,  # Pour suggérer la structure
+  open_file:          true
 }
 FROM_TIME.nil?  || options.merge!(from_time: FROM_TIME)
 TO_TIME.nil?    || options.merge!(to_time:   TO_TIME)
 # On parse le dossier de collecte
 require_relative '../../lib/required'
 coll = Collecte.new(FOLDER_COLLECTE_PATH)
-FORCE_PARSING && coll.parse
 coll.extract(options)

@@ -11,6 +11,12 @@ class Collecte
   def extract options = nil, options_alt = nil
     options = options_arg_to_real_options(options)
     options_alt.nil? || options.merge!(options_alt)
+
+    # Faut-il parser les fichiers avant l'opération
+    # d'extraction ?
+    options[:force_parsing].nil? || parse(options)
+
+    # On procède à l'extraction
     extractor(options.delete(:format)).extract_data(options)
   ensure
     if (errors != nil && errors.count > 0) || options[:debug]

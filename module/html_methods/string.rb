@@ -13,6 +13,8 @@ def link content, attrs = nil
 end
 
 def libval label, value, div_attrs = nil
+  div_attrs ||= Hash.new
+  div_attrs.key?(:class) || div_attrs.merge!(class: 'libval')
   div(
     span(label, class: 'label')+
     span(value, class: 'value'),

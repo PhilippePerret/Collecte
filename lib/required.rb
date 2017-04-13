@@ -4,6 +4,7 @@
   Module permettant de requérir tout ce qui doit l'être.
 
 =end
+require 'fileutils'
 
 # En attendant que la vraie méthode log soit chargée
 def log mess, opts=nil; end
@@ -23,9 +24,10 @@ def require_folder dossier
   end
 end
 
-require 'fileutils'
 
-MAIN_FOLDER = File.dirname(File.dirname(File.expand_path(__FILE__)))
+defined?(MAIN_FOLDER) || begin
+  MAIN_FOLDER = File.dirname(File.dirname(File.expand_path(__FILE__)))
+end
 LIB_FOLDER  = File.join(MAIN_FOLDER, 'lib')
 
 REQUIRED_FIRST_FOLDER = File.join(LIB_FOLDER, 'required_first')
