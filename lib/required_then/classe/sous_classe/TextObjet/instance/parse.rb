@@ -9,8 +9,9 @@ class TextObjet
   # Méthode principale qui parse une ligne de collecte
   # pour en faire un texte-objet.
   def parse line
-    @raw = line
-    @only_str = raw.dup.strip
+    line != nil || raise("Un texte-objet ne peut être parsé avec une line nil…")
+    @raw      = line
+    @only_str = raw.strip
 
     if res = raw.match(/^#{REG_HORLOGE} /)
       hor = res.to_a[1]

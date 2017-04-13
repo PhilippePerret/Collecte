@@ -24,20 +24,27 @@ class Film
   attr_reader :collecte
 
   # {Film::Horloge} Temps de fin du film
-  def fin ; @fin ||= scenes.last.horloge end
+  # Il devrait être défini par une ligne `HORLOGE FIN` mais
+  # au cas où, on prend le temps de la dernière scène à
+  # laquelle on ajoute une minute.
+  def fin= value
+    value.instance_of?(Film::Horloge) || value = Film::Horloge.new(self, value.s2h)
+    @fin = value
+  end
+  def fin
+    @fin ||= Film::Horloge.new(self, (scenes.last.horloge.time + 60).s2h)
+  end
   alias :end :fin
 
   # {Film::Horloge} Temps de départ du film
   # Note : ce temps correspond au temps de la première
   # scène de la collecte
-  def start ; @debut ||= scenes.first.horloge end
-  alias :debut :start
+  def debut ; @debut ||= scenes.first.horloge end
+  alias :start :debut
 
   # {Fixnum} Durée du film
   def duree
-    @duree ||= begin
-      scenes.last.horloge.time - scenes.first.horloge.time
-    end
+    @duree ||= fin.time - debut.time
   end
 
 

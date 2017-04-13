@@ -12,9 +12,16 @@ class Scenes
     @hash ||= Hash.new
     item = Film::Scene.new(self.film)
     item.parse(bloc.code)
-    item.line = bloc.line
-    self << item
-    # @hash.merge!( item.id => item )
+    # Si c'est la dernière scène, on ne l'ajoute pas
+    # à la liste des scènes mais on s'en sert pour
+    # indiquer la durée du film
+    if item.lieu == 'FIN'
+      film.fin = item.horloge
+      log "Fin du film trouvée à #{film.fin.horloge}"
+    else
+      item.line = bloc.line
+      self << item
+    end
   rescue BadBlocData => e
     log "Mauvaises données pour un bloc de scène", error: e
   end

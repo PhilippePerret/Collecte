@@ -26,25 +26,29 @@ class Scene
 
     # On passe la première ligne
     parse_first_line
-    @resume       = parse_line(second_line)
-    # Si le résumé possède des objets relatifs, il faut
-    # les mettre dans la scène elle-même.
-    OBJECTS_PROPERTIES.each do |prop|
-      instance_variable_set("@#{prop}", @resume.send(prop))
+    if second_line
+      @resume = parse_line(second_line)
+      # Si le résumé possède des objets relatifs, il faut
+      # les mettre dans la scène elle-même.
+      OBJECTS_PROPERTIES.each do |prop|
+        instance_variable_set("@#{prop}", @resume.send(prop))
+      end
     end
-    @paragraphes  = Array.new
-    other_lines.each do |line|
-      fto = parse_line(line)
-      fto.nil? || @paragraphes << fto
+    if other_lines
+      @paragraphes  = Array.new
+      other_lines.each do |line|
+        fto = parse_line(line)
+        fto.nil? || @paragraphes << fto
+      end
+      # On récupère tous les relatifs des paragraphes
+      @paragraphes.each do |paragraphe|
+        paragraphe.brins_ids.nil? || @brins_ids += paragraphe.brins_ids
+        paragraphe.notes_ids.nil? || @notes_ids += paragraphe.notes_ids
+        paragraphe.scenes_ids.nil? || @scenes_ids += paragraphe.scenes_ids
+        paragraphe.personnages_ids.nil? || @personnages_ids += paragraphe.personnages_ids
+      end
     end
-    # On récupère tous les relatifs des paragraphes
-    @paragraphes.each do |paragraphe|
-      paragraphe.brins_ids.nil? || @brins_ids += paragraphe.brins_ids
-      paragraphe.notes_ids.nil? || @notes_ids += paragraphe.notes_ids
-      paragraphe.scenes_ids.nil? || @scenes_ids += paragraphe.scenes_ids
-      paragraphe.personnages_ids.nil? || @personnages_ids += paragraphe.personnages_ids
-    end
-
+    
     # On mets les relatifs à nil quand il sont vides
     @brins_ids        = @brins_ids.nil_if_empty
     @notes_ids        = @notes_ids.nil_if_empty
@@ -54,10 +58,10 @@ class Scene
   end
 
   REG_FIRST_LINE_SCENE =
-    /^((?:[0-9]:)?(?:[0-9]?[0-9]:[0-9]?[0-9])) (EXT\.|INT\.|NOIR)(?: ?\/ ?(EXT\.|INT\.|NOIR))? (JOUR|NUIT|MATIN|SOIR|NOIR)(?: ?\/ ?(JOUR|NUIT|MATIN|SOIR|NOIR))? (.*?)(?: ?\/ ?(.*?))?$/
+    /^((?:[0-9]:)?(?:[0-9]?[0-9]:[0-9]?[0-9])) (EXT\.|INT\.|NOIR)(?: ?\/ ?(EXT\.|INT\.|NOIR))? (JOUR|NUIT|MATIN|SOIR|NOIR)(?: ?\/ ?(JOUR|NUIT|MATIN|SOIR|NOIR))?(.*?)(?: ?\/ ?(.*?))?$/
 
   REG_FIRST_LINE_SCENE_SIMPLE =
-    /^((?:[0-9]:)?(?:[0-9]?[0-9]:[0-9]?[0-9])) (NOIR)( GENERIQUE| GÉNÉRIQUE)?$/
+    /^((?:[0-9]:)?(?:[0-9]?[0-9]:[0-9]?[0-9])) (NOIR|FIN)( GENERIQUE| GÉNÉRIQUE)?$/
 
   def parse_first_line
     if first_line.match(REG_FIRST_LINE_SCENE)
@@ -71,14 +75,15 @@ class Scene
         first_line.match(REG_FIRST_LINE_SCENE).to_a[1..-1]
     elsif first_line.match(REG_FIRST_LINE_SCENE_SIMPLE)
       @horloge,
-      @lieu =
+      @lieu,
+      @generique =
         first_line.match(REG_FIRST_LINE_SCENE_SIMPLE).to_a[1..-1]
     else
       raise "L’intitulé de la scène #{numero} est mal formaté (#{first_line.inspect})"
     end
 
     # Erreur de mauvais formatage.
-    if @horloge.nil? || @lieu.nil? || (@lieu != 'NOIR' && @effet.nil?)
+    if @horloge.nil? || @lieu.nil? || (!['NOIR','FIN'].include?(@lieu) && @effet.nil?)
       raise BadBlocData, "La première ligne de la scène #{bunch_code.inspect} est mal formatée. Impossible de décomposer l'intitulé."
     end
 

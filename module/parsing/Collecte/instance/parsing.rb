@@ -44,11 +44,10 @@ class Collecte
 
   def parse_scenes
     log "PARSING DES SCÈNES…"
-    log "\tParsing des scènes"
     film.scenes.parse
-    log "\tCalcul de la durée des scènes"
+    log "Calcul de la durée des scènes"
     film.scenes.each{|ks, s| s.set_duree}
-    log "\tSauvegarde des scènes"
+    log "Sauvegarde des scènes"
     film.scenes.save
   rescue Exception => e
     log "au cours du parsing des scènes", error: e

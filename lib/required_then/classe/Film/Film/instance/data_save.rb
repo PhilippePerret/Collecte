@@ -3,26 +3,6 @@
 # GESTION DU FICHIER MARSHAL film.msh
 class Film
 
-  # Renvoie un {Hash} de toutes les données du film
-  def donnee_totale
-    @donnee_totale ||= {
-      # METADATA
-      # --------
-      id:             id,
-      titre:          titre,
-      metadata:       metadata, # = collecte.metadata.data
-      # ÉLÉMENTS
-      # --------
-      scenes:         scenes.data2save,
-      personnages:    personnages.data2save,
-      brins:          brins.data2save,
-      notes:          notes.data2save,
-      # DATES
-      # -----
-      created_at:     (created_at || Time.now.to_i)
-    }
-  end
-
   # Sauver les données dans le fichier marshal
   def save
     if MODE_DATA_SAVE == :marshal
@@ -69,7 +49,7 @@ class Film
   # Enregistrer les métadata du film dans le pstore
   def store_metadata
     pstore.transaction do |ps|
-      ps[:metadata]   = metadata
+      ps[:metadata]   = metadata.merge(duree: duree)
       ps[:created_at] = ps[:created_at] || Time.now.to_i
       ps[:updated_at] = Time.now.to_i
     end
@@ -102,5 +82,28 @@ class Film
       ps
     end
   end
+
+  # Renvoie un {Hash} de toutes les données du film
+  # Noter que cette donnée NE SERT PAS quand on enregistre
+  # les données dans un PStore.
+  def donnee_totale
+    @donnee_totale ||= {
+      # METADATA
+      # --------
+      id:             id,
+      titre:          titre,
+      metadata:       metadata, # = collecte.metadata.data
+      # ÉLÉMENTS
+      # --------
+      scenes:         scenes.data2save,
+      personnages:    personnages.data2save,
+      brins:          brins.data2save,
+      notes:          notes.data2save,
+      # DATES
+      # -----
+      created_at:     (created_at || Time.now.to_i)
+    }
+  end
+
 
 end #/Film
