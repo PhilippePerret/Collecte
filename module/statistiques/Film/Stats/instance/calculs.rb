@@ -15,7 +15,7 @@ class Statistiques
   end
 
   def value_longest_scene
-    "Scène #{longest_scene.numero} #{longest_scene.resume.only_str} #{longest_scene.duree.s2h}"
+    "Scène #{longest_scene.numero} #{longest_scene.duree.s2h} #{longest_scene.resume.to_html}"
   end
   def longest_scene
     @longest_scene ||= begin
@@ -28,17 +28,20 @@ class Statistiques
   end
 
   def value_shortest_scene
-    "Scène #{shortest_scene.numero} #{shortest_scene.resume.only_str} #{shortest_scene.duree.s2h}"
+    "Scène #{shortest_scene.numero} #{shortest_scene.duree.s2h} (#{shortest_scene.resume.to_html})"
   end
   def shortest_scene
     @shortest_scene ||= begin
       shortest = film.scenes.first
       film.scenes.each do |sid, scene|
-        scene.duree >= shortest || shortest = scene
+        scene.duree >= shortest.duree || shortest = scene
       end
       shortest
     end
   end
 
+  def nombre_personnages
+    @nombre_personnages ||= film.personnages.count
+  end
 end #/Statistiques
 end #/Film

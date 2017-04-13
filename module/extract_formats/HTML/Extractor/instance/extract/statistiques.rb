@@ -18,7 +18,8 @@ class Extractor
       'Nombre de scènes'      => stats.nombre_scenes,
       'Temps moyen par scène' => stats.temps_moyen_scene_str,
       'Plus longue scène'     => stats.value_shortest_scene,
-      'Plus courte scène'     => stats.value_longest_scene
+      'Plus courte scène'     => stats.value_longest_scene,
+      'Nombre de personnages' => stats.nombre_personnages
     }.collect do |kpaire, vpaire|
       write(libval(kpaire, vpaire))
     end

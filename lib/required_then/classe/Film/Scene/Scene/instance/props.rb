@@ -31,6 +31,9 @@ class Scene
     @notes ||= Film::Notes.new(self.film)
   end
 
+  # Raccourci
+  def duree ; @duree ||= horloge.duree end
+
   # Méthode qui définit la durée de la scène
   # Rappel : cette donnée est maintenue dans horloge
   def set_duree
