@@ -1,4 +1,34 @@
-# Le fichier `film.msh`
+# Base des données
+
+Suivant la valeur de la constante `Film::MODE_DATA_SAVE`, les données peuvent être enregistrées dans un fichier Marshal ou un PStore.
+
+[le fichier Marshal]: #fichier_marshal
+[le fichier PStore]: #fichier_pstore
+
+# Le fichier `film.pstore` {#fichier_pstore}
+
+Il contient peu ou prou les mêmes informations que [le fichier Marshal] mais permet un accès à une donnée en particulier au lieu d'avoir à tout charger et tout sauver à chaque modification.
+
+    :metadata     Toutes les métadonnées
+    :created_at   Time secondes de création du fichier
+    :updated_at   Time secondes de la dernière actualisation
+    :scene {
+      :_ids_      Liste Array des identifiants de scènes
+      :items      Table Hash des données des scènes
+    }
+    :personnage {
+      :_ids_      Idem
+      :items      Idem
+    }
+    :brin {
+      idem
+    }
+    :note {
+      idem
+    }
+
+
+# Le fichier `film.msh` {#fichier_marshal}
 
 Ce fichier est produit à la collecte du film, il contient absolument toutes les données du film :
 

@@ -1,5 +1,11 @@
-* Utiliser le lien TM pour les fiches personnages et les fiches brins
-* N'affiche le lien showinTM_link que lorsque l'on est ONLINE (faire ça par CSS ? C'est dangereux, il vaudrait mieux faire les fichiers définitifs sans ces liens-outils)
+* Ne pas ouvrir les fichiers log en mode test
+* Faire un méthode extract(format) qui extrait tous les éléments du film
+  - le séquencier complet
+  - le synopsis complet
+  - tous les brins
+  - tous les brins par personnage et relation
+  - la liste complète des informations
+* Voir une version complète du séquencier avec les paragraphes des scènes
 
 * Faire une sortie de brin par personnage (ce sont les scènes d'un personnage). => Brins automatiques.
   Essayer aussi de faire les brins automatiques de relation de personnages (lorsqu'ils se trouvent au moins ensemble dans deux scènes).

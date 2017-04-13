@@ -59,10 +59,8 @@ class Collecte
   #
 
   def prepare_parsing
-    # Il faut préparer le dossier `parsing` et le
-    # dossier `data`
-    FileUtils.rm_rf(data_folder)     if File.exist?(data_folder)
-    build_data_folder
+    # Il faut préparer le dossier `data`
+    File.exist?(data_folder) || build_data_folder
     # Initialisation des scènes
     Film::Scene.init
     log "Parsing préparé avec succès."

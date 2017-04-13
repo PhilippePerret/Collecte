@@ -67,4 +67,5 @@ module RelativeObjectMethods
       a
     end
   end
+
 end #/ RelativeObject

@@ -58,7 +58,6 @@ module CollecteFileMethods
   class Bloc
     attr_reader :code, :line
     def initialize code, line
-      log "Nouveau bloc à la ligne #{line.inspect}"
       @code = code.strip
       @line = line
     end

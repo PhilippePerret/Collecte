@@ -18,9 +18,13 @@ module RelativeObjectMethods
   # la donnée @line est définie.
   def showinTM_link
     @line != nil || (return '')
-    href = "txmt://open/?url=file://#{collecte_file}"
-    href += "&line=#{line}&column=1"
-    link('->TM', {href: href, class: 'tmlink'})
+    '<adminonly>'+
+      link(
+        'TM', {
+          href: "txmt://open/?url=file://#{collecte_file}&line=#{line}&column=1", 
+          class: 'tmlink'
+        }) +
+    '</adminonly>'
   end
 
 

@@ -21,9 +21,9 @@ class Collecte
     parse_all
     # On sauve tout
     film.save
-    # Si le fichier `film.msh` n'a pas été produit,
-    # il faut signaler une erreur
-    File.exist?(film.marshal_file) || raise('Le fichier data `film.msh` n’a pas été produit. La collecte n’a pas abouti.')
+    # Si le fichier de données (marshal ou pstore) n'a pas été
+    # produit, il faut signaler une erreur
+    check_fichier_data_film
   rescue Exception => e
     log 'à la fin de Collecte#parse', fatal_error: e
   ensure
@@ -32,4 +32,10 @@ class Collecte
     end
   end
 
+  # En fin de parsing, on vérifie que le fichier data a
+  # bien été produit. On raise dans le cas contraire
+  def check_fichier_data_film
+    fichier_final = Film::MODE_DATA_SAVE == :pstore ? film.pstore_file : film.marshal_file
+    File.exist?(fichier_final) || raise("Le fichier data `#{fichier_final}` n’a pas été produit. La collecte n’a pas abouti.")
+  end
 end

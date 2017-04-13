@@ -15,7 +15,18 @@ module ListElementsMethods
   #
   attr_reader :hash
 
-
+  # Ajoute une instance de l'objet singulier à
+  # l'instance pluriel. Par exemple une Film::Scene à
+  # film.scenes.
+  #
+  # La méthode est aussi bien utilisée lors du parsing des
+  # fichiers de collecte que lors de la récupération des
+  # données depuis les fichiers marshal ou les fichier
+  # pstore.
+  # 
+  def << instance
+    @hash.merge!( instance.id => instance )
+  end
   # Retourne l'élément d'identifiant +element_id+
   # Par exemple le brin, par `film.brins[12] #=> brin #12`
   def [] element_id

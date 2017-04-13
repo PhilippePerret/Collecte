@@ -1,222 +1,41 @@
-12/04 22:37:44 Fin du chargement des librairies (lib/required.rb)
-12/04 22:37:44 INSTANCIATION COLLECTE "/Users/philippeperret/Desktop/Everest_collect"
-12/04 22:37:44 Parsing préparé avec succès.
-12/04 22:37:44 PARSING DES MÉTADONNÉES…
-12/04 22:37:44 Métadata parsées ({:id=>"Everest2016", :titre=>"Éverest", :auteurs=>["Phil"], :debut=>"3/04/2017", :fin=>nil})
-12/04 22:37:44 PARSING DES BRINS…
-12/04 22:37:44 Nouveau bloc à la ligne 1
-12/04 22:37:44 Nouveau bloc à la ligne 5
-12/04 22:37:44 Nouveau bloc à la ligne 9
-12/04 22:37:44 Nouveau bloc à la ligne 13
-12/04 22:37:44 Nouveau bloc à la ligne 16
-12/04 22:37:44 Nouveau bloc à la ligne 19
-12/04 22:37:44 Nouveau bloc à la ligne 23
-12/04 22:37:44 Nouveau bloc à la ligne 27
-12/04 22:37:44 Nouveau bloc à la ligne 31
-12/04 22:37:44 Nouveau bloc à la ligne 34
-12/04 22:37:44 Nouveau bloc à la ligne 38
-12/04 22:37:44 Nouveau bloc à la ligne 42
-12/04 22:37:44 PARSING DES PERSONNAGES…
-12/04 22:37:44 Nouveau bloc à la ligne 4
-12/04 22:37:44 Nouveau bloc à la ligne 13
-12/04 22:37:44 Nouveau bloc à la ligne 21
-12/04 22:37:44 Nouveau bloc à la ligne 31
-12/04 22:37:44 Nouveau bloc à la ligne 41
-12/04 22:37:44 Nouveau bloc à la ligne 51
-12/04 22:37:44 Nouveau bloc à la ligne 61
-12/04 22:37:44 Nouveau bloc à la ligne 69
-12/04 22:37:44 Nouveau bloc à la ligne 77
-12/04 22:37:44 Nouveau bloc à la ligne 87
-12/04 22:37:44 Nouveau bloc à la ligne 96
-12/04 22:37:44 Nouveau bloc à la ligne 105
-12/04 22:37:44 Nouveau bloc à la ligne 113
-12/04 22:37:44 Nouveau bloc à la ligne 123
-12/04 22:37:44 Nouveau bloc à la ligne 133
-12/04 22:37:44 Nouveau bloc à la ligne 142
-12/04 22:37:44 Nouveau bloc à la ligne 150
-12/04 22:37:44 Nouveau bloc à la ligne 158
-12/04 22:37:44 Nouveau bloc à la ligne 168
-12/04 22:37:44 Nouveau bloc à la ligne 176
-12/04 22:37:44 PARSING DES SCÈNES…
-12/04 22:37:44 	Parsing des scènes
-12/04 22:37:44 Nouveau bloc à la ligne 2
-12/04 22:37:44 Nouveau bloc à la ligne 10
-12/04 22:37:44 Nouveau bloc à la ligne 14
-12/04 22:37:44 Nouveau bloc à la ligne 18
-12/04 22:37:44 Nouveau bloc à la ligne 21
-12/04 22:37:44 Nouveau bloc à la ligne 29
-12/04 22:37:44 Nouveau bloc à la ligne 33
-12/04 22:37:44 Nouveau bloc à la ligne 37
-12/04 22:37:44 Nouveau bloc à la ligne 41
-12/04 22:37:44 Nouveau bloc à la ligne 46
-12/04 22:37:44 Nouveau bloc à la ligne 61
-12/04 22:37:44 Nouveau bloc à la ligne 65
-12/04 22:37:44 Nouveau bloc à la ligne 69
-12/04 22:37:44 Nouveau bloc à la ligne 73
-12/04 22:37:44 Nouveau bloc à la ligne 77
-12/04 22:37:44 Nouveau bloc à la ligne 81
-12/04 22:37:44 Nouveau bloc à la ligne 87
-12/04 22:37:44 Nouveau bloc à la ligne 92
-12/04 22:37:44 Nouveau bloc à la ligne 100
-12/04 22:37:44 Nouveau bloc à la ligne 105
-12/04 22:37:44 Nouveau bloc à la ligne 108
-12/04 22:37:44 Nouveau bloc à la ligne 111
-12/04 22:37:44 Nouveau bloc à la ligne 120
-12/04 22:37:44 Nouveau bloc à la ligne 126
-12/04 22:37:44 Nouveau bloc à la ligne 132
-12/04 22:37:44 Nouveau bloc à la ligne 135
-12/04 22:37:44 Nouveau bloc à la ligne 142
-12/04 22:37:44 Nouveau bloc à la ligne 147
-12/04 22:37:44 Nouveau bloc à la ligne 154
-12/04 22:37:44 Nouveau bloc à la ligne 158
-12/04 22:37:44 Nouveau bloc à la ligne 161
-12/04 22:37:44 Nouveau bloc à la ligne 167
-12/04 22:37:44 Nouveau bloc à la ligne 171
-12/04 22:37:44 Nouveau bloc à la ligne 174
-12/04 22:37:44 Nouveau bloc à la ligne 177
-12/04 22:37:44 Nouveau bloc à la ligne 185
-12/04 22:37:44 Nouveau bloc à la ligne 192
-12/04 22:37:44 Nouveau bloc à la ligne 198
-12/04 22:37:44 Nouveau bloc à la ligne 206
-12/04 22:37:44 Nouveau bloc à la ligne 209
-12/04 22:37:44 Nouveau bloc à la ligne 217
-12/04 22:37:44 Nouveau bloc à la ligne 224
-12/04 22:37:44 Nouveau bloc à la ligne 238
-12/04 22:37:44 Nouveau bloc à la ligne 246
-12/04 22:37:44 Nouveau bloc à la ligne 252
-12/04 22:37:44 Nouveau bloc à la ligne 258
-12/04 22:37:44 Nouveau bloc à la ligne 268
-12/04 22:37:44 Nouveau bloc à la ligne 272
-12/04 22:37:44 Nouveau bloc à la ligne 275
-12/04 22:37:44 Nouveau bloc à la ligne 284
-12/04 22:37:44 Nouveau bloc à la ligne 294
-12/04 22:37:44 Nouveau bloc à la ligne 297
-12/04 22:37:44 Nouveau bloc à la ligne 300
-12/04 22:37:44 Nouveau bloc à la ligne 303
-12/04 22:37:44 Nouveau bloc à la ligne 307
-12/04 22:37:44 Nouveau bloc à la ligne 314
-12/04 22:37:44 Nouveau bloc à la ligne 320
-12/04 22:37:44 Nouveau bloc à la ligne 329
-12/04 22:37:44 Nouveau bloc à la ligne 335
-12/04 22:37:44 Nouveau bloc à la ligne 339
-12/04 22:37:44 Nouveau bloc à la ligne 345
-12/04 22:37:44 Nouveau bloc à la ligne 348
-12/04 22:37:44 Nouveau bloc à la ligne 353
-12/04 22:37:44 Nouveau bloc à la ligne 358
-12/04 22:37:44 Nouveau bloc à la ligne 364
-12/04 22:37:44 Nouveau bloc à la ligne 371
-12/04 22:37:44 Nouveau bloc à la ligne 380
-12/04 22:37:44 Nouveau bloc à la ligne 386
-12/04 22:37:44 Nouveau bloc à la ligne 394
-12/04 22:37:44 Nouveau bloc à la ligne 398
-12/04 22:37:44 Nouveau bloc à la ligne 404
-12/04 22:37:44 Nouveau bloc à la ligne 408
-12/04 22:37:44 Nouveau bloc à la ligne 412
-12/04 22:37:44 Nouveau bloc à la ligne 415
-12/04 22:37:44 Nouveau bloc à la ligne 418
-12/04 22:37:44 Nouveau bloc à la ligne 421
-12/04 22:37:44 Nouveau bloc à la ligne 429
-12/04 22:37:44 Nouveau bloc à la ligne 439
-12/04 22:37:44 Nouveau bloc à la ligne 443
-12/04 22:37:44 Nouveau bloc à la ligne 446
-12/04 22:37:44 Nouveau bloc à la ligne 449
-12/04 22:37:44 Nouveau bloc à la ligne 452
-12/04 22:37:44 Nouveau bloc à la ligne 462
-12/04 22:37:44 Nouveau bloc à la ligne 465
-12/04 22:37:44 Nouveau bloc à la ligne 468
-12/04 22:37:44 Nouveau bloc à la ligne 471
-12/04 22:37:44 Nouveau bloc à la ligne 474
-12/04 22:37:44 Nouveau bloc à la ligne 484
-12/04 22:37:44 Nouveau bloc à la ligne 492
-12/04 22:37:44 Nouveau bloc à la ligne 505
-12/04 22:37:44 Nouveau bloc à la ligne 508
-12/04 22:37:44 Nouveau bloc à la ligne 514
-12/04 22:37:44 Nouveau bloc à la ligne 517
-12/04 22:37:44 Nouveau bloc à la ligne 523
-12/04 22:37:44 Nouveau bloc à la ligne 532
-12/04 22:37:44 Nouveau bloc à la ligne 535
-12/04 22:37:44 Nouveau bloc à la ligne 538
-12/04 22:37:44 Nouveau bloc à la ligne 544
-12/04 22:37:44 Nouveau bloc à la ligne 547
-12/04 22:37:44 Nouveau bloc à la ligne 554
-12/04 22:37:44 Nouveau bloc à la ligne 561
-12/04 22:37:44 Nouveau bloc à la ligne 569
-12/04 22:37:44 Nouveau bloc à la ligne 572
-12/04 22:37:44 Nouveau bloc à la ligne 581
-12/04 22:37:44 Nouveau bloc à la ligne 586
-12/04 22:37:44 Nouveau bloc à la ligne 589
-12/04 22:37:44 Nouveau bloc à la ligne 592
-12/04 22:37:44 Nouveau bloc à la ligne 599
-12/04 22:37:44 Nouveau bloc à la ligne 606
-12/04 22:37:44 Nouveau bloc à la ligne 609
-12/04 22:37:44 Nouveau bloc à la ligne 614
-12/04 22:37:44 Nouveau bloc à la ligne 619
-12/04 22:37:44 Nouveau bloc à la ligne 630
-12/04 22:37:44 Nouveau bloc à la ligne 633
-12/04 22:37:44 Nouveau bloc à la ligne 636
-12/04 22:37:44 Nouveau bloc à la ligne 641
-12/04 22:37:44 Nouveau bloc à la ligne 644
-12/04 22:37:44 Nouveau bloc à la ligne 651
-12/04 22:37:44 Nouveau bloc à la ligne 659
-12/04 22:37:44 Nouveau bloc à la ligne 663
-12/04 22:37:44 Nouveau bloc à la ligne 669
-12/04 22:37:44 Nouveau bloc à la ligne 672
-12/04 22:37:44 Nouveau bloc à la ligne 675
-12/04 22:37:44 Nouveau bloc à la ligne 678
-12/04 22:37:44 Nouveau bloc à la ligne 684
-12/04 22:37:44 Nouveau bloc à la ligne 687
-12/04 22:37:44 Nouveau bloc à la ligne 700
-12/04 22:37:44 Nouveau bloc à la ligne 706
-12/04 22:37:44 Nouveau bloc à la ligne 710
-12/04 22:37:44 Nouveau bloc à la ligne 717
-12/04 22:37:44 Nouveau bloc à la ligne 720
-12/04 22:37:44 Nouveau bloc à la ligne 723
-12/04 22:37:44 Nouveau bloc à la ligne 726
-12/04 22:37:44 Nouveau bloc à la ligne 731
-12/04 22:37:44 Nouveau bloc à la ligne 745
-12/04 22:37:44 Nouveau bloc à la ligne 752
-12/04 22:37:44 Nouveau bloc à la ligne 755
-12/04 22:37:44 Nouveau bloc à la ligne 758
-12/04 22:37:44 Nouveau bloc à la ligne 762
-12/04 22:37:44 Nouveau bloc à la ligne 768
-12/04 22:37:44 Nouveau bloc à la ligne 771
-12/04 22:37:44 Nouveau bloc à la ligne 774
-12/04 22:37:44 Nouveau bloc à la ligne 777
-12/04 22:37:44 Nouveau bloc à la ligne 783
-12/04 22:37:44 Nouveau bloc à la ligne 791
-12/04 22:37:44 Nouveau bloc à la ligne 794
-12/04 22:37:44 Nouveau bloc à la ligne 804
-12/04 22:37:44 Nouveau bloc à la ligne 814
-12/04 22:37:44 Nouveau bloc à la ligne 818
-12/04 22:37:44 Nouveau bloc à la ligne 826
-12/04 22:37:44 Nouveau bloc à la ligne 830
-12/04 22:37:44 Nouveau bloc à la ligne 833
-12/04 22:37:44 Nouveau bloc à la ligne 839
-12/04 22:37:44 Nouveau bloc à la ligne 845
-12/04 22:37:44 Nouveau bloc à la ligne 850
-12/04 22:37:44 Nouveau bloc à la ligne 853
-12/04 22:37:44 Nouveau bloc à la ligne 863
-12/04 22:37:44 Nouveau bloc à la ligne 870
-12/04 22:37:44 Nouveau bloc à la ligne 879
-12/04 22:37:44 Nouveau bloc à la ligne 885
-12/04 22:37:44 Nouveau bloc à la ligne 895
-12/04 22:37:44 Nouveau bloc à la ligne 898
-12/04 22:37:44 Nouveau bloc à la ligne 901
-12/04 22:37:44 Nouveau bloc à la ligne 908
-12/04 22:37:44 Nouveau bloc à la ligne 911
-12/04 22:37:44 Nouveau bloc à la ligne 914
-12/04 22:37:44 Nouveau bloc à la ligne 920
-12/04 22:37:44 Nouveau bloc à la ligne 923
-12/04 22:37:44 Nouveau bloc à la ligne 936
-12/04 22:37:45 	Calcul de la durée des scènes
-12/04 22:37:45 	Sauvegarde des scènes
-12/04 22:37:45 -> Film#load…
-12/04 22:37:45 -> Film#dispatch
-12/04 22:37:45 <- Film#dispatch OK
-12/04 22:37:45 <- Film#load OK
-12/04 22:37:45   -> prepare [path="/Users/philippeperret/Desktop/Everest_collect/extraction/full_sequencier_suggest_stt.html"]
-12/04 22:37:45   <- prepare
-12/04 22:37:45 Méthode d'extraction à utiliser : :extract_sequencier
-12/04 22:37:45 -> extract_sequencier(as_brin = false)
-12/04 22:37:45 from_time: 0 / to_time: Infinity
-12/04 22:37:45 Nombre de scènes passant le filtre : 169
+13/04 09:15:45 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+13/04 09:15:45 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+13/04 09:15:45 -> Film#load…
+13/04 09:15:45 -> Film#dispatch
+13/04 09:15:45 <- Film#dispatch OK
+13/04 09:15:45 <- Film#load OK
+13/04 09:15:45 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+13/04 09:15:45 -> Film#load…
+13/04 09:15:45 -> Film#dispatch
+13/04 09:15:45 <- Film#dispatch OK
+13/04 09:15:45 <- Film#load OK
+13/04 09:15:45 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+13/04 09:15:45 -> Film#load…
+13/04 09:15:45 -> Film#dispatch
+13/04 09:15:45 <- Film#dispatch OK
+13/04 09:15:45 <- Film#load OK
+13/04 09:15:45 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+13/04 09:15:45 -> Film#load…
+13/04 09:15:45 -> Film#dispatch
+13/04 09:15:45 <- Film#dispatch OK
+13/04 09:15:45 <- Film#load OK
+13/04 09:15:45 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+13/04 09:15:45 -> Film#load…
+13/04 09:15:45 -> Film#dispatch
+13/04 09:15:45 <- Film#dispatch OK
+13/04 09:15:45 <- Film#load OK
+13/04 09:15:45 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+13/04 09:15:45 -> Film#load…
+13/04 09:15:45 -> Film#dispatch
+13/04 09:15:45 <- Film#dispatch OK
+13/04 09:15:45 <- Film#load OK
+13/04 09:15:45 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+13/04 09:15:45 -> Film#load…
+13/04 09:15:45 -> Film#dispatch
+13/04 09:15:45 <- Film#dispatch OK
+13/04 09:15:45 <- Film#load OK
+13/04 09:15:45 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+13/04 09:15:45 -> Film#load…
+13/04 09:15:45 -> Film#dispatch
+13/04 09:15:45 <- Film#dispatch OK
+13/04 09:15:45 <- Film#load OK

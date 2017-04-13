@@ -1,18 +1,61 @@
 describe 'Film au cours du parsing' do
 
+  after(:all) do
+    # Après le test de cette feuille, on repasse toujours
+    # dans le mode de données pstore
+    Film::MODE_DATA_SAVE = :pstore
+    Film::MODE_DATA_LOAD = :pstore
+  end
+
   let(:collecte) { @collecte }
   let(:film) { @film || collecte.film }
   let(:data) { @data ||= film.donnee_totale }
 
-  context 'avec un parsing sans information générale' do
+  context 'avec un parsing au format Marshal' do
     before(:all) do
+      Film::MODE_DATA_SAVE = :marshal
+      Film::MODE_DATA_LOAD = :marshal
       @collecte = Collecte.new(folder_test_1)
+      FileUtils.rm_rf(@collecte.data_folder)
       # ===> parse <===
       @collecte.parse
     end
-    describe 'Le fichier `film.msh`' do
+    it 'créer un fichier Marshal' do
+      expect(File.exist? film.marshal_file).to eq true
+    end
+    it 'ne crée pas un fichier PStore' do
+      expect(File.exist? film.pstore_file).to eq false
+    end
+  end
+  context 'avec un parsing au format PStore' do
+    before(:all) do
+      Film::MODE_DATA_SAVE = :pstore
+      Film::MODE_DATA_LOAD = :pstore
+      @collecte = Collecte.new(folder_test_1)
+      FileUtils.rm_rf(@collecte.data_folder)
+      # ===> parse <===
+      @collecte.parse
+    end
+    it 'NE crée PAS un fichier Marshal' do
+      expect(File.exist? film.marshal_file).to eq false
+    end
+    it 'crée un fichier PStore' do
+      expect(File.exist? film.pstore_file).to eq true
+    end
+  end
+
+  context 'avec un parsing sans information générale' do
+    before(:all) do
+      Film::MODE_DATA_SAVE = :pstore
+      Film::MODE_DATA_LOAD = :pstore
+      @collecte = Collecte.new(folder_test_1)
+      FileUtils.rm_rf(@collecte.data_folder)
+      # ===> parse <===
+      @collecte.parse
+    end
+    describe 'Le fichier `film.pstore`' do
       it 'est produit' do
-        expect(File.exist? film.marshal_file).to eq true
+        expect(File.exist? film.pstore_file).to eq true
       end
       it 'ne définit pas l’id du film' do
         expect(data[:id]).to eq nil
@@ -39,6 +82,11 @@ describe 'Film au cours du parsing' do
       end
       it 'définit le titre du film' do
         expect(data[:titre]).to eq 'Éverest'
+      end
+    end
+    describe 'le fichier `film.pstore`' do
+      it 'est produit' do
+        expect(File.exists? film.pstore_file).to eq true
       end
     end
     describe 'l’instance Film' do

@@ -29,13 +29,36 @@ class FinalFile
   end
   def cssise_all_sass
     require 'sass'
+    # On relève la date de tous les fichiers CSS
+    data_css = Hash.new
+    # Pour mettre le temps le plus vieux d'un fichier
+    # CSS. Il suffit qu'il soit plus vieux qu'un fichier commençant
+    # par '_' et on actualise tous les fichiers.
+    older_time = Float::INFINITY
+    csss = Dir["#{collecte.extractor.folder_css}/**/*.css"].each do |css_path|
+      mtime = File.stat(css_path).mtime.to_i
+      data_css.merge!(css_path => mtime)
+      mtime > older_time || older_time = mtime
+    end
+    # Si un fichier commençant par '_' est trouvé plus vieux
+    # que tous les autres fichiers css, l'actualisation générale
+    # est nécessaire.
+    updateall_required = false
+    Dir["#{collecte.extractor.folder_css}/**/_*.sass"].each do |sass_path|
+      File.stat(sass_path).mtime.to_i < older_time || begin
+        log "Le fichier SASS `#{File.basename sass_path}` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire."
+        updateall_required = true
+        break
+      end
+    end
     Dir["#{collecte.extractor.folder_css}/**/*.sass"].each do |sass_path|
       affixe   = File.basename(sass_path, File.extname(sass_path))
       # On passe les fichier inclus
       affixe.start_with?('_') && next
       css_name = affixe + '.css'
       css_path = File.join(File.dirname(sass_path), css_name)
-      outofdate(sass_path, css_path) || next
+      updateall_required || outofdate(sass_path, css_path) || next
+      log "SASSisation du fichier CSS `#{css_name}`"
       Sass.compile_file(sass_path, css_path, sass_options)
     end
   end
