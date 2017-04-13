@@ -1,0 +1,70 @@
+<!DOCTYPE html><html lang="fr"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  
+  
+  <style type='text/css'>body{width:17cm;margin:2cm;font-size:13.1pt}ul,ol{margin-left:3em;padding-left:0;margin-right:3em;list-style:square}dl{margin-left:2em;margin-right:3em}dl dt{font-weight:bold;font-family:Arial,Helvetica}dl dd{margin-left:2em}code{background-color:#FEFEFE}
+
+nav#__tdm__{border:1px solid #CCC;padding:1em;font-size:.85em;width:75%;background-color:#EFEFEF}nav#__tdm__.float{float:right;margin-left:4em;margin-bottom:2em}nav#__tdm__.float_left{float:left;margin-right:4em;margin-bottom:2em}nav#__tdm__.right{margin-left:20%}nav#__tdm__.left{margin-left:2%}nav#__tdm__ div.titre{font-variant:small-caps;font-size:1.4em}nav#__tdm__ ul{list-style:none}nav#__tdm__ ul a.__atdm__:link,nav#__tdm__ ul a.__atdm__:visited,nav#__tdm__ ul a.__atdm__:hover{text-decoration:none;color:inherit}nav#__tdm__ ul a.__atdm__:hover{text-decoration:underline}nav#__tdm__ ul li.__litdm__.__tdmlevel1__{margin-left:0}nav#__tdm__ ul li.__litdm__.__tdmlevel1__ a.__atdm__{font-size:1.2em}nav#__tdm__ ul li.__litdm__.__tdmlevel2__{margin-left:1em}nav#__tdm__ ul li.__litdm__.__tdmlevel2__ a.__atdm__{font-size:1.15em}nav#__tdm__ ul li.__litdm__.__tdmlevel3__{margin-left:2em}nav#__tdm__ ul li.__litdm__.__tdmlevel3__ a.__atdm__{font-size:1.1em}nav#__tdm__ ul li.__litdm__.__tdmlevel4__{margin-left:3em}nav#__tdm__ ul li.__litdm__.__tdmlevel4__ a.__atdm__{font-size:1.05em}nav#__tdm__ ul li.__litdm__.__tdmlevel5__{margin-left:4em}nav#__tdm__ ul li.__litdm__.__tdmlevel5__ a.__atdm__{font-size:1em}nav#__tdm__ ul li.__litdm__.__tdmlevel6__{margin-left:5em}nav#__tdm__ ul li.__litdm__.__tdmlevel6__ a.__atdm__{font-size:.85em}</style>
+</head>
+<body id="top"><nav role="navigation" id="__tdm__" class="float"><div class="titre">Table des matières</div><ul class="__ul_tdm__"><li class="__litdm__ __tdmlevel1__"><a class="__atdm__" href="#manuel-dutilisation-de-collecte">Manuel d’utilisation de Collecte</a></li>
+<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#collectefilm">Collecte des informations</a></li>
+<li class="__litdm__ __tdmlevel3__"><a class="__atdm__" href="#definirfindufilm">Définition de la fin du film</a></li>
+<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#parsingcollecte">Parsing de la collecte</a></li>
+<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#extractioninformation">Extraction des informations du film</a></li></ul></nav>
+<h1 id="manuel-dutilisation-de-collecte">Manuel d’utilisation de Collecte</h1>
+
+<ul id="markdown-toc">
+  <li><a href="#manuel-dutilisation-de-collecte" id="markdown-toc-manuel-dutilisation-de-collecte">Manuel d’utilisation de Collecte</a>    <ul>
+      <li><a href="#collectefilm" id="markdown-toc-collectefilm">Collecte des informations</a>        <ul>
+          <li><a href="#definirfindufilm" id="markdown-toc-definirfindufilm">Définition de la fin du film</a></li>
+        </ul>
+      </li>
+      <li><a href="#parsingcollecte" id="markdown-toc-parsingcollecte">Parsing de la collecte</a></li>
+      <li><a href="#extractioninformation" id="markdown-toc-extractioninformation">Extraction des informations du film</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="collectefilm">Collecte des informations</h2>
+
+<p>La <em>Collecte</em> est la première opération à exécuter. Elle consiste à rassembler toutes les informations du film dans un dossier appelé <em>dossier de collecte</em>.</p>
+
+<p>Ce dossier contient :</p>
+
+<ul>
+  <li>le fichier des personnages (cf. <a href="#fichier_des_personnages">fichier des personnages</a>),</li>
+  <li>le fichier des brins (cf. <a href="#fichier_des_brins">fichier des brins</a>),</li>
+  <li>le fichier des scènes (cf. <a href="#fichier_des_scenes">fichier des scènes</a>).</li>
+</ul>
+
+<h3 id="definirfindufilm">Définition de la fin du film</h3>
+
+<p>Pour définir la fin du film, il faut impérativement terminer le <a href="#fichier_des_scenes">fichier des scènes</a> par :</p>
+
+<pre><code>
+    H:MM:SS FIN
+
+</code></pre>
+
+<p>Dans le cas contraire, le programme prendra le temps de la dernière scène et lui attribuera arbitrairement une durée de 1 minute.</p>
+
+<h2 id="parsingcollecte">Parsing de la collecte</h2>
+
+<p>Le <em>parsing</em> est l’opération qui consiste à transformer les données collectées dans l’étape précédente en données utilisables pour créer des fichiers d’analyse, des statistiques, etc.</p>
+
+<p>Pour parser un dossier de collecte, le plus simple est d’utiliser dans le Terminal la commande :</p>
+
+<pre><code>collecte parse mon/dossier/collecte
+</code></pre>
+
+<p>Ou de le faire par ruby :</p>
+
+<pre><code>coll = Collecte.new('mon/dossier/collecte')
+coll.parse
+</code></pre>
+
+<h2 id="extractioninformation">Extraction des informations du film</h2>
+
+<p>L’<em>extraction</em> est la troisième opération de la collecte, et son but ultime. Elle permet d’obtenir des séquenciers, des fichiers brins et même des statistiques sur le film.</p>
+</body></html>
