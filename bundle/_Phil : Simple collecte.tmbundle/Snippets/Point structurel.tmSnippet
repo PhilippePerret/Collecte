@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>STT_${1|INC_PERT,INC_DEC,PIVOT_1,PIVOT_2,DEV_PART1,DEV_PART2,DENOUEMENT,CLE_DE_VOUTE,CLIMAX,CRISE|}$0</string>
+	<key>name</key>
+	<string>Point structurel</string>
+	<key>scope</key>
+	<string>source.simple_collecte</string>
+	<key>tabTrigger</key>
+	<string>stt</string>
+	<key>uuid</key>
+	<string>71D8AB6E-6940-4AA6-9F72-D8B27F745C20</string>
+</dict>
+</plist>

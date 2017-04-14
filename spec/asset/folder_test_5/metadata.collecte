@@ -4,6 +4,8 @@ AUTEURS_COLLECTE:   Phil, Marion
 DEBUT_COLLECTE:     11/4/2017
 FIN_COLLECTE:       11/4/2017
 # STRUCTURE
+Définir le temps des points de structure ci-dessous ou
+copier-coller les marques en fin de scène.
 STT_INC_PERT:
 STT_INC_DEC:
 STT_PIVOT_1:

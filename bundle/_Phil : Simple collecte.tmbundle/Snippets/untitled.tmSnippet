@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>ID:               ${1:IDENTIFIANT_FILMODICO}
+TITRE:            ${2:TITRE_FILM}
+AUTEURS_COLLECTE: ${3:AUTEURS}
+DEBUT_COLLECTE:   ${4:JOUR}/${5:MOIS}/${6:ANNEE}
+FIN_COLLECTE:     $0</string>
+	<key>name</key>
+	<string>Métadonnées : définir</string>
+	<key>scope</key>
+	<string>source.simple_collecte</string>
+	<key>tabTrigger</key>
+	<string>metadata</string>
+	<key>uuid</key>
+	<string>EDA9BE45-F7C9-48DD-AF3D-BF6F981158EC</string>
+</dict>
+</plist>

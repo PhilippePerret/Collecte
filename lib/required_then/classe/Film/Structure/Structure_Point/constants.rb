@@ -2,7 +2,6 @@
 class Film
 class Structure
 class Point
-class << self
 
   ABS_POINTS_DATA = {
     inc_dec:    {
@@ -21,7 +20,7 @@ class << self
       hname: 'Pivot 2', short_hname: 'Pvt 2',
       pfa: 0.75, tolerance: 0.24
     },
-    cdv:        {
+    cle_de_voute: {
       hname: 'Clé de voûte', short_hname: 'CdV',
       pfa: 0.5, tolerance: 0.12
     },
@@ -46,14 +45,7 @@ class << self
       pfa: nil
     }
   }
-  def name_of point
-    ABS_POINTS_DATA[point.id][:hname]
-  end
-  def short_name_of point
-    ABS_POINTS_DATA[point.id][:short_hname] || name_of(point)
-  end
 
-end #/<< self
 end #/Point
 end #/Structure
 end #/Film

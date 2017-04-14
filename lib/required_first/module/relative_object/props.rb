@@ -51,6 +51,11 @@ module RelativeObjectMethods
   # Note : une note est aussi un Objet Relatif.
   attr_reader :notes_ids
 
+  # {Array de Symbol} Liste des IDs de points
+  # structurels auxquels appartient l'objet.
+  # p.e. [:inc_dec, :climax]
+  attr_reader :stt_points_ids
+
   # Propriétés volatiles
   # --------------------
 

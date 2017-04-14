@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>saveActiveFile</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby -wU
+=begin
+
+Créer le fichier SCENES du film s'il n'existe pas
+
+=end
+dossier_film  = ENV['TM_PROJECT_DIRECTORY']
+affixe_film   = File.basename(dossier_film)
+file_path     = File.join(dossier_film, "metadata.collecte")
+
+File.exists?(file_path) || begin
+  fref = File.open(file_path,'a')
+  [
+    '='*58,
+    'Jouer la tabulation après le `metadata` ci-dessous',
+    '='*58
+  ].each do |line|
+    fref.puts "# #{line}"
+  end
+  
+  fref.puts ""
+  fref.puts "metadata"
+    
+end
+
+puts "Fichier métadonnées créé."
+
+sleep 2
+
+`mate "#{file_path}"`
+</string>
+	<key>input</key>
+	<string>none</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>keyEquivalent</key>
+	<string>@m</string>
+	<key>name</key>
+	<string>Métadonnée : créer le fichier</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>replaceInput</string>
+	<key>scope</key>
+	<string>source.simple_collecte</string>
+	<key>uuid</key>
+	<string>23DC6DB2-C855-466C-91C6-4C29FF4E56FF</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>

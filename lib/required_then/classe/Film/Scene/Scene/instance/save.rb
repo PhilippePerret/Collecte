@@ -28,7 +28,8 @@ class Scene
       brins_ids:        brins_ids,
       personnages_ids:  personnages_ids,
       paragraphes:      paragraphes_as_hash_data,
-      notes_ids:        notes_ids
+      notes_ids:        notes_ids,
+      stt_points_ids:   stt_points_ids
     }
   end
 

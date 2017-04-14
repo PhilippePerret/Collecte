@@ -22,6 +22,8 @@ describe 'Parsing du collecte des scènes' do
       expect(File.exist? collecte.data_folder).to eq true
     end
     it 'produit le fichier data/scenes.msh dans le dossier de collecte' do
+      p = File.join(collecte.data_folder, 'scenes.msh')
+      expect(File.exist? p).to eq true
     end
   end
 
@@ -44,8 +46,8 @@ describe 'Parsing du collecte des scènes' do
         numero:   1,
         lieu: 'INT.',
         effet: 'JOUR', decor: 'MAISON DE JOE',
-        line: 1
-
+        line: 1,
+        stt_points_ids: [:inc_pert, :inc_dec]
       }.each do |prop, expected|
         expect(scene1[prop]).to eq expected
       end
@@ -70,7 +72,7 @@ describe 'Parsing du collecte des scènes' do
           lieu: 'INT.', lieu_alt: 'EXT.',
           effet:'JOUR', effet_alt: nil,
           decor: 'MAISON DE JOE', decor_alt:'JARDIN PUBLIC',
-          line: 10
+          line: 12
         }.each do |prop, expected|
           expect(scene3[prop]).to eq expected
         end

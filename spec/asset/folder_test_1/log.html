@@ -3,38 +3,52 @@
 <head>
   <meta http-equiv="Content-type" content="text/html; charset=utf-8">
   <title>
-    Log du 14 04 2017 - 14:30
+    Log du 14 04 2017 - 21:08
   </title>
   <style type="text/css">
-    div.error{color:red}div.error{color:red}div.error{color:red}div.error{color:red}div.error{color:red}div.error{color:red}div.error{color:red}div.error{color:red}div.error{color:red}div.error{color:red}
+    div.error{color:red}
   </style>
   <script type="text/javascript">
     
   </script>
 </head>
 <body>
-  <h2>Log du 14 04 2017 - 14:30</h2>
-  <h3>Erreurs survenues</h3><div class="error">14/04 14:30:42 ### ERREUR au cours du parsing des scènes : L’intitulé de la scène 2 est mal formaté ("0:01:40 NUIT JARDIN PUBLIC")
+  <h2>Log du 14 04 2017 - 21:08</h2>
+  <h3>Erreurs survenues</h3><div class="error">14/04 21:08:49 ### ERREUR au cours du parsing des scènes : uninitialized constant Film::Structure::Point::ABS_POINTS_DATA
+</div>
+<div class="error">14/04 21:08:49 ### ERREUR à la fin de Collecte#parse : undefined method `horloge' for nil:NilClass
 </div>
 <h3>Journal complet</h3>
 <pre>
-14/04 14:30:42 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_error_1"
-14/04 14:30:42 Parsing préparé avec succès.
-14/04 14:30:42 PARSING DES MÉTADONNÉES…
-14/04 14:30:42 PARSING DES BRINS…
-14/04 14:30:42 PARSING DES PERSONNAGES…
-14/04 14:30:42 PARSING DES SCÈNES…
-14/04 14:30:42 ### ERREUR au cours du parsing des scènes : L’intitulé de la scène 2 est mal formaté ("0:01:40 NUIT JARDIN PUBLIC")
-/Users/philippeperret/Programmation/Collecte/module/parsing/Film/Scene/Scene/instance/parse.rb:84:in `parse_first_line'
-/Users/philippeperret/Programmation/Collecte/module/parsing/Film/Scene/Scene/instance/parse.rb:28:in `parse'
+14/04 21:08:49 Fin du chargement des librairies (lib/required.rb)
+14/04 21:08:49 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_1"
+14/04 21:08:49 Parsing préparé avec succès.
+14/04 21:08:49 PARSING DES MÉTADONNÉES…
+14/04 21:08:49 PARSING DES PERSONNAGES…
+14/04 21:08:49 PARSING DES BRINS…
+14/04 21:08:49 PARSING DES SCÈNES…
+14/04 21:08:49 ### ERREUR au cours du parsing des scènes : uninitialized constant Film::Structure::Point::ABS_POINTS_DATA
+/Users/philippeperret/Programmation/Collecte/module/parsing/Film/Scene/Scene/instance/parse.rb:136:in `parse_line'
+/Users/philippeperret/Programmation/Collecte/module/parsing/Film/Scene/Scene/instance/parse.rb:40:in `block in parse'
+/Users/philippeperret/Programmation/Collecte/module/parsing/Film/Scene/Scene/instance/parse.rb:39:in `each'
+/Users/philippeperret/Programmation/Collecte/module/parsing/Film/Scene/Scene/instance/parse.rb:39:in `parse'
 /Users/philippeperret/Programmation/Collecte/module/parsing/Film/Scene/Scenes/instance/parse.rb:13:in `add'
 /Users/philippeperret/Programmation/Collecte/module/parsing/_first_required_/CollecteFile/parse.rb:15:in `block in parse'
 /Users/philippeperret/Programmation/Collecte/module/parsing/_first_required_/CollecteFile/parse.rb:15:in `each'
 /Users/philippeperret/Programmation/Collecte/module/parsing/_first_required_/CollecteFile/parse.rb:15:in `parse'
-/Users/philippeperret/Programmation/Collecte/module/parsing/Collecte/instance/parsing.rb:47:in `parse_scenes'
+/Users/philippeperret/Programmation/Collecte/module/parsing/Collecte/instance/parsing.rb:48:in `parse_scenes'
 /Users/philippeperret/Programmation/Collecte/module/parsing/Collecte/instance/parsing.rb:11:in `parse_all'
 /Users/philippeperret/Programmation/Collecte/lib/required_then/classe/Collecte/Collecte/instance/parse.rb:21:in `parse'
-/Users/philippeperret/Programmation/Collecte/spec/unit/Collecte/Parsing/parse_spec.rb:39:in `block (3 levels) in <top (required)>'
+/Users/philippeperret/Programmation/Collecte/spec/unit/Collecte/Parsing/Scenes/parse_file_collecte_spec.rb:8:in `block (3 levels) in <top (required)>'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-expectations-3.5.0/lib/rspec/matchers/built_in/raise_error.rb:52:in `matches?'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-expectations-3.5.0/lib/rspec/matchers/built_in/raise_error.rb:71:in `does_not_match?'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-expectations-3.5.0/lib/rspec/expectations/handler.rb:78:in `does_not_match?'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-expectations-3.5.0/lib/rspec/expectations/handler.rb:72:in `block in handle_matcher'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-expectations-3.5.0/lib/rspec/expectations/handler.rb:27:in `with_matcher'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-expectations-3.5.0/lib/rspec/expectations/handler.rb:70:in `handle_matcher'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-expectations-3.5.0/lib/rspec/expectations/expectation_target.rb:78:in `not_to'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-expectations-3.5.0/lib/rspec/expectations/expectation_target.rb:106:in `not_to'
+/Users/philippeperret/Programmation/Collecte/spec/unit/Collecte/Parsing/Scenes/parse_file_collecte_spec.rb:8:in `block (2 levels) in <top (required)>'
 /Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/hooks.rb:350:in `instance_exec'
 /Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/hooks.rb:350:in `run'
 /Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/hooks.rb:514:in `block in run_owned_hooks_for'
@@ -47,9 +61,52 @@
 /Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/memoized_helpers.rb:182:in `isolate_for_context_hook'
 /Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:535:in `run_before_context_hooks'
 /Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:588:in `run'
-/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:590:in `block in run'
-/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:590:in `map'
-/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:590:in `run'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/runner.rb:113:in `block (3 levels) in run_specs'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/runner.rb:113:in `map'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/runner.rb:113:in `block (2 levels) in run_specs'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/configuration.rb:1836:in `with_suite_hooks'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/runner.rb:112:in `block in run_specs'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/reporter.rb:77:in `report'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/runner.rb:111:in `run_specs'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/runner.rb:87:in `run'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/runner.rb:71:in `run'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/runner.rb:45:in `invoke'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/exe/rspec:4:in `<top (required)>'
+/Users/philippeperret/.rbenv/versions/2.3.0/bin/rspec:23:in `load'
+/Users/philippeperret/.rbenv/versions/2.3.0/bin/rspec:23:in `<main>'
+14/04 21:08:49 ### ERREUR à la fin de Collecte#parse : undefined method `horloge' for nil:NilClass
+/Users/philippeperret/Programmation/Collecte/lib/required_then/classe/Film/Film/instance/props.rb:38:in `fin'
+/Users/philippeperret/Programmation/Collecte/lib/required_then/classe/Film/Film/instance/props.rb:50:in `duree'
+/Users/philippeperret/Programmation/Collecte/lib/required_then/classe/Film/Film/instance/data_save.rb:52:in `block in store_metadata'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/2.3.0/pstore.rb:331:in `block in transaction'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/2.3.0/pstore.rb:330:in `catch'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/2.3.0/pstore.rb:330:in `transaction'
+/Users/philippeperret/Programmation/Collecte/lib/required_then/classe/Film/Film/instance/data_save.rb:51:in `store_metadata'
+/Users/philippeperret/Programmation/Collecte/lib/required_then/classe/Film/Film/instance/data_save.rb:33:in `pstore_save'
+/Users/philippeperret/Programmation/Collecte/lib/required_then/classe/Film/Film/instance/data_save.rb:17:in `save'
+/Users/philippeperret/Programmation/Collecte/lib/required_then/classe/Collecte/Collecte/instance/parse.rb:23:in `parse'
+/Users/philippeperret/Programmation/Collecte/spec/unit/Collecte/Parsing/Scenes/parse_file_collecte_spec.rb:8:in `block (3 levels) in <top (required)>'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-expectations-3.5.0/lib/rspec/matchers/built_in/raise_error.rb:52:in `matches?'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-expectations-3.5.0/lib/rspec/matchers/built_in/raise_error.rb:71:in `does_not_match?'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-expectations-3.5.0/lib/rspec/expectations/handler.rb:78:in `does_not_match?'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-expectations-3.5.0/lib/rspec/expectations/handler.rb:72:in `block in handle_matcher'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-expectations-3.5.0/lib/rspec/expectations/handler.rb:27:in `with_matcher'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-expectations-3.5.0/lib/rspec/expectations/handler.rb:70:in `handle_matcher'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-expectations-3.5.0/lib/rspec/expectations/expectation_target.rb:78:in `not_to'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-expectations-3.5.0/lib/rspec/expectations/expectation_target.rb:106:in `not_to'
+/Users/philippeperret/Programmation/Collecte/spec/unit/Collecte/Parsing/Scenes/parse_file_collecte_spec.rb:8:in `block (2 levels) in <top (required)>'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/hooks.rb:350:in `instance_exec'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/hooks.rb:350:in `run'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/hooks.rb:514:in `block in run_owned_hooks_for'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/hooks.rb:513:in `each'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/hooks.rb:513:in `run_owned_hooks_for'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/hooks.rb:466:in `run'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:536:in `block in run_before_context_hooks'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/memoized_helpers.rb:186:in `block in isolate_for_context_hook'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/memoized_helpers.rb:182:in `instance_exec'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/memoized_helpers.rb:182:in `isolate_for_context_hook'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:535:in `run_before_context_hooks'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:588:in `run'
 /Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/runner.rb:113:in `block (3 levels) in run_specs'
 /Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/runner.rb:113:in `map'
 /Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/runner.rb:113:in `block (2 levels) in run_specs'

@@ -102,8 +102,12 @@ class Scene
     'n' => :notes,
     's' => :scenes
   }
-  # Méthode qui permet de parser une ligne.
-  # La méthode retourne un objet FilmObjet
+  # Méthode qui permet de parser une ligne quelconque
+  # de la scène en dehors de l'intitulé.
+  # La méthode retourne un objet FilmObjet ou nil s'il ne
+  # faut rien considérer, comme par exemple pour la ligne
+  # des objets relatifs ou une ligne définissant un point
+  # structurel.
   def parse_line line
     case line
     when /^(b|n|p|s)([0-9]+)/i
@@ -122,7 +126,28 @@ class Scene
       end
 
       return nil
-
+    when /^STT_([A-Z_]+)$/
+      #
+      # P O I N T   S T R U C T U R E L
+      #
+      # La ligne courant définit un point structurel
+      # auquel la scène appartient
+      stt_point_id = line[4..-1].downcase.to_sym
+      if Film::Structure::Point::ABS_POINTS_DATA.key?(stt_point_id)
+        #
+        # Ce point structurel existe
+        #
+        # On peut l'ajouter à la scène courante.
+        log "Point structurel trouvé dans la scène : #{stt_point_id.inspect}"
+        @stt_points_ids ||= Array.new
+        @stt_points_ids << stt_point_id
+      else
+        #
+        # Le point structurel spécifié est inconnu
+        #
+        raise "Le point structurel désigné par `#{line}` est inconnu…"
+      end
+      return nil
     when /^\([0-9]+\) /
       #
       # L I G N E   D E   N O T E

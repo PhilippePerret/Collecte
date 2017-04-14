@@ -1,22 +1,12 @@
-14/04 16:34:57 Fin du chargement des librairies (lib/required.rb)
-14/04 16:34:57 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_5"
-14/04 16:34:57 Parsing préparé avec succès.
-14/04 16:34:57 PARSING DES MÉTADONNÉES…
-14/04 16:34:57 Métadata parsées ({:id=>"divisions2017", :titre=>"Film pour divisions", :auteurs=>["Phil", "Marion"], :debut=>"11/4/2017", :fin=>"11/4/2017"})
-14/04 16:34:57 PARSING DES PERSONNAGES…
-14/04 16:34:57 PARSING DES BRINS…
-14/04 16:34:57 PARSING DES SCÈNES…
-14/04 16:34:57 FIN DU FILM TROUVÉE à 1:00:30
-14/04 16:34:57 Calcul de la durée des scènes
-14/04 16:34:57 Sauvegarde des scènes
-14/04 16:34:57 -> Film#load_from_pstore
-14/04 16:34:57 <- Film#load_from_pstore OK
-14/04 16:34:57   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_5/extraction/full_statistiques.html"]
-14/04 16:34:57   <- prepare
-14/04 16:34:57 Méthode d'extraction à utiliser : :extract_statistiques
-14/04 16:34:57 STATISTIQUES : données générales
-14/04 16:34:57 Liste des IDs de personnages retenus : ["joe", "jan", "trois", "quatre"]
-14/04 16:34:57 STATISTIQUES : données des brins
-14/04 16:34:57 Liste des IDs de brins retenus : [1, 4, 2, 5, 3]
-14/04 16:34:57 STATISTIQUES : constitution du code
-14/04 16:34:57 STATISTIQUES : /fin de constitution du code
+14/04 21:14:59 Fin du chargement des librairies (lib/required.rb)
+14/04 21:14:59 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_1"
+14/04 21:14:59 Parsing préparé avec succès.
+14/04 21:14:59 PARSING DES MÉTADONNÉES…
+14/04 21:14:59 PARSING DES PERSONNAGES…
+14/04 21:14:59 PARSING DES BRINS…
+14/04 21:14:59 PARSING DES SCÈNES…
+14/04 21:14:59 Point structurel trouvé dans la scène : :inc_pert
+14/04 21:14:59 Point structurel trouvé dans la scène : :inc_dec
+14/04 21:14:59 FIN DU FILM TROUVÉE à 0:03:50
+14/04 21:14:59 Calcul de la durée des scènes
+14/04 21:14:59 Sauvegarde des scènes
