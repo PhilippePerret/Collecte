@@ -1,2 +1,5 @@
-14/04 14:30:13 Fin du chargement des librairies (lib/required.rb)
-14/04 14:30:13 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_1"
+14/04 14:30:43 Fin du chargement des librairies (lib/required.rb)
+14/04 14:30:43 -> Collecte::parse_commande
+14/04 14:30:43 Analyse de la ligne de commande
+14/04 14:30:43 Format de sortie : :html
+14/04 14:30:43 <- Collecte::parse_commande

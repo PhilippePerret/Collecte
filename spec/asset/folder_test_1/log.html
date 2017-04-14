@@ -3,60 +3,38 @@
 <head>
   <meta http-equiv="Content-type" content="text/html; charset=utf-8">
   <title>
-    Log du 14 04 2017 - 14:28
+    Log du 14 04 2017 - 14:30
   </title>
   <style type="text/css">
-    div.error{color:red}div.error{color:red}div.error{color:red}div.error{color:red}div.error{color:red}div.error{color:red}div.error{color:red}div.error{color:red}
+    div.error{color:red}div.error{color:red}div.error{color:red}div.error{color:red}div.error{color:red}div.error{color:red}div.error{color:red}div.error{color:red}div.error{color:red}div.error{color:red}
   </style>
   <script type="text/javascript">
     
   </script>
 </head>
 <body>
-  <h2>Log du 14 04 2017 - 14:28</h2>
-  <h3>Erreurs survenues</h3><div class="error">14/04 14:28:29 ### ERREUR  : Aucune scène n'est comprise entre le début du film et 0:00:20.
+  <h2>Log du 14 04 2017 - 14:30</h2>
+  <h3>Erreurs survenues</h3><div class="error">14/04 14:30:42 ### ERREUR au cours du parsing des scènes : L’intitulé de la scène 2 est mal formaté ("0:01:40 NUIT JARDIN PUBLIC")
 </div>
 <h3>Journal complet</h3>
 <pre>
-14/04 14:28:29 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3"
-14/04 14:28:29 -> Film#load_from_pstore
-14/04 14:28:29 <- Film#load_from_pstore OK
-14/04 14:28:29   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3/extraction/sequencier_from_180.html"]
-14/04 14:28:29   <- prepare
-14/04 14:28:29 Méthode d'extraction à utiliser : :extract_sequencier
-14/04 14:28:29 -> extract_sequencier(as_brin = false)
-14/04 14:28:29 Scène 1 (0:00:30) filtrée : > à from_time
-14/04 14:28:29 Scène 2 (0:01:40) filtrée : > à from_time
-14/04 14:28:29 Nombre de scènes passant le filtre : 2
-14/04 14:28:29 Méthode Scene à utiliser : :as_sequence
-14/04 14:28:29 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
-14/04 14:28:29 SASSisation du fichier CSS `resume.css`
-14/04 14:28:29 SASSisation du fichier CSS `sequencier.css`
-14/04 14:28:29 SASSisation du fichier CSS `statistiques.css`
-14/04 14:28:29 SASSisation du fichier CSS `synopsis.css`
-14/04 14:28:29 SASSisation du fichier CSS `brins_simples.css`
-14/04 14:28:29 SASSisation du fichier CSS `brut.css`
-14/04 14:28:29 SASSisation du fichier CSS `chemin_de_fer.css`
-14/04 14:28:29 SASSisation du fichier CSS `events.css`
-14/04 14:28:29 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3"
-14/04 14:28:29 -> Film#load_from_pstore
-14/04 14:28:29 <- Film#load_from_pstore OK
-14/04 14:28:29   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3/extraction/sequencier_to_20.html"]
-14/04 14:28:29   <- prepare
-14/04 14:28:29 Méthode d'extraction à utiliser : :extract_sequencier
-14/04 14:28:29 -> extract_sequencier(as_brin = false)
-14/04 14:28:29 Scène 1 (0:00:30) filtrée : < à to_time
-14/04 14:28:29 Scène 2 (0:01:40) filtrée : < à to_time
-14/04 14:28:29 Scène 3 (0:03:20) filtrée : < à to_time
-14/04 14:28:29 Scène 4 (0:04:53) filtrée : < à to_time
-14/04 14:28:29 Nombre de scènes passant le filtre : 0
-14/04 14:28:29 ### ERREUR  : Aucune scène n'est comprise entre le début du film et 0:00:20.
-/Users/philippeperret/Programmation/Collecte/module/extract_formats/HTML/Extractor/instance/extract/sequencier.rb:39:in `extract_sequencier'
-/Users/philippeperret/Programmation/Collecte/module/extracting/Extractor/Extractor/instance/set_by_type.rb:120:in `call_extract_methode_by_type'
-/Users/philippeperret/Programmation/Collecte/module/extracting/Extractor/Extractor/instance/extract.rb:63:in `proceed_extract_data'
-/Users/philippeperret/Programmation/Collecte/module/extracting/Extractor/Extractor/instance/extract.rb:32:in `extract_data'
-/Users/philippeperret/Programmation/Collecte/lib/required_then/classe/Collecte/Collecte/instance/extract_methods.rb:20:in `extract'
-/Users/philippeperret/Programmation/Collecte/spec/unit/Collecte/Extraction/Par_format/HTML/sequencier_partiel_spec.rb:62:in `block (4 levels) in <top (required)>'
+14/04 14:30:42 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_error_1"
+14/04 14:30:42 Parsing préparé avec succès.
+14/04 14:30:42 PARSING DES MÉTADONNÉES…
+14/04 14:30:42 PARSING DES BRINS…
+14/04 14:30:42 PARSING DES PERSONNAGES…
+14/04 14:30:42 PARSING DES SCÈNES…
+14/04 14:30:42 ### ERREUR au cours du parsing des scènes : L’intitulé de la scène 2 est mal formaté ("0:01:40 NUIT JARDIN PUBLIC")
+/Users/philippeperret/Programmation/Collecte/module/parsing/Film/Scene/Scene/instance/parse.rb:84:in `parse_first_line'
+/Users/philippeperret/Programmation/Collecte/module/parsing/Film/Scene/Scene/instance/parse.rb:28:in `parse'
+/Users/philippeperret/Programmation/Collecte/module/parsing/Film/Scene/Scenes/instance/parse.rb:13:in `add'
+/Users/philippeperret/Programmation/Collecte/module/parsing/_first_required_/CollecteFile/parse.rb:15:in `block in parse'
+/Users/philippeperret/Programmation/Collecte/module/parsing/_first_required_/CollecteFile/parse.rb:15:in `each'
+/Users/philippeperret/Programmation/Collecte/module/parsing/_first_required_/CollecteFile/parse.rb:15:in `parse'
+/Users/philippeperret/Programmation/Collecte/module/parsing/Collecte/instance/parsing.rb:47:in `parse_scenes'
+/Users/philippeperret/Programmation/Collecte/module/parsing/Collecte/instance/parsing.rb:11:in `parse_all'
+/Users/philippeperret/Programmation/Collecte/lib/required_then/classe/Collecte/Collecte/instance/parse.rb:21:in `parse'
+/Users/philippeperret/Programmation/Collecte/spec/unit/Collecte/Parsing/parse_spec.rb:39:in `block (3 levels) in <top (required)>'
 /Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/hooks.rb:350:in `instance_exec'
 /Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/hooks.rb:350:in `run'
 /Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/hooks.rb:514:in `block in run_owned_hooks_for'
@@ -69,9 +47,6 @@
 /Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/memoized_helpers.rb:182:in `isolate_for_context_hook'
 /Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:535:in `run_before_context_hooks'
 /Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:588:in `run'
-/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:590:in `block in run'
-/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:590:in `map'
-/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:590:in `run'
 /Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:590:in `block in run'
 /Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:590:in `map'
 /Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:590:in `run'
@@ -88,15 +63,6 @@
 /Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/exe/rspec:4:in `<top (required)>'
 /Users/philippeperret/.rbenv/versions/2.3.0/bin/rspec:23:in `load'
 /Users/philippeperret/.rbenv/versions/2.3.0/bin/rspec:23:in `<main>'
-14/04 14:28:29 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
-14/04 14:28:29 SASSisation du fichier CSS `resume.css`
-14/04 14:28:29 SASSisation du fichier CSS `sequencier.css`
-14/04 14:28:29 SASSisation du fichier CSS `statistiques.css`
-14/04 14:28:29 SASSisation du fichier CSS `synopsis.css`
-14/04 14:28:29 SASSisation du fichier CSS `brins_simples.css`
-14/04 14:28:29 SASSisation du fichier CSS `brut.css`
-14/04 14:28:29 SASSisation du fichier CSS `chemin_de_fer.css`
-14/04 14:28:29 SASSisation du fichier CSS `events.css`
 
 </pre>
 </body>
