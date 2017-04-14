@@ -1,4 +1,4 @@
-## Collecte des informations {#collectefilm}
+# Collecte des informations {#collectefilm}
 
 La *Collecte* est la première opération à exécuter. Elle consiste à rassembler toutes les informations du film dans un dossier appelé *dossier de collecte*.
 
@@ -8,7 +8,7 @@ Ce dossier contient :
 * le fichier des brins (cf. [fichier des brins]),
 * le fichier des scènes (cf. [fichier des scènes]).
 
-### Dossier de collecte {#dossiercollecte}
+## Dossier de collecte {#dossiercollecte}
 
 Le « dossier de collecte » peut se situer n'importe où sur votre ordinateur. C'est dans ce dossier que seront produit les fichiers de données (Marshal ou PStore) ainsi que le dossier d'extraction où seront placés tous les fichiers extraits.
 
@@ -24,7 +24,7 @@ Sa hiérarchie normale est :
                                      /...
 ~~~
 
-### Définition de la fin du film {#definirfindufilm}
+## Définition de la fin du film {#definirfindufilm}
 
 Pour définir la fin du film, il faut impérativement terminer le [fichier des scènes] par :
 
@@ -36,7 +36,7 @@ Pour définir la fin du film, il faut impérativement terminer le [fichier des s
 
 Dans le cas contraire, le programme prendra le temps de la dernière scène et lui attribuera arbitrairement une durée de 1 minute.
 
-### Temps réels et temps relatifs {#tempsreelsetrelatifs}
+## Temps réels et temps relatifs {#tempsreelsetrelatifs}
 
 Il faut comprendre que pour le programme il existe deux temps différents, les *temps réels* et les *temps relatifs*.
 
@@ -46,7 +46,7 @@ Les *temps réels*, qui prennent pour référence une première scène qui comme
 
 Pour [la commande `collecte`], ce sont toujours des *temps réels* qu'il faut fournir, pas des *temps relatifs*. Il convient de prendre ces temps dans les fichiers extraits, notamment les séquenciers complets.
 
-### Collecte des scènes {#collectedesscenes}
+## Collecte des scènes {#collectedesscenes}
 
 Les scènes du film sont *collectées* dans un fichier du [dossier de collecte] :
 
@@ -56,7 +56,7 @@ Les scènes du film sont *collectées* dans un fichier du [dossier de collecte]�
 
 Grâce au [bundle TextMate], ce fichier peut être créé à l'aide de la commande `Scènes : créer le fichier`.
 
-#### Format général d'une scène
+### Format général d'une scène
 
 Dans le fichier `scenes.collecte`, une scène se présente sous la forme :
 
@@ -87,14 +87,32 @@ Ou, pour une scène *en parallèle* dans deux décors différents :
       (2) On joue ici sur le contraste jour/nuit.
 ~~~
 
-#### Création de la scène à l'aide du bundle TextMate
+Chaque scène doit être **impérativement séparée de la précédente par une ligne vide** :
+
+~~~
+      0:00:06 INT. JOUR MAISON
+      Première scène.
+
+      0:00:42 EXT. NUIT JARDIN
+      La scène suivante doit être séparée par une ligne.
+~~~
+
+La fin du film se détermine par la ligne :
+
+~~~
+      1:12:12 FIN
+~~~
+
+Cette ligne n'est pas comptée pour une scène.
+
+### Création de la scène à l'aide du bundle TextMate
 
 Avec le [bundle TextMate], il suffit d'utiliser le snippet `s` pour créer la scène (donc de taper « s » puis la touche tabulation).
 
 En plus de ce snippet, le temps peut être entièrement géré par TextMate, ce qui permet de ne pas s'en soucier. Ouvrir le l'aide du bundle pour apprendre à le faire.
 
 
-### Collecte et gestion des brins {#gestiondesbrins}
+## Collecte et gestion des brins {#gestiondesbrins}
 
 Un « brin » est comme une catégorie. Il permet de rassembler les scènes sous une même étiquette. Chaque sous-intrigue, dans une histoire, est un *brin*. Mais un *brin* peut aussi concerner un thème, un accessoire, une relation de personnage ou tout autre élément dramatique.
 
@@ -104,7 +122,7 @@ Les *brins* du film sont consignés dans le fichier :
       <dossier collecte>/brins.collecte
 ~~~
 
-#### Format général d'un brin
+### Format général d'un brin
 
 Chaque brin, dans le fichier `brins.collecte`, a la forme :
 
@@ -133,7 +151,7 @@ Par exemple :
 
 > Noter que chaque brin doit être séparé d'une ligne.
 
-#### Création du brin à l'aide du bundle TextMate
+### Création du brin à l'aide du bundle TextMate
 
 À l'aide du [bundle TextMate], on peut créer le fichier des brins grâce à la commande `Brins : créer le fichier`.
 
@@ -141,7 +159,7 @@ Ensuite, dans ce fichier, on peut utiliser le snippet `brin` pour créer un nouv
 
 Pour de plus amples détails, voir l'aide du bundle (en tapant CMD+H **tandis qu'un fichier collecte est actif**).
 
-### Collecte et gestion des personnages {#gestiondespersonnages}
+## Collecte et gestion des personnages {#gestiondespersonnages}
 
 Pour la collecte, les personnages du film sont consignés dans le fichier :
 
@@ -153,7 +171,7 @@ La définition des personnages permet d'utiliser des marques `[PERSO#<id personn
 
 Grâce à ces marques, par exemple, on peut déterminer le temps de présence d'un personnage à l'écran.
 
-#### Format général d'une donnée personnage {#formatgeneraldatapersonnage}
+### Format général d'une donnée personnage {#formatgeneraldatapersonnage}
 
 Chaque personnage, dans le fichier `personnages.collecte`, est consigné sous la forme :
 
@@ -170,7 +188,7 @@ Chaque personnage, dans le fichier `personnages.collecte`, est consigné sous la
         NOM_ACTEUR:     <nom acteur>
 ~~~
 
-#### Création du personnage à l'aide du bundle TextMate {#creationpersonnagewithbundle}
+### Création du personnage à l'aide du bundle TextMate {#creationpersonnagewithbundle}
 
 On peut créer le fichier `personnages.collecte`, avec le [bundle TextMate], en utilisant la commande `Persos : créer le fichier`.
 
@@ -179,3 +197,78 @@ Ensuite, dans ce fichier, il suffit d'utiliser le snippet `perso` pour créer fa
 Dans le [fichier de collecte des scènes][fichier des scènes], il suffit de taper `p` puis tabulation pour choisir un personnage très facilement.
 
 Pour de plus amples détails sur l'utilisation des personnages, voir l'aide du bundle (en tapant CMD+H **tandis qu'un fichier collecte est actif**).
+
+## Fichier des métadonnées {#fichiermetadata}
+
+Un fichier de métadonnées peut être créé à la racine du dossier de collecte :
+
+~~~
+      <dossier collecte>/metadata.json
+~~~
+
+Ce fichier permet de définir les données suivantes :
+
+~~~
+      {
+        /* Le titre du film */
+        "titre": "<le titre du film>",
+        /* ID du film */
+        "id": "<identifiant filmodico",
+        /* Les auteurs de la collect */
+        "auteurs": ["Auteur 1", "Auteur 2"/* , etc. */],
+        /* Date de debut de la collecte */
+        "date_debut": "JJ/MM/AAAA",
+        /* Date de fin de la collecte */
+        "date_fin": "JJ/MM/AAAA"
+      }
+~~~
+
+### Définition du titre du film {#definirtitrefilm}
+
+Définir le titre, dans les métadonnées, à l'aide de la propriété `titre`.
+
+### Définition de l'identifiant du film {#definiridentifiantfilm}
+
+Définir l'identifiant Filmodico, dans les métadonnées, à l'aide de la propriété `id`.
+
+### Dates de début et de fin de collecte {#definirdatedebutfincollecte}
+
+Définir la date de début de collecte avec la propriété `date_debut` dans les métadonnées, et la date de fin de collecte, si la collecte est terminée, à l'aide de la propriété `date_fin`.
+
+La valeur est une date sous la forme `JJ/MM/AAAA`. Par exemple `14/04/2017`.
+
+
+### Définition des auteurs de la collecte {#definirauteurscollecte}
+
+Définir le titre, dans les métadonnées, à l'aide de la propriété `auteurs`.
+
+
+### Définition de la structure {#definitionstructure}
+
+La structure du film peut être définie dans le [fichier des métadonnées], grâce à la donnée `structure` :
+
+~~~
+
+      // Dans le fichier metadata.json
+      {
+        ...
+        "structure":{
+          "pivot_1":              "0:21:45", // (*)
+          "incident_perturbateur":"5:03",    // (*)
+          "incident_declencheur": "12:20",   // (*)
+          "developpement":        "0:25:00", // (*)
+          "cle_de_voute":         "0:59:30", // (*)
+          "crise":                "1:17:00", // (*)
+          "pivot_2":              "1:24:12", // (*)
+          "denouement":           "1:29:10", // (*)
+          "climax":               "1:40:12"  // (*)
+        }
+      }
+~~~
+
+> (*) Il s'agit des temps réels (cf. l'[explication sur les temps réels et relatifs]). Ils peuvent être donc définis après une première extraction.
+
+Ces temps permettent :
+
+* de définir dans le fichier statistique les écarts par rapport au *Paradigme de Field Augmenté*.
+* de séparer les actes dans le [fichier résumé] et le [fichier synopsis].

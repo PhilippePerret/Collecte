@@ -1,110 +1,601 @@
 <!DOCTYPE html><html lang="fr"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Manuel de Collecte</title>
+  <title>Manuel d'utilisation de Collecte</title>
   <meta name="author" lang="fr" content="Philippe Perret">
   
   <style type='text/css'>body{width:17cm;margin:2cm;font-size:13.1pt}ul,ol{margin-left:3em;padding-left:0;margin-right:3em;list-style:square}dl{margin-left:2em;margin-right:3em}dl dt{font-weight:bold;font-family:Arial,Helvetica}dl dd{margin-left:2em}code{background-color:#FEFEFE}
 
 nav#__tdm__{border:1px solid #CCC;padding:1em;font-size:.85em;width:75%;background-color:#EFEFEF}nav#__tdm__.float{float:right;margin-left:4em;margin-bottom:2em}nav#__tdm__.float_left{float:left;margin-right:4em;margin-bottom:2em}nav#__tdm__.right{margin-left:20%}nav#__tdm__.left{margin-left:2%}nav#__tdm__ div.titre{font-variant:small-caps;font-size:1.4em}nav#__tdm__ ul{list-style:none}nav#__tdm__ ul a.__atdm__:link,nav#__tdm__ ul a.__atdm__:visited,nav#__tdm__ ul a.__atdm__:hover{text-decoration:none;color:inherit}nav#__tdm__ ul a.__atdm__:hover{text-decoration:underline}nav#__tdm__ ul li.__litdm__.__tdmlevel1__{margin-left:0}nav#__tdm__ ul li.__litdm__.__tdmlevel1__ a.__atdm__{font-size:1.2em}nav#__tdm__ ul li.__litdm__.__tdmlevel2__{margin-left:1em}nav#__tdm__ ul li.__litdm__.__tdmlevel2__ a.__atdm__{font-size:1.15em}nav#__tdm__ ul li.__litdm__.__tdmlevel3__{margin-left:2em}nav#__tdm__ ul li.__litdm__.__tdmlevel3__ a.__atdm__{font-size:1.1em}nav#__tdm__ ul li.__litdm__.__tdmlevel4__{margin-left:3em}nav#__tdm__ ul li.__litdm__.__tdmlevel4__ a.__atdm__{font-size:1.05em}nav#__tdm__ ul li.__litdm__.__tdmlevel5__{margin-left:4em}nav#__tdm__ ul li.__litdm__.__tdmlevel5__ a.__atdm__{font-size:1em}nav#__tdm__ ul li.__litdm__.__tdmlevel6__{margin-left:5em}nav#__tdm__ ul li.__litdm__.__tdmlevel6__ a.__atdm__{font-size:.85em}</style>
 </head>
-<body id="top"><nav role="navigation" id="__tdm__" class="float"><div class="titre">Table des matières</div><ul class="__ul_tdm__"><li class="__litdm__ __tdmlevel1__"><a class="__atdm__" href="#manuel-dutilisation-de-collecte">Manuel d’utilisation de Collecte</a></li>
-<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#collectefilm">Collecte des informations</a></li>
-<li class="__litdm__ __tdmlevel3__"><a class="__atdm__" href="#definirfindufilm">Définition de la fin du film</a></li>
-<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#parsingcollecte">Parsing de la collecte</a></li>
-<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#extractioninformation">Extraction des informations du film</a></li>
-<li class="__litdm__ __tdmlevel3__"><a class="__atdm__" href="#fichierstatistiques">Le fichier Statistiques</a></li>
-<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#collectecommand">La commande <code>collecte</code></a></li>
-<li class="__litdm__ __tdmlevel3__"><a class="__atdm__" href="#commande_collecte_help">Opération <code>collecte help</code></a></li>
-<li class="__litdm__ __tdmlevel3__"><a class="__atdm__" href="#commande_collecte_parse">Opération <code>collecte parse</code></a></li>
-<li class="__litdm__ __tdmlevel3__"><a class="__atdm__" href="#commande_collecte_extract">Opération <code>collecte extract</code></a></li>
-<li class="__litdm__ __tdmlevel4__"><a class="__atdm__" href="#set_from_and_to_time">Définir le temps de début et le temps de fin</a></li>
-<li class="__litdm__ __tdmlevel4__"><a class="__atdm__" href="#produire-des-squenciers">Produire des séquenciers</a></li></ul></nav>
-<h1 id="manuel-dutilisation-de-collecte">Manuel d’utilisation de Collecte</h1>
+<body id="top"><nav role="navigation" id="__tdm__" class="float"><div class="titre">Table des matières</div><ul class="__ul_tdm__"><li class="__litdm__ __tdmlevel1__"><a class="__atdm__" href="#collectefilm">Collecte des informations</a></li>
+<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#dossiercollecte">Dossier de collecte</a></li>
+<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#definirfindufilm">Définition de la fin du film</a></li>
+<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#tempsreelsetrelatifs">Temps réels et temps relatifs</a></li>
+<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#collectedesscenes">Collecte des scènes</a></li>
+<li class="__litdm__ __tdmlevel3__"><a class="__atdm__" href="#format-gnral-dune-scne">Format général d’une scène</a></li>
+<li class="__litdm__ __tdmlevel3__"><a class="__atdm__" href="#cration-de-la-scne--laide-du-bundle-textmate">Création de la scène à l’aide du bundle TextMate</a></li>
+<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#gestiondesbrins">Collecte et gestion des brins</a></li>
+<li class="__litdm__ __tdmlevel3__"><a class="__atdm__" href="#format-gnral-dun-brin">Format général d’un brin</a></li>
+<li class="__litdm__ __tdmlevel3__"><a class="__atdm__" href="#cration-du-brin--laide-du-bundle-textmate">Création du brin à l’aide du bundle TextMate</a></li>
+<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#gestiondespersonnages">Collecte et gestion des personnages</a></li>
+<li class="__litdm__ __tdmlevel3__"><a class="__atdm__" href="#formatgeneraldatapersonnage">Format général d’une donnée personnage</a></li>
+<li class="__litdm__ __tdmlevel3__"><a class="__atdm__" href="#creationpersonnagewithbundle">Création du personnage à l’aide du bundle TextMate</a></li>
+<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#fichiermetadata">Fichier des métadonnées</a></li>
+<li class="__litdm__ __tdmlevel3__"><a class="__atdm__" href="#definirtitrefilm">Définition du titre du film</a></li>
+<li class="__litdm__ __tdmlevel3__"><a class="__atdm__" href="#definiridentifiantfilm">Définition de l’identifiant du film</a></li>
+<li class="__litdm__ __tdmlevel3__"><a class="__atdm__" href="#definirdatedebutfincollecte">Dates de début et de fin de collecte</a></li>
+<li class="__litdm__ __tdmlevel3__"><a class="__atdm__" href="#definirauteurscollecte">Définition des auteurs de la collecte</a></li>
+<li class="__litdm__ __tdmlevel3__"><a class="__atdm__" href="#definitionstructure">Définition de la structure</a></li>
+<li class="__litdm__ __tdmlevel1__"><a class="__atdm__" href="#parsingcollecte">Parsing de la collecte</a></li>
+<li class="__litdm__ __tdmlevel1__"><a class="__atdm__" href="#extractioninformation">Extraction des informations du film</a></li>
+<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#fichierresume">Le fichier résumé</a></li>
+<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#fichiersynopsis">Le fichier synopsis</a></li>
+<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#fichierssequencier">Les fichiers séquencier</a></li>
+<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#fichiersbrins">Les fichiers brins</a></li>
+<li class="__litdm__ __tdmlevel3__"><a class="__atdm__" href="#designationbrins">Désignation des brins</a></li>
+<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#fichierstatistiques">Le fichier Statistiques</a></li>
+<li class="__litdm__ __tdmlevel1__"><a class="__atdm__" href="#collectecommand">La commande <code>collecte</code></a></li>
+<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#installationcommandecollecte">Installation de la commande <code>collecte</code></a></li>
+<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#commande_collecte_help">Opération <code>collecte help</code></a></li>
+<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#commande_collecte_parse">Opération <code>collecte parse</code></a></li>
+<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#commande_collecte_extract">Opération <code>collecte extract</code></a></li>
+<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#emplacement-des-fichiers-produits">Emplacement des fichiers produits</a></li>
+<li class="__litdm__ __tdmlevel1__"><a class="__atdm__" href="#optionscommandcollecte">Les différentes options de la command <code>collecte extract</code></a></li>
+<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#extrairetousfichiers">Extraire tous les fichiers</a></li>
+<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#extraireresume">Extraire le résumé</a></li>
+<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#extrairesynopsis">Extraire le synopsis</a></li>
+<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#extraire_sequenciers">Extraire des séquenciers</a></li>
+<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#extraire_brins">Extraire un ou des brins</a></li>
+<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#set_from_and_to_time">Définir le temps de début et le temps de fin</a></li>
+<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#forcerparsing">Forcer le parsing avant l’extraction</a></li>
+<li class="__litdm__ __tdmlevel1__"><a class="__atdm__" href="#annexes">Annexes</a></li>
+<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#formatagedeshorloges">Formatage des horloges</a></li>
+<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#nomfichiersextraits">Nom et titre des fichiers extraits</a></li>
+<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#bundletextmate">Le bundle TextMate</a></li>
+<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#outilcollecteenligne">Outil de collecte en ligne</a></li></ul></nav>
+<!-- COLLECTE -->
 
-<h2 id="collectefilm">Collecte des informations</h2>
+<!-- EXTRACTION -->
+
+<!-- ANNEXE -->
+
+<h1 id="collectefilm">Collecte des informations</h1>
 
 <p>La <em>Collecte</em> est la première opération à exécuter. Elle consiste à rassembler toutes les informations du film dans un dossier appelé <em>dossier de collecte</em>.</p>
 
 <p>Ce dossier contient :</p>
 
 <ul>
-  <li>le fichier des personnages (cf. <a href="#fichier_des_personnages">fichier des personnages</a>),</li>
-  <li>le fichier des brins (cf. <a href="#fichier_des_brins">fichier des brins</a>),</li>
-  <li>le fichier des scènes (cf. <a href="#fichier_des_scenes">fichier des scènes</a>).</li>
+  <li>le fichier des personnages (cf. <a href="#gestiondespersonnages">fichier des personnages</a>),</li>
+  <li>le fichier des brins (cf. <a href="#gestiondesbrins">fichier des brins</a>),</li>
+  <li>le fichier des scènes (cf. <a href="#collectedesscenes">fichier des scènes</a>).</li>
 </ul>
 
-<h3 id="definirfindufilm">Définition de la fin du film</h3>
+<h2 id="dossiercollecte">Dossier de collecte</h2>
 
-<p>Pour définir la fin du film, il faut impérativement terminer le <a href="#fichier_des_scenes">fichier des scènes</a> par :</p>
+<p>Le « dossier de collecte » peut se situer n’importe où sur votre ordinateur. C’est dans ce dossier que seront produit les fichiers de données (Marshal ou PStore) ainsi que le dossier d’extraction où seront placés tous les fichiers extraits.</p>
+
+<p>Sa hiérarchie normale est :</p>
+
+<pre><code>      .../dossier_collecte/scenes.collecte
+                          /personnages.collecte
+                          /brins.collecte
+                          /data/film.pstore
+                          /extraction/...
+                                     /...
+                                     /...
+</code></pre>
+
+<h2 id="definirfindufilm">Définition de la fin du film</h2>
+
+<p>Pour définir la fin du film, il faut impérativement terminer le <a href="#collectedesscenes">fichier des scènes</a> par :</p>
 
 <pre><code>
-    H:MM:SS FIN
+        H:MM:SS FIN
 
 </code></pre>
 
 <p>Dans le cas contraire, le programme prendra le temps de la dernière scène et lui attribuera arbitrairement une durée de 1 minute.</p>
 
-<h2 id="parsingcollecte">Parsing de la collecte</h2>
+<h2 id="tempsreelsetrelatifs">Temps réels et temps relatifs</h2>
+
+<p>Il faut comprendre que pour le programme il existe deux temps différents, les <em>temps réels</em> et les <em>temps relatifs</em>.</p>
+
+<p>La divergence entre <em>temps réel</em> et <em>temps relatif</em> tient au fait que la première scène, dans la collecte, ne commence pas à l’horloge <code>0:00:00</code> mais après une amorce du film où sont présentés les producteurs et les diffuseurs.</p>
+
+<p>Les <em>temps réels</em>, qui prennent pour référence une première scène qui commence vraiment à <code>0:00:00</code>, sont utilisés pour tous les temps des fichiers extraits de la collecte.</p>
+
+<p>Pour <a href="#collectecommand">la commande <code>collecte</code></a>, ce sont toujours des <em>temps réels</em> qu’il faut fournir, pas des <em>temps relatifs</em>. Il convient de prendre ces temps dans les fichiers extraits, notamment les séquenciers complets.</p>
+
+<h2 id="collectedesscenes">Collecte des scènes</h2>
+
+<p>Les scènes du film sont <em>collectées</em> dans un fichier du <a href="#dossiercollecte">dossier de collecte</a> :</p>
+
+<pre><code>      &lt;dossier collecte&gt;/scenes.collecte
+</code></pre>
+
+<p>Grâce au <a href="#bundletextmate">bundle TextMate</a>, ce fichier peut être créé à l’aide de la commande <code>Scènes : créer le fichier</code>.</p>
+
+<h3 id="format-gnral-dune-scne">Format général d’une scène</h3>
+
+<p>Dans le fichier <code>scenes.collecte</code>, une scène se présente sous la forme :</p>
+
+<pre><code>      H:MM:SS LIEU EFFET DÉCOR
+      Résumé de la scène. brins et notes
+      Premier paragraphe. brins et notes
+      Deuxième paragraphe. brins et notes
+      etc.
+</code></pre>
+
+<p>Par exemple :</p>
+
+<pre><code>      1:25:52 INT. JOUR MAISON DE JOE
+      [PERSO#joe] rentre chez lui. b12 (25)
+      Joe se gare devant chez lui.
+      Joe sort de sa voiture et traverse le parking.
+      Joe rentre chez lui.
+</code></pre>
+
+<p>Ou, pour une scène <em>en parallèle</em> dans deux décors différents :</p>
+
+<pre><code>      1:45:12 INT./EXT. JOUR/NUIT VAISSEAU / BASE TERRESTRE
+      Le capitaine [PERSO#anatoli] lance un appel au secours
+      à la base. b45 (2)
+      (2) On joue ici sur le contraste jour/nuit.
+</code></pre>
+
+<p>Chaque scène doit être <strong>impérativement séparée de la précédente par une ligne vide</strong> :</p>
+
+<pre><code>      0:00:06 INT. JOUR MAISON
+      Première scène.
+
+      0:00:42 EXT. NUIT JARDIN
+      La scène suivante doit être séparée par une ligne.
+</code></pre>
+
+<p>La fin du film se détermine par la ligne :</p>
+
+<pre><code>      1:12:12 FIN
+</code></pre>
+
+<p>Cette ligne n’est pas comptée pour une scène.</p>
+
+<h3 id="cration-de-la-scne--laide-du-bundle-textmate">Création de la scène à l’aide du bundle TextMate</h3>
+
+<p>Avec le <a href="#bundletextmate">bundle TextMate</a>, il suffit d’utiliser le snippet <code>s</code> pour créer la scène (donc de taper « s » puis la touche tabulation).</p>
+
+<p>En plus de ce snippet, le temps peut être entièrement géré par TextMate, ce qui permet de ne pas s’en soucier. Ouvrir le l’aide du bundle pour apprendre à le faire.</p>
+
+<h2 id="gestiondesbrins">Collecte et gestion des brins</h2>
+
+<p>Un « brin » est comme une catégorie. Il permet de rassembler les scènes sous une même étiquette. Chaque sous-intrigue, dans une histoire, est un <em>brin</em>. Mais un <em>brin</em> peut aussi concerner un thème, un accessoire, une relation de personnage ou tout autre élément dramatique.</p>
+
+<p>Les <em>brins</em> du film sont consignés dans le fichier :</p>
+
+<pre><code>      &lt;dossier collecte&gt;/brins.collecte
+</code></pre>
+
+<h3 id="format-gnral-dun-brin">Format général d’un brin</h3>
+
+<p>Chaque brin, dans le fichier <code>brins.collecte</code>, a la forme :</p>
+
+<pre><code>      INDICE DU BRIN
+      TITRE DU BRIN
+      DESCRIPTION DU BRIN
+</code></pre>
+
+<blockquote>
+  <p>Chaque brin doit être séparé de l’autre par une ligne vide.</p>
+</blockquote>
+
+<p>Par exemple :</p>
+
+<pre><code>      12
+      Relation entre Joe et son chien
+      Ce brin contient toutes les scènes qui concernent la
+      relation de Joe avec son chien.
+
+      13
+      Utilisation de la casserole
+      Ce brin contient toutes les scènes qui concerne
+      l'utilisation qui est faite de la casserole qui
+      servira finalement au meurtre.
+</code></pre>
+
+<blockquote>
+  <p>Noter que chaque brin doit être séparé d’une ligne.</p>
+</blockquote>
+
+<h3 id="cration-du-brin--laide-du-bundle-textmate">Création du brin à l’aide du bundle TextMate</h3>
+
+<p>À l’aide du <a href="#bundletextmate">bundle TextMate</a>, on peut créer le fichier des brins grâce à la commande <code>Brins : créer le fichier</code>.</p>
+
+<p>Ensuite, dans ce fichier, on peut utiliser le snippet <code>brin</code> pour créer un nouveau brin qui aura automatiquement le bon index (donc en tapant <code>brin</code> puis tabulation).</p>
+
+<p>Pour de plus amples détails, voir l’aide du bundle (en tapant CMD+H <strong>tandis qu’un fichier collecte est actif</strong>).</p>
+
+<h2 id="gestiondespersonnages">Collecte et gestion des personnages</h2>
+
+<p>Pour la collecte, les personnages du film sont consignés dans le fichier :</p>
+
+<pre><code>      &lt;dossier collecte&gt;/personnages.collecte
+</code></pre>
+
+<p>La définition des personnages permet d’utiliser des marques <code>[PERSO#&lt;id personnage&gt;]</code> dans les autres fichiers de collecte afin d’associer les <em>brins</em>, les scènes ou les beats de scène à des personnages. On gagne aussi énormément de temps en n’ayant pas à écrire le nom du personnage chaque fois.</p>
+
+<p>Grâce à ces marques, par exemple, on peut déterminer le temps de présence d’un personnage à l’écran.</p>
+
+<h3 id="formatgeneraldatapersonnage">Format général d’une donnée personnage</h3>
+
+<p>Chaque personnage, dans le fichier <code>personnages.collecte</code>, est consigné sous la forme :</p>
+
+<pre><code>      PERSONNAGE:&lt;identifiant texte personnage&gt;
+        PRENOM:         &lt;prenom du personnage&gt;
+        NOM:            &lt;nom du personnage&gt;
+        PSEUDO:         &lt;pseudo (si autre que "Prénom Nom")&gt;
+        SEXE:           Homme ou Femme
+        ANNEE:          &lt;année de naissance&gt;
+        FONCTION:       &lt;fonction dans l'histoire&gt;
+        DESCRIPTION:    &lt;description du personnage&gt;
+        PRENOM_ACTEUR:  &lt;prénom de l'acteur&gt;
+        NOM_ACTEUR:     &lt;nom acteur&gt;
+</code></pre>
+
+<h3 id="creationpersonnagewithbundle">Création du personnage à l’aide du bundle TextMate</h3>
+
+<p>On peut créer le fichier <code>personnages.collecte</code>, avec le <a href="#bundletextmate">bundle TextMate</a>, en utilisant la commande <code>Persos : créer le fichier</code>.</p>
+
+<p>Ensuite, dans ce fichier, il suffit d’utiliser le snippet <code>perso</code> pour créer facilement un nouveau personnage (donc de taper <code>perso</code> puis la touche tabulation).</p>
+
+<p>Dans le <a href="#collectedesscenes">fichier de collecte des scènes</a>, il suffit de taper <code>p</code> puis tabulation pour choisir un personnage très facilement.</p>
+
+<p>Pour de plus amples détails sur l’utilisation des personnages, voir l’aide du bundle (en tapant CMD+H <strong>tandis qu’un fichier collecte est actif</strong>).</p>
+
+<h2 id="fichiermetadata">Fichier des métadonnées</h2>
+
+<p>Un fichier de métadonnées peut être créé à la racine du dossier de collecte :</p>
+
+<pre><code>      &lt;dossier collecte&gt;/metadata.json
+</code></pre>
+
+<p>Ce fichier permet de définir les données suivantes :</p>
+
+<pre><code>      {
+        /* Le titre du film */
+        "titre": "&lt;le titre du film&gt;",
+        /* ID du film */
+        "id": "&lt;identifiant filmodico",
+        /* Les auteurs de la collect */
+        "auteurs": ["Auteur 1", "Auteur 2"/* , etc. */],
+        /* Date de debut de la collecte */
+        "date_debut": "JJ/MM/AAAA",
+        /* Date de fin de la collecte */
+        "date_fin": "JJ/MM/AAAA"
+      }
+</code></pre>
+
+<h3 id="definirtitrefilm">Définition du titre du film</h3>
+
+<p>Définir le titre, dans les métadonnées, à l’aide de la propriété <code>titre</code>.</p>
+
+<h3 id="definiridentifiantfilm">Définition de l’identifiant du film</h3>
+
+<p>Définir l’identifiant Filmodico, dans les métadonnées, à l’aide de la propriété <code>id</code>.</p>
+
+<h3 id="definirdatedebutfincollecte">Dates de début et de fin de collecte</h3>
+
+<p>Définir la date de début de collecte avec la propriété <code>date_debut</code> dans les métadonnées, et la date de fin de collecte, si la collecte est terminée, à l’aide de la propriété <code>date_fin</code>.</p>
+
+<p>La valeur est une date sous la forme <code>JJ/MM/AAAA</code>. Par exemple <code>14/04/2017</code>.</p>
+
+<h3 id="definirauteurscollecte">Définition des auteurs de la collecte</h3>
+
+<p>Définir le titre, dans les métadonnées, à l’aide de la propriété <code>auteurs</code>.</p>
+
+<h3 id="definitionstructure">Définition de la structure</h3>
+
+<p>La structure du film peut être définie dans le <a href="#fichiermetadata">fichier des métadonnées</a>, grâce à la donnée <code>structure</code> :</p>
+
+<pre><code>
+      // Dans le fichier metadata.json
+      {
+        ...
+        "structure":{
+          "pivot_1":              "0:21:45", // (*)
+          "incident_perturbateur":"5:03",    // (*)
+          "incident_declencheur": "12:20",   // (*)
+          "developpement":        "0:25:00", // (*)
+          "cle_de_voute":         "0:59:30", // (*)
+          "crise":                "1:17:00", // (*)
+          "pivot_2":              "1:24:12", // (*)
+          "denouement":           "1:29:10", // (*)
+          "climax":               "1:40:12"  // (*)
+        }
+      }
+</code></pre>
+
+<blockquote>
+  <p>(*) Il s’agit des temps réels (cf. l’<a href="#tempsreelsetrelatifs">explication sur les temps réels et relatifs</a>). Ils peuvent être donc définis après une première extraction.</p>
+</blockquote>
+
+<p>Ces temps permettent :</p>
+
+<ul>
+  <li>de définir dans le fichier statistique les écarts par rapport au <em>Paradigme de Field Augmenté</em>.</li>
+  <li>de séparer les actes dans le <a href="#fichierresume">fichier résumé</a> et le <a href="#fichiersynopsis">fichier synopsis</a>.</li>
+</ul>
+
+<h1 id="parsingcollecte">Parsing de la collecte</h1>
 
 <p>Le <em>parsing</em> est l’opération qui consiste à transformer les données collectées dans l’étape précédente en données utilisables pour créer des fichiers d’analyse, des statistiques, etc.</p>
 
 <p>Pour parser un dossier de collecte, le plus simple est d’utiliser dans le Terminal la commande :</p>
 
-<pre><code>collecte parse mon/dossier/collecte
+<pre><code>      collecte parse mon/dossier/collecte
 </code></pre>
 
 <p>Ou de le faire par ruby :</p>
 
-<pre><code>coll = Collecte.new('mon/dossier/collecte')
-coll.parse
+<pre><code>      coll = Collecte.new('mon/dossier/collecte')
+      coll.parse
 </code></pre>
 
 <p>Pour tout savoir sur <a href="#collectecommand">la commande collecte</a>.</p>
 
-<h2 id="extractioninformation">Extraction des informations du film</h2>
+<h1 id="extractioninformation">Extraction des informations du film</h1>
 
 <p>L’<em>extraction</em> est la troisième opération de la collecte, et son but ultime. Elle permet d’obtenir des séquenciers, des fichiers brins et même des statistiques sur le film.</p>
 
-<h3 id="fichierstatistiques">Le fichier Statistiques</h3>
+<p>On peut extraire :</p>
 
-<h2 id="collectecommand">La commande <code>collecte</code></h2>
+<ul>
+  <li>un résumé (ou <em>des</em> résumés partiels <sup>(*)</sup>),</li>
+  <li>un synopsis (ou <em>des</em> synopsis partiels <sup>(*)</sup>),</li>
+  <li>un séquencier (ou <em>des</em> séquenciers partiels <sup>(*)</sup>),</li>
+  <li>les séquenciers de chaque brin défini (complet ou partiel <sup>(*)</sup>),</li>
+  <li>les séquenciers de chaque brin automatique personnage (complet ou partiel <sup>(*)</sup>),</li>
+  <li>les séquenciers de chaque brin automatique des relations de personnages (complet ou partiel <sup>(*)</sup>)</li>
+</ul>
 
-<p>La commande <code>collecte</code> permet de parser et surtout d’extraire tous les types de fichiers possible pour les analyses, même <a href="#fichierstatistiques">le fichier statistiques</a>.</p>
+<p>(<em>) On obtient une sortie *partielle</em> simplement en définissant le début ou la fin de l’extrait à l’aide des options <code>:from_time</code> et <code>:to_time</code>. Cf. <a href="#set_from_and_to_time">Définir les temps de début et de fin</a>.</p>
+
+<h2 id="fichierresume">Le fichier résumé</h2>
+
+<p>Le <em>fichier résumé</em> présente simplement la liste des résumés de scènes assemblés bout à bout.</p>
+
+<p><strong>En ligne de commande</strong> :</p>
+
+<pre><code>
+      // forme longue
+      $ collecte extract --resume
+
+      // forme courte
+      $ collecte extract -res -o=text
+
+</code></pre>
+
+<blockquote>
+  <p>Si aucun format (<code>-o</code>) n’est défini, la sortie sera en HTML.</p>
+</blockquote>
+
+<p><strong>En programmation ruby</strong> :</p>
+
+<pre><code class="language-ruby">      coll = Collecte.new('mon/dossier/collecte')
+      coll.extract(:resume, {format: :text})
+</code></pre>
+
+<blockquote>
+  <p>Si aucun format n’est défini, la sortie sera en HTML.</p>
+</blockquote>
+
+<p>Si la structure est définie (cf. <a href="#definitionstructure">définition de la structure</a>), des retours à la ligne séparent les actes pour rendre le texte plus clair.</p>
+
+<h2 id="fichiersynopsis">Le fichier synopsis</h2>
+
+<p>Le <em>fichier synopsis</em> présente simplement le synopsis du film, c’es-à-dire les résumés des scènes assemblés ou leurs <em>paragraphes</em> (leur <em>beats</em>) s’ils sont définis.</p>
+
+<p><strong>En ligne de commande</strong> :</p>
+
+<pre><code>
+      // forme longue
+      $ collecte extract --synopsis
+
+      // forme courte
+      $ collecte extract -syn
+
+</code></pre>
+
+<p><strong>En programmation ruby</strong> :</p>
+
+<pre><code class="language-ruby">      coll = Collecte.new('chemin/vers/dossier/collecte')
+      coll.extract(as: :synopsis, no_horloge: true)
+</code></pre>
+
+<p>Par défaut, une petite horloge indiquant le temps est placée dans la marge gauche du synopsis. On peut la supprimer en ajoutant comme ci-dessus l’option <code>:no_horloge</code> à <code>true</code>.</p>
+
+<p>Si la structure est définie (cf. <a href="#definitionstructure">définition de la structure</a>), des doubles retours à la ligne séparent les actes.</p>
+
+<h2 id="fichierssequencier">Les fichiers séquencier</h2>
+
+<p>Les <em>fichiers séquenciers</em> sont certainement les fichiers les plus extraits pour les analyses, notamment sous leur forme de <a href="#fichiersbrins">fichiers brins</a>.</p>
+
+<p><strong>En ligne de commande</strong></p>
+
+<pre><code class="language-bash">
+      // forme longue
+      $ collecte extract --sequencier
+
+      // forme courte
+      $ collecte extract -seq
+
+</code></pre>
+
+<p><strong>En programmation ruby</strong></p>
+
+<pre><code class="language-ruby">      coll = Collecte.new('ma/collecte')
+      coll.extract(
+        as: :sequencier,
+        format:   :html # par defaut
+      )
+</code></pre>
+
+<p>Voir toutes les <a href="#optionscommandcollecte">options utilisables</a> avec cette commande.</p>
+
+<h2 id="fichiersbrins">Les fichiers brins</h2>
+
+<p>TODO</p>
+
+<h3 id="designationbrins">Désignation des brins</h3>
+
+<p>Les brins à extraire sont désignés de façon textuelle dans les options. Par exemple :</p>
+
+<pre><code>      $ collecte extract -brins=2
+
+      $ collecte extract -brins=2+4
+
+      $ collecte extract -brins=2,(4+12)
+</code></pre>
+
+<p>Ou en ruby :</p>
+
+<pre><code class="language-ruby">      coll = Collecte.new('dossier/collecte')
+      coll.extract(
+        as: :brins,
+        brins:  '2'
+      )
+
+      coll.extract(
+        as: :brins,
+        brins:  '2+4'
+      )
+
+      coll.extract(
+        as: :brins,
+        brins:  '2,(4+12)'
+      )
+
+</code></pre>
+
+<p>Pour un brin seul, on indique seulement son identifiant dans le [fichier brins].</p>
+
+<p>Si on veut toutes les scènes qui appartiennent à deux brins (ou plus), on utilise le signe <code>+</code>. Noter que dans ce cas les scènes retenues sont celles qui appartiennent à TOUS les brins désignés.</p>
+
+<p>Par exemple :</p>
+
+<pre><code>      $ collecte extract -b=2+4
+</code></pre>
+
+<p>La commande précédente crée un séquencier-brin qui contiendra toutes les scènes qui appartiennent en même temps au brin 2 ET au brin 4. Elles doivent <em>impérativement</em> appartenir aux deux brins.</p>
+
+<p>Si on veut exprimer la condition <code>ou</code>, on utilise une virgule. Par exemple :</p>
+
+<pre><code>      $ collecte extract -b=2,4
+</code></pre>
+
+<p>La commande précédente crée un séquencier-brin qui contiendra toutes les scènes du brin 2 et toutes les scènes du brin 4 (entrelacées).</p>
+
+<p>On peut créer une description complexe à l’aide des parenthèses :</p>
+
+<pre><code>      $ collecte extract -b=2+(4,12)+59
+</code></pre>
+
+<p>La commande précédente crée un séquencier-brin des scènes qui répondent aux conditions : appartenir impérativement au brin 2, ET appartenir impérativement au brin 59, ET appartenir impérativement au brin 4 OU au brin 12.</p>
+
+<p>Avec un <code>+</code> dans la parenthèse :</p>
+
+<pre><code>      $ collecte extract -b=2,(4+5)
+</code></pre>
+
+<p>Crée un séquencier-brin des scènes qui appartiennent au brin 2 ou les scènes qui appartiennent au brin 4 ET au brin 5.</p>
+
+<h2 id="fichierstatistiques">Le fichier Statistiques</h2>
+
+<p>Le <em>fichier statistiques</em> présente des statistiques sur le film, telles que le nombre de scènes, la durée moyenne par scène, le nombre de personnages, de décors, etc.</p>
+
+<p><strong>En ligne de commande</strong></p>
+
+<pre><code>
+      // format long
+      $ collecte extract --statistiques --from=0:00 --to=1:00:00
+
+      // format court
+      $collecte extract -stats -f=0:0 -t=1:0:0
+
+</code></pre>
+
+<blockquote>
+  <p>Note : la commande ci-dessus permet de ne sortir les statistiques que pour une période de temps.</p>
+</blockquote>
+
+<p><strong>En programmation ruby</strong></p>
+
+<pre><code class="language-ruby">      coll = Collecte.new('ma/collecte')
+      coll.extract(
+        as:         :statistiques,
+        from_time:  "1:00",
+        to_time:    "1:0:0"
+      )
+</code></pre>
+
+<p>Si la structure est définie (cf. <a href="#definitionstructure">définition de la structure</a>), le fichier calcule aussi les écarts ou les concordances avec le <em>paradigme de Field augmenté</em>.</p>
+
+<h1 id="collectecommand">La commande <code>collecte</code></h1>
+
+<p>La commande <code>collecte</code> permet de <em>parser</em> et d’<em>extraire</em> tous les types de fichiers possible pour les analyses, même <a href="#fichierstatistiques">le fichier statistiques</a>.</p>
 
 <p>Cette commande fonctionne, à la base, avec la spécification de l’opération a exécuter en premier argument :</p>
 
-<pre><code>  $  collecte [operation]
+<pre><code>      $  collecte [operation]
 </code></pre>
 
 <p>Il existe trois opérations principales :</p>
 
-<pre><code>  help      Pour obtenir l'aide du programme (ce manuel)
-  parse     Pour parser les fichiers collecte
-  extract   Pour extraire tout type de fichier des données
-            de collecte.
+<pre><code>      help      Pour obtenir l'aide du programme (ce manuel)
+      parse     Pour parser les fichiers collecte
+      extract   Pour extraire tout type de fichier des données
+                de collecte.
 </code></pre>
 
 <p>En conséquence :</p>
 
-<pre><code>  $ collecte help pdf
-  // =&gt; ouvre ce manuel en version PDF
-  $ collecte help
-  // =&gt; ouvre ce manuel en version HTML
+<pre><code>      $ collecte help pdf
+      // =&gt; ouvre ce manuel en version PDF
+      $ collecte help
+      // =&gt; ouvre ce manuel en version HTML
 
-  $ collecte parse
-  // =&gt; parse tous les fichiers collecte du dossier dans lequel
-  //    on se trouve
+      $ collecte parse
+      // =&gt; parse tous les fichiers collecte du dossier
+      //    dans lequel on se trouve
 
-  $ collecte extract --all
-  // =&gt; Extrait tous les fichiers possibles à partir des
-  //    données  de collecte fournies, en format HTML
+      $ collecte extract --all
+      // =&gt; Extrait tous les fichiers possibles à partir
+      //    des données  de collecte fournies, en format
+      //    HTML.
 </code></pre>
 
-<h3 id="commande_collecte_help">Opération <code>collecte help</code></h3>
+<p>Ces trois commandes s’utilisent avec des options ou des arguments que nous allons détailler. Mais pour commencer, il faut installer cette commande manuellement.</p>
+
+<h2 id="installationcommandecollecte">Installation de la commande <code>collecte</code></h2>
+
+<ul>
+  <li>Charger l’application <code>Collecte.app</code> dans le dossier Applications si nécessaire,</li>
+  <li>Créer un lien symbolique de la commande dans <code>/usr/local/bin</code> pour pouvoir l’utiliser en ligne de commande.</li>
+</ul>
+
+<p>Pour créer le lien symbolique, utiliser dans l’application Terminal :</p>
+
+<pre><code>      $ sudo ln -s /Application/Collecte.app/Contents/MacOS/Collecte /usr/local/bin/collecte
+</code></pre>
+
+<blockquote>
+  <p>Note : <code>sudo</code> n’est pas nécessaire si vous êtes en root.</p>
+</blockquote>
+
+<h2 id="commande_collecte_help">Opération <code>collecte help</code></h2>
 
 <p>Comme nous venons de le voir, cette opération permet d’ouvrir le présent manuel, soit en version PDF (ajouter <code>pdf</code>) soit en version HTML (ne rien ajouter ou ajouter <code>html</code>).</p>
 
-<h3 id="commande_collecte_parse">Opération <code>collecte parse</code></h3>
+<h2 id="commande_collecte_parse">Opération <code>collecte parse</code></h2>
 
 <p>Cette opération permet de parser tous les fichiers de collecte en vue de leur utilisation pour produire les fichiers d’analyse.</p>
 
@@ -113,47 +604,344 @@ coll.parse
 <p>Les arguments possibles pour le parse sont :</p>
 
 <pre><code>
-  $ collecte parse
-  // =&gt; Parse tous les fichiers existants dans le dossier
-  //    courant.
+      $ collecte parse
+      // =&gt; Parse tous les fichiers existants dans le dossier
+      //    courant.
 
-  $ collecte parse mon/dossier/collecte
-  // =&gt; Parse tous les fichiers du dossier `mon/dossier/collecte`
+      $ collecte parse mon/dossier/collecte
+      // =&gt; Parse tous les fichiers du dossier
+      //    `mon/dossier/collecte`
 
-  $ collecte parse -p mon/dossier/collecte
-  // =&gt; Parse seulement le fichier des personnages du
-  //    dossier spécifié.
+      $ collecte parse -p mon/dossier/collecte
+      // =&gt; Parse seulement le fichier des personnages du
+      //    dossier spécifié.
 
-  $ collecte parse -b mon/dossier/collecte
-  // =&gt; Parse seulement le fichier des brins du dossier
-  //    spécifié.
+      $ collecte parse -b mon/dossier/collecte
+      // =&gt; Parse seulement le fichier des brins du dossier
+      //    spécifié.
 
 </code></pre>
 
 <p>Mais la collecte étant rapide, même pour un fichier de scènes, il vaut mieux tout collecter chaque fois.</p>
 
-<h3 id="commande_collecte_extract">Opération <code>collecte extract</code></h3>
+<h2 id="commande_collecte_extract">Opération <code>collecte extract</code></h2>
 
 <p>C’est l’opération d’extraction des données qui permet de produire tous les fichiers nécessaires pour une analyse.</p>
 
 <p>Cette opération connait le plus d’options, afin de pouvoir produire exactement ce qu’il faut.</p>
 
-<h4 id="set_from_and_to_time">Définir le temps de début et le temps de fin</h4>
+<h2 id="emplacement-des-fichiers-produits">Emplacement des fichiers produits</h2>
 
-<p>Pour tous les fichiers extraits, on peut définir le temps de départ à l’aide des options <code>from</code> et <code>to</code> qui doivent définir une horloge <code>H:MM:SS</code>.</p>
+<p>Les fichiers extraits de la collecte sont placés dans un dossier <code>extraction</code> dans le <a href="#dossiercollecte">dossier de la collecte</a>.</p>
+
+<p>Leur nom dépendra des différentes options choisies. Cf. <a href="#nomfichiersextraits">nom des fichiers extraits</a>.</p>
+
+<h1 id="optionscommandcollecte">Les différentes options de la command <code>collecte extract</code></h1>
+
+<h2 id="extrairetousfichiers">Extraire tous les fichiers</h2>
+
+<p>On peut, à l’aide d’une unique commande, extraire tous les fichiers d’analyse, c’est-à-dire :</p>
+
+<ul>
+  <li>le séquencier complet,</li>
+  <li>le résumé complet,</li>
+  <li>le synopsis complet avec horloge,</li>
+  <li>tous les séquenciers des brins (appelés « fichiers brins »),</li>
+  <li>le fichier statistiques.</li>
+</ul>
+
+<p><strong>Options en ligne de commande</strong></p>
+
+<pre><code>      --all
+      -a
+</code></pre>
+
+<p>Par exemple :</p>
+
+<pre><code>      collecte extract --all
+      ou
+      collecte extract -a
+</code></pre>
+
+<blockquote>
+  <p>Noter que si le parsing n’a pas eu encore lieu il sera exécuté avant l’extraction.</p>
+</blockquote>
+
+<p><strong>Options en ruby</strong></p>
+
+<pre><code class="language-ruby">      coll = Collecte.new('dossier/collecte')
+      coll.extract(:all)
+</code></pre>
+
+<blockquote>
+  <p>Le format de sortie sera HTML. Pour un autre format (<code>:text</code> ou <code>:xml</code>, mettre en second argument <code>format: :&lt;format&gt;</code>).</p>
+</blockquote>
+
+<h2 id="extraireresume">Extraire le résumé</h2>
+
+<p>Le fichier « résumé » est un fichier qui ne reprent que les résumés des scènes et les assemble l’un au bout de l’autre.</p>
+
+<p><strong>Options ligne de commande</strong></p>
+
+<pre><code>      // forme longue
+      $ collecte extract --resume
+
+      // forme abregee
+      $ collecte extract -res
+</code></pre>
+
+<p><strong>Options en ruby</strong></p>
+
+<pre><code class="language-ruby">      coll = Collecte.new('dossier/collecte')
+      coll.extract(
+        as:   :resume
+      )
+</code></pre>
+
+<p>Si les actes sont définis (cf. <a href="#definitionstructure">définition des actes</a>), un retour à ligne est ajouté à chaque changement d’acte.</p>
+
+<h2 id="extrairesynopsis">Extraire le synopsis</h2>
+
+<p><strong>Options ligne de commande</strong></p>
+
+<pre><code>      // forme longue
+      $ collecte extract --synopsis
+
+      // forme abregee
+      $ collecte extract -syn
+</code></pre>
+
+<p><strong>Programmation ruby</strong></p>
+
+<pre><code class="language-ruby">      coll = Collecte.new('dossier/collecte')
+      coll.extract(
+        as: :synopsis
+      )
+</code></pre>
+
+<p><strong>Autres options</strong></p>
+
+<pre><code>
+      :no_horloge     Supprime les horloges si true
+
+      // Commande
+      $ collect extract -syn --no_horloge
+
+      // Ruby
+      coll.extract(
+        as:         :synopsis,
+        no_horloge: true
+      )
+
+</code></pre>
+
+<h2 id="extraire_sequenciers">Extraire des séquenciers</h2>
+
+<p>Pour produire des séquenciers, c’est-à-dire des fichiers comportant les scènes et les intitulés, utiliser l’option <code>--sequencier</code> ou <code>-seq</code>.</p>
+
+<p><strong>Options lignes de commande</strong></p>
+
+<pre><code>      --sequencier
+      -seq
+</code></pre>
+
+<p>Par exemple, pour produire un séquencier à partir de la 10<sup>ème</sup> minute réelle :</p>
+
+<pre><code>      $ collecte extract -seq -f=10:00
+</code></pre>
+
+<p><strong>Options en ruby</strong></p>
+
+<pre><code class="language-ruby">      as: :sequencier
+</code></pre>
 
 <p>Exemple :</p>
 
-<pre><code>  $ collecte extract --all --from=0:12 --to=1:12:00
+<pre><code class="language-ruby">      Coll = Collecte.new('mon/dossier/collecte')
+      Coll.parse # si necessaire
+      Coll.extract(
+        as: :sequencier,
+        from_time: '10:0'
+      )
 </code></pre>
 
-<p>Avec la commande précédente, tous les fichiers seront extraits, entre la 12ème minute et 1 heure 12.</p>
+<blockquote>
+  <p>Par défaut, le format sera du HTML.</p>
+</blockquote>
 
-<p>On peut utiliser aussi la formule d’option courte :</p>
+<h2 id="extraire_brins">Extraire un ou des brins</h2>
 
-<pre><code>  $ collecte extract -a -f=0:12 -t=1:12:00
+<blockquote>
+  <p>Rappel : un « brin » est en fait un séquencier qui se concentre sur un élément particulier de la narration. Dans le fichier de collecte des scènes, les scènes sont mises dans des brins à l’aide des marques <code>b&lt;indice du brin&gt;</code>. Cf. la <a href="#gestiondesbrins">gestion des brins</a>.</p>
+</blockquote>
+
+<p><strong>Options ligne de commande</strong></p>
+
+<pre><code>
+      // forme longue
+      $ collecte extract --brins=&lt;designation&gt;
+
+      // forme abregee
+      $ collecte extract -b=&lt;designation&gt;
+
 </code></pre>
 
-<h4 id="produire-des-squenciers">Produire des séquenciers</h4>
+<blockquote>
+  <p>Cf. la <a href="#designationbrins">désignation des brins</a>.</p>
+</blockquote>
+
+<p><strong>Programmation ruby</strong></p>
+
+<pre><code class="language-ruby">      coll = Collecte.new('dossier/collecte')
+      coll.extract(
+        as:     :brins,
+        brins:  '&lt;designation&gt;'
+      )
+</code></pre>
+
+<blockquote>
+  <p>Cf. la <a href="#designationbrins">désignation des brins</a>.</p>
+</blockquote>
+
+<h2 id="set_from_and_to_time">Définir le temps de début et le temps de fin</h2>
+
+<p>Pour tous les fichiers extraits, on peut définir le temps de départ à l’aide des options <code>from</code> et <code>to</code> qui doivent définir une horloge <code>H:MM:SS</code>.</p>
+
+<p><strong>Options ligne de commande</strong></p>
+
+<pre><code>      --from=&lt;horloge&gt;(*)  Depuis ce temps réel (**)
+      -f=&lt;horloge&gt;
+
+      --to=&lt;horloge&gt;       À ce temps réel (**)
+      --t=&lt;horloge&gt;
+</code></pre>
+
+<p>(*) Voir le <a href="#formatagedeshorloges">formatage des horloges</a>.<br />
+(**) Voir l’<a href="#tempsreelsetrelatifs">explication sur les temps réels et relatifs</a>.</p>
+
+<p>Exemple :</p>
+
+<pre><code>      $ collecte extract --all --from=0:12 --to=1:12:00
+</code></pre>
+
+<p>Avec la commande précédente, tous les fichiers seront extraits, entre la 12ème minute et 1 heure 12. On peut utiliser aussi la formule d’option courte :</p>
+
+<pre><code>      $ collecte extract -a -f=0:12 -t=1:12:00
+</code></pre>
+
+<p><strong>Options en ruby</strong></p>
+
+<pre><code class="language-ruby">        :from_time  =&gt; "&lt;horloge&gt;"
+        :to_time    =&gt; "&lt;horloge&gt;"
+</code></pre>
+
+<p>Exemple :</p>
+
+<pre><code class="language-ruby">      coll = Collection.new('mon/dossier/collecte')
+      coll.extract(
+        format:     :html,
+        as:         :sequencier,
+        from_time:  '0:12',
+        to_time:    '1:25:56'
+      )
+</code></pre>
+
+<h2 id="forcerparsing">Forcer le parsing avant l’extraction</h2>
+
+<p>Parfois des données sont modifiées dans les fichiers de collecte. Mais si un <em>parsing</em> a déjà eu lieu, les nouvelles données ne seront pas prises en compte. Pour qu’elles le soient, il faut <em>forcer à novueau le parsing</em>. On utilise pour ça l’option <code>force_parsing</code>.</p>
+
+<p><strong>Options en ligne de commande</strong></p>
+
+<pre><code>      --force_parsing
+      -fp
+</code></pre>
+
+<p>Par exemple :</p>
+
+<pre><code>      $ collecte extract -a -fp
+      // ou
+      $ collecte extract --all --force_parsing
+</code></pre>
+
+<blockquote>
+  <p>La commande précédente extrait tous les fichier (<code>-a</code>) en forçant le parsing des données (<code>-fp</code>)</p>
+</blockquote>
+
+<p><strong>Option en ruby</strong></p>
+
+<pre><code class="language-ruby">      :force_parsing
+</code></pre>
+
+<p>Par exemple :</p>
+
+<pre><code class="language-ruby">      coll = Collecte.new('mon/dossier/collecte')
+      coll.extract(:all, force_parsing: true)
+
+      # ou
+
+      coll.extract(
+        as:             :sequencier,
+        format:         :xml,
+        force_parsing:  true
+      )
+</code></pre>
+
+<h1 id="annexes">Annexes</h1>
+
+<h2 id="formatagedeshorloges">Formatage des horloges</h2>
+
+<p>Les horloges s’expriment par :</p>
+
+<pre><code>      H:MM:SS
+</code></pre>
+
+<p>Par exemple :</p>
+
+<pre><code>      12:30
+
+      # Pour « 12 minutes et 30 secondes »
+
+      1:25:03
+
+      # Pour « une heure vingt-cing minutes et trois
+      # secondes »
+</code></pre>
+
+<p>Les zéros ne sont pas obligatoires, on peut donc tout à fait écrire :</p>
+
+<pre><code>      1:2:5
+
+      # Pour « une heure, deux minutes et cinq secondes »
+</code></pre>
+
+<h2 id="nomfichiersextraits">Nom et titre des fichiers extraits</h2>
+
+<p>Le nom des fichiers extraits (qui se trouvent dans le <a href="#dossiercollecte">dossier de la collecte</a>) dépend des différentes <a href="#optionscommandcollecte">options de collecte</a>.</p>
+
+<p>Un fichier complet, c’est-à-dire partant du premier temps et allant jusqu’au dernier, porte le titre « complet » et son nom de fichier est précédé de <code>full_</code>. Par exemple :</p>
+
+<pre><code>      full_sequencier.html
+      full_brin_1.html
+      full_personnage_jan.html
+</code></pre>
+
+<p>Un fichier qui ne contient qu’une partie du temps du film porte dans son titre « partiel » (p.e. « Séquencier partiel ») et son nom de fichier contient le temps de départ et de fin. Par exemple :</p>
+
+<pre><code>      sequencier_210_3600.html
+</code></pre>
+
+<h2 id="bundletextmate">Le bundle TextMate</h2>
+
+<p>Le bundle TextMate permet de procéder avec beaucoup plus de souplesse et de facilité à la collecte des scènes, des personnages et des brins du film.</p>
+
+<blockquote>
+  <p>Cf. aussi l’<a href="#outilcollecteenligne">outil de collecte en ligne</a>.</p>
+</blockquote>
+
+<p>TODO: À DÉVELOPPER</p>
+
+<h2 id="outilcollecteenligne">Outil de collecte en ligne</h2>
+
+<p>TODO: À DÉVELOPPER</p>
 
 </body></html>

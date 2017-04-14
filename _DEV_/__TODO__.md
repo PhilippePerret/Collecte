@@ -1,3 +1,10 @@
+* Prendre en compte le temps dans les statistiques (en fait, il faut utiliser aussi Collecte#scenes au lieu de film.scenes)
+
+* Prendre en compte la définition de la structure dans les métadonnées
+  - Pour le moment, s'en servir dans le résumé et le synopsis pour séparer les actes.
+
+* Dans le fichier statistiques, tenir compte de la définition de la structure dans les métadonnées pour donner les écarts avec le PFA.
+
 * Mettre en place l'utilisation (déjà documentée) des options -p (personnages) et -b (brins) pour la commande `collecte parse` qui permet de ne parser que les personnages ou que les brins.
 
 * Poursuivre l'extraction des statistiques

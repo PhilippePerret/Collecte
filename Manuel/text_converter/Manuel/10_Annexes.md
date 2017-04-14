@@ -1,7 +1,6 @@
+# Annexes
 
-## Annexes
-
-### Formatage des horloges {#formatagedeshorloges}
+## Formatage des horloges {#formatagedeshorloges}
 
 Les horloges s'expriment par :
 
@@ -31,7 +30,7 @@ Les zéros ne sont pas obligatoires, on peut donc tout à fait écrire :
 ~~~
 
 
-### Nom et titre des fichiers extraits {#nomfichiersextraits}
+## Nom et titre des fichiers extraits {#nomfichiersextraits}
 
 Le nom des fichiers extraits (qui se trouvent dans le [dossier de la collecte]) dépend des différentes [options de collecte].
 
@@ -50,7 +49,7 @@ Un fichier qui ne contient qu'une partie du temps du film porte dans son titre �
 ~~~
 
 
-### Le bundle TextMate {#bundletextmate}
+## Le bundle TextMate {#bundletextmate}
 
 Le bundle TextMate permet de procéder avec beaucoup plus de souplesse et de facilité à la collecte des scènes, des personnages et des brins du film.
 
@@ -58,6 +57,6 @@ Le bundle TextMate permet de procéder avec beaucoup plus de souplesse et de fac
 
 TODO: À DÉVELOPPER
 
-### Outil de collecte en ligne {#outilcollecteenligne}
+## Outil de collecte en ligne {#outilcollecteenligne}
 
 TODO: À DÉVELOPPER

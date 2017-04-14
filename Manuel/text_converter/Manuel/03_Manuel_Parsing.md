@@ -1,4 +1,4 @@
-## Parsing de la collecte {#parsingcollecte}
+# Parsing de la collecte {#parsingcollecte}
 
 Le *parsing* est l'opération qui consiste à transformer les données collectées dans l'étape précédente en données utilisables pour créer des fichiers d'analyse, des statistiques, etc.
 

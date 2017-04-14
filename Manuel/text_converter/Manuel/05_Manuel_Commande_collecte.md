@@ -1,4 +1,4 @@
-## La commande `collecte` {#collectecommand}
+# La commande `collecte` {#collectecommand}
 
 La commande `collecte` permet de *parser* et d'*extraire* tous les types de fichiers possible pour les analyses, même [le fichier statistiques].
 
@@ -37,7 +37,7 @@ En conséquence :
 
 Ces trois commandes s'utilisent avec des options ou des arguments que nous allons détailler. Mais pour commencer, il faut installer cette commande manuellement.
 
-### Installation de la commande `collecte` {#installationcommandecollecte}
+## Installation de la commande `collecte` {#installationcommandecollecte}
 
 * Charger l'application `Collecte.app` dans le dossier Applications si nécessaire,
 * Créer un lien symbolique de la commande dans `/usr/local/bin` pour pouvoir l'utiliser en ligne de commande.
@@ -50,11 +50,11 @@ Pour créer le lien symbolique, utiliser dans l'application Terminal :
 
 > Note : `sudo` n'est pas nécessaire si vous êtes en root.
 
-### Opération `collecte help` {#commande_collecte_help}
+## Opération `collecte help` {#commande_collecte_help}
 
 Comme nous venons de le voir, cette opération permet d'ouvrir le présent manuel, soit en version PDF (ajouter `pdf`) soit en version HTML (ne rien ajouter ou ajouter `html`).
 
-### Opération `collecte parse` {#commande_collecte_parse}
+## Opération `collecte parse` {#commande_collecte_parse}
 
 Cette opération permet de parser tous les fichiers de collecte en vue de leur utilisation pour produire les fichiers d'analyse.
 
@@ -84,13 +84,13 @@ Les arguments possibles pour le parse sont :
 
 Mais la collecte étant rapide, même pour un fichier de scènes, il vaut mieux tout collecter chaque fois.
 
-### Opération `collecte extract` {#commande_collecte_extract}
+## Opération `collecte extract` {#commande_collecte_extract}
 
 C'est l'opération d'extraction des données qui permet de produire tous les fichiers nécessaires pour une analyse.
 
 Cette opération connait le plus d'options, afin de pouvoir produire exactement ce qu'il faut.
 
-### Emplacement des fichiers produits
+## Emplacement des fichiers produits
 
 Les fichiers extraits de la collecte sont placés dans un dossier `extraction` dans le [dossier de la collecte].
 
