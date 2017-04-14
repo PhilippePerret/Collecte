@@ -45,7 +45,7 @@ class FinalFile
     # est nécessaire.
     updateall_required = false
     Dir["#{collecte.extractor.folder_css}/**/_*.sass"].each do |sass_path|
-      File.stat(sass_path).mtime.to_i < older_time || begin
+      File.stat(sass_path).mtime.to_i > older_time || begin
         log "Le fichier SASS `#{File.basename sass_path}` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire."
         updateall_required = true
         break

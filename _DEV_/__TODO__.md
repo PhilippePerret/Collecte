@@ -1,6 +1,4 @@
-* Après correction de tous les tests, revenir au test des statistiques
-
-* [BUG] Voir pourquoi on reSASSe tous les fichiers chaque fois
+* Ajouter les fiches (+ CSS et JS) au fichier des statistiques
 
 * Analyser la structure si elle est définie dans les métadonnées.
 
