@@ -11,10 +11,6 @@ describe 'Fichier statistiques' do
     end
     describe 'les statistiques' do
       it 'considèrent qu’il y a 8 scènes' do
-        # puts "Toutes les scènes\n-----------------"
-        # stats.scenes.each do |scene|
-        #   puts "Scene ##{scene.numero} durée #{scene.duree}"
-        # end
         expect(stats.nombre_scenes).to eq 8
       end
       it 'considèrent la scène 7 comme la plus longue' do
@@ -26,10 +22,9 @@ describe 'Fichier statistiques' do
       it 'considèrent qu’il y a 4 personnages' do
         expect(stats.nombre_personnages).to eq 4
       end
-      # # TODO
-      # it 'considèrent qu’il y a 5 brins' do
-      #   expect(stats.nombre_brins).to eq 5
-      # end
+      it 'considèrent qu’il y a 5 brins' do
+        expect(stats.nombre_brins).to eq 5
+      end
     end
   end
   context 'avec un laps de temps défini' do
@@ -58,10 +53,9 @@ describe 'Fichier statistiques' do
       it 'considèrent qu’il y a 2 personnages' do
         expect(stats.nombre_personnages).to eq 2
       end
-      # TODO
-      # it 'considèrent qu’il y a 3 brins' do
-      #   expect(stats.nombre_brins).to eq 3
-      # end
+      it 'considèrent qu’il y a 3 brins' do
+        expect(stats.nombre_brins).to eq 3
+      end
     end
   end
 end

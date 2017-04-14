@@ -1,5 +1,18 @@
-14/04 14:30:43 Fin du chargement des librairies (lib/required.rb)
-14/04 14:30:43 -> Collecte::parse_commande
-14/04 14:30:43 Analyse de la ligne de commande
-14/04 14:30:43 Format de sortie : :html
-14/04 14:30:43 <- Collecte::parse_commande
+14/04 14:35:21   -> prepare [path="/Users/philippeperret/Desktop/Everest_collect/extraction/full_statistiques.html"]
+14/04 14:35:21   <- prepare
+14/04 14:35:21 Méthode d'extraction à utiliser : :extract_statistiques
+14/04 14:35:21 STATISTIQUES : données générales
+14/04 14:35:21 Liste des IDs de personnages retenus : ["rob", "helen", "guy", "harold", "mike", "jan", "krakauer", "doug", "beck", "yasuko", "ang", "scott", "ianwoodall", "sandy", "caro", "peach", "anatoli", "neal", "lopsang", "david"]
+14/04 14:35:21 STATISTIQUES : données des brins
+14/04 14:35:21 Liste des IDs de brins retenus : [5, 10, 11, 1, 3, 2, 4, 6, 7, 8, 12, 9]
+14/04 14:35:21 STATISTIQUES : constitution du code
+14/04 14:35:21 STATISTIQUES : /fin de constitution du code
+14/04 14:35:22 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
+14/04 14:35:22 SASSisation du fichier CSS `resume.css`
+14/04 14:35:22 SASSisation du fichier CSS `sequencier.css`
+14/04 14:35:22 SASSisation du fichier CSS `statistiques.css`
+14/04 14:35:22 SASSisation du fichier CSS `synopsis.css`
+14/04 14:35:22 SASSisation du fichier CSS `brins_simples.css`
+14/04 14:35:22 SASSisation du fichier CSS `brut.css`
+14/04 14:35:22 SASSisation du fichier CSS `chemin_de_fer.css`
+14/04 14:35:22 SASSisation du fichier CSS `events.css`

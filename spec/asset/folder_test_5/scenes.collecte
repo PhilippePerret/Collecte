@@ -6,10 +6,10 @@
 # Le 24e est égal à 2:30
 
 0:00:30 INT. JOUR MAISON DE JOE
-Première scène. Avec [PERSO#joe]
+Première scène. Avec [PERSO#joe] b1 b4
 
 0:05:30 INT. JOUR MAISON DE JAN
-Une scène de l'exposition. Avec [PERSO#jan].
+Une scène de l'exposition. Avec [PERSO#jan]. b2 b4
 
 0:14:30 EXT. JOUR JARDIN
 Pivot 1. Avec [PERSO#joe] et [PERSO#jan]
@@ -18,15 +18,15 @@ Pivot 1. Avec [PERSO#joe] et [PERSO#jan]
 Tiers. Avec [PERSO#joe]
 
 0:30:30 EXT. NUIT JARDIN
-Clé de voûte. Avec [PERSO#joe]
+Clé de voûte. Avec [PERSO#joe]  b4 b5
 
 0:40:30 INT. NUIT MAISON DE JOE
-Deux tiers. Avec [PERSO#trois].
+Deux tiers. Avec [PERSO#trois]. b3 b2 b4
 
 0:45:30 EXT. NUIT JARDIN
-Pivot 2. Avec [PERSO#trois] et [PERSO#joe] et [PERSO#quatre].
+Pivot 2. Avec [PERSO#trois] et [PERSO#joe] et [PERSO#quatre]. b1
 
 0:56:30 INT. JOUR MAISON DE JOE
-Climax. Avec [PERSO#joe] et [PERSO#trois].
+Climax. Avec [PERSO#joe] et [PERSO#trois]. b1
 
 1:00:30 FIN

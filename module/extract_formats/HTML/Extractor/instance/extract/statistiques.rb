@@ -39,7 +39,7 @@ Nombre de brins | #{stats.nombre_brins}
 Classement des brins par importance temporelle
     EOV
     stats.brins_par_temps_presence.each do |brin|
-      data_stats << "##{brin.id} | #{brin.titre.to_htm[0..50]} | #{brin.presence.s2h}#{RC}"
+      data_stats << "##{brin.id} | #{brin.libelle.to_html[0..50]} | #{brin.presence.s2h}#{RC}"
     end
 
     log "STATISTIQUES : constitution du code"
