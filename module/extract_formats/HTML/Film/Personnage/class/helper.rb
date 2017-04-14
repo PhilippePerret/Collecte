@@ -3,16 +3,6 @@ class Film
 class Personnage
 class << self
 
-  # Pour les tests
-  # Film::Personnage.init
-  def init
-    @film = nil
-  end
-
-  def film
-    @film ||= Collecte.current.film
-  end
-
   # Traite les balises [PERSO#<id>] dans +code+
   def traite_balises_in code
     code.gsub(/\[PERSO\#(.*?)\]/){

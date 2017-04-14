@@ -37,8 +37,9 @@ class Extractor
     write RC*2 + '=== BRINS ==='
     film.brins.each do |brin_id, brin|
       write "#{RC}Brin #{brin_id}"
-      [:id, :libelle, :description].each do |prop|
-        write "#{prop}", "#{brin.send(prop)}", {before_label: "\t"}
+      write "id", "#{brin.id}", {before_label: "\t"}
+      [:libelle, :description].each do |prop|
+        write "#{prop}", "#{brin.send(prop).to_html}", {before_label: "\t"}
       end
     end
     final_file.flush
