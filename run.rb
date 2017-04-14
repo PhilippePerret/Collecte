@@ -16,8 +16,8 @@ when 'help'
   # => Ouverture du manuel de l'application
   #
   log "HELP DEMANDÉE PAR LIGNE DE COMMANDE"
-  extension = ARGV[1] || 'html'
-  ['pdf', 'html'].include?(extension) || extension = 'html'
+  extension = ARGV[1] || 'htm'
+  ['pdf', 'htm'].include?(extension) || extension = 'htm'
   `open "#{MAIN_FOLDER}/Manuel/Manuel.#{extension}"`
 
 when 'parse', 'extract'
