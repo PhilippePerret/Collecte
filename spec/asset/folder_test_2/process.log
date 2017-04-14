@@ -1,129 +1,270 @@
-14/04 11:03:43 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_5"
-14/04 11:03:43 Parsing préparé avec succès.
-14/04 11:03:43 PARSING DES MÉTADONNÉES…
-14/04 11:03:43 Métadata parsées ({:id=>"divisions2017", :titre=>"Film pour divisions", :auteurs=>["Phil", "Marion"], :debut=>"11/4/2017", :fin=>"11/4/2017"})
-14/04 11:03:43 PARSING DES BRINS…
-14/04 11:03:43 PARSING DES PERSONNAGES…
-14/04 11:03:43 PARSING DES SCÈNES…
-14/04 11:03:43 FIN DU FILM TROUVÉE à 1:00:30
-14/04 11:03:43 Nombre de scènes collectées : 8
-14/04 11:03:43 Calcul de la durée des scènes
-14/04 11:03:43 Sauvegarde des scènes
-14/04 11:03:43 -> Film#load_from_pstore
-14/04 11:03:43 <- Film#load_from_pstore OK
-14/04 11:03:43   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_5/extraction/full_statistiques.html"]
-14/04 11:03:43   <- prepare
-14/04 11:03:43 Méthode d'extraction à utiliser : :extract_statistiques
-14/04 11:03:43 from_time: 0 / to_time: Infinity
-14/04 11:03:43 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
-14/04 11:03:43 SASSisation du fichier CSS `resume.css`
-14/04 11:03:43 SASSisation du fichier CSS `sequencier.css`
-14/04 11:03:43 SASSisation du fichier CSS `statistiques.css`
-14/04 11:03:43 SASSisation du fichier CSS `synopsis.css`
-14/04 11:03:43 SASSisation du fichier CSS `brins_simples.css`
-14/04 11:03:43 SASSisation du fichier CSS `brut.css`
-14/04 11:03:43 SASSisation du fichier CSS `chemin_de_fer.css`
-14/04 11:03:43 SASSisation du fichier CSS `events.css`
-14/04 11:03:43 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_5"
-14/04 11:03:43 Parsing préparé avec succès.
-14/04 11:03:43 PARSING DES MÉTADONNÉES…
-14/04 11:03:43 Métadata parsées ({:id=>"divisions2017", :titre=>"Film pour divisions", :auteurs=>["Phil", "Marion"], :debut=>"11/4/2017", :fin=>"11/4/2017"})
-14/04 11:03:43 PARSING DES BRINS…
-14/04 11:03:43 PARSING DES PERSONNAGES…
-14/04 11:03:43 PARSING DES SCÈNES…
-14/04 11:03:43 FIN DU FILM TROUVÉE à 1:00:30
-14/04 11:03:43 Nombre de scènes collectées : 8
-14/04 11:03:43 Calcul de la durée des scènes
-14/04 11:03:43 Sauvegarde des scènes
-14/04 11:03:43 -> Film#load_from_pstore
-14/04 11:03:43 <- Film#load_from_pstore OK
-14/04 11:03:43   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_5/extraction/statistiques_from_0_to_1500.html"]
-14/04 11:03:43   <- prepare
-14/04 11:03:43 Méthode d'extraction à utiliser : :extract_statistiques
-14/04 11:03:43 from_time: 0 / to_time: 1500
-14/04 11:03:43 Scène 5 (0:30:30) filtrée : < à to_time
-14/04 11:03:43 Scène 6 (0:40:30) filtrée : < à to_time
-14/04 11:03:43 Scène 7 (0:45:30) filtrée : < à to_time
-14/04 11:03:43 Scène 8 (0:56:30) filtrée : < à to_time
-14/04 11:03:43 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
-14/04 11:03:43 SASSisation du fichier CSS `resume.css`
-14/04 11:03:43 SASSisation du fichier CSS `sequencier.css`
-14/04 11:03:43 SASSisation du fichier CSS `statistiques.css`
-14/04 11:03:43 SASSisation du fichier CSS `synopsis.css`
-14/04 11:03:43 SASSisation du fichier CSS `brins_simples.css`
-14/04 11:03:43 SASSisation du fichier CSS `brut.css`
-14/04 11:03:43 SASSisation du fichier CSS `chemin_de_fer.css`
-14/04 11:03:43 SASSisation du fichier CSS `events.css`
-14/04 11:03:43 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
-14/04 11:03:43 -> Film#load_from_pstore
-14/04 11:03:43 <- Film#load_from_pstore OK
-14/04 11:03:43   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2/extraction/full_synopsis.html"]
-14/04 11:03:43   <- prepare
-14/04 11:03:43 Méthode d'extraction à utiliser : :extract_synopsis
-14/04 11:03:43 from_time: 0 / to_time: Infinity
-14/04 11:03:43 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
-14/04 11:03:43 SASSisation du fichier CSS `resume.css`
-14/04 11:03:43 SASSisation du fichier CSS `sequencier.css`
-14/04 11:03:43 SASSisation du fichier CSS `statistiques.css`
-14/04 11:03:43 SASSisation du fichier CSS `synopsis.css`
-14/04 11:03:43 SASSisation du fichier CSS `brins_simples.css`
-14/04 11:03:43 SASSisation du fichier CSS `brut.css`
-14/04 11:03:43 SASSisation du fichier CSS `chemin_de_fer.css`
-14/04 11:03:43 SASSisation du fichier CSS `events.css`
-14/04 11:03:44 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
-14/04 11:03:44 -> Film#load_from_pstore
-14/04 11:03:44 <- Film#load_from_pstore OK
-14/04 11:03:44   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2/extraction/full_synopsis.html"]
-14/04 11:03:44   <- prepare
-14/04 11:03:44 Méthode d'extraction à utiliser : :extract_synopsis
-14/04 11:03:44 from_time: 0 / to_time: Infinity
-14/04 11:03:44 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
-14/04 11:03:44 SASSisation du fichier CSS `resume.css`
-14/04 11:03:44 SASSisation du fichier CSS `sequencier.css`
-14/04 11:03:44 SASSisation du fichier CSS `statistiques.css`
-14/04 11:03:44 SASSisation du fichier CSS `synopsis.css`
-14/04 11:03:44 SASSisation du fichier CSS `brins_simples.css`
-14/04 11:03:44 SASSisation du fichier CSS `brut.css`
-14/04 11:03:44 SASSisation du fichier CSS `chemin_de_fer.css`
-14/04 11:03:44 SASSisation du fichier CSS `events.css`
-14/04 11:03:44 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
-14/04 11:03:44 Parsing préparé avec succès.
-14/04 11:03:44 PARSING DES MÉTADONNÉES…
-14/04 11:03:44 Métadata parsées ({:id=>"Everest2016", :titre=>"Éverest", :auteurs=>["Phil", "Benoit"], :debut=>"25/4/2017", :fin=>"30/4/2017"})
-14/04 11:03:44 PARSING DES BRINS…
-14/04 11:03:44 PARSING DES PERSONNAGES…
-14/04 11:03:44 PARSING DES SCÈNES…
-14/04 11:03:44 Nombre de scènes collectées : 4
-14/04 11:03:44 Calcul de la durée des scènes
-14/04 11:03:44 Sauvegarde des scènes
-14/04 11:03:44 -> Film#load_from_pstore
-14/04 11:03:44 <- Film#load_from_pstore OK
-14/04 11:03:44   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2/extraction/.txt"]
-14/04 11:03:44   <- prepare
-14/04 11:03:44 Méthode d'extraction à utiliser : :extract_whole
-14/04 11:03:44 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
-14/04 11:03:44 SASSisation du fichier CSS `resume.css`
-14/04 11:03:44 SASSisation du fichier CSS `sequencier.css`
-14/04 11:03:44 SASSisation du fichier CSS `statistiques.css`
-14/04 11:03:44 SASSisation du fichier CSS `synopsis.css`
-14/04 11:03:44 SASSisation du fichier CSS `brins_simples.css`
-14/04 11:03:44 SASSisation du fichier CSS `brut.css`
-14/04 11:03:44 SASSisation du fichier CSS `chemin_de_fer.css`
-14/04 11:03:44 SASSisation du fichier CSS `events.css`
-14/04 11:03:44 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
-14/04 11:03:44 -> Film#load_from_pstore
-14/04 11:03:44 <- Film#load_from_pstore OK
-14/04 11:03:44 -> Film#load_from_pstore
-14/04 11:03:44 <- Film#load_from_pstore OK
-14/04 11:03:44   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2/extraction/full_extract_data.txt"]
-14/04 11:03:44   <- prepare
-14/04 11:03:44 Méthode d'extraction à utiliser : :extract_whole
-14/04 11:03:44 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
-14/04 11:03:44 SASSisation du fichier CSS `resume.css`
-14/04 11:03:44 SASSisation du fichier CSS `sequencier.css`
-14/04 11:03:44 SASSisation du fichier CSS `statistiques.css`
-14/04 11:03:44 SASSisation du fichier CSS `synopsis.css`
-14/04 11:03:44 SASSisation du fichier CSS `brins_simples.css`
-14/04 11:03:44 SASSisation du fichier CSS `brut.css`
-14/04 11:03:44 SASSisation du fichier CSS `chemin_de_fer.css`
-14/04 11:03:44 SASSisation du fichier CSS `events.css`
+14/04 12:13:25 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3"
+14/04 12:13:25 -> Film#load_from_pstore
+14/04 12:13:26 <- Film#load_from_pstore OK
+14/04 12:13:26   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3/extraction/sequencier_to_180.html"]
+14/04 12:13:26   <- prepare
+14/04 12:13:26 Méthode d'extraction à utiliser : :extract_sequencier
+14/04 12:13:26 -> extract_sequencier(as_brin = false)
+14/04 12:13:26 from_time: 0 / to_time: 180
+14/04 12:13:26 Scène 3 (0:03:20) filtrée : < à to_time
+14/04 12:13:26 Scène 4 (0:04:53) filtrée : < à to_time
+14/04 12:13:26 Nombre de scènes passant le filtre : 2
+14/04 12:13:26 Méthode Scene à utiliser : :as_sequence
+14/04 12:13:26 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
+14/04 12:13:26 SASSisation du fichier CSS `resume.css`
+14/04 12:13:26 SASSisation du fichier CSS `sequencier.css`
+14/04 12:13:26 SASSisation du fichier CSS `statistiques.css`
+14/04 12:13:26 SASSisation du fichier CSS `synopsis.css`
+14/04 12:13:26 SASSisation du fichier CSS `brins_simples.css`
+14/04 12:13:26 SASSisation du fichier CSS `brut.css`
+14/04 12:13:26 SASSisation du fichier CSS `chemin_de_fer.css`
+14/04 12:13:26 SASSisation du fichier CSS `events.css`
+14/04 12:13:26 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3"
+14/04 12:13:26 -> Film#load_from_pstore
+14/04 12:13:26 <- Film#load_from_pstore OK
+14/04 12:13:26   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3/extraction/sequencier_from_100_to_290.html"]
+14/04 12:13:26   <- prepare
+14/04 12:13:26 Méthode d'extraction à utiliser : :extract_sequencier
+14/04 12:13:26 -> extract_sequencier(as_brin = false)
+14/04 12:13:26 from_time: 100 / to_time: 290
+14/04 12:13:26 Scène 1 (0:00:30) filtrée : > à from_time
+14/04 12:13:26 Scène 4 (0:04:53) filtrée : < à to_time
+14/04 12:13:26 Nombre de scènes passant le filtre : 2
+14/04 12:13:26 Méthode Scene à utiliser : :as_sequence
+14/04 12:13:26 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
+14/04 12:13:26 SASSisation du fichier CSS `resume.css`
+14/04 12:13:26 SASSisation du fichier CSS `sequencier.css`
+14/04 12:13:26 SASSisation du fichier CSS `statistiques.css`
+14/04 12:13:26 SASSisation du fichier CSS `synopsis.css`
+14/04 12:13:26 SASSisation du fichier CSS `brins_simples.css`
+14/04 12:13:26 SASSisation du fichier CSS `brut.css`
+14/04 12:13:26 SASSisation du fichier CSS `chemin_de_fer.css`
+14/04 12:13:26 SASSisation du fichier CSS `events.css`
+14/04 12:13:26 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3"
+14/04 12:13:26 -> Film#load_from_pstore
+14/04 12:13:26 <- Film#load_from_pstore OK
+14/04 12:13:26   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3/extraction/sequencier_from_60_to_180.html"]
+14/04 12:13:26   <- prepare
+14/04 12:13:26 Méthode d'extraction à utiliser : :extract_sequencier
+14/04 12:13:26 -> extract_sequencier(as_brin = false)
+14/04 12:13:26 from_time: 60 / to_time: 180
+14/04 12:13:26 Scène 1 (0:00:30) filtrée : > à from_time
+14/04 12:13:26 Scène 3 (0:03:20) filtrée : < à to_time
+14/04 12:13:26 Scène 4 (0:04:53) filtrée : < à to_time
+14/04 12:13:26 Nombre de scènes passant le filtre : 1
+14/04 12:13:26 Méthode Scene à utiliser : :as_sequence
+14/04 12:13:26 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
+14/04 12:13:26 SASSisation du fichier CSS `resume.css`
+14/04 12:13:26 SASSisation du fichier CSS `sequencier.css`
+14/04 12:13:26 SASSisation du fichier CSS `statistiques.css`
+14/04 12:13:26 SASSisation du fichier CSS `synopsis.css`
+14/04 12:13:26 SASSisation du fichier CSS `brins_simples.css`
+14/04 12:13:26 SASSisation du fichier CSS `brut.css`
+14/04 12:13:26 SASSisation du fichier CSS `chemin_de_fer.css`
+14/04 12:13:26 SASSisation du fichier CSS `events.css`
+14/04 12:13:26 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_5"
+14/04 12:13:26 Parsing préparé avec succès.
+14/04 12:13:26 PARSING DES MÉTADONNÉES…
+14/04 12:13:26 Métadata parsées ({:id=>"divisions2017", :titre=>"Film pour divisions", :auteurs=>["Phil", "Marion"], :debut=>"11/4/2017", :fin=>"11/4/2017"})
+14/04 12:13:26 PARSING DES BRINS…
+14/04 12:13:26 PARSING DES PERSONNAGES…
+14/04 12:13:26 PARSING DES SCÈNES…
+14/04 12:13:26 FIN DU FILM TROUVÉE à 1:00:30
+14/04 12:13:26 Calcul de la durée des scènes
+14/04 12:13:26 Sauvegarde des scènes
+14/04 12:13:26 -> Film#load_from_pstore
+14/04 12:13:26 <- Film#load_from_pstore OK
+14/04 12:13:26   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_5/extraction/full_statistiques.html"]
+14/04 12:13:26   <- prepare
+14/04 12:13:26 Méthode d'extraction à utiliser : :extract_statistiques
+14/04 12:13:26 from_time: 0 / to_time: Infinity
+14/04 12:13:26 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
+14/04 12:13:26 SASSisation du fichier CSS `resume.css`
+14/04 12:13:26 SASSisation du fichier CSS `sequencier.css`
+14/04 12:13:26 SASSisation du fichier CSS `statistiques.css`
+14/04 12:13:26 SASSisation du fichier CSS `synopsis.css`
+14/04 12:13:26 SASSisation du fichier CSS `brins_simples.css`
+14/04 12:13:26 SASSisation du fichier CSS `brut.css`
+14/04 12:13:26 SASSisation du fichier CSS `chemin_de_fer.css`
+14/04 12:13:26 SASSisation du fichier CSS `events.css`
+14/04 12:13:26 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_5"
+14/04 12:13:26 Parsing préparé avec succès.
+14/04 12:13:26 PARSING DES MÉTADONNÉES…
+14/04 12:13:26 Métadata parsées ({:id=>"divisions2017", :titre=>"Film pour divisions", :auteurs=>["Phil", "Marion"], :debut=>"11/4/2017", :fin=>"11/4/2017"})
+14/04 12:13:26 PARSING DES BRINS…
+14/04 12:13:26 PARSING DES PERSONNAGES…
+14/04 12:13:26 PARSING DES SCÈNES…
+14/04 12:13:26 FIN DU FILM TROUVÉE à 1:00:30
+14/04 12:13:26 Calcul de la durée des scènes
+14/04 12:13:26 Sauvegarde des scènes
+14/04 12:13:26 -> Film#load_from_pstore
+14/04 12:13:26 <- Film#load_from_pstore OK
+14/04 12:13:26   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_5/extraction/statistiques_from_0_to_1500.html"]
+14/04 12:13:26   <- prepare
+14/04 12:13:26 Méthode d'extraction à utiliser : :extract_statistiques
+14/04 12:13:26 from_time: 0 / to_time: 1500
+14/04 12:13:26 Scène 5 (0:30:30) filtrée : < à to_time
+14/04 12:13:26 Scène 6 (0:40:30) filtrée : < à to_time
+14/04 12:13:26 Scène 7 (0:45:30) filtrée : < à to_time
+14/04 12:13:26 Scène 8 (0:56:30) filtrée : < à to_time
+14/04 12:13:26 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
+14/04 12:13:26 SASSisation du fichier CSS `resume.css`
+14/04 12:13:26 SASSisation du fichier CSS `sequencier.css`
+14/04 12:13:26 SASSisation du fichier CSS `statistiques.css`
+14/04 12:13:26 SASSisation du fichier CSS `synopsis.css`
+14/04 12:13:26 SASSisation du fichier CSS `brins_simples.css`
+14/04 12:13:26 SASSisation du fichier CSS `brut.css`
+14/04 12:13:26 SASSisation du fichier CSS `chemin_de_fer.css`
+14/04 12:13:26 SASSisation du fichier CSS `events.css`
+14/04 12:13:26 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+14/04 12:13:26 -> Film#load_from_pstore
+14/04 12:13:26 <- Film#load_from_pstore OK
+14/04 12:13:26   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2/extraction/full_synopsis.html"]
+14/04 12:13:26   <- prepare
+14/04 12:13:26 Méthode d'extraction à utiliser : :extract_synopsis
+14/04 12:13:26 from_time: 0 / to_time: Infinity
+14/04 12:13:26 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
+14/04 12:13:26 SASSisation du fichier CSS `resume.css`
+14/04 12:13:26 SASSisation du fichier CSS `sequencier.css`
+14/04 12:13:26 SASSisation du fichier CSS `statistiques.css`
+14/04 12:13:26 SASSisation du fichier CSS `synopsis.css`
+14/04 12:13:26 SASSisation du fichier CSS `brins_simples.css`
+14/04 12:13:26 SASSisation du fichier CSS `brut.css`
+14/04 12:13:26 SASSisation du fichier CSS `chemin_de_fer.css`
+14/04 12:13:26 SASSisation du fichier CSS `events.css`
+14/04 12:13:26 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+14/04 12:13:26 -> Film#load_from_pstore
+14/04 12:13:26 <- Film#load_from_pstore OK
+14/04 12:13:26   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2/extraction/full_synopsis.html"]
+14/04 12:13:26   <- prepare
+14/04 12:13:26 Méthode d'extraction à utiliser : :extract_synopsis
+14/04 12:13:26 from_time: 0 / to_time: Infinity
+14/04 12:13:26 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
+14/04 12:13:26 SASSisation du fichier CSS `resume.css`
+14/04 12:13:26 SASSisation du fichier CSS `sequencier.css`
+14/04 12:13:26 SASSisation du fichier CSS `statistiques.css`
+14/04 12:13:26 SASSisation du fichier CSS `synopsis.css`
+14/04 12:13:26 SASSisation du fichier CSS `brins_simples.css`
+14/04 12:13:26 SASSisation du fichier CSS `brut.css`
+14/04 12:13:26 SASSisation du fichier CSS `chemin_de_fer.css`
+14/04 12:13:26 SASSisation du fichier CSS `events.css`
+14/04 12:13:26 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+14/04 12:13:26 Parsing préparé avec succès.
+14/04 12:13:26 PARSING DES MÉTADONNÉES…
+14/04 12:13:26 Métadata parsées ({:id=>"Everest2016", :titre=>"Éverest", :auteurs=>["Phil", "Benoit"], :debut=>"25/4/2017", :fin=>"30/4/2017"})
+14/04 12:13:26 PARSING DES BRINS…
+14/04 12:13:26 PARSING DES PERSONNAGES…
+14/04 12:13:26 PARSING DES SCÈNES…
+14/04 12:13:26 Calcul de la durée des scènes
+14/04 12:13:26 Sauvegarde des scènes
+14/04 12:13:26 -> Film#load_from_pstore
+14/04 12:13:26 <- Film#load_from_pstore OK
+14/04 12:13:26   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2/extraction/.txt"]
+14/04 12:13:26   <- prepare
+14/04 12:13:26 Méthode d'extraction à utiliser : :extract_whole
+14/04 12:13:26 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
+14/04 12:13:26 SASSisation du fichier CSS `resume.css`
+14/04 12:13:26 SASSisation du fichier CSS `sequencier.css`
+14/04 12:13:26 SASSisation du fichier CSS `statistiques.css`
+14/04 12:13:26 SASSisation du fichier CSS `synopsis.css`
+14/04 12:13:26 SASSisation du fichier CSS `brins_simples.css`
+14/04 12:13:26 SASSisation du fichier CSS `brut.css`
+14/04 12:13:26 SASSisation du fichier CSS `chemin_de_fer.css`
+14/04 12:13:26 SASSisation du fichier CSS `events.css`
+14/04 12:13:26 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+14/04 12:13:26 -> Film#load_from_pstore
+14/04 12:13:26 <- Film#load_from_pstore OK
+14/04 12:13:26 -> Film#load_from_pstore
+14/04 12:13:26 <- Film#load_from_pstore OK
+14/04 12:13:26   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2/extraction/full_extract_data.txt"]
+14/04 12:13:26   <- prepare
+14/04 12:13:26 Méthode d'extraction à utiliser : :extract_whole
+14/04 12:13:26 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
+14/04 12:13:26 SASSisation du fichier CSS `resume.css`
+14/04 12:13:26 SASSisation du fichier CSS `sequencier.css`
+14/04 12:13:26 SASSisation du fichier CSS `statistiques.css`
+14/04 12:13:26 SASSisation du fichier CSS `synopsis.css`
+14/04 12:13:26 SASSisation du fichier CSS `brins_simples.css`
+14/04 12:13:26 SASSisation du fichier CSS `brut.css`
+14/04 12:13:26 SASSisation du fichier CSS `chemin_de_fer.css`
+14/04 12:13:26 SASSisation du fichier CSS `events.css`
+14/04 12:13:26 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_1"
+14/04 12:13:26 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_1"
+14/04 12:13:26 Parsing préparé avec succès.
+14/04 12:13:26 PARSING DES MÉTADONNÉES…
+14/04 12:13:26 PARSING DES BRINS…
+14/04 12:13:26 PARSING DES PERSONNAGES…
+14/04 12:13:26 PARSING DES SCÈNES…
+14/04 12:13:26 FIN DU FILM TROUVÉE à 0:03:50
+14/04 12:13:26 Calcul de la durée des scènes
+14/04 12:13:26 Sauvegarde des scènes
+14/04 12:13:27 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_1"
+14/04 12:13:27 Parsing préparé avec succès.
+14/04 12:13:27 PARSING DES MÉTADONNÉES…
+14/04 12:13:27 PARSING DES BRINS…
+14/04 12:13:27 PARSING DES PERSONNAGES…
+14/04 12:13:27 PARSING DES SCÈNES…
+14/04 12:13:27 FIN DU FILM TROUVÉE à 0:03:50
+14/04 12:13:27 Calcul de la durée des scènes
+14/04 12:13:27 Sauvegarde des scènes
+14/04 12:13:27 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_1"
+14/04 12:13:27 Parsing préparé avec succès.
+14/04 12:13:27 PARSING DES MÉTADONNÉES…
+14/04 12:13:27 PARSING DES BRINS…
+14/04 12:13:27 PARSING DES PERSONNAGES…
+14/04 12:13:27 PARSING DES SCÈNES…
+14/04 12:13:27 FIN DU FILM TROUVÉE à 0:03:50
+14/04 12:13:27 Calcul de la durée des scènes
+14/04 12:13:27 Sauvegarde des scènes
+14/04 12:13:27 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_1"
+14/04 12:13:27 Parsing préparé avec succès.
+14/04 12:13:27 PARSING DES MÉTADONNÉES…
+14/04 12:13:27 PARSING DES BRINS…
+14/04 12:13:27 PARSING DES PERSONNAGES…
+14/04 12:13:27 PARSING DES SCÈNES…
+14/04 12:13:27 FIN DU FILM TROUVÉE à 0:03:50
+14/04 12:13:27 Calcul de la durée des scènes
+14/04 12:13:27 Sauvegarde des scènes
+14/04 12:13:27 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+14/04 12:13:27 Parsing préparé avec succès.
+14/04 12:13:27 PARSING DES MÉTADONNÉES…
+14/04 12:13:27 Métadata parsées ({:id=>"Everest2016", :titre=>"Éverest", :auteurs=>["Phil", "Benoit"], :debut=>"25/4/2017", :fin=>"30/4/2017"})
+14/04 12:13:27 PARSING DES BRINS…
+14/04 12:13:27 PARSING DES PERSONNAGES…
+14/04 12:13:27 PARSING DES SCÈNES…
+14/04 12:13:27 Calcul de la durée des scènes
+14/04 12:13:27 Sauvegarde des scènes
+14/04 12:13:27 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+14/04 12:13:27 Parsing préparé avec succès.
+14/04 12:13:27 PARSING DES MÉTADONNÉES…
+14/04 12:13:27 Métadata parsées ({:id=>"Everest2016", :titre=>"Éverest", :auteurs=>["Phil", "Benoit"], :debut=>"25/4/2017", :fin=>"30/4/2017"})
+14/04 12:13:27 PARSING DES BRINS…
+14/04 12:13:27 PARSING DES PERSONNAGES…
+14/04 12:13:27 PARSING DES SCÈNES…
+14/04 12:13:27 Calcul de la durée des scènes
+14/04 12:13:27 Sauvegarde des scènes
+14/04 12:13:27 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_1"
+14/04 12:13:27 Parsing préparé avec succès.
+14/04 12:13:27 PARSING DES MÉTADONNÉES…
+14/04 12:13:27 PARSING DES BRINS…
+14/04 12:13:27 PARSING DES PERSONNAGES…
+14/04 12:13:27 PARSING DES SCÈNES…
+14/04 12:13:27 FIN DU FILM TROUVÉE à 0:03:50
+14/04 12:13:27 Calcul de la durée des scènes
+14/04 12:13:27 Sauvegarde des scènes
+14/04 12:13:27 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_1"
+14/04 12:13:27 Parsing préparé avec succès.
+14/04 12:13:27 PARSING DES MÉTADONNÉES…
+14/04 12:13:27 PARSING DES BRINS…
+14/04 12:13:27 PARSING DES PERSONNAGES…
+14/04 12:13:27 PARSING DES SCÈNES…
+14/04 12:13:27 FIN DU FILM TROUVÉE à 0:03:50
+14/04 12:13:27 Calcul de la durée des scènes
+14/04 12:13:27 Sauvegarde des scènes
+14/04 12:13:27 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_1"
+14/04 12:13:27 Parsing préparé avec succès.
+14/04 12:13:27 PARSING DES MÉTADONNÉES…
+14/04 12:13:27 PARSING DES BRINS…
+14/04 12:13:27 PARSING DES PERSONNAGES…
+14/04 12:13:27 PARSING DES SCÈNES…
+14/04 12:13:27 FIN DU FILM TROUVÉE à 0:03:50

@@ -6,6 +6,7 @@ describe 'Sortie sous forme de séquencier complet' do
 
     # Nouvelle instance pour forcer le chargement
     @collecte = Collecte.new(folder_test_3)
+    @collecte.parse
     @collecte.extract(format: :html, as: :sequencier)
     @code = File.read(@collecte.extractor(:html).final_file.path)
     # puts "@code = #{RC}#{@code}"
@@ -34,7 +35,7 @@ describe 'Sortie sous forme de séquencier complet' do
 
     describe 'contient pour le séquencier' do
       it 'son titre' do
-        expect(code).to have_tag('div#titre', text: "Séquencier complet du film “Séquences”")
+        expect(code).to have_tag('div#titre', text: "Séquencier complet du film “Film pour séquenciers”")
       end
       it 'sa section des scènes' do
         expect(code).to have_tag('section#sequencier', with:{class: 'scenes'})

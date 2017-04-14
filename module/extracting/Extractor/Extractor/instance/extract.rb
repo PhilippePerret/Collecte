@@ -12,7 +12,9 @@ class Extractor
     @options = default_options(options)
 
     if @options[:as].to_s.start_with?('all_')
-      objet = @options[:as].to_s.split('_')[1]
+      as_splited = @options[:as].to_s.split('_')
+      objet = as_splited[1]
+      @options[:format] = (as_splited[2] || 'html').to_sym
       log "Traitement d'un ensemble d'objets #{objet}"
       case objet
       when 'brins'

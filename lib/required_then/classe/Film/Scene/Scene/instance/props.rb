@@ -37,11 +37,11 @@ class Scene
   # Méthode qui définit la durée de la scène
   # Rappel : cette donnée est maintenue dans horloge
   def set_duree
-    horloge.duree=
+    horloge.duree =
       if film.scenes[self.numero+1]
         film.scenes[self.numero+1].time
       else
-        film.duree
+        film.duree + film.start.time
       end - time
   end
 

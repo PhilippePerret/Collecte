@@ -3,38 +3,36 @@
 <head>
   <meta http-equiv="Content-type" content="text/html; charset=utf-8">
   <title>
-    Log du 14 04 2017 - 12:13
+    Log du 14 04 2017 - 11:23
   </title>
   <style type="text/css">
-    div.error{color:red}div.error{color:red}div.error{color:red}div.error{color:red}div.error{color:red}div.error{color:red}div.error{color:red}div.error{color:red}div.error{color:red}div.error{color:red}
+    div.error{color:red}
   </style>
   <script type="text/javascript">
     
   </script>
 </head>
 <body>
-  <h2>Log du 14 04 2017 - 12:13</h2>
-  <h3>Erreurs survenues</h3><div class="error">14/04 12:13:27 ### ERREUR au cours du parsing des scènes : L’intitulé de la scène 2 est mal formaté ("0:01:40 NUIT JARDIN PUBLIC")
+  <h2>Log du 14 04 2017 - 11:23</h2>
+  <h3>Erreurs survenues</h3><div class="error">14/04 11:23:33 ### ERREUR  : Aucune scène n'est comprise entre le début du film et la fin du film.
 </div>
 <h3>Journal complet</h3>
 <pre>
-14/04 12:13:27 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_error_1"
-14/04 12:13:27 Parsing préparé avec succès.
-14/04 12:13:27 PARSING DES MÉTADONNÉES…
-14/04 12:13:27 PARSING DES BRINS…
-14/04 12:13:27 PARSING DES PERSONNAGES…
-14/04 12:13:27 PARSING DES SCÈNES…
-14/04 12:13:27 ### ERREUR au cours du parsing des scènes : L’intitulé de la scène 2 est mal formaté ("0:01:40 NUIT JARDIN PUBLIC")
-/Users/philippeperret/Programmation/Collecte/module/parsing/Film/Scene/Scene/instance/parse.rb:84:in `parse_first_line'
-/Users/philippeperret/Programmation/Collecte/module/parsing/Film/Scene/Scene/instance/parse.rb:28:in `parse'
-/Users/philippeperret/Programmation/Collecte/module/parsing/Film/Scene/Scenes/instance/parse.rb:13:in `add'
-/Users/philippeperret/Programmation/Collecte/module/parsing/_first_required_/CollecteFile/parse.rb:15:in `block in parse'
-/Users/philippeperret/Programmation/Collecte/module/parsing/_first_required_/CollecteFile/parse.rb:15:in `each'
-/Users/philippeperret/Programmation/Collecte/module/parsing/_first_required_/CollecteFile/parse.rb:15:in `parse'
-/Users/philippeperret/Programmation/Collecte/module/parsing/Collecte/instance/parsing.rb:47:in `parse_scenes'
-/Users/philippeperret/Programmation/Collecte/module/parsing/Collecte/instance/parsing.rb:11:in `parse_all'
-/Users/philippeperret/Programmation/Collecte/lib/required_then/classe/Collecte/Collecte/instance/parse.rb:21:in `parse'
-/Users/philippeperret/Programmation/Collecte/spec/unit/Collecte/Parsing/parse_spec.rb:39:in `block (3 levels) in <top (required)>'
+14/04 11:23:33 Fin du chargement des librairies (lib/required.rb)
+14/04 11:23:33 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3"
+14/04 11:23:33   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3/extraction/full_sequencier.html"]
+14/04 11:23:33   <- prepare
+14/04 11:23:33 Méthode d'extraction à utiliser : :extract_sequencier
+14/04 11:23:33 -> extract_sequencier(as_brin = false)
+14/04 11:23:33 from_time: 0 / to_time: Infinity
+14/04 11:23:33 Nombre de scènes passant le filtre : 0
+14/04 11:23:33 ### ERREUR  : Aucune scène n'est comprise entre le début du film et la fin du film.
+/Users/philippeperret/Programmation/Collecte/module/extract_formats/HTML/Extractor/instance/extract/sequencier.rb:39:in `extract_sequencier'
+/Users/philippeperret/Programmation/Collecte/module/extracting/Extractor/Extractor/instance/set_by_type.rb:120:in `call_extract_methode_by_type'
+/Users/philippeperret/Programmation/Collecte/module/extracting/Extractor/Extractor/instance/extract.rb:63:in `proceed_extract_data'
+/Users/philippeperret/Programmation/Collecte/module/extracting/Extractor/Extractor/instance/extract.rb:32:in `extract_data'
+/Users/philippeperret/Programmation/Collecte/lib/required_then/classe/Collecte/Collecte/instance/extract_methods.rb:20:in `extract'
+/Users/philippeperret/Programmation/Collecte/spec/unit/Collecte/Extraction/Par_format/HTML/sequencier_full_spec.rb:10:in `block (2 levels) in <top (required)>'
 /Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/hooks.rb:350:in `instance_exec'
 /Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/hooks.rb:350:in `run'
 /Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/hooks.rb:514:in `block in run_owned_hooks_for'
@@ -47,9 +45,6 @@
 /Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/memoized_helpers.rb:182:in `isolate_for_context_hook'
 /Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:535:in `run_before_context_hooks'
 /Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:588:in `run'
-/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:590:in `block in run'
-/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:590:in `map'
-/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:590:in `run'
 /Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/runner.rb:113:in `block (3 levels) in run_specs'
 /Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/runner.rb:113:in `map'
 /Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/runner.rb:113:in `block (2 levels) in run_specs'
@@ -63,6 +58,15 @@
 /Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/exe/rspec:4:in `<top (required)>'
 /Users/philippeperret/.rbenv/versions/2.3.0/bin/rspec:23:in `load'
 /Users/philippeperret/.rbenv/versions/2.3.0/bin/rspec:23:in `<main>'
+14/04 11:23:33 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
+14/04 11:23:33 SASSisation du fichier CSS `resume.css`
+14/04 11:23:33 SASSisation du fichier CSS `sequencier.css`
+14/04 11:23:33 SASSisation du fichier CSS `statistiques.css`
+14/04 11:23:33 SASSisation du fichier CSS `synopsis.css`
+14/04 11:23:33 SASSisation du fichier CSS `brins_simples.css`
+14/04 11:23:33 SASSisation du fichier CSS `brut.css`
+14/04 11:23:33 SASSisation du fichier CSS `chemin_de_fer.css`
+14/04 11:23:33 SASSisation du fichier CSS `events.css`
 
 </pre>
 </body>

@@ -25,10 +25,13 @@ describe 'Parsing du collecte des scènes' do
     end
   end
 
-  describe 'le fichier scenes.msh' do
-    let(:datam) { @datam ||= Marshal.load(File.read collecte.film.scenes.marshal_file) }
+  describe 'le fichier film.pstore' do
+    # let(:datam) { @datam ||= Marshal.load(File.read collecte.film.scenes.marshal_file) }
+    let(:datam) { @datam ||= PStore.new(collecte.film.pstore_file).transaction do |ps|
+      ps[:scene]
+    end }
     it 'existe' do
-      expect(File.exist? collecte.film.scenes.marshal_file).to eq true
+      expect(File.exist? collecte.film.pstore_file).to eq true
     end
     it 'définit le bon nombre de scènes' do
       expect(datam[:items].count).to eq 3
@@ -60,7 +63,7 @@ describe 'Parsing du collecte des scènes' do
     describe 'troisième scène' do
       let(:scene3) { @scene3 ||= datam[:items][3] }
       it 'définit bien la scène' do
-        # puts "scène 3 : #{scene3.inspect}"
+        puts "scène 3 : #{scene3.inspect}"
         expect(scene3).not_to eq nil
         {
           id: 3, numero: 3,
@@ -73,7 +76,7 @@ describe 'Parsing du collecte des scènes' do
         end
         {
           horloge: '0:03:20', time: 200, real_time: 170,
-          end_time: 170, real_end_time: 140, duree: -30
+          end_time: 230, real_end_time: 200, duree: 30
         }.each do |prop, expected|
           expect(scene3[:horloge][prop]).to eq expected
         end

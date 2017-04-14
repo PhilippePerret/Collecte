@@ -13,6 +13,7 @@ describe 'Extraction HTML de tous les brins' do
     end
     it 'produit tous les fichiers brins' do
       FileUtils.rm_rf(dossier_extraction) if File.exist?(dossier_extraction)
+      collecte.parse
       collecte.extract(:all_brins_html)
       expect(File.exist?(dossier_extraction)).to eq true
       (1..6).each do |bid|
