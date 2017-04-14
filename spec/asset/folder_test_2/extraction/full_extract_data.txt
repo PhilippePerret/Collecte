@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-type" content="text/html; charset=utf-8">
   <title>
-    Extraction des données du 14 04 2017 - 12:45 complet du film “Éverest”
+    Extraction des données du 14 04 2017 - 14:20 complet du film “Éverest”
   </title>
   
   
@@ -11,7 +11,7 @@
 <body>
   
   #
-# Extraction de 14 04 2017 - 12:45
+# Extraction de 14 04 2017 - 14:20
 # ================================
 # Film : Everest2016
 #
@@ -55,28 +55,28 @@ Personnage anta
 
 Brin 1
 	id                     1
-	libelle                Premier brin
-	description            Description du premier brin.
+	libelle                #<Film::TextObjet:0x007ffeab3dbc90>
+	description            #<Film::TextObjet:0x007ffeab3db5d8>
 
 Brin 2
 	id                     2
-	libelle                Deuxième brin
-	description            Une description du deuxième brin.
+	libelle                #<Film::TextObjet:0x007ffeab3daa48>
+	description            #<Film::TextObjet:0x007ffeab3da728>
 
 Brin 3
 	id                     3
-	libelle                Troisième brin
-	description            
+	libelle                #<Film::TextObjet:0x007ffeab3da0c0>
+	description            #<Film::TextObjet:0x007ffeab3d9c60>
 
 Brin 4
 	id                     4
-	libelle                Quatrième brin
-	description            
+	libelle                #<Film::TextObjet:0x007ffeab3d9760>
+	description            #<Film::TextObjet:0x007ffeab3d8c70>
 
 Brin 5
 	id                     5
-	libelle                Cinquième brin inutilisé par la collecte.
-	description            
+	libelle                #<Film::TextObjet:0x007ffeab3d8590>
+	description            #<Film::TextObjet:0x007ffeab3d80b8>
 
 
 === SCENES ===

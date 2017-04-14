@@ -51,8 +51,9 @@ class Extractor
     write '=== BRINS ===', nil, {div_class: 'titre'}
     film.brins.each do |brin_id, brin|
       write "Brin #{brin_id}", nil, {div_class: 'stitre'}
-      [:id, :libelle, :description].each do |prop|
-        write "#{prop}", "#{brin.send(prop)}"
+      write "id", brin.id
+      [:libelle, :description].each do |prop|
+        write "#{prop}", "#{brin.send(prop).to_html}"
       end
     end
     write '</brins>'
