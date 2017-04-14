@@ -1,23 +1,2 @@
-14/04 14:27:55 Fin du chargement des librairies (lib/required.rb)
-14/04 14:27:55 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
-14/04 14:27:55 Parsing préparé avec succès.
-14/04 14:27:55 PARSING DES MÉTADONNÉES…
-14/04 14:27:55 Métadata parsées ({:id=>"Everest2016", :titre=>"Éverest", :auteurs=>["Phil", "Benoit"], :debut=>"25/4/2017", :fin=>"30/4/2017"})
-14/04 14:27:55 PARSING DES BRINS…
-14/04 14:27:55 PARSING DES PERSONNAGES…
-14/04 14:27:55 PARSING DES SCÈNES…
-14/04 14:27:55 Calcul de la durée des scènes
-14/04 14:27:55 Sauvegarde des scènes
-14/04 14:27:55 -> Film#load_from_pstore
-14/04 14:27:55 <- Film#load_from_pstore OK
-14/04 14:27:55   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2/extraction/.txt"]
-14/04 14:27:55   <- prepare
-14/04 14:27:55 Méthode d'extraction à utiliser : :extract_whole
-14/04 14:27:55 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
-14/04 14:27:55 -> Film#load_from_pstore
-14/04 14:27:55 <- Film#load_from_pstore OK
-14/04 14:27:55 -> Film#load_from_pstore
-14/04 14:27:55 <- Film#load_from_pstore OK
-14/04 14:27:55   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2/extraction/full_extract_data.txt"]
-14/04 14:27:55   <- prepare
-14/04 14:27:55 Méthode d'extraction à utiliser : :extract_whole
+14/04 14:30:13 Fin du chargement des librairies (lib/required.rb)
+14/04 14:30:13 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_1"

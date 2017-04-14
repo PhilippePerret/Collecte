@@ -18,15 +18,15 @@ describe 'Parsing d’un brin' do
       it 'parse correctement le brin' do
         brin.parse("12#{RC}Libellé du brin#{RC}Description du brin")
         expect(brin.id).to eq 12
-        expect(brin.libelle).to eq 'Libellé du brin'
-        expect(brin.description).to eq 'Description du brin'
+        expect(brin.libelle.only_str).to eq 'Libellé du brin'
+        expect(brin.description.only_str).to eq 'Description du brin'
       end
     end
     context 'sans la description' do
       it 'parse correctement le brin' do
         brin.parse("13#{RC}Un libellé sans description")
         expect(brin.id).to eq 13
-        expect(brin.libelle).to eq 'Un libellé sans description'
+        expect(brin.libelle.only_str).to eq 'Un libellé sans description'
         expect(brin.description).to eq nil
       end
     end

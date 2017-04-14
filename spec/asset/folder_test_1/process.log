@@ -1,258 +1,258 @@
-14/04 14:20:55 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
-14/04 14:20:55 -> Film#load_from_pstore
-14/04 14:20:55 <- Film#load_from_pstore OK
-14/04 14:20:55   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_3.html"]
-14/04 14:20:55   <- prepare
-14/04 14:20:55 Méthode d'extraction à utiliser : :extract_brin
-14/04 14:20:55 -> Film::Extractor#extract_brin
-14/04 14:20:55 -> extract_sequencier(as_brin = true)
-14/04 14:20:55 Scène 1 (0:00:30) filtrée : hors conditions
-14/04 14:20:55 Scène 2 (0:01:40) filtrée : hors conditions
-14/04 14:20:55 Scène 6 (0:11:45) filtrée : hors conditions
-14/04 14:20:55 Scène 7 (0:15:15) filtrée : hors conditions
-14/04 14:20:55 Nombre de scènes passant le filtre : 3
-14/04 14:20:55 Méthode Scene à utiliser : :as_brin
-14/04 14:20:55 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
-14/04 14:20:55 SASSisation du fichier CSS `resume.css`
-14/04 14:20:55 SASSisation du fichier CSS `sequencier.css`
-14/04 14:20:55 SASSisation du fichier CSS `statistiques.css`
-14/04 14:20:55 SASSisation du fichier CSS `synopsis.css`
-14/04 14:20:55 SASSisation du fichier CSS `brins_simples.css`
-14/04 14:20:55 SASSisation du fichier CSS `brut.css`
-14/04 14:20:55 SASSisation du fichier CSS `chemin_de_fer.css`
-14/04 14:20:55 SASSisation du fichier CSS `events.css`
-14/04 14:20:56 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
-14/04 14:20:56 -> Film#load_from_pstore
-14/04 14:20:56 <- Film#load_from_pstore OK
-14/04 14:20:56   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_3.html"]
-14/04 14:20:56   <- prepare
-14/04 14:20:56 Méthode d'extraction à utiliser : :extract_brin
-14/04 14:20:56 -> Film::Extractor#extract_brin
-14/04 14:20:56 -> extract_sequencier(as_brin = true)
-14/04 14:20:56 Scène 1 (0:00:30) filtrée : hors conditions
-14/04 14:20:56 Scène 2 (0:01:40) filtrée : hors conditions
-14/04 14:20:56 Scène 6 (0:11:45) filtrée : hors conditions
-14/04 14:20:56 Scène 7 (0:15:15) filtrée : hors conditions
-14/04 14:20:56 Nombre de scènes passant le filtre : 3
-14/04 14:20:56 Méthode Scene à utiliser : :as_brin
-14/04 14:20:56 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
-14/04 14:20:56 SASSisation du fichier CSS `resume.css`
-14/04 14:20:56 SASSisation du fichier CSS `sequencier.css`
-14/04 14:20:56 SASSisation du fichier CSS `statistiques.css`
-14/04 14:20:56 SASSisation du fichier CSS `synopsis.css`
-14/04 14:20:56 SASSisation du fichier CSS `brins_simples.css`
-14/04 14:20:56 SASSisation du fichier CSS `brut.css`
-14/04 14:20:56 SASSisation du fichier CSS `chemin_de_fer.css`
-14/04 14:20:56 SASSisation du fichier CSS `events.css`
-14/04 14:20:56 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
-14/04 14:20:56 -> Film#load_from_pstore
-14/04 14:20:56 <- Film#load_from_pstore OK
-14/04 14:20:56   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_2_4.html"]
-14/04 14:20:56   <- prepare
-14/04 14:20:56 Méthode d'extraction à utiliser : :extract_brin
-14/04 14:20:56 -> Film::Extractor#extract_brin
-14/04 14:20:56 -> extract_sequencier(as_brin = true)
-14/04 14:20:56 Scène 1 (0:00:30) filtrée : hors conditions
-14/04 14:20:56 Scène 3 (0:03:20) filtrée : hors conditions
-14/04 14:20:56 Scène 5 (0:07:23) filtrée : hors conditions
-14/04 14:20:56 Scène 6 (0:11:45) filtrée : hors conditions
-14/04 14:20:56 Nombre de scènes passant le filtre : 3
-14/04 14:20:56 Méthode Scene à utiliser : :as_brin
-14/04 14:20:56 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
-14/04 14:20:56 SASSisation du fichier CSS `resume.css`
-14/04 14:20:56 SASSisation du fichier CSS `sequencier.css`
-14/04 14:20:56 SASSisation du fichier CSS `statistiques.css`
-14/04 14:20:56 SASSisation du fichier CSS `synopsis.css`
-14/04 14:20:56 SASSisation du fichier CSS `brins_simples.css`
-14/04 14:20:56 SASSisation du fichier CSS `brut.css`
-14/04 14:20:56 SASSisation du fichier CSS `chemin_de_fer.css`
-14/04 14:20:56 SASSisation du fichier CSS `events.css`
-14/04 14:20:56 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
-14/04 14:20:56 -> Film#load_from_pstore
-14/04 14:20:56 <- Film#load_from_pstore OK
-14/04 14:20:56   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_2_4.html"]
-14/04 14:20:56   <- prepare
-14/04 14:20:56 Méthode d'extraction à utiliser : :extract_brin
-14/04 14:20:56 -> Film::Extractor#extract_brin
-14/04 14:20:56 -> extract_sequencier(as_brin = true)
-14/04 14:20:56 Scène 1 (0:00:30) filtrée : hors conditions
-14/04 14:20:56 Scène 3 (0:03:20) filtrée : hors conditions
-14/04 14:20:56 Scène 5 (0:07:23) filtrée : hors conditions
-14/04 14:20:56 Scène 6 (0:11:45) filtrée : hors conditions
-14/04 14:20:56 Nombre de scènes passant le filtre : 3
-14/04 14:20:56 Méthode Scene à utiliser : :as_brin
-14/04 14:20:56 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
-14/04 14:20:56 SASSisation du fichier CSS `resume.css`
-14/04 14:20:56 SASSisation du fichier CSS `sequencier.css`
-14/04 14:20:56 SASSisation du fichier CSS `statistiques.css`
-14/04 14:20:56 SASSisation du fichier CSS `synopsis.css`
-14/04 14:20:56 SASSisation du fichier CSS `brins_simples.css`
-14/04 14:20:56 SASSisation du fichier CSS `brut.css`
-14/04 14:20:56 SASSisation du fichier CSS `chemin_de_fer.css`
-14/04 14:20:56 SASSisation du fichier CSS `events.css`
-14/04 14:20:56 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
-14/04 14:20:56 -> Film#load_from_pstore
-14/04 14:20:56 <- Film#load_from_pstore OK
-14/04 14:20:56   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_1.html"]
-14/04 14:20:56   <- prepare
-14/04 14:20:56 Méthode d'extraction à utiliser : :extract_brin
-14/04 14:20:56 -> Film::Extractor#extract_brin
-14/04 14:20:56 -> extract_sequencier(as_brin = true)
-14/04 14:20:56 Scène 6 (0:11:45) filtrée : hors conditions
-14/04 14:20:56 Scène 7 (0:15:15) filtrée : hors conditions
-14/04 14:20:56 Nombre de scènes passant le filtre : 5
-14/04 14:20:56 Méthode Scene à utiliser : :as_brin
-14/04 14:20:56 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
-14/04 14:20:56 SASSisation du fichier CSS `resume.css`
-14/04 14:20:56 SASSisation du fichier CSS `sequencier.css`
-14/04 14:20:56 SASSisation du fichier CSS `statistiques.css`
-14/04 14:20:56 SASSisation du fichier CSS `synopsis.css`
-14/04 14:20:56 SASSisation du fichier CSS `brins_simples.css`
-14/04 14:20:56 SASSisation du fichier CSS `brut.css`
-14/04 14:20:56 SASSisation du fichier CSS `chemin_de_fer.css`
-14/04 14:20:56 SASSisation du fichier CSS `events.css`
-14/04 14:20:56 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
-14/04 14:20:56 -> Film#load_from_pstore
-14/04 14:20:56 <- Film#load_from_pstore OK
-14/04 14:20:56   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_2_4.html"]
-14/04 14:20:56   <- prepare
-14/04 14:20:56 Méthode d'extraction à utiliser : :extract_brin
-14/04 14:20:56 -> Film::Extractor#extract_brin
-14/04 14:20:56 -> extract_sequencier(as_brin = true)
-14/04 14:20:56 Scène 1 (0:00:30) filtrée : hors conditions
-14/04 14:20:56 Scène 3 (0:03:20) filtrée : hors conditions
-14/04 14:20:56 Scène 5 (0:07:23) filtrée : hors conditions
-14/04 14:20:56 Scène 6 (0:11:45) filtrée : hors conditions
-14/04 14:20:56 Nombre de scènes passant le filtre : 3
-14/04 14:20:56 Méthode Scene à utiliser : :as_brin
-14/04 14:20:56 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
-14/04 14:20:56 SASSisation du fichier CSS `resume.css`
-14/04 14:20:56 SASSisation du fichier CSS `sequencier.css`
-14/04 14:20:56 SASSisation du fichier CSS `statistiques.css`
-14/04 14:20:56 SASSisation du fichier CSS `synopsis.css`
-14/04 14:20:56 SASSisation du fichier CSS `brins_simples.css`
-14/04 14:20:56 SASSisation du fichier CSS `brut.css`
-14/04 14:20:56 SASSisation du fichier CSS `chemin_de_fer.css`
-14/04 14:20:56 SASSisation du fichier CSS `events.css`
-14/04 14:20:56 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
-14/04 14:20:56 -> Film#load_from_pstore
-14/04 14:20:56 <- Film#load_from_pstore OK
-14/04 14:20:56   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_1_3.html"]
-14/04 14:20:56   <- prepare
-14/04 14:20:56 Méthode d'extraction à utiliser : :extract_brin
-14/04 14:20:56 -> Film::Extractor#extract_brin
-14/04 14:20:56 -> extract_sequencier(as_brin = true)
-14/04 14:20:56 Scène 1 (0:00:30) filtrée : hors conditions
-14/04 14:20:56 Scène 2 (0:01:40) filtrée : hors conditions
-14/04 14:20:56 Scène 6 (0:11:45) filtrée : hors conditions
-14/04 14:20:56 Scène 7 (0:15:15) filtrée : hors conditions
-14/04 14:20:56 Nombre de scènes passant le filtre : 3
-14/04 14:20:56 Méthode Scene à utiliser : :as_brin
-14/04 14:20:56 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
-14/04 14:20:56 SASSisation du fichier CSS `resume.css`
-14/04 14:20:56 SASSisation du fichier CSS `sequencier.css`
-14/04 14:20:56 SASSisation du fichier CSS `statistiques.css`
-14/04 14:20:56 SASSisation du fichier CSS `synopsis.css`
-14/04 14:20:56 SASSisation du fichier CSS `brins_simples.css`
-14/04 14:20:56 SASSisation du fichier CSS `brut.css`
-14/04 14:20:56 SASSisation du fichier CSS `chemin_de_fer.css`
-14/04 14:20:56 SASSisation du fichier CSS `events.css`
-14/04 14:20:56 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
-14/04 14:20:56 -> Film#load_from_pstore
-14/04 14:20:56 <- Film#load_from_pstore OK
-14/04 14:20:56   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin__2_3__1.html"]
-14/04 14:20:56   <- prepare
-14/04 14:20:56 Méthode d'extraction à utiliser : :extract_brin
-14/04 14:20:56 -> Film::Extractor#extract_brin
-14/04 14:20:56 -> extract_sequencier(as_brin = true)
-14/04 14:20:56 Scène 1 (0:00:30) filtrée : hors conditions
-14/04 14:20:56 Scène 6 (0:11:45) filtrée : hors conditions
-14/04 14:20:56 Scène 7 (0:15:15) filtrée : hors conditions
-14/04 14:20:56 Nombre de scènes passant le filtre : 4
-14/04 14:20:56 Méthode Scene à utiliser : :as_brin
-14/04 14:20:56 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
-14/04 14:20:56 SASSisation du fichier CSS `resume.css`
-14/04 14:20:56 SASSisation du fichier CSS `sequencier.css`
-14/04 14:20:56 SASSisation du fichier CSS `statistiques.css`
-14/04 14:20:56 SASSisation du fichier CSS `synopsis.css`
-14/04 14:20:56 SASSisation du fichier CSS `brins_simples.css`
-14/04 14:20:56 SASSisation du fichier CSS `brut.css`
-14/04 14:20:56 SASSisation du fichier CSS `chemin_de_fer.css`
-14/04 14:20:56 SASSisation du fichier CSS `events.css`
-14/04 14:20:56 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
-14/04 14:20:56 -> Film#load_from_pstore
-14/04 14:20:56 <- Film#load_from_pstore OK
-14/04 14:20:56   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_1__2_3_.html"]
-14/04 14:20:56   <- prepare
-14/04 14:20:56 Méthode d'extraction à utiliser : :extract_brin
-14/04 14:20:56 -> Film::Extractor#extract_brin
-14/04 14:20:56 -> extract_sequencier(as_brin = true)
-14/04 14:20:56 Scène 1 (0:00:30) filtrée : hors conditions
-14/04 14:20:56 Scène 6 (0:11:45) filtrée : hors conditions
-14/04 14:20:56 Scène 7 (0:15:15) filtrée : hors conditions
-14/04 14:20:56 Nombre de scènes passant le filtre : 4
-14/04 14:20:56 Méthode Scene à utiliser : :as_brin
-14/04 14:20:56 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
-14/04 14:20:56 SASSisation du fichier CSS `resume.css`
-14/04 14:20:56 SASSisation du fichier CSS `sequencier.css`
-14/04 14:20:56 SASSisation du fichier CSS `statistiques.css`
-14/04 14:20:56 SASSisation du fichier CSS `synopsis.css`
-14/04 14:20:56 SASSisation du fichier CSS `brins_simples.css`
-14/04 14:20:57 SASSisation du fichier CSS `brut.css`
-14/04 14:20:57 SASSisation du fichier CSS `chemin_de_fer.css`
-14/04 14:20:57 SASSisation du fichier CSS `events.css`
-14/04 14:20:57 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_5"
-14/04 14:20:57 Parsing préparé avec succès.
-14/04 14:20:57 PARSING DES MÉTADONNÉES…
-14/04 14:20:57 Métadata parsées ({:id=>"divisions2017", :titre=>"Film pour divisions", :auteurs=>["Phil", "Marion"], :debut=>"11/4/2017", :fin=>"11/4/2017"})
-14/04 14:20:57 PARSING DES BRINS…
-14/04 14:20:57 PARSING DES PERSONNAGES…
-14/04 14:20:57 PARSING DES SCÈNES…
-14/04 14:20:57 FIN DU FILM TROUVÉE à 1:00:30
-14/04 14:20:57 Calcul de la durée des scènes
-14/04 14:20:57 Sauvegarde des scènes
-14/04 14:20:57 -> Film#load_from_pstore
-14/04 14:20:57 <- Film#load_from_pstore OK
-14/04 14:20:57   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_5/extraction/full_sequencier.html"]
-14/04 14:20:57   <- prepare
-14/04 14:20:57 Méthode d'extraction à utiliser : :extract_sequencier
-14/04 14:20:57 -> extract_sequencier(as_brin = false)
-14/04 14:20:57 Nombre de scènes passant le filtre : 8
-14/04 14:20:57 Méthode Scene à utiliser : :as_sequence
-14/04 14:20:57 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
-14/04 14:20:57 SASSisation du fichier CSS `resume.css`
-14/04 14:20:57 SASSisation du fichier CSS `sequencier.css`
-14/04 14:20:57 SASSisation du fichier CSS `statistiques.css`
-14/04 14:20:57 SASSisation du fichier CSS `synopsis.css`
-14/04 14:20:57 SASSisation du fichier CSS `brins_simples.css`
-14/04 14:20:57 SASSisation du fichier CSS `brut.css`
-14/04 14:20:57 SASSisation du fichier CSS `chemin_de_fer.css`
-14/04 14:20:57 SASSisation du fichier CSS `events.css`
-14/04 14:20:57 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_5"
-14/04 14:20:57 Parsing préparé avec succès.
-14/04 14:20:57 PARSING DES MÉTADONNÉES…
-14/04 14:20:57 Métadata parsées ({:id=>"divisions2017", :titre=>"Film pour divisions", :auteurs=>["Phil", "Marion"], :debut=>"11/4/2017", :fin=>"11/4/2017"})
-14/04 14:20:57 PARSING DES BRINS…
-14/04 14:20:57 PARSING DES PERSONNAGES…
-14/04 14:20:57 PARSING DES SCÈNES…
-14/04 14:20:57 FIN DU FILM TROUVÉE à 1:00:30
-14/04 14:20:57 Calcul de la durée des scènes
-14/04 14:20:57 Sauvegarde des scènes
-14/04 14:20:57 -> Film#load_from_pstore
-14/04 14:20:57 <- Film#load_from_pstore OK
-14/04 14:20:57   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_5/extraction/full_sequencier_suggest_stt.html"]
-14/04 14:20:57   <- prepare
-14/04 14:20:57 Méthode d'extraction à utiliser : :extract_sequencier
-14/04 14:20:57 -> extract_sequencier(as_brin = false)
-14/04 14:20:57 Nombre de scènes passant le filtre : 8
-14/04 14:20:57 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
-14/04 14:20:57 SASSisation du fichier CSS `resume.css`
-14/04 14:20:57 SASSisation du fichier CSS `sequencier.css`
-14/04 14:20:57 SASSisation du fichier CSS `statistiques.css`
-14/04 14:20:57 SASSisation du fichier CSS `synopsis.css`
-14/04 14:20:57 SASSisation du fichier CSS `brins_simples.css`
-14/04 14:20:57 SASSisation du fichier CSS `brut.css`
-14/04 14:20:57 SASSisation du fichier CSS `chemin_de_fer.css`
-14/04 14:20:57 SASSisation du fichier CSS `events.css`
-14/04 14:20:57 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
-14/04 14:20:57 Parsing préparé avec succès.
+14/04 14:28:26 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
+14/04 14:28:26 -> Film#load_from_pstore
+14/04 14:28:26 <- Film#load_from_pstore OK
+14/04 14:28:26   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_3.html"]
+14/04 14:28:26   <- prepare
+14/04 14:28:26 Méthode d'extraction à utiliser : :extract_brin
+14/04 14:28:26 -> Film::Extractor#extract_brin
+14/04 14:28:26 -> extract_sequencier(as_brin = true)
+14/04 14:28:26 Scène 1 (0:00:30) filtrée : hors conditions
+14/04 14:28:26 Scène 2 (0:01:40) filtrée : hors conditions
+14/04 14:28:26 Scène 6 (0:11:45) filtrée : hors conditions
+14/04 14:28:26 Scène 7 (0:15:15) filtrée : hors conditions
+14/04 14:28:26 Nombre de scènes passant le filtre : 3
+14/04 14:28:26 Méthode Scene à utiliser : :as_brin
+14/04 14:28:26 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
+14/04 14:28:26 SASSisation du fichier CSS `resume.css`
+14/04 14:28:26 SASSisation du fichier CSS `sequencier.css`
+14/04 14:28:26 SASSisation du fichier CSS `statistiques.css`
+14/04 14:28:26 SASSisation du fichier CSS `synopsis.css`
+14/04 14:28:26 SASSisation du fichier CSS `brins_simples.css`
+14/04 14:28:26 SASSisation du fichier CSS `brut.css`
+14/04 14:28:26 SASSisation du fichier CSS `chemin_de_fer.css`
+14/04 14:28:26 SASSisation du fichier CSS `events.css`
+14/04 14:28:26 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
+14/04 14:28:26 -> Film#load_from_pstore
+14/04 14:28:26 <- Film#load_from_pstore OK
+14/04 14:28:26   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_3.html"]
+14/04 14:28:26   <- prepare
+14/04 14:28:26 Méthode d'extraction à utiliser : :extract_brin
+14/04 14:28:26 -> Film::Extractor#extract_brin
+14/04 14:28:26 -> extract_sequencier(as_brin = true)
+14/04 14:28:26 Scène 1 (0:00:30) filtrée : hors conditions
+14/04 14:28:26 Scène 2 (0:01:40) filtrée : hors conditions
+14/04 14:28:26 Scène 6 (0:11:45) filtrée : hors conditions
+14/04 14:28:26 Scène 7 (0:15:15) filtrée : hors conditions
+14/04 14:28:26 Nombre de scènes passant le filtre : 3
+14/04 14:28:26 Méthode Scene à utiliser : :as_brin
+14/04 14:28:26 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
+14/04 14:28:26 SASSisation du fichier CSS `resume.css`
+14/04 14:28:26 SASSisation du fichier CSS `sequencier.css`
+14/04 14:28:26 SASSisation du fichier CSS `statistiques.css`
+14/04 14:28:26 SASSisation du fichier CSS `synopsis.css`
+14/04 14:28:26 SASSisation du fichier CSS `brins_simples.css`
+14/04 14:28:26 SASSisation du fichier CSS `brut.css`
+14/04 14:28:26 SASSisation du fichier CSS `chemin_de_fer.css`
+14/04 14:28:26 SASSisation du fichier CSS `events.css`
+14/04 14:28:26 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
+14/04 14:28:26 -> Film#load_from_pstore
+14/04 14:28:26 <- Film#load_from_pstore OK
+14/04 14:28:26   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_2_4.html"]
+14/04 14:28:26   <- prepare
+14/04 14:28:26 Méthode d'extraction à utiliser : :extract_brin
+14/04 14:28:26 -> Film::Extractor#extract_brin
+14/04 14:28:26 -> extract_sequencier(as_brin = true)
+14/04 14:28:26 Scène 1 (0:00:30) filtrée : hors conditions
+14/04 14:28:26 Scène 3 (0:03:20) filtrée : hors conditions
+14/04 14:28:26 Scène 5 (0:07:23) filtrée : hors conditions
+14/04 14:28:26 Scène 6 (0:11:45) filtrée : hors conditions
+14/04 14:28:26 Nombre de scènes passant le filtre : 3
+14/04 14:28:26 Méthode Scene à utiliser : :as_brin
+14/04 14:28:26 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
+14/04 14:28:26 SASSisation du fichier CSS `resume.css`
+14/04 14:28:26 SASSisation du fichier CSS `sequencier.css`
+14/04 14:28:26 SASSisation du fichier CSS `statistiques.css`
+14/04 14:28:26 SASSisation du fichier CSS `synopsis.css`
+14/04 14:28:26 SASSisation du fichier CSS `brins_simples.css`
+14/04 14:28:26 SASSisation du fichier CSS `brut.css`
+14/04 14:28:26 SASSisation du fichier CSS `chemin_de_fer.css`
+14/04 14:28:26 SASSisation du fichier CSS `events.css`
+14/04 14:28:26 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
+14/04 14:28:26 -> Film#load_from_pstore
+14/04 14:28:26 <- Film#load_from_pstore OK
+14/04 14:28:26   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_2_4.html"]
+14/04 14:28:26   <- prepare
+14/04 14:28:26 Méthode d'extraction à utiliser : :extract_brin
+14/04 14:28:26 -> Film::Extractor#extract_brin
+14/04 14:28:26 -> extract_sequencier(as_brin = true)
+14/04 14:28:26 Scène 1 (0:00:30) filtrée : hors conditions
+14/04 14:28:26 Scène 3 (0:03:20) filtrée : hors conditions
+14/04 14:28:26 Scène 5 (0:07:23) filtrée : hors conditions
+14/04 14:28:26 Scène 6 (0:11:45) filtrée : hors conditions
+14/04 14:28:26 Nombre de scènes passant le filtre : 3
+14/04 14:28:26 Méthode Scene à utiliser : :as_brin
+14/04 14:28:26 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
+14/04 14:28:26 SASSisation du fichier CSS `resume.css`
+14/04 14:28:26 SASSisation du fichier CSS `sequencier.css`
+14/04 14:28:26 SASSisation du fichier CSS `statistiques.css`
+14/04 14:28:26 SASSisation du fichier CSS `synopsis.css`
+14/04 14:28:26 SASSisation du fichier CSS `brins_simples.css`
+14/04 14:28:26 SASSisation du fichier CSS `brut.css`
+14/04 14:28:26 SASSisation du fichier CSS `chemin_de_fer.css`
+14/04 14:28:26 SASSisation du fichier CSS `events.css`
+14/04 14:28:27 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
+14/04 14:28:27 -> Film#load_from_pstore
+14/04 14:28:27 <- Film#load_from_pstore OK
+14/04 14:28:27   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_1.html"]
+14/04 14:28:27   <- prepare
+14/04 14:28:27 Méthode d'extraction à utiliser : :extract_brin
+14/04 14:28:27 -> Film::Extractor#extract_brin
+14/04 14:28:27 -> extract_sequencier(as_brin = true)
+14/04 14:28:27 Scène 6 (0:11:45) filtrée : hors conditions
+14/04 14:28:27 Scène 7 (0:15:15) filtrée : hors conditions
+14/04 14:28:27 Nombre de scènes passant le filtre : 5
+14/04 14:28:27 Méthode Scene à utiliser : :as_brin
+14/04 14:28:27 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
+14/04 14:28:27 SASSisation du fichier CSS `resume.css`
+14/04 14:28:27 SASSisation du fichier CSS `sequencier.css`
+14/04 14:28:27 SASSisation du fichier CSS `statistiques.css`
+14/04 14:28:27 SASSisation du fichier CSS `synopsis.css`
+14/04 14:28:27 SASSisation du fichier CSS `brins_simples.css`
+14/04 14:28:27 SASSisation du fichier CSS `brut.css`
+14/04 14:28:27 SASSisation du fichier CSS `chemin_de_fer.css`
+14/04 14:28:27 SASSisation du fichier CSS `events.css`
+14/04 14:28:27 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
+14/04 14:28:27 -> Film#load_from_pstore
+14/04 14:28:27 <- Film#load_from_pstore OK
+14/04 14:28:27   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_2_4.html"]
+14/04 14:28:27   <- prepare
+14/04 14:28:27 Méthode d'extraction à utiliser : :extract_brin
+14/04 14:28:27 -> Film::Extractor#extract_brin
+14/04 14:28:27 -> extract_sequencier(as_brin = true)
+14/04 14:28:27 Scène 1 (0:00:30) filtrée : hors conditions
+14/04 14:28:27 Scène 3 (0:03:20) filtrée : hors conditions
+14/04 14:28:27 Scène 5 (0:07:23) filtrée : hors conditions
+14/04 14:28:27 Scène 6 (0:11:45) filtrée : hors conditions
+14/04 14:28:27 Nombre de scènes passant le filtre : 3
+14/04 14:28:27 Méthode Scene à utiliser : :as_brin
+14/04 14:28:27 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
+14/04 14:28:27 SASSisation du fichier CSS `resume.css`
+14/04 14:28:27 SASSisation du fichier CSS `sequencier.css`
+14/04 14:28:27 SASSisation du fichier CSS `statistiques.css`
+14/04 14:28:27 SASSisation du fichier CSS `synopsis.css`
+14/04 14:28:27 SASSisation du fichier CSS `brins_simples.css`
+14/04 14:28:27 SASSisation du fichier CSS `brut.css`
+14/04 14:28:27 SASSisation du fichier CSS `chemin_de_fer.css`
+14/04 14:28:27 SASSisation du fichier CSS `events.css`
+14/04 14:28:27 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
+14/04 14:28:27 -> Film#load_from_pstore
+14/04 14:28:27 <- Film#load_from_pstore OK
+14/04 14:28:27   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_1_3.html"]
+14/04 14:28:27   <- prepare
+14/04 14:28:27 Méthode d'extraction à utiliser : :extract_brin
+14/04 14:28:27 -> Film::Extractor#extract_brin
+14/04 14:28:27 -> extract_sequencier(as_brin = true)
+14/04 14:28:27 Scène 1 (0:00:30) filtrée : hors conditions
+14/04 14:28:27 Scène 2 (0:01:40) filtrée : hors conditions
+14/04 14:28:27 Scène 6 (0:11:45) filtrée : hors conditions
+14/04 14:28:27 Scène 7 (0:15:15) filtrée : hors conditions
+14/04 14:28:27 Nombre de scènes passant le filtre : 3
+14/04 14:28:27 Méthode Scene à utiliser : :as_brin
+14/04 14:28:27 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
+14/04 14:28:27 SASSisation du fichier CSS `resume.css`
+14/04 14:28:27 SASSisation du fichier CSS `sequencier.css`
+14/04 14:28:27 SASSisation du fichier CSS `statistiques.css`
+14/04 14:28:27 SASSisation du fichier CSS `synopsis.css`
+14/04 14:28:27 SASSisation du fichier CSS `brins_simples.css`
+14/04 14:28:27 SASSisation du fichier CSS `brut.css`
+14/04 14:28:27 SASSisation du fichier CSS `chemin_de_fer.css`
+14/04 14:28:27 SASSisation du fichier CSS `events.css`
+14/04 14:28:27 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
+14/04 14:28:27 -> Film#load_from_pstore
+14/04 14:28:27 <- Film#load_from_pstore OK
+14/04 14:28:27   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin__2_3__1.html"]
+14/04 14:28:27   <- prepare
+14/04 14:28:27 Méthode d'extraction à utiliser : :extract_brin
+14/04 14:28:27 -> Film::Extractor#extract_brin
+14/04 14:28:27 -> extract_sequencier(as_brin = true)
+14/04 14:28:27 Scène 1 (0:00:30) filtrée : hors conditions
+14/04 14:28:27 Scène 6 (0:11:45) filtrée : hors conditions
+14/04 14:28:27 Scène 7 (0:15:15) filtrée : hors conditions
+14/04 14:28:27 Nombre de scènes passant le filtre : 4
+14/04 14:28:27 Méthode Scene à utiliser : :as_brin
+14/04 14:28:27 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
+14/04 14:28:27 SASSisation du fichier CSS `resume.css`
+14/04 14:28:27 SASSisation du fichier CSS `sequencier.css`
+14/04 14:28:27 SASSisation du fichier CSS `statistiques.css`
+14/04 14:28:27 SASSisation du fichier CSS `synopsis.css`
+14/04 14:28:27 SASSisation du fichier CSS `brins_simples.css`
+14/04 14:28:27 SASSisation du fichier CSS `brut.css`
+14/04 14:28:27 SASSisation du fichier CSS `chemin_de_fer.css`
+14/04 14:28:27 SASSisation du fichier CSS `events.css`
+14/04 14:28:27 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
+14/04 14:28:27 -> Film#load_from_pstore
+14/04 14:28:27 <- Film#load_from_pstore OK
+14/04 14:28:27   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_1__2_3_.html"]
+14/04 14:28:27   <- prepare
+14/04 14:28:27 Méthode d'extraction à utiliser : :extract_brin
+14/04 14:28:27 -> Film::Extractor#extract_brin
+14/04 14:28:27 -> extract_sequencier(as_brin = true)
+14/04 14:28:27 Scène 1 (0:00:30) filtrée : hors conditions
+14/04 14:28:27 Scène 6 (0:11:45) filtrée : hors conditions
+14/04 14:28:27 Scène 7 (0:15:15) filtrée : hors conditions
+14/04 14:28:27 Nombre de scènes passant le filtre : 4
+14/04 14:28:27 Méthode Scene à utiliser : :as_brin
+14/04 14:28:27 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
+14/04 14:28:27 SASSisation du fichier CSS `resume.css`
+14/04 14:28:27 SASSisation du fichier CSS `sequencier.css`
+14/04 14:28:27 SASSisation du fichier CSS `statistiques.css`
+14/04 14:28:27 SASSisation du fichier CSS `synopsis.css`
+14/04 14:28:27 SASSisation du fichier CSS `brins_simples.css`
+14/04 14:28:27 SASSisation du fichier CSS `brut.css`
+14/04 14:28:27 SASSisation du fichier CSS `chemin_de_fer.css`
+14/04 14:28:27 SASSisation du fichier CSS `events.css`
+14/04 14:28:27 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_5"
+14/04 14:28:27 Parsing préparé avec succès.
+14/04 14:28:27 PARSING DES MÉTADONNÉES…
+14/04 14:28:27 Métadata parsées ({:id=>"divisions2017", :titre=>"Film pour divisions", :auteurs=>["Phil", "Marion"], :debut=>"11/4/2017", :fin=>"11/4/2017"})
+14/04 14:28:27 PARSING DES BRINS…
+14/04 14:28:27 PARSING DES PERSONNAGES…
+14/04 14:28:27 PARSING DES SCÈNES…
+14/04 14:28:27 FIN DU FILM TROUVÉE à 1:00:30
+14/04 14:28:27 Calcul de la durée des scènes
+14/04 14:28:27 Sauvegarde des scènes
+14/04 14:28:27 -> Film#load_from_pstore
+14/04 14:28:27 <- Film#load_from_pstore OK
+14/04 14:28:27   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_5/extraction/full_sequencier.html"]
+14/04 14:28:27   <- prepare
+14/04 14:28:27 Méthode d'extraction à utiliser : :extract_sequencier
+14/04 14:28:27 -> extract_sequencier(as_brin = false)
+14/04 14:28:27 Nombre de scènes passant le filtre : 8
+14/04 14:28:27 Méthode Scene à utiliser : :as_sequence
+14/04 14:28:27 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
+14/04 14:28:27 SASSisation du fichier CSS `resume.css`
+14/04 14:28:27 SASSisation du fichier CSS `sequencier.css`
+14/04 14:28:27 SASSisation du fichier CSS `statistiques.css`
+14/04 14:28:27 SASSisation du fichier CSS `synopsis.css`
+14/04 14:28:27 SASSisation du fichier CSS `brins_simples.css`
+14/04 14:28:27 SASSisation du fichier CSS `brut.css`
+14/04 14:28:27 SASSisation du fichier CSS `chemin_de_fer.css`
+14/04 14:28:27 SASSisation du fichier CSS `events.css`
+14/04 14:28:27 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_5"
+14/04 14:28:27 Parsing préparé avec succès.
+14/04 14:28:27 PARSING DES MÉTADONNÉES…
+14/04 14:28:27 Métadata parsées ({:id=>"divisions2017", :titre=>"Film pour divisions", :auteurs=>["Phil", "Marion"], :debut=>"11/4/2017", :fin=>"11/4/2017"})
+14/04 14:28:27 PARSING DES BRINS…
+14/04 14:28:27 PARSING DES PERSONNAGES…
+14/04 14:28:27 PARSING DES SCÈNES…
+14/04 14:28:27 FIN DU FILM TROUVÉE à 1:00:30
+14/04 14:28:27 Calcul de la durée des scènes
+14/04 14:28:27 Sauvegarde des scènes
+14/04 14:28:27 -> Film#load_from_pstore
+14/04 14:28:27 <- Film#load_from_pstore OK
+14/04 14:28:27   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_5/extraction/full_sequencier_suggest_stt.html"]
+14/04 14:28:27   <- prepare
+14/04 14:28:27 Méthode d'extraction à utiliser : :extract_sequencier
+14/04 14:28:27 -> extract_sequencier(as_brin = false)
+14/04 14:28:27 Nombre de scènes passant le filtre : 8
+14/04 14:28:27 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
+14/04 14:28:27 SASSisation du fichier CSS `resume.css`
+14/04 14:28:27 SASSisation du fichier CSS `sequencier.css`
+14/04 14:28:27 SASSisation du fichier CSS `statistiques.css`
+14/04 14:28:27 SASSisation du fichier CSS `synopsis.css`
+14/04 14:28:27 SASSisation du fichier CSS `brins_simples.css`
+14/04 14:28:27 SASSisation du fichier CSS `brut.css`
+14/04 14:28:27 SASSisation du fichier CSS `chemin_de_fer.css`
+14/04 14:28:27 SASSisation du fichier CSS `events.css`
+14/04 14:28:27 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+14/04 14:28:27 Parsing préparé avec succès.
