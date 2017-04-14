@@ -14,3 +14,20 @@ PERSONNAGE:jan
   ANNEE:
   FONCTION: Antagoniste
   DESCRIPTION: Description de l'antagoniste Jan.
+  
+PERSONNAGE:trois
+  PRENOM:   Troisième
+  NOM:      Perso
+  SEXE:     Homme
+  FONCTION: Mentor
+  DESCRIPTION: Description du troisième personnage, le mentor.
+
+PERSONNAGE:quatre
+  PRENOM:   Quatro
+  NOM:      Cento
+  PSEUDO:   Cento
+  SEXE:     Garçon
+  ANNEE:    2000
+  FONCTION: Objet de la quête
+  DESCRIPTION: Objet de la quête de [PERSO#jan].
+

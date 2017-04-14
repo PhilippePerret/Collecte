@@ -35,7 +35,7 @@ class FinalFile
     # CSS. Il suffit qu'il soit plus vieux qu'un fichier commençant
     # par '_' et on actualise tous les fichiers.
     older_time = Float::INFINITY
-    csss = Dir["#{collecte.extractor.folder_css}/**/*.css"].each do |css_path|
+    Dir["#{collecte.extractor.folder_css}/**/*.css"].each do |css_path|
       mtime = File.stat(css_path).mtime.to_i
       data_css.merge!(css_path => mtime)
       mtime > older_time || older_time = mtime

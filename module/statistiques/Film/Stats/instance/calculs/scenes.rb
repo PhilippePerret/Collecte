@@ -42,8 +42,5 @@ class Statistiques
     end
   end
 
-  def nombre_personnages
-    @nombre_personnages ||= personnages.count
-  end
 end #/Statistiques
 end #/Film

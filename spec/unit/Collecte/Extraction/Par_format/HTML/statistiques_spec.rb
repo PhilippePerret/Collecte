@@ -10,18 +10,24 @@ describe 'Fichier statistiques' do
       @collecte.extract(as: :statistiques)
     end
     describe 'les statistiques' do
-      it 'affiche bien 8 scènes' do
+      it 'considèrent qu’il y a 8 scènes' do
         # puts "Toutes les scènes\n-----------------"
         # stats.scenes.each do |scene|
         #   puts "Scene ##{scene.numero} durée #{scene.duree}"
         # end
         expect(stats.nombre_scenes).to eq 8
       end
-      it 'affiche bien la scène 7 comme la plus longue' do
+      it 'considèrent la scène 7 comme la plus longue' do
         expect(stats.longest_scene.numero).to eq 7
       end
-      it 'affiche bien la scène 8 comme la plus courte' do
+      it 'considèrent la scène 8 comme la plus courte' do
         expect(stats.shortest_scene.numero).to eq 8
+      end
+      it 'considèrent qu’il y a 4 personnages' do
+        expect(stats.nombre_personnages).to eq 4
+      end
+      it 'considèrent qu’il y a 5 brins' do
+        expect(stats.nombre_brins).to eq 5
       end
     end
   end
@@ -35,18 +41,24 @@ describe 'Fichier statistiques' do
         )
     end
     describe 'les statistiques' do
-      it 'affiche bien 4 scènes seulement' do
+      it 'considèrent qu’il y a 4 scènes seulement' do
         # puts "Avec la limite\n------------"
         # stats.scenes.each do |scene|
         #   puts "Scene ##{scene.numero} durée #{scene.duree}"
         # end
         expect(stats.nombre_scenes).to eq 4
       end
-      it 'affiche bien la scène 4 comme la plus longue' do
+      it 'considèrent la scène 4 comme la plus longue' do
         expect(stats.longest_scene.numero).to eq 4
       end
-      it 'affiche bien la scène 1 comme la plus courte' do
+      it 'considèrent la scène 1 comme la plus courte' do
         expect(stats.shortest_scene.numero).to eq 1
+      end
+      it 'considèrent qu’il y a 2 personnages' do
+        expect(stats.nombre_personnages).to eq 2
+      end
+      it 'considèrent qu’il y a 3 brins' do
+        expect(stats.nombre_brins).to eq 3
       end
     end
   end

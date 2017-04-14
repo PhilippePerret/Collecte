@@ -9,14 +9,11 @@ class Statistiques
   def collecte ; @collecte  ||= film.collecte end
   def extractor ;@extractor ||= collecte.extractor end
 
-  # Les scènes dont il faut tenir compte pour les
-  # statistiques
-  def scenes ; @scenes ||= extractor.scenes end
-
-  # Les personnages, mais seulement ceux qui apparaissent
-  # dans le temps donné (TODO)
-  def personnages
-    @personnages ||= film.personnages
-  end
+  # Les éléments du film, MAIS SEULEMENT ceux qui apparaissent
+  # avec le filtre donné.
+  def scenes      ; @scenes       ||= extractor.scenes      end
+  def personnages ; @personnages  ||= extractor.personnages end
+  def brins       ; @brins        ||= extractor.brins       end
+  
 end #/Statistiques
 end #/Film

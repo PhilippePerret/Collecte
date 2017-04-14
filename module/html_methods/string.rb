@@ -22,6 +22,17 @@ def libval label, value, div_attrs = nil
   )
 end
 
+def libval1val2 label, value1, value2, attrs = nil
+  attrs ||= Hash.new
+  attrs.key?(:class) || attrs.merge!(class: 'libvalval')
+  div(
+    span(label, class: 'label')+
+    span(value1, class: 'value1')+
+    span(value2, class: 'value2'),
+    attrs
+  )
+end
+
 
 # Retourne un code type pour une boite de fermeture
 # de petite fenetre

@@ -8,6 +8,7 @@ class Brin
 
   # {String} Libellé du brin (son titre)
   attr_reader :libelle
+  alias :titre :libelle
 
   # {String} Description du brin
   attr_reader :description
