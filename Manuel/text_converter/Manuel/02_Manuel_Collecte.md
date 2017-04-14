@@ -105,6 +105,61 @@ La fin du film se détermine par la ligne :
 
 Cette ligne n'est pas comptée pour une scène.
 
+### Appartenance de la scène à des brins ou des notes {#sceneinbrinsornotes}
+
+Les dernières lignes de la scène peuvent permettre de l'introduire dans des brins ou des notes (principalement des brins).
+
+Cette ligne comportera simplement les marques de ces appartenances, avec `b<id brin>` pour les brins ou `n<id note>` pour les notes.
+
+Par exemple, cette scène appartiendra au brin 12 et à la note 4 :
+
+~~~
+      0:23:54 INT. JOUR MAISON DE JOE
+      [PERSO#joe] rentre chez lui.
+      b12 n4
+~~~
+
+### Définition d'un point structurel pour la scène {#pointsttinscene}
+
+On peut définir que la scène appartient à un point structure, ou qu'un point structurel est contenu dans la scène, en définissant une ligne où apparaitra seulement (« seulement » est important) le point structurel en question.
+
+Par exemple :
+
+~~~
+      0:23:54 INT. JOUR MAISON DE JOE
+      [PERSO#joe] rentre chez lui.
+      STT_CLE_DE_VOUTE
+      b12 n4    
+~~~
+
+Si la scène contient plusieurs points structurels, ils doivent impérativement être spécifiés sur des lignes différentes. Par exemple :
+
+~~~
+      0:12:54 INT. JOUR MAISON DE JOE
+      [PERSO#joe] rentre chez lui.
+      STT_INC_PERT
+      STT_INC_DEC
+      b12 n4    
+~~~
+
+
+Avec le [bundle TextMate], il suffit de taper `stt` puis tabulation pour obtenir la liste des tous les points structurels possibles.
+
+Cette liste contient :
+
+~~~
+      STT_INC_PERT      Incident perturbateur
+      STT_INC_DEC       Incident déclencheur
+      STT_PIVOT_1       Premier pivot
+      STT_DEV_PART1     Première partie de développement
+      STT_CLE_DE_VOUTE  Clé de voûte
+      STT_DEV_PART2     Seconde partie de dveloppement
+      STT_PIVOT_2       Second pivot
+      STT_CRISE         Crise
+      STT_DENOUEMENT    Début du dénouement
+      STT_CLIMAX        Climax
+~~~
+
 ### Création de la scène à l'aide du bundle TextMate
 
 Avec le [bundle TextMate], il suffit d'utiliser le snippet `s` pour créer la scène (donc de taper « s » puis la touche tabulation).

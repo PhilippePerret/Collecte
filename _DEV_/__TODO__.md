@@ -1,5 +1,5 @@
-* Documenter les marques de points structurels (-> Manuel)
-* Implémenter le snippet pour ajouter les points structurels (avec stt->|)
+
+* Poursuivre le traitement des points structurels
 
 * Analyser la structure si elle est définie dans les métadonnées.
 
