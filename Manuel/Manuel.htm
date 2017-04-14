@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="fr"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
-  
+  <title>Manuel de Collecte</title>
+  <meta name="author" lang="fr" content="Philippe Perret">
   
   <style type='text/css'>body{width:17cm;margin:2cm;font-size:13.1pt}ul,ol{margin-left:3em;padding-left:0;margin-right:3em;list-style:square}dl{margin-left:2em;margin-right:3em}dl dt{font-weight:bold;font-family:Arial,Helvetica}dl dd{margin-left:2em}code{background-color:#FEFEFE}
 
@@ -11,20 +11,15 @@ nav#__tdm__{border:1px solid #CCC;padding:1em;font-size:.85em;width:75%;backgrou
 <li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#collectefilm">Collecte des informations</a></li>
 <li class="__litdm__ __tdmlevel3__"><a class="__atdm__" href="#definirfindufilm">Définition de la fin du film</a></li>
 <li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#parsingcollecte">Parsing de la collecte</a></li>
-<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#extractioninformation">Extraction des informations du film</a></li></ul></nav>
+<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#extractioninformation">Extraction des informations du film</a></li>
+<li class="__litdm__ __tdmlevel3__"><a class="__atdm__" href="#fichierstatistiques">Le fichier Statistiques</a></li>
+<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#collectecommand">La commande <code>collecte</code></a></li>
+<li class="__litdm__ __tdmlevel3__"><a class="__atdm__" href="#commande_collecte_help">Opération <code>collecte help</code></a></li>
+<li class="__litdm__ __tdmlevel3__"><a class="__atdm__" href="#commande_collecte_parse">Opération <code>collecte parse</code></a></li>
+<li class="__litdm__ __tdmlevel3__"><a class="__atdm__" href="#commande_collecte_extract">Opération <code>collecte extract</code></a></li>
+<li class="__litdm__ __tdmlevel4__"><a class="__atdm__" href="#set_from_and_to_time">Définir le temps de début et le temps de fin</a></li>
+<li class="__litdm__ __tdmlevel4__"><a class="__atdm__" href="#produire-des-squenciers">Produire des séquenciers</a></li></ul></nav>
 <h1 id="manuel-dutilisation-de-collecte">Manuel d’utilisation de Collecte</h1>
-
-<ul id="markdown-toc">
-  <li><a href="#manuel-dutilisation-de-collecte" id="markdown-toc-manuel-dutilisation-de-collecte">Manuel d’utilisation de Collecte</a>    <ul>
-      <li><a href="#collectefilm" id="markdown-toc-collectefilm">Collecte des informations</a>        <ul>
-          <li><a href="#definirfindufilm" id="markdown-toc-definirfindufilm">Définition de la fin du film</a></li>
-        </ul>
-      </li>
-      <li><a href="#parsingcollecte" id="markdown-toc-parsingcollecte">Parsing de la collecte</a></li>
-      <li><a href="#extractioninformation" id="markdown-toc-extractioninformation">Extraction des informations du film</a></li>
-    </ul>
-  </li>
-</ul>
 
 <h2 id="collectefilm">Collecte des informations</h2>
 
@@ -64,7 +59,101 @@ nav#__tdm__{border:1px solid #CCC;padding:1em;font-size:.85em;width:75%;backgrou
 coll.parse
 </code></pre>
 
+<p>Pour tout savoir sur <a href="#collectecommand">la commande collecte</a>.</p>
+
 <h2 id="extractioninformation">Extraction des informations du film</h2>
 
 <p>L’<em>extraction</em> est la troisième opération de la collecte, et son but ultime. Elle permet d’obtenir des séquenciers, des fichiers brins et même des statistiques sur le film.</p>
+
+<h3 id="fichierstatistiques">Le fichier Statistiques</h3>
+
+<h2 id="collectecommand">La commande <code>collecte</code></h2>
+
+<p>La commande <code>collecte</code> permet de parser et surtout d’extraire tous les types de fichiers possible pour les analyses, même <a href="#fichierstatistiques">le fichier statistiques</a>.</p>
+
+<p>Cette commande fonctionne, à la base, avec la spécification de l’opération a exécuter en premier argument :</p>
+
+<pre><code>  $  collecte [operation]
+</code></pre>
+
+<p>Il existe trois opérations principales :</p>
+
+<pre><code>  help      Pour obtenir l'aide du programme (ce manuel)
+  parse     Pour parser les fichiers collecte
+  extract   Pour extraire tout type de fichier des données
+            de collecte.
+</code></pre>
+
+<p>En conséquence :</p>
+
+<pre><code>  $ collecte help pdf
+  // =&gt; ouvre ce manuel en version PDF
+  $ collecte help
+  // =&gt; ouvre ce manuel en version HTML
+
+  $ collecte parse
+  // =&gt; parse tous les fichiers collecte du dossier dans lequel
+  //    on se trouve
+
+  $ collecte extract --all
+  // =&gt; Extrait tous les fichiers possibles à partir des
+  //    données  de collecte fournies, en format HTML
+</code></pre>
+
+<h3 id="commande_collecte_help">Opération <code>collecte help</code></h3>
+
+<p>Comme nous venons de le voir, cette opération permet d’ouvrir le présent manuel, soit en version PDF (ajouter <code>pdf</code>) soit en version HTML (ne rien ajouter ou ajouter <code>html</code>).</p>
+
+<h3 id="commande_collecte_parse">Opération <code>collecte parse</code></h3>
+
+<p>Cette opération permet de parser tous les fichiers de collecte en vue de leur utilisation pour produire les fichiers d’analyse.</p>
+
+<p>Le résultat de ce parsing est un fichier <code>film.pstore</code> ou <code>film.msh</code> qui contient toutes les données du film.</p>
+
+<p>Les arguments possibles pour le parse sont :</p>
+
+<pre><code>
+  $ collecte parse
+  // =&gt; Parse tous les fichiers existants dans le dossier
+  //    courant.
+
+  $ collecte parse mon/dossier/collecte
+  // =&gt; Parse tous les fichiers du dossier `mon/dossier/collecte`
+
+  $ collecte parse -p mon/dossier/collecte
+  // =&gt; Parse seulement le fichier des personnages du
+  //    dossier spécifié.
+
+  $ collecte parse -b mon/dossier/collecte
+  // =&gt; Parse seulement le fichier des brins du dossier
+  //    spécifié.
+
+</code></pre>
+
+<p>Mais la collecte étant rapide, même pour un fichier de scènes, il vaut mieux tout collecter chaque fois.</p>
+
+<h3 id="commande_collecte_extract">Opération <code>collecte extract</code></h3>
+
+<p>C’est l’opération d’extraction des données qui permet de produire tous les fichiers nécessaires pour une analyse.</p>
+
+<p>Cette opération connait le plus d’options, afin de pouvoir produire exactement ce qu’il faut.</p>
+
+<h4 id="set_from_and_to_time">Définir le temps de début et le temps de fin</h4>
+
+<p>Pour tous les fichiers extraits, on peut définir le temps de départ à l’aide des options <code>from</code> et <code>to</code> qui doivent définir une horloge <code>H:MM:SS</code>.</p>
+
+<p>Exemple :</p>
+
+<pre><code>  $ collecte extract --all --from=0:12 --to=1:12:00
+</code></pre>
+
+<p>Avec la commande précédente, tous les fichiers seront extraits, entre la 12ème minute et 1 heure 12.</p>
+
+<p>On peut utiliser aussi la formule d’option courte :</p>
+
+<pre><code>  $ collecte extract -a -f=0:12 -t=1:12:00
+</code></pre>
+
+<h4 id="produire-des-squenciers">Produire des séquenciers</h4>
+
 </body></html>

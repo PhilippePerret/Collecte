@@ -11,6 +11,7 @@ class << self
   attr_reader :command_folder
 
   SHORT_OPTIONS_TO_LONG = {
+    'a'     => :all,
     'b'     => :brins,
     'd'     => :debug,
     'h'     => :horloge,

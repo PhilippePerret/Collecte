@@ -4,11 +4,15 @@ Le *parsing* est l'opération qui consiste à transformer les données collecté
 
 Pour parser un dossier de collecte, le plus simple est d'utiliser dans le Terminal la commande :
 
-    collecte parse mon/dossier/collecte
+~~~
+      collecte parse mon/dossier/collecte
+~~~
 
 Ou de le faire par ruby :
 
-    coll = Collecte.new('mon/dossier/collecte')
-    coll.parse
+~~~
+      coll = Collecte.new('mon/dossier/collecte')
+      coll.parse
+~~~
 
 Pour tout savoir sur [la commande collecte].
