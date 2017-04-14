@@ -1,27 +1,75 @@
-14/04 10:32:45 Fin du chargement des librairies (lib/required.rb)
-14/04 10:32:45 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_5"
-14/04 10:32:45 Parsing préparé avec succès.
-14/04 10:32:45 PARSING DES MÉTADONNÉES…
-14/04 10:32:45 Métadata parsées ({:id=>"divisions2017", :titre=>"Film pour divisions", :auteurs=>["Phil", "Marion"], :debut=>"11/4/2017", :fin=>"11/4/2017"})
-14/04 10:32:45 PARSING DES BRINS…
-14/04 10:32:45 PARSING DES PERSONNAGES…
-14/04 10:32:45 PARSING DES SCÈNES…
-14/04 10:32:45 FIN DU FILM TROUVÉE à 1:00:30
-14/04 10:32:45 Nombre de scènes collectées : 8
-14/04 10:32:45 Calcul de la durée des scènes
-14/04 10:32:45 Sauvegarde des scènes
-14/04 10:32:46 -> Film#load_from_pstore
-14/04 10:32:46 <- Film#load_from_pstore OK
-14/04 10:32:46   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_5/extraction/statistiques_from_0_to_1500.html"]
-14/04 10:32:46   <- prepare
-14/04 10:32:46 Méthode d'extraction à utiliser : :extract_statistiques
-14/04 10:32:46 Nombre de scènes (film.scenes) dans Film::Statistiques#nombre_scenes : 8
-14/04 10:32:46 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
-14/04 10:32:46 SASSisation du fichier CSS `resume.css`
-14/04 10:32:46 SASSisation du fichier CSS `sequencier.css`
-14/04 10:32:46 SASSisation du fichier CSS `statistiques.css`
-14/04 10:32:46 SASSisation du fichier CSS `synopsis.css`
-14/04 10:32:46 SASSisation du fichier CSS `brins_simples.css`
-14/04 10:32:46 SASSisation du fichier CSS `brut.css`
-14/04 10:32:46 SASSisation du fichier CSS `chemin_de_fer.css`
-14/04 10:32:46 SASSisation du fichier CSS `events.css`
+14/04 11:04:45 ### ERREUR PERSONNAGE INCONNU : Le personnage d'identifiant "joe" n'est pas défini dans le fichier des personnages.
+/Users/philippeperret/Programmation/Collecte/lib/required_then/classe/sous_classe/TextObjet/instance/parse.rb:36:in `block in parse'
+/Users/philippeperret/Programmation/Collecte/lib/required_then/classe/sous_classe/TextObjet/instance/parse.rb:25:in `each'
+/Users/philippeperret/Programmation/Collecte/lib/required_then/classe/sous_classe/TextObjet/instance/parse.rb:25:in `parse'
+/Users/philippeperret/Programmation/Collecte/spec/unit/Autres_classes/TextObjet/parse_spec.rb:123:in `block (4 levels) in <top (required)>'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/hooks.rb:350:in `instance_exec'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/hooks.rb:350:in `run'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/hooks.rb:514:in `block in run_owned_hooks_for'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/hooks.rb:513:in `each'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/hooks.rb:513:in `run_owned_hooks_for'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/hooks.rb:466:in `run'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:536:in `block in run_before_context_hooks'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/memoized_helpers.rb:186:in `block in isolate_for_context_hook'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/memoized_helpers.rb:182:in `instance_exec'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/memoized_helpers.rb:182:in `isolate_for_context_hook'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:535:in `run_before_context_hooks'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:588:in `run'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:590:in `block in run'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:590:in `map'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:590:in `run'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:590:in `block in run'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:590:in `map'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:590:in `run'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/runner.rb:113:in `block (3 levels) in run_specs'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/runner.rb:113:in `map'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/runner.rb:113:in `block (2 levels) in run_specs'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/configuration.rb:1836:in `with_suite_hooks'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/runner.rb:112:in `block in run_specs'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/reporter.rb:77:in `report'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/runner.rb:111:in `run_specs'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/runner.rb:87:in `run'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/runner.rb:71:in `run'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/runner.rb:45:in `invoke'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/exe/rspec:4:in `<top (required)>'
+/Users/philippeperret/.rbenv/versions/2.3.0/bin/rspec:23:in `load'
+/Users/philippeperret/.rbenv/versions/2.3.0/bin/rspec:23:in `<main>'
+14/04 11:04:45 ### ERREUR PERSONNAGE INCONNU : Le personnage d'identifiant "jan" n'est pas défini dans le fichier des personnages.
+/Users/philippeperret/Programmation/Collecte/lib/required_then/classe/sous_classe/TextObjet/instance/parse.rb:36:in `block in parse'
+/Users/philippeperret/Programmation/Collecte/lib/required_then/classe/sous_classe/TextObjet/instance/parse.rb:25:in `each'
+/Users/philippeperret/Programmation/Collecte/lib/required_then/classe/sous_classe/TextObjet/instance/parse.rb:25:in `parse'
+/Users/philippeperret/Programmation/Collecte/spec/unit/Autres_classes/TextObjet/parse_spec.rb:123:in `block (4 levels) in <top (required)>'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/hooks.rb:350:in `instance_exec'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/hooks.rb:350:in `run'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/hooks.rb:514:in `block in run_owned_hooks_for'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/hooks.rb:513:in `each'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/hooks.rb:513:in `run_owned_hooks_for'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/hooks.rb:466:in `run'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:536:in `block in run_before_context_hooks'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/memoized_helpers.rb:186:in `block in isolate_for_context_hook'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/memoized_helpers.rb:182:in `instance_exec'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/memoized_helpers.rb:182:in `isolate_for_context_hook'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:535:in `run_before_context_hooks'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:588:in `run'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:590:in `block in run'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:590:in `map'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:590:in `run'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:590:in `block in run'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:590:in `map'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:590:in `run'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/runner.rb:113:in `block (3 levels) in run_specs'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/runner.rb:113:in `map'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/runner.rb:113:in `block (2 levels) in run_specs'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/configuration.rb:1836:in `with_suite_hooks'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/runner.rb:112:in `block in run_specs'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/reporter.rb:77:in `report'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/runner.rb:111:in `run_specs'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/runner.rb:87:in `run'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/runner.rb:71:in `run'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/runner.rb:45:in `invoke'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/exe/rspec:4:in `<top (required)>'
+/Users/philippeperret/.rbenv/versions/2.3.0/bin/rspec:23:in `load'
+/Users/philippeperret/.rbenv/versions/2.3.0/bin/rspec:23:in `<main>'
+14/04 11:04:45 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
+14/04 11:04:45 Traitement d'un ensemble d'objets brins
+14/04 11:04:45 Traitement d'un ensemble d'objets brins

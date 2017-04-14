@@ -5,8 +5,7 @@ class Statistiques
 
   def nombre_scenes
     @nombre_scenes ||= begin
-      log "Nombre de scènes (film.scenes) dans Film::Statistiques#nombre_scenes : #{film.scenes.count}"
-      film.scenes.count
+      self.scenes.count
     end
   end
 
@@ -22,8 +21,8 @@ class Statistiques
   end
   def longest_scene
     @longest_scene ||= begin
-      longest = film.scenes.first
-      film.scenes.each do |sid, scene|
+      longest = scenes.first
+      scenes.each do |scene|
         scene.duree <= longest.duree || longest = scene
       end
       longest
@@ -35,8 +34,8 @@ class Statistiques
   end
   def shortest_scene
     @shortest_scene ||= begin
-      shortest = film.scenes.first
-      film.scenes.each do |sid, scene|
+      shortest = scenes.first
+      scenes.each do |scene|
         scene.duree >= shortest.duree || shortest = scene
       end
       shortest
@@ -44,7 +43,7 @@ class Statistiques
   end
 
   def nombre_personnages
-    @nombre_personnages ||= film.personnages.count
+    @nombre_personnages ||= personnages.count
   end
 end #/Statistiques
 end #/Film

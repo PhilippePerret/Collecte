@@ -9,9 +9,20 @@ describe 'Fichier statistiques' do
       @collecte.parse
       @collecte.extract(as: :statistiques)
     end
-    it 'calcule les statistiques pour tout le film' do
-      expect(stats.nombre_scenes).to eq 8
-      # 8 scènes
+    describe 'les statistiques' do
+      it 'affiche bien 8 scènes' do
+        # puts "Toutes les scènes\n-----------------"
+        # stats.scenes.each do |scene|
+        #   puts "Scene ##{scene.numero} durée #{scene.duree}"
+        # end
+        expect(stats.nombre_scenes).to eq 8
+      end
+      it 'affiche bien la scène 7 comme la plus longue' do
+        expect(stats.longest_scene.numero).to eq 7
+      end
+      it 'affiche bien la scène 8 comme la plus courte' do
+        expect(stats.shortest_scene.numero).to eq 8
+      end
     end
   end
   context 'avec un laps de temps défini' do
@@ -23,8 +34,20 @@ describe 'Fichier statistiques' do
           from_time: '0:0', to_time: '25:0'
         )
     end
-    it 'calcule les statistiques dans ce temps' do
-      expect(stats.nombre_scenes).to eq 4
+    describe 'les statistiques' do
+      it 'affiche bien 4 scènes seulement' do
+        # puts "Avec la limite\n------------"
+        # stats.scenes.each do |scene|
+        #   puts "Scene ##{scene.numero} durée #{scene.duree}"
+        # end
+        expect(stats.nombre_scenes).to eq 4
+      end
+      it 'affiche bien la scène 4 comme la plus longue' do
+        expect(stats.longest_scene.numero).to eq 4
+      end
+      it 'affiche bien la scène 1 comme la plus courte' do
+        expect(stats.shortest_scene.numero).to eq 1
+      end
     end
   end
 end

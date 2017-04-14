@@ -48,7 +48,7 @@ class Scene
         paragraphe.personnages_ids.nil? || @personnages_ids += paragraphe.personnages_ids
       end
     end
-    
+
     # On mets les relatifs à nil quand il sont vides
     @brins_ids        = @brins_ids.nil_if_empty
     @notes_ids        = @notes_ids.nil_if_empty
@@ -73,6 +73,8 @@ class Scene
       @decor,
       @decor_alt =
         first_line.match(REG_FIRST_LINE_SCENE).to_a[1..-1]
+      @decor && @decor = @decor.strip
+      @decor_alt && @decor_alt = @decor_alt.strip
     elsif first_line.match(REG_FIRST_LINE_SCENE_SIMPLE)
       @horloge,
       @lieu,
