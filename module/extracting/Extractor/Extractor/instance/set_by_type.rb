@@ -61,7 +61,7 @@ class Extractor
   def set_javascripts_by_type
     js_files = Array.new
     case options[:as]
-    when :sequencier, :synopsis, :brin
+    when :sequencier, :synopsis, :brin, :statistiques
       js_files << "#{folder_js}/fiches.js"
     when :resume
       # Rien du tout

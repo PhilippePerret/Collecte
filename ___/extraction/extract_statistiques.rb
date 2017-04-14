@@ -1,4 +1,4 @@
-@#!/usr/bin/env ruby -wU
+#!/usr/bin/env ruby -wU
 # encoding: UTF-8
 #
 # Pour lancer le parse d'un dossier de collecte.
