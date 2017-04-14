@@ -6,8 +6,8 @@ class Collecte
   def parse_all
     prepare_parsing
     parse_metadata
-    parse_brins
     parse_personnages
+    parse_brins
     parse_scenes
     termine_parsing
   end
@@ -25,6 +25,14 @@ class Collecte
     log "au cours du parsing des métadonnées", error: e
   end
 
+  def parse_personnages
+    log "PARSING DES PERSONNAGES…"
+    film.personnages.parse
+    film.personnages.save
+  rescue Exception => e
+    log "au cours du parsing des personnages", error: e
+  end
+
   # Méthode qui lance le parsing des brins
   def parse_brins
     log 'PARSING DES BRINS…'
@@ -34,13 +42,6 @@ class Collecte
     log "au cours du parsing des brins", error: e
   end
 
-  def parse_personnages
-    log "PARSING DES PERSONNAGES…"
-    film.personnages.parse
-    film.personnages.save
-  rescue Exception => e
-    log "au cours du parsing des personnages", error: e
-  end
 
   def parse_scenes
     log "PARSING DES SCÈNES…"
