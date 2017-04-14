@@ -10,7 +10,7 @@ class Film
   def load_if_exist
     if MODE_DATA_LOAD == :marshal
       if File.exist?(marshal_file)
-        load
+        load_from_marshal
         return true
       else
         return false
@@ -35,18 +35,21 @@ class Film
     end
   end
 
-  # Charger les données du fichier Marshal
+  # Charger les données du fichier PStore ou Marshal
   def load
-    log "-> Film#load…"
+    load_if_exist
+  end
+
+  def load_from_marshal
+    log "-> load_from_marshal"
     File.exist?(marshal_file) || raise('Impossible de charger les données du film : le film `data/film.msh` n’existe pas.')
     @donnee_totale = Marshal.load(File.read(marshal_file))
     dispatch
-    log "<- Film#load OK"
+    log "<- load_from_marshal"
   end
 
   def load_from_pstore
     log "-> Film#load_from_pstore"
-    File.exist?(pstore_file) || raise('Impossible de charger les données du film : le fichier PStore n’existe pas.')
     destore_metadata
     [:personnage, :brin, :note, :scene].each do |ktype|
       destore_data ktype
@@ -57,7 +60,7 @@ class Film
   # Chargement des métadonnées du film depuis le PStore
   def destore_metadata
     pstore.transaction do |ps|
-      self.metadata   = ps[:metadata]
+      collecte.metadata.data = ps[:metadata]
       self.created_at =  ps[:created_at]
       self.updated_at =  ps[:updated_at]
     end
@@ -76,7 +79,7 @@ class Film
         instance.dispatch(odata)
         # On ajoute cette instance à la liste des
         # instances de ce type.
-        self.send(type) << instance
+        self.send("#{type}s".to_sym) << instance
       end
     end
   end

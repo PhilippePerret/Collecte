@@ -1,3 +1,7 @@
+* [BUG] Voir pourquoi on reSASSe tous les fichiers chaque fois
+
+* Analyser la structure si elle est définie dans les métadonnées.
+
 * Prendre en compte le temps dans les statistiques (en fait, il faut utiliser aussi Collecte#scenes au lieu de film.scenes)
 
 * Prendre en compte la définition de la structure dans les métadonnées

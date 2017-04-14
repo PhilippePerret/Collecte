@@ -68,6 +68,7 @@ class Film
         ps[type][:items][oid] = objet.hash_data
         liste_ids_of_type << oid
       end
+
       # On enregistre la liste des IDs des objets du type
       # Par exemple la liste des IDs de personnage
       ps[type][:_ids_] = liste_ids_of_type

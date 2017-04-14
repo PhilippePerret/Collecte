@@ -1,20 +1,5 @@
 module ListElementsMethods
 
-  # {Hash} Tableau des éléments du film, avec en clé l'ID
-  # de l'élément et en valeur son instance, en fonction du
-  # type d'élément ({Film::Brin} pour les brins, par exemple)
-  #
-  # NOTE On peut obtenir ces éléments en faisant :
-  #   film.<element pluriel>[<id de l'élément>]
-  #   ou
-  #   film.<element pluriel>.hash[<id de l'élément>]
-  # Par exemple, pour les brins :
-  #   film.brins[<id du brin>]
-  #   ou
-  #   film.brins.hash[<id du brin>]
-  #
-  attr_reader :hash
-
   # Ajoute une instance de l'objet singulier à
   # l'instance pluriel. Par exemple une Film::Scene à
   # film.scenes.
@@ -23,10 +8,12 @@ module ListElementsMethods
   # fichiers de collecte que lors de la récupération des
   # données depuis les fichiers marshal ou les fichier
   # pstore.
-  # 
+  #
   def << instance
+    @hash ||= Hash.new
     @hash.merge!( instance.id => instance )
   end
+
   # Retourne l'élément d'identifiant +element_id+
   # Par exemple le brin, par `film.brins[12] #=> brin #12`
   def [] element_id
@@ -85,6 +72,14 @@ module ListElementsMethods
           d2s.merge!(k => inst.hash_data)
         end
       end
+
+      # # DEBUG
+      # if self.class.name.to_s == 'Film::Scenes'
+      #   log "Nombre de scènes sauvées : #{d2s.count}"
+      #   log "            dans le film : #{film.scenes.count}"
+      # end
+      # # /DEBUG
+
       {
         created_at: Time.now.to_i,
         film_id:    film.id,

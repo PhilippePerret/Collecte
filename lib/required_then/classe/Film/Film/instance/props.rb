@@ -12,10 +12,13 @@ class Film
 
 
   # {Fixnum} Temps de création du fichier film.msh
+  # ou du fichier film.pstore
   # Attention : ne correspond pas au début de la collecte,
   # enregistrée elle dans collecte.debut ou
   # collecte.metadata.data[:debut] sous forme de JJ/MM/AAAA
   attr_accessor :created_at
+  # {Fixnum} Time d'actualisation du fichier de données
+  attr_accessor :updated_at
 
   # Instance {Collecte} rattachée au film
   #

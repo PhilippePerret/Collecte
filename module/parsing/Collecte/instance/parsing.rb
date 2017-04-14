@@ -45,6 +45,7 @@ class Collecte
   def parse_scenes
     log "PARSING DES SCÈNES…"
     film.scenes.parse
+    log "Nombre de scènes collectées : #{film.scenes.count}"
     log "Calcul de la durée des scènes"
     film.scenes.each{|ks, s| s.set_duree}
     log "Sauvegarde des scènes"

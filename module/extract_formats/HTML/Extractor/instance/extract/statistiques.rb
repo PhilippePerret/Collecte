@@ -6,6 +6,7 @@ class Extractor
   #
   # Extraction de la collecte sous forme d'un synopsis
   def extract_statistiques
+    # log "-> Collecte::Extractor#extract_statistiques"
     Collecte.require_module 'statistiques'
     stats = film.stats
 

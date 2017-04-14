@@ -4,7 +4,10 @@ class Statistiques
 
 
   def nombre_scenes
-    @nombre_scenes ||= film.scenes.count
+    @nombre_scenes ||= begin
+      log "Nombre de scènes (film.scenes) dans Film::Statistiques#nombre_scenes : #{film.scenes.count}"
+      film.scenes.count
+    end
   end
 
   def temps_moyen_scene_str
