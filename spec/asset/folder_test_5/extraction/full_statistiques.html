@@ -5,39 +5,50 @@
   <title>
     Fichier statistiques complet du film “Film pour divisions”
   </title>
-  <style type="text/css">div.fiche{position:fixed;width:280px;top:12px;right:12px;color:#fff;border-radius:1em;padding:2em;letter-spacing:2.3px;line-height:1.3em;text-align:justify;z-index:2000}div.fiche a:link,div.fiche a:hover,div.fiche a:visited{color:#B5B5FF}div.fiche.personnage{background-color:#585482}div.fiche.brin{background-color:#896953}div.fiche.note{background-color:#006B69}div.fiche.hidden{display:none}div.fiche div.titre{font-size:1.1em;font-weight:bold;margin-bottom:1em;text-align:left !important}div.fiche span.label{display:inline-block;width:120px;color:#CCC;font-style:italic}div.fiche span.value{color:inherit}div.fiche a.closebox{position:absolute;font-family:Helvetica,Arial;top:12px;right:12px;background-color:red;color:#fff;padding:0 5px 1px;border-radius:5px}body{margin:2em;margin-top:3em;position:relative;font-size:11.8pt}a{text-decoration:none;color:#007}div#titre{font-size:1.9em;margin:2.5em 0 .3em .5em}div#titre div.lib_brin{font-size:.75em;margin-left:3em}a.tmlink{float:right;font-size:9.1pt;font-family:Arial,Helvetica;opacity:.5;border:1px solid;border-radius:1.5em;padding:3px;letter-spacing:-0.3px}a.tmlink:hover{opacity:1}section.statistiques{margin-left:4em}section.statistiques div.titre{margin-left:0em;font-size:1.4em}section.statistiques div.libvalval{margin-left:4em;width:740px}section.statistiques div.libvalval:nth-child(odd){background-color:#CCF}section.statistiques div.libvalval:nth-child(even){background-color:#fff}section.statistiques div.libvalval span.label,section.statistiques div.libvalval span.value1,section.statistiques div.libvalval span.value2{display:inline-block}section.statistiques div.libvalval span.label{width:220px;font-style:italic;color:#777;vertical-align:top}section.statistiques div.libvalval span.value1{width:260px}section.statistiques div.libvalval span.value2{width:260px}
+  <style type="text/css">div.fiche{position:fixed;width:280px;top:12px;right:12px;color:#fff;border-radius:1em;padding:2em;letter-spacing:2.3px;line-height:1.3em;text-align:justify;z-index:2000}div.fiche a:link,div.fiche a:hover,div.fiche a:visited{color:#B5B5FF}div.fiche.personnage,div.fiche.personnage div{background-color:#585482 !important}div.fiche.brin,div.fiche.brin div{background-color:#896953 !important}div.fiche.note,div.fiche.note div{background-color:#006B69 !important}div.fiche.hidden{display:none}div.fiche div.titre{font-size:1.1em;font-weight:bold;margin-bottom:1em;text-align:left !important}div.fiche span.label{display:inline-block;width:120px !important;color:#CCC !important;font-style:italic}div.fiche span.value{color:inherit}div.fiche a.closebox{position:absolute;font-family:Helvetica,Arial;top:12px;right:12px;background-color:red;color:#fff;padding:0 5px 1px;border-radius:5px}body{margin:2em;margin-top:3em;position:relative;font-size:11.8pt}a{text-decoration:none;color:#007}div#titre{font-size:1.9em;margin:2.5em 0 .3em .5em}div#titre div.lib_brin{font-size:.75em;margin-left:3em}a.tmlink{float:right;font-size:9.1pt;font-family:Arial,Helvetica;opacity:.5;border:1px solid;border-radius:1.5em;padding:3px;letter-spacing:-0.3px}a.tmlink:hover{opacity:1}div.libval{padding:4px .5em}div.libval:nth-child(even){background:#FFF}div.libval:nth-child(odd){background:#CCF}div.libval span.label,div.libval span.value{display:inline-block;vertical-align:top}div.libval span.label{width:200px;color:#555;font-style:italic}div.libval span.value{color:#000;width:400px}div.libvalval{margin-left:4em;width:740px;padding:12px .5em}div.libvalval:nth-child(odd){background-color:#CCF}div.libvalval:nth-child(even){background-color:#fff}div.libvalval span.label,div.libvalval span.value1,div.libvalval span.value2{display:inline-block;vertical-align:top}div.libvalval span.label{width:220px;font-style:italic;color:#777}div.libvalval span.value1{width:260px}div.libvalval span.value2{width:260px}section.statistiques{margin-left:4em}section.statistiques div.titre{margin:2em 0 .5em 0;font-size:1.5em}section.statistiques section.groupe{border:1px solid;display:inline-block;width:auto;margin-left:4em}section.statistiques section.groupe div.libvalval{margin-left:0 !important}
 </style>
-  
+  <script type="text/javascript">var curfid = null;function ShowPersonnage(oid){return TraiteFiche(oid, 'personnage')}function ShowNote(oid){return TraiteFiche(oid, 'note')}function ShowBrin(oid){return TraiteFiche(oid, 'brin')}function TraiteFiche(oid, otype){  var fid = 'fiche-'+otype+'-'+oid;  var other_fiche = fid != curfid;  if(curfid){HideCurFiche()}  if(other_fiche){ShowFiche(fid, otype)}  return false;}function DOMObject(fid){return document.getElementById(fid)}function ShowFiche(fid, ftype){  DOMObject(fid).classList='fiche '+ftype;  curfid=fid;}function HideCurFiche(){  var obj = document.getElementById(curfid);  obj.classList=obj.classList+' hidden';  curfid=null;  return false;}</script>
 </head>
 <body>
   
   <!--
-EXTRACTION DU 14 04 2017 - 14:34
+EXTRACTION DU 14 04 2017 - 16:34
 FILM : divisions2017
 -->
 <div id="titre">Fichier statistiques complet du film “Film pour divisions”</div>
 <section class="statistiques">
+<div class="titre">DONNÉES GÉNÉRALES</div>
+<section class="groupe">
 <div class="libvalval"><span class="label">Nombre de scènes</span><span class="value1">8</span><span class="value2"></span></div>
 <div class="libvalval"><span class="label">Temps moyen par scène</span><span class="value1">0:07:30</span><span class="value2"></span></div>
-<div class="libvalval"><span class="label">Plus longue scène</span><span class="value1">Scène 8 0:04:00 (Climax. Avec <a href="#" onclick="return ShowPersonnage('joe')">Joe Prota</a> et <a href="#" onclick="return ShowPersonnage('trois')">Troisième Perso</a>.<sup><a href="#" onclick="return ShowBrin(1)">brin 1</a></sup>)</span><span class="value2"></span></div>
-<div class="libvalval"><span class="label">Plus courte scène</span><span class="value1">Scène 7 0:11:00 Pivot 2. Avec <a href="#" onclick="return ShowPersonnage('trois')">Troisième Perso</a> et <a href="#" onclick="return ShowPersonnage('joe')">Joe Prota</a> et <a href="#" onclick="return ShowPersonnage('quatre')">Cento</a>.<sup><a href="#" onclick="return ShowBrin(1)">brin 1</a></sup></span><span class="value2"></span></div>
+<div class="libvalval"><span class="label">Plus courte scène</span><span class="value1">0:04:00</span><span class="value2"><div>Scène 8</div>Climax. Avec <a href="#" onclick="return ShowPersonnage('joe')">Joe Prota</a> et <a href="#" onclick="return ShowPersonnage('trois')">Troisième Perso</a>.<sup><a href="#" onclick="return ShowBrin(1)">brin 1</a></sup></span></div>
+<div class="libvalval"><span class="label">Plus longue scène</span><span class="value1">0:11:00</span><span class="value2"><div>Scène 7</div>Pivot 2. Avec <a href="#" onclick="return ShowPersonnage('trois')">Troisième Perso</a> et <a href="#" onclick="return ShowPersonnage('joe')">Joe Prota</a> et <a href="#" onclick="return ShowPersonnage('quatre')">Cento</a>.<sup><a href="#" onclick="return ShowBrin(1)">brin 1</a></sup></span></div>
+</section>
 <div class="titre"></div>
 <div class="titre">PERSONNAGES</div>
+<section class="groupe">
 <div class="libvalval"><span class="label">Nombre de personnages</span><span class="value1">4</span><span class="value2"></span></div>
+</section>
 <div class="titre">Classement des personnages par temps de présence</div>
+<section class="groupe">
 <div class="libvalval"><span class="label">#joe</span><span class="value1">Joe Prota</span><span class="value2">0:46:00</span></div>
 <div class="libvalval"><span class="label">#trois</span><span class="value1">Troisième Perso</span><span class="value2">0:20:00</span></div>
 <div class="libvalval"><span class="label">#jan</span><span class="value1">Jan</span><span class="value2">0:15:00</span></div>
 <div class="libvalval"><span class="label">#quatre</span><span class="value1">Cento</span><span class="value2">0:11:00</span></div>
+</section>
 <div class="titre"></div>
 <div class="titre">BRINS</div>
+<section class="groupe">
 <div class="libvalval"><span class="label">Nombre de brins</span><span class="value1">5</span><span class="value2"></span></div>
+</section>
 <div class="titre">Classement des brins par importance temporelle</div>
+<section class="groupe">
 <div class="libvalval"><span class="label">#4</span><span class="value1">Quatrième brin</span><span class="value2">0:29:00</span></div>
 <div class="libvalval"><span class="label">#1</span><span class="value1">Premier brin</span><span class="value2">0:20:00</span></div>
 <div class="libvalval"><span class="label">#2</span><span class="value1">Deuxième brin</span><span class="value2">0:14:00</span></div>
 <div class="libvalval"><span class="label">#5</span><span class="value1">Cinquième brin inutilisé par la collecte.</span><span class="value2">0:10:00</span></div>
 <div class="libvalval"><span class="label">#3</span><span class="value1">Troisième brin</span><span class="value2">0:05:00</span></div>
+</section>
 </section>
 <div class="fiche personnage hidden" id="fiche-personnage-joe"><a href="#" onclick="return HideCurFiche()" class="closebox">x</a><adminonly><a href="txmt://open/?url=file:///Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_5/personnages.collecte&line=1&column=1" class="tmlink">TM</a></adminonly><div class="titre">Joe Prota</div><div class="description"><div class="libval"><span class="label">Fonction</span><span class="value">Protagoniste</span></div><div class="libval"><span class="label">Année de naissance</span><span class="value">2000</span></div><div class="libval"><span class="label">Description</span><span class="value">Description du protagoniste Joe.</span></div></div></div>
 <div class="fiche personnage hidden" id="fiche-personnage-jan"><a href="#" onclick="return HideCurFiche()" class="closebox">x</a><adminonly><a href="txmt://open/?url=file:///Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_5/personnages.collecte&line=9&column=1" class="tmlink">TM</a></adminonly><div class="titre">Jan</div><div class="description"><div class="libval"><span class="label">Fonction</span><span class="value">Antagoniste</span></div><div class="libval"><span class="label">Description</span><span class="value">Description de l'antagoniste Jan.</span></div></div></div>
