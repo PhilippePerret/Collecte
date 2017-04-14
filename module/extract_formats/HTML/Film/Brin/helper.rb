@@ -11,7 +11,7 @@ class Brin
     div(
       closebox("return HideCurFiche()") +
       showinTM_link +
-      div(libelle_displayed, class: 'titre') +
+      div(libelle.to_html, class: 'titre') +
       to_html,
       {class: 'fiche brin hidden', id: "fiche-brin-#{id}"}
     )
@@ -19,7 +19,7 @@ class Brin
   def to_html
     c = String.new
     c << libval('Brin', id)
-    description && c << libval('Description', description_displayed, class: 'description')
+    description && c << libval('Description', description.to_html, class: 'description')
     return c
   end
 

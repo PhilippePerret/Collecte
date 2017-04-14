@@ -10,8 +10,8 @@ class Brin
   attr_reader :libelle
   alias :titre :libelle
 
-  # {String} Description du brin
-  attr_reader :description
+  # # {String} Description du brin
+  # attr_reader :description
 
 end #/Brin
 end #/Film

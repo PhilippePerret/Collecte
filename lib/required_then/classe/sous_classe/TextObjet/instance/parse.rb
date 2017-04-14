@@ -8,6 +8,9 @@ class TextObjet
 
   # Méthode principale qui parse une ligne de collecte
   # pour en faire un texte-objet.
+  #
+  # Retourne self pour le chainage
+  #
   def parse line
     line != nil || raise("Un texte-objet ne peut être parsé avec une line nil…")
     @raw      = line
@@ -75,7 +78,8 @@ class TextObjet
     @brins_ids = @brins_ids.reverse
     @notes_ids = @notes_ids.reverse!
 
-
+    # Pour le chainage
+    return self
   end
 
 end #/TextObjet

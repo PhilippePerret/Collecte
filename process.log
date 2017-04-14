@@ -1,27 +1,41 @@
-14/04 13:39:57 Fin du chargement des librairies (lib/required.rb)
-14/04 13:39:57 INSTANCIATION COLLECTE "/Users/philippeperret/Desktop/Everest_collect"
-14/04 13:39:57 Parsing préparé avec succès.
-14/04 13:39:57 PARSING DES MÉTADONNÉES…
-14/04 13:39:57 Métadata parsées ({:id=>"Everest2016", :titre=>"Éverest", :auteurs=>["Phil"], :debut=>"3/04/2017", :fin=>nil})
-14/04 13:39:57 PARSING DES BRINS…
-14/04 13:39:57 PARSING DES PERSONNAGES…
-14/04 13:39:57 PARSING DES SCÈNES…
-14/04 13:39:57 FIN DU FILM TROUVÉE à 1:54:00
-14/04 13:39:57 Calcul de la durée des scènes
-14/04 13:39:57 Sauvegarde des scènes
-14/04 13:39:57 Parsing préparé avec succès.
-14/04 13:39:57 PARSING DES MÉTADONNÉES…
-14/04 13:39:57 Métadata parsées ({:id=>"Everest2016", :titre=>"Éverest", :auteurs=>["Phil"], :debut=>"3/04/2017", :fin=>nil})
-14/04 13:39:57 PARSING DES BRINS…
-14/04 13:39:57 PARSING DES PERSONNAGES…
-14/04 13:39:57 PARSING DES SCÈNES…
-14/04 13:39:57 FIN DU FILM TROUVÉE à 1:54:00
-14/04 13:39:57 Calcul de la durée des scènes
-14/04 13:39:57 Sauvegarde des scènes
-14/04 13:39:57   -> prepare [path="/Users/philippeperret/Desktop/Everest_collect/extraction/full_statistiques.html"]
-14/04 13:39:57   <- prepare
-14/04 13:39:57 Méthode d'extraction à utiliser : :extract_statistiques
-14/04 13:39:57 STATISTIQUES : données générales
-14/04 13:39:57 Liste des IDs de personnages retenus : ["rob", "helen", "guy", "harold", "mike", "jan", "krakauer", "doug", "beck", "yasuko", "ang", "scott", "ianwoodall", "sandy", "caro", "peach", "anatoli", "neal", "lopsang", "david"]
-14/04 13:39:57 STATISTIQUES : données des brins
-14/04 13:39:57 Liste des IDs de brins retenus : [5, 10, 11, 1, 3, 2, 4, 6, 7, 8, 12, 9]
+14/04 14:08:07 Fin du chargement des librairies (lib/required.rb)
+14/04 14:08:08 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+14/04 14:08:08 Parsing préparé avec succès.
+14/04 14:08:08 PARSING DES MÉTADONNÉES…
+14/04 14:08:08 Métadata parsées ({:id=>"Everest2016", :titre=>"Éverest", :auteurs=>["Phil", "Benoit"], :debut=>"25/4/2017", :fin=>"30/4/2017"})
+14/04 14:08:08 PARSING DES BRINS…
+14/04 14:08:08 PARSING DES PERSONNAGES…
+14/04 14:08:08 PARSING DES SCÈNES…
+14/04 14:08:08 Calcul de la durée des scènes
+14/04 14:08:08 Sauvegarde des scènes
+14/04 14:08:08 -> Film#load_from_pstore
+14/04 14:08:08 <- Film#load_from_pstore OK
+14/04 14:08:08   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2/extraction/.html"]
+14/04 14:08:08   <- prepare
+14/04 14:08:08 Méthode d'extraction à utiliser : :extract_whole
+14/04 14:08:08 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
+14/04 14:08:08 SASSisation du fichier CSS `resume.css`
+14/04 14:08:08 SASSisation du fichier CSS `sequencier.css`
+14/04 14:08:08 SASSisation du fichier CSS `statistiques.css`
+14/04 14:08:08 SASSisation du fichier CSS `synopsis.css`
+14/04 14:08:08 SASSisation du fichier CSS `brins_simples.css`
+14/04 14:08:08 SASSisation du fichier CSS `brut.css`
+14/04 14:08:08 SASSisation du fichier CSS `chemin_de_fer.css`
+14/04 14:08:08 SASSisation du fichier CSS `events.css`
+14/04 14:08:08 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2"
+14/04 14:08:08 -> Film#load_from_pstore
+14/04 14:08:08 <- Film#load_from_pstore OK
+14/04 14:08:08 -> Film#load_from_pstore
+14/04 14:08:08 <- Film#load_from_pstore OK
+14/04 14:08:08   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_2/extraction/full_extract_data.html"]
+14/04 14:08:08   <- prepare
+14/04 14:08:08 Méthode d'extraction à utiliser : :extract_whole
+14/04 14:08:08 Le fichier SASS `_charte.sass` est plus jeune qu'un des fichiers CSS => actualisation générale nécessaire.
+14/04 14:08:08 SASSisation du fichier CSS `resume.css`
+14/04 14:08:08 SASSisation du fichier CSS `sequencier.css`
+14/04 14:08:08 SASSisation du fichier CSS `statistiques.css`
+14/04 14:08:08 SASSisation du fichier CSS `synopsis.css`
+14/04 14:08:08 SASSisation du fichier CSS `brins_simples.css`
+14/04 14:08:08 SASSisation du fichier CSS `brut.css`
+14/04 14:08:08 SASSisation du fichier CSS `chemin_de_fer.css`
+14/04 14:08:08 SASSisation du fichier CSS `events.css`

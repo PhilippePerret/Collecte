@@ -34,9 +34,9 @@ module RelativeObjectMethods
   # les durées.
   attr_reader :horloge
 
-  # {String} Description
+  # {Film::TextObjet} Description
   # Note : utilisée seulement pour quelques objets comme
-  # les brins
+  # les brins ou les personnages
   attr_reader :description
 
   # {Array de Fixnum} Liste des identifiants de brins

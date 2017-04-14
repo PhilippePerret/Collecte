@@ -27,7 +27,7 @@ class << self
     liste_ids =
       filtre_brins.collect do |arr|
         arr.each do |bid|
-          allbrins << {id: bid, titre: film.brins[bid].libelle}
+          allbrins << {id: bid, titre: film.brins[bid].libelle.to_html}
         end
         if arr.count > 1
           "(#{arr.join(' OU ')})"
@@ -53,8 +53,6 @@ class << self
     end
     film.titre && tit << " du film “#{film.titre}”"
 
-    log "tit : #{tit.inspect}"
-
     case options[:format]
     when :text, :xml
     else
@@ -65,7 +63,6 @@ class << self
         end
       end
     end
-    log "tit : #{tit.inspect}"
     return tit
   end
 

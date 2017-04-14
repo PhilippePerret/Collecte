@@ -17,7 +17,7 @@ class TextObjet
   # Distpatch dans le texte-objet les données +hdata+ et
   # retourne l'instance Film::TextObjet
   def dispatch hdata
-    hdata.each{|k,v|instance_variable_set("@#{k}",v)}
+    hdata.nil? || hdata.each{|k,v|instance_variable_set("@#{k}",v)}
     @horloge.nil? || @horloge = Film::Horloge.new(film, @horloge)
     return self # Pour chainer
   end
@@ -28,7 +28,7 @@ class TextObjet
   # personnages ont été remplacées par les pseudos et les
   # marques de brins et de notes ont été supprimées.
   def to_str options = nil
-    @only_str
+    only_str.to_s
   end
 
 

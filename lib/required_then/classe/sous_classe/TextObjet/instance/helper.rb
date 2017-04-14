@@ -8,6 +8,7 @@ class TextObjet
   # Note : c'est dans la classe que sont testés le fait qu'il
   # faut ajouter les relatifs ou non.
   def to_html
+    only_str != nil || (return '')
     c = only_str.dup
 
     # Traitement des personnages de l'objet
