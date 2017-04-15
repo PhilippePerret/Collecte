@@ -1,16 +1,3 @@
-* Pour l'aide qui s'ouvre quand on clique sur l'application Collecte, mettre plutôt :
-  - un lien vers le formulaire de collecte locale
-  - un lien vers le formulaire de collecte online
-  - un lien pour ouvrir le manuel en version PDF
-  - un lien pour ouvrir le manuel en version HTML
-  - un lien pour rejoindre tout de suite la partie sur la ligne de commande dans le manuel en HTML
-  * Indiquer où se trouve se fichier d'aide
-  
-* Prendre en compte la définition de la structure dans les métadonnées
-  - s'en servir dans le résumé et le synopsis pour séparer les actes.
-
-* Dans le fichier statistiques, tenir compte de la définition de la structure dans les métadonnées pour donner les écarts avec le PFA.
-
 * Mettre en place l'utilisation (déjà documentée) des options -p (personnages) et -b (brins) pour la commande `collecte parse` qui permet de ne parser que les personnages ou que les brins.
 
 * Poursuivre l'extraction des statistiques

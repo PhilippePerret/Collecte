@@ -12,6 +12,7 @@ class Extractor
     write '<section class="resumes">'
     scenes.each do |scene|
       write span(scene.resume.only_str, {class: 'resume'})
+      write '<br>' if scene.premiere_scene_acte?
     end
     write '</section>' #/synopsis
     final_file.flush
