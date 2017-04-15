@@ -91,8 +91,14 @@ class Scene
 
     @horloge = Film::Horloge.new(film, @horloge)
 
-    # TODO Il faut ajouter le décor à la liste des décors
-    # du film
+    # Ajouter le décor
+    decor = Film::Decor.new(film, {lieu: @lieu, decor: @decor})
+    film.decors << decor
+    # S'il y a un décor alternatif, il faut l'ajouter
+    if @decor_alt
+      decoralt = Film::Decor.new(film, {lieu: @lieu_alt || @lieu, decor: @decor_alt})
+      film.decors << decoralt
+    end
 
   end
 

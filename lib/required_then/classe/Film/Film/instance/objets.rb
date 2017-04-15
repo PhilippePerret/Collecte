@@ -5,5 +5,6 @@ class Film
   def brins       ; @brins        ||= Brins.new(self)       end
   def personnages ; @personnages  ||= Personnages.new(self) end
   def notes       ; @notes        ||= Notes.new(self)       end
+  def decors      ; @decors       ||= Decors.new(self)      end
   
 end #/Film

@@ -26,7 +26,7 @@ TO_TIME = nil
 options = {
   format:             OUTPUT_FORMAT,
   as:                 :sequencier,
-  force_parsing:      FORCE_PARSING
+  force_parsing:      FORCE_PARSING,
   suggest_structure:  SUGGEST_STRUCTURE,  # Pour suggérer la structure
   open_file:          true
 }
