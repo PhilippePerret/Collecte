@@ -59,6 +59,18 @@ module RelativeObjectMethods
   # Propriétés volatiles
   # --------------------
 
+  # Points structurels, si des @stt_points_ids sont
+  # définis
+  def points_structurels
+    @points_structurels ||= begin
+      if stt_points_ids
+        stt_points_ids.collect do |stt_point|
+          Film::Structure::Point.new(self, stt_point)
+        end
+      end
+    end
+  end
+
   # Renvoie le type de l'élémen par exemple :brin,
   # :personnage ou :scene
   def type_element

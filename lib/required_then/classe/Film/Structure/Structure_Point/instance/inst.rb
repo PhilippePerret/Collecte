@@ -3,11 +3,9 @@ class Film
 class Structure
 class Point
 
-  def initialize film, id, data = nil
-    @id = id
-    data.nil? || begin
-      @data = data
-    end
+  def initialize owner, id
+    @owner  = owner
+    @id     = id
   end
 
 end #/Point

@@ -143,7 +143,7 @@ Si la scène contient plusieurs points structurels, ils doivent impérativement 
 ~~~
 
 
-Avec le [bundle TextMate], il suffit de taper `stt` puis tabulation pour obtenir la liste des tous les points structurels possibles.
+Avec le [bundle TextMate], il suffit de taper `stt` puis tabulation pour obtenir la liste des tous les points structurels possibles et choisir celui qu'on veut insérer dans la scène.
 
 Cette liste contient :
 
