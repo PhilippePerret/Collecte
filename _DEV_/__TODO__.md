@@ -1,10 +1,5 @@
-
-* Poursuivre le traitement des points structurels
-
-* Analyser la structure si elle est définie dans les métadonnées.
-
 * Prendre en compte la définition de la structure dans les métadonnées
-  - Pour le moment, s'en servir dans le résumé et le synopsis pour séparer les actes.
+  - s'en servir dans le résumé et le synopsis pour séparer les actes.
 
 * Dans le fichier statistiques, tenir compte de la définition de la structure dans les métadonnées pour donner les écarts avec le PFA.
 

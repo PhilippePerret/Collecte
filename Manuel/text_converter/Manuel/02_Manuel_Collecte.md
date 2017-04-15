@@ -56,7 +56,7 @@ Les scènes du film sont *collectées* dans un fichier du [dossier de collecte]�
 
 Grâce au [bundle TextMate], ce fichier peut être créé à l'aide de la commande `Scènes : créer le fichier`.
 
-### Format général d'une scène
+### Format général d'une scène {#formatgeneralscene}
 
 Dans le fichier `scenes.collecte`, une scène se présente sous la forme :
 
@@ -105,6 +105,7 @@ La fin du film se détermine par la ligne :
 
 Cette ligne n'est pas comptée pour une scène.
 
+
 ### Appartenance de la scène à des brins ou des notes {#sceneinbrinsornotes}
 
 Les dernières lignes de la scène peuvent permettre de l'introduire dans des brins ou des notes (principalement des brins).
@@ -119,11 +120,11 @@ Par exemple, cette scène appartiendra au brin 12 et à la note 4 :
       b12 n4
 ~~~
 
-### Définition d'un point structurel pour la scène {#pointsttinscene}
+### Points structurels de la scène {#pointsttinscene}
 
-On peut définir que la scène appartient à un point structure, ou qu'un point structurel est contenu dans la scène, en définissant une ligne où apparaitra seulement (« seulement » est important) le point structurel en question.
+Les *points structurels*, ce sont les `pivots`, les `clé de voûte`, le début du dénouement et autres début de la seconde partie de développement.
 
-Par exemple :
+On peut indiquer la présence de tels points structurels en mettant sur une ligne, plutôt à la fin, la *marque du point structurel* **et seulement cette marque**. Par exemple :
 
 ~~~
       0:23:54 INT. JOUR MAISON DE JOE
@@ -132,7 +133,7 @@ Par exemple :
       b12 n4    
 ~~~
 
-Si la scène contient plusieurs points structurels, ils doivent impérativement être spécifiés sur des lignes différentes. Par exemple :
+Si la scène contient plusieurs points structurels, ils doivent impérativement être spécifiés *sur des lignes différentes*. Par exemple :
 
 ~~~
       0:12:54 INT. JOUR MAISON DE JOE
@@ -159,6 +160,8 @@ Cette liste contient :
       STT_DENOUEMENT    Début du dénouement
       STT_CLIMAX        Climax
 ~~~
+
+Consulter le livre Narration sur la structure pour la définition de ces points.
 
 ### Création de la scène à l'aide du bundle TextMate
 
