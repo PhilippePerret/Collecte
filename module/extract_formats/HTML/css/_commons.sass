@@ -63,7 +63,7 @@ div.libval
 
 div.libvalval
   margin-left : 4em
-  width       : 740px
+  width       : auto // 740px
   padding     : 12px 0.5em
   &:nth-child(odd)
     background-color    : #CCF
@@ -74,13 +74,16 @@ div.libvalval
     display         : inline-block
     vertical-align  : top
   span.label
-    width           : 220px
+    width           : 180px
     font-style      : italic
     color           : #777
+    text-align      : right
+    padding-right   : 1em
   span.value1
-    width       : 260px
+    width       : 160px
+    text-align  : center
   span.value2
-    width       : 260px
+    width       : 400px
 
   &.libelles
     font-style      : italic
@@ -90,5 +93,6 @@ div.libvalval
     padding         : 4px 20px
     background-color  : #616161
     span.label
-      color     : #A7A7A7
-      font-size : 1em
+      color       : #A7A7A7
+      font-size   : 1em
+      text-align  : left

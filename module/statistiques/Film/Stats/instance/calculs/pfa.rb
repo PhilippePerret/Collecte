@@ -63,8 +63,7 @@ class Statistiques
 
     if c.count > 0
       c = [
-        [:titre, 'MODÈLE DE FIELD (PFA)'],
-        [:titre, 'Positions par rapport au modèle de Field'],
+        [:titre, 'POSITION DES POINTS PAR RAPPORT AU MODÈLE DE FIELD (PFA)'],
         [:section_in],
         [:libelles, 'Point structurel', 'position absolue', 'position dans le film']
       ] + c + [

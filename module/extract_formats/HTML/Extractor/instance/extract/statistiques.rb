@@ -38,35 +38,41 @@ class Extractor
       [:data, '… personnages', stats.nombre_personnages],
       [:data, '… brins', stats.nombre_brins],
       [:data, '… points structurels définis', stats.nombre_points_structurels, stats.points_in_et_out],
-      [:section_out],
+      [:section_out]
+    ] + stats.helper_pfa + [
       [:titre, 'SCÈNES'],
       [:section_in],
       [:data, 'Temps moyen par scène', stats.temps_moyen_scene_str],
       [:data, 'Plus courte scène', stats.shortest_scene.hduree, shortscene],
       [:data, 'Plus longue scène', stats.longest_scene.hduree, longscene],
       [:section_out],
+      [:titre, 'Dix plus longues scènes du film'],
+      [:libelles, 'numéro', 'durée', 'résumé']
+    ] + stats.ten_longest_scenes.collect do |scene|
+      [:data, "Scène #{scene.numero}<br>à #{scene.horloge.real_horloge}", scene.duree.s2h, scene.resume.to_html]
+    end + [
       [:empty],
       [:titre, 'PERSONNAGES'],
       [:titre, 'Classement des personnages par temps de présence'],
       [:section_in],
-      [:libelles, 'ID personnage', 'Patronyme', 'Présence dans le film']
+      [:libelles, 'ID', 'Présence', 'Patronyme']
     ] + stats.personnages_par_temps_presence.collect do |perso|
       # Données statistiques pour les personnages
-      [:data, perso.id, perso.pseudo, perso.presence.s2h]
+      [:data, perso.id, perso.presence.s2h, perso.as_link]
     end + [
       [:section_out],
       [:empty],
       [:titre, 'BRINS'],
       [:titre, 'Classement des brins par importance temporelle'],
       [:section_in],
-      [:libelles, 'ID Brin', 'Libellé', 'Présence dans le film']
+      [:libelles, 'ID', 'Durée totale', 'Libellé']
     ] + stats.brins_par_temps_presence.collect do |brin|
       # Données statistiques pour les brins
-      [:data, brin.id, brin.libelle.to_html, brin.presence.s2h]
+      [:data, brin.id, brin.presence.s2h, brin.libelle.to_html]
     end + [
       [:section_out],
       [:empty]
-    ] + stats.helper_pfa
+    ]
 
     log "STATISTIQUES : constitution du code"
     data_stats.each do |type, label, value1, value2|

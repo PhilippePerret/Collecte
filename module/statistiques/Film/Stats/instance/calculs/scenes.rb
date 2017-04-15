@@ -8,6 +8,15 @@ class Statistiques
       self.scenes.count
     end
   end
+  def scenes_classees
+    @scenes_classees ||= scenes.sort_by{|scene| - scene.duree}
+  end
+
+  # Retourne la liste des 10 plus longues scènes
+  # Array de Film::Scene
+  def ten_longest_scenes
+    @ten_longest_scenes ||= scenes_classees[1..10]
+  end
 
   def temps_moyen_scene_str
     @temps_moyen_scene_str ||= temps_moyen_scene.s2h
@@ -20,26 +29,13 @@ class Statistiques
     "Scène #{longest_scene.numero} #{longest_scene.duree.s2h} #{longest_scene.resume.to_html}"
   end
   def longest_scene
-    @longest_scene ||= begin
-      longest = scenes.first
-      scenes.each do |scene|
-        scene.duree <= longest.duree || longest = scene
-      end
-      longest
-    end
+    @longest_scene ||= scenes_classees.first
   end
-
   def value_shortest_scene
     "Scène #{shortest_scene.numero} #{shortest_scene.duree.s2h} (#{shortest_scene.resume.to_html})"
   end
   def shortest_scene
-    @shortest_scene ||= begin
-      shortest = scenes.first
-      scenes.each do |scene|
-        scene.duree >= shortest.duree || shortest = scene
-      end
-      shortest
-    end
+    @shortest_scene ||= scenes_classees.last
   end
 
 end #/Statistiques
