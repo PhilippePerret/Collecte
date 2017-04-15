@@ -38,6 +38,7 @@ class Point
     end
   end
 
+
   # {Film::Zone} La zone relative du film, en fonction
   # de la scène (son début et sa fin)
   def zone_relative
@@ -68,7 +69,9 @@ class Point
   end
 
   def offset
-    exist? ? zone_relative.offset_with(zone_pfa) : nil
+    @offset ||= begin
+      exist? ? zone_relative.offset_with(zone_pfa) : nil
+    end
   end
 
 end #/Point

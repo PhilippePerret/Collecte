@@ -1,13 +1,45 @@
-15/04 08:08:26 Fin du chargement des librairies (lib/required.rb)
-15/04 08:08:26 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_1"
-15/04 08:08:26 Parsing préparé avec succès.
-15/04 08:08:26 PARSING DES MÉTADONNÉES…
-15/04 08:08:26 PARSING DES PERSONNAGES…
-15/04 08:08:26 PARSING DES BRINS…
-15/04 08:08:26 PARSING DES SCÈNES…
-15/04 08:08:26 Point structurel trouvé dans la scène : :inc_pert
-15/04 08:08:26 Point structurel trouvé dans la scène : :inc_dec
-15/04 08:08:26 Point structurel trouvé dans la scène : :denouement
-15/04 08:08:26 FIN DU FILM TROUVÉE à 0:03:50
-15/04 08:08:26 Calcul de la durée des scènes
-15/04 08:08:26 Sauvegarde des scènes
+15/04 11:44:33 Fin du chargement des librairies (lib/required.rb)
+15/04 11:44:33 INSTANCIATION COLLECTE "/Users/philippeperret/Desktop/Everest_collect"
+15/04 11:44:33 Parsing préparé avec succès.
+15/04 11:44:33 PARSING DES MÉTADONNÉES…
+15/04 11:44:33 Métadata parsées ({:id=>"Everest2016", :titre=>"Éverest", :auteurs=>["Phil"], :debut=>"3/04/2017"})
+15/04 11:44:33 PARSING DES PERSONNAGES…
+15/04 11:44:33 PARSING DES BRINS…
+15/04 11:44:33 PARSING DES SCÈNES…
+15/04 11:44:33 Point structurel trouvé dans la scène : :inc_pert
+15/04 11:44:34 Point structurel trouvé dans la scène : :inc_dec
+15/04 11:44:34 Point structurel trouvé dans la scène : :pivot_1
+15/04 11:44:34 Point structurel trouvé dans la scène : :climax
+15/04 11:44:34 Point structurel trouvé dans la scène : :cle_de_voute
+15/04 11:44:34 Point structurel trouvé dans la scène : :pivot_2
+15/04 11:44:34 FIN DU FILM TROUVÉE à 1:54:00
+15/04 11:44:34 Calcul de la durée des scènes
+15/04 11:44:34 Sauvegarde des scènes
+15/04 11:44:34 Parsing préparé avec succès.
+15/04 11:44:34 PARSING DES MÉTADONNÉES…
+15/04 11:44:34 Métadata parsées ({:id=>"Everest2016", :titre=>"Éverest", :auteurs=>["Phil"], :debut=>"3/04/2017"})
+15/04 11:44:34 PARSING DES PERSONNAGES…
+15/04 11:44:34 PARSING DES BRINS…
+15/04 11:44:34 PARSING DES SCÈNES…
+15/04 11:44:34 Point structurel trouvé dans la scène : :inc_pert
+15/04 11:44:34 Point structurel trouvé dans la scène : :inc_dec
+15/04 11:44:34 Point structurel trouvé dans la scène : :pivot_1
+15/04 11:44:34 Point structurel trouvé dans la scène : :climax
+15/04 11:44:34 Point structurel trouvé dans la scène : :cle_de_voute
+15/04 11:44:34 Point structurel trouvé dans la scène : :pivot_2
+15/04 11:44:34 FIN DU FILM TROUVÉE à 1:54:00
+15/04 11:44:34 Calcul de la durée des scènes
+15/04 11:44:34 Sauvegarde des scènes
+15/04 11:44:34   -> prepare [path="/Users/philippeperret/Desktop/Everest_collect/extraction/full_statistiques.html"]
+15/04 11:44:34   <- prepare
+15/04 11:44:34 Méthode d'extraction à utiliser : :extract_statistiques
+15/04 11:44:34 Liste des IDs de personnages retenus : ["rob", "helen", "guy", "harold", "mike", "jan", "krakauer", "doug", "beck", "yasuko", "ang", "scott", "ianwoodall", "sandy", "caro", "peach", "anatoli", "neal", "lopsang", "david"]
+15/04 11:44:34 Liste des IDs de brins retenus : [5, 10, 11, 1, 3, 2, 4, 6, 7, 8, 12, 9]
+15/04 11:44:34 La scène 1 contient les points structurels : [:inc_pert]
+15/04 11:44:34 La scène 42 contient les points structurels : [:inc_dec, :pivot_1]
+15/04 11:44:34 La scène 43 contient les points structurels : [:climax]
+15/04 11:44:34 La scène 70 contient les points structurels : [:cle_de_voute]
+15/04 11:44:34 La scène 127 contient les points structurels : [:pivot_2]
+15/04 11:44:34 STATISTIQUES : constitution du code
+15/04 11:44:34 STATISTIQUES : /fin de constitution du code
+15/04 11:44:34 SASSisation du fichier CSS `statistiques.css`

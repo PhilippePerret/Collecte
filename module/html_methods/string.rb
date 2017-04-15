@@ -32,6 +32,7 @@ def libval1val2 label, value1, value2, attrs = nil
     attrs
   )
 end
+alias :libvalval :libval1val2
 
 
 # Retourne un code type pour une boite de fermeture

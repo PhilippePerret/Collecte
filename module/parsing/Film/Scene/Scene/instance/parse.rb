@@ -114,8 +114,9 @@ class Scene
       #
       # L I G N E   D E   R E L A T I F S
       #
-      # C'est la dernière ligne possible de la scène.
-
+      # Ça n'est plus forcément la dernière ligne
+      # de la scène, qui peut être maintenant une marque
+      # de point structurel.
       line.split(' ').each do |relmark|
         rel_mark, rel_id = relmark.match(/^(b|n|p|s)([0-9]+)$/i).to_a[1..-1]
         rel_id = rel_id.to_i
@@ -126,7 +127,7 @@ class Scene
       end
 
       return nil
-    when /^STT_([A-Z_]+)$/
+    when /^STT_([A-Z1-3_]+)$/
       #
       # P O I N T   S T R U C T U R E L
       #

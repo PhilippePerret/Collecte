@@ -40,20 +40,34 @@ class Horloge
     end
   end
 
-  # Position left du temps sur une ligne de temps
-  def left
-    @left ||= Film::Timeline::TIMELINE_LEFT + film.timeline.secondes_to_pixels(real_time)
+  # Le nombre d'heures du début
+  def heures
+    @heures ||= splitted_time[0].to_i
   end
-  # Largeur de l'horloge en fonction de la durée de
-  # l'objet
-  def width
-    @width ||= begin
-      if duree
-        film.timeline.secondes_to_pixels(duree, 2) + 1
-      else
-        4
-      end
-    end
+  # Le nombre de minutes du début
+  def minutes
+    @minutes ||= splitted_time[1].to_i
+  end
+  # Le nombre de secondes du début
+  def secondes
+    @secondes ||= splitted_time[2].to_i
+  end
+
+  def heures_end
+    @heures_end ||= splitted_end_time[0].to_i
+  end
+  def minutes_end
+    @minutes_end ||= splitted_end_time[1].to_i
+  end
+  def secondes_end
+    @secondes_end ||= splitted_end_time[2].to_i
+  end
+
+  def splitted_time
+    @splitted ||= time.s2h.split(':')
+  end
+  def splitted_end_time
+    @splitted_end_time ||= end_time.s2h.split(':')
   end
 
 end #/Horloge

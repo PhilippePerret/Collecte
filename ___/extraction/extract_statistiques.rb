@@ -24,13 +24,13 @@ TO_TIME = nil
 # ===========================================================
 
 options = {
-  format:       OUTPUT_FORMAT,
-  as:           :statistiques,
-  open_file:    true
+  format:         OUTPUT_FORMAT,
+  as:             :statistiques,
+  force_parsing:  FORCE_PARSING,
+  open_file:      true
 }
 FROM_TIME.nil?  || options.merge!(from_time: FROM_TIME)
 TO_TIME.nil?    || options.merge!(to_time:   TO_TIME)
 require_relative '../../lib/required'
 coll = Collecte.new(FOLDER_COLLECTE_PATH)
-FORCE_PARSING && coll.parse
 coll.extract(options)

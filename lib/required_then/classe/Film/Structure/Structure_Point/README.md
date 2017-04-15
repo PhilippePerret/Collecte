@@ -31,7 +31,7 @@ Les méthodes importantes d'un point structurel sont :
                   retournent NIL s'il s'agit d'un point qui
                   n'est pas fixé dans le temps, comme la
                   crise par exemple.
-                  
+
       offset      Si le point est hors zone, le décalage avec
                   la zone absolue.
                   < 0 si le point est avant la zone absolue
@@ -42,6 +42,12 @@ Les méthodes importantes d'un point structurel sont :
                   `zone_pfa.debut` qui donne le début en secondes
                   et `zone_pfa.fin` qui donne la fin en secondes.
                   C'est une instance {Film::Zone}.
+
+      zone_pfa_h  La marque "de h:mm:ss à h:mm:ss" pour spécifier
+                  la zone.
+      zone_relative_h Idem, pour la zone relative, donc celle du
+                  film (= la scène)
+
 ~~~
 
 ## Rapport statistique
