@@ -60,7 +60,7 @@ Le fichier « résumé » est un fichier qui ne reprent que les résumés des 
       )
 ~~~
 
-Si les actes sont définis (cf. [définition des actes]), un retour à ligne est ajouté à chaque changement d'acte.
+Si les actes sont définis (cf. [définition des actes]), une séparation est ajoutée à chaque changement d'acte.
 
 ## Extraire le synopsis {#extrairesynopsis}
 
@@ -99,6 +99,8 @@ Si les actes sont définis (cf. [définition des actes]), un retour à ligne est
       )
 
 ~~~
+
+> Note : comme pour les résumés, si les actes sont définis (cf. [définition des actes]), une séparation est faite suivant les différentes parties.
 
 ## Extraire des séquenciers {#extraire_sequenciers}
 
