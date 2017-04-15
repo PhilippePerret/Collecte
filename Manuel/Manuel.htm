@@ -7,12 +7,17 @@
 
 nav#__tdm__{border:1px solid #CCC;padding:1em;font-size:.85em;width:75%;background-color:#EFEFEF}nav#__tdm__.float{float:right;margin-left:4em;margin-bottom:2em}nav#__tdm__.float_left{float:left;margin-right:4em;margin-bottom:2em}nav#__tdm__.right{margin-left:20%}nav#__tdm__.left{margin-left:2%}nav#__tdm__ div.titre{font-variant:small-caps;font-size:1.4em}nav#__tdm__ ul{list-style:none}nav#__tdm__ ul a.__atdm__:link,nav#__tdm__ ul a.__atdm__:visited,nav#__tdm__ ul a.__atdm__:hover{text-decoration:none;color:inherit}nav#__tdm__ ul a.__atdm__:hover{text-decoration:underline}nav#__tdm__ ul li.__litdm__.__tdmlevel1__{margin-left:0}nav#__tdm__ ul li.__litdm__.__tdmlevel1__ a.__atdm__{font-size:1.2em}nav#__tdm__ ul li.__litdm__.__tdmlevel2__{margin-left:1em}nav#__tdm__ ul li.__litdm__.__tdmlevel2__ a.__atdm__{font-size:1.15em}nav#__tdm__ ul li.__litdm__.__tdmlevel3__{margin-left:2em}nav#__tdm__ ul li.__litdm__.__tdmlevel3__ a.__atdm__{font-size:1.1em}nav#__tdm__ ul li.__litdm__.__tdmlevel4__{margin-left:3em}nav#__tdm__ ul li.__litdm__.__tdmlevel4__ a.__atdm__{font-size:1.05em}nav#__tdm__ ul li.__litdm__.__tdmlevel5__{margin-left:4em}nav#__tdm__ ul li.__litdm__.__tdmlevel5__ a.__atdm__{font-size:1em}nav#__tdm__ ul li.__litdm__.__tdmlevel6__{margin-left:5em}nav#__tdm__ ul li.__litdm__.__tdmlevel6__ a.__atdm__{font-size:.85em}</style>
 </head>
-<body id="top"><nav role="navigation" id="__tdm__" class="float"><div class="titre">Table des matières</div><ul class="__ul_tdm__"><li class="__litdm__ __tdmlevel1__"><a class="__atdm__" href="#collectefilm">Collecte des informations</a></li>
+<body id="top"><nav role="navigation" id="__tdm__" class="float"><div class="titre">Table des matières</div><ul class="__ul_tdm__"><li class="__litdm__ __tdmlevel1__"><a class="__atdm__" href="#leprogrammecollecte">Le programme <code>Collecte</code></a></li>
+<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#troismodesutilisation">Les trois modes d’utilisation de <code>Collecte</code></a></li>
+<li class="__litdm__ __tdmlevel1__"><a class="__atdm__" href="#collectefilm">Collecte des informations</a></li>
+<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#fichiersdecollecte">Les fichiers de collecte</a></li>
 <li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#dossiercollecte">Dossier de collecte</a></li>
 <li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#definirfindufilm">Définition de la fin du film</a></li>
 <li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#tempsreelsetrelatifs">Temps réels et temps relatifs</a></li>
 <li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#collectedesscenes">Collecte des scènes</a></li>
-<li class="__litdm__ __tdmlevel3__"><a class="__atdm__" href="#format-gnral-dune-scne">Format général d’une scène</a></li>
+<li class="__litdm__ __tdmlevel3__"><a class="__atdm__" href="#formatgeneralscene">Format général d’une scène</a></li>
+<li class="__litdm__ __tdmlevel3__"><a class="__atdm__" href="#sceneinbrinsornotes">Appartenance de la scène à des brins ou des notes</a></li>
+<li class="__litdm__ __tdmlevel3__"><a class="__atdm__" href="#pointsttinscene">Points structurels de la scène</a></li>
 <li class="__litdm__ __tdmlevel3__"><a class="__atdm__" href="#cration-de-la-scne--laide-du-bundle-textmate">Création de la scène à l’aide du bundle TextMate</a></li>
 <li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#gestiondesbrins">Collecte et gestion des brins</a></li>
 <li class="__litdm__ __tdmlevel3__"><a class="__atdm__" href="#format-gnral-dun-brin">Format général d’un brin</a></li>
@@ -46,8 +51,16 @@ nav#__tdm__{border:1px solid #CCC;padding:1em;font-size:.85em;width:75%;backgrou
 <li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#extrairesynopsis">Extraire le synopsis</a></li>
 <li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#extraire_sequenciers">Extraire des séquenciers</a></li>
 <li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#extraire_brins">Extraire un ou des brins</a></li>
+<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#extraire-le-fichier-statistiques-extraire-statistiques">Extraire le fichier statistiques {#extraire statistiques}</a></li>
 <li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#set_from_and_to_time">Définir le temps de début et le temps de fin</a></li>
-<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#forcerparsing">Forcer le parsing avant l’extraction</a></li>
+<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#setformatsortie">Définir le format de sortie</a></li>
+<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#optionsextraction">Options de l’extraction</a></li>
+<li class="__litdm__ __tdmlevel3__"><a class="__atdm__" href="#option_notimeline">Option : ne pas afficher la timeline</a></li>
+<li class="__litdm__ __tdmlevel3__"><a class="__atdm__" href="#option_suggeststructure">Option : suggérer la structure</a></li>
+<li class="__litdm__ __tdmlevel3__"><a class="__atdm__" href="#forcerparsing">Option : forcer le parsing avant l’extraction</a></li>
+<li class="__litdm__ __tdmlevel3__"><a class="__atdm__" href="#option_horloge_synopsis">Option : mettre une horloge au synopsis</a></li>
+<li class="__litdm__ __tdmlevel3__"><a class="__atdm__" href="#option_ouvrirfichierextrait">Option : ouvrir le fichier extrait</a></li>
+<li class="__litdm__ __tdmlevel3__"><a class="__atdm__" href="#option_debugger">Option : débugger</a></li>
 <li class="__litdm__ __tdmlevel1__"><a class="__atdm__" href="#annexes">Annexes</a></li>
 <li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#formatagedeshorloges">Formatage des horloges</a></li>
 <li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#nomfichiersextraits">Nom et titre des fichiers extraits</a></li>
@@ -59,16 +72,49 @@ nav#__tdm__{border:1px solid #CCC;padding:1em;font-size:.85em;width:75%;backgrou
 
 <!-- ANNEXE -->
 
+<h1 id="leprogrammecollecte">Le programme <code>Collecte</code></h1>
+
+<p>Le programme <code>Collecte</code> permet de collecter les informations d’un film afin de produire des séquenciers, des synopsis, de sortir des statistiques, etc., tout fichier pouvant être utile pour les analyses.</p>
+
+<h2 id="troismodesutilisation">Les trois modes d’utilisation de <code>Collecte</code></h2>
+
+<ul>
+  <li>le mode d’aide : <code>collecte help</code>,</li>
+  <li>le mode de parsing. Pour <em>parser</em> les <a href="#fichiersdecollecte">fichiers de collecte</a></li>
+  <li>le mode d’extraction. Pour extraire les fichiers des données collectées, on parle d’<em>extraction</em>.</li>
+</ul>
+
+<pre><code>
+      $ collecte help[ pdf|html]
+
+      $ collecte parse[ options][ chemin/vers/dossier/collecte]
+
+      $ collecte extract [options][ chemin/vers/dossier/collecte]
+
+</code></pre>
+
+<p>Par exemple en ruby :</p>
+
+<pre><code class="language-ruby">      coll = Collecte.new('dossier/collecte')
+      coll.parse
+      coll.extract(:all)
+</code></pre>
+
 <h1 id="collectefilm">Collecte des informations</h1>
 
 <p>La <em>Collecte</em> est la première opération à exécuter. Elle consiste à rassembler toutes les informations du film dans un dossier appelé <em>dossier de collecte</em>.</p>
 
-<p>Ce dossier contient :</p>
+<p>Ce dossier contient tous les <a href="#fichiersdecollecte">fichiers de collecte</a>.</p>
+
+<h2 id="fichiersdecollecte">Les fichiers de collecte</h2>
+
+<p>On peut trouver dans la <a href="#dossiercollecte">dossier de collecte</a> les fichiers suivants :</p>
 
 <ul>
-  <li>le fichier des personnages (cf. <a href="#gestiondespersonnages">fichier des personnages</a>),</li>
-  <li>le fichier des brins (cf. <a href="#gestiondesbrins">fichier des brins</a>),</li>
-  <li>le fichier des scènes (cf. <a href="#collectedesscenes">fichier des scènes</a>).</li>
+  <li>le fichier des personnages (-&gt; le <a href="#gestiondespersonnages">fichier des personnages</a>),</li>
+  <li>le fichier des brins (-&gt; le <a href="#gestiondesbrins">fichier des brins</a>),</li>
+  <li>le fichier des scènes (-&gt; le <a href="#collectedesscenes">fichier des scènes</a>),</li>
+  <li>le fichier des métadonnées (-&gt; le <a href="#fichiermetadata">fichier des métadonnées</a>).</li>
 </ul>
 
 <h2 id="dossiercollecte">Dossier de collecte</h2>
@@ -116,7 +162,7 @@ nav#__tdm__{border:1px solid #CCC;padding:1em;font-size:.85em;width:75%;backgrou
 
 <p>Grâce au <a href="#bundletextmate">bundle TextMate</a>, ce fichier peut être créé à l’aide de la commande <code>Scènes : créer le fichier</code>.</p>
 
-<h3 id="format-gnral-dune-scne">Format général d’une scène</h3>
+<h3 id="formatgeneralscene">Format général d’une scène</h3>
 
 <p>Dans le fichier <code>scenes.collecte</code>, une scène se présente sous la forme :</p>
 
@@ -159,6 +205,58 @@ nav#__tdm__{border:1px solid #CCC;padding:1em;font-size:.85em;width:75%;backgrou
 </code></pre>
 
 <p>Cette ligne n’est pas comptée pour une scène.</p>
+
+<h3 id="sceneinbrinsornotes">Appartenance de la scène à des brins ou des notes</h3>
+
+<p>Les dernières lignes de la scène peuvent permettre de l’introduire dans des brins ou des notes (principalement des brins).</p>
+
+<p>Cette ligne comportera simplement les marques de ces appartenances, avec <code>b&lt;id brin&gt;</code> pour les brins ou <code>n&lt;id note&gt;</code> pour les notes.</p>
+
+<p>Par exemple, cette scène appartiendra au brin 12 et à la note 4 :</p>
+
+<pre><code>      0:23:54 INT. JOUR MAISON DE JOE
+      [PERSO#joe] rentre chez lui.
+      b12 n4
+</code></pre>
+
+<h3 id="pointsttinscene">Points structurels de la scène</h3>
+
+<p>Les <em>points structurels</em>, ce sont les <code>pivots</code>, les <code>clé de voûte</code>, le début du dénouement et autres début de la seconde partie de développement.</p>
+
+<p>On peut indiquer la présence de tels points structurels en mettant sur une ligne, plutôt à la fin, la <em>marque du point structurel</em> <strong>et seulement cette marque</strong>. Par exemple :</p>
+
+<pre><code>      0:23:54 INT. JOUR MAISON DE JOE
+      [PERSO#joe] rentre chez lui.
+      STT_CLE_DE_VOUTE
+      b12 n4    
+</code></pre>
+
+<p>Si la scène contient plusieurs points structurels, ils doivent impérativement être spécifiés <em>sur des lignes différentes</em>. Par exemple :</p>
+
+<pre><code>      0:12:54 INT. JOUR MAISON DE JOE
+      [PERSO#joe] rentre chez lui.
+      STT_INC_PERT
+      STT_INC_DEC
+      b12 n4    
+</code></pre>
+
+<p>Avec le <a href="#bundletextmate">bundle TextMate</a>, il suffit de taper <code>stt</code> puis tabulation pour obtenir la liste des tous les points structurels possibles et choisir celui qu’on veut insérer dans la scène.</p>
+
+<p>Cette liste contient :</p>
+
+<pre><code>      STT_INC_PERT      Incident perturbateur
+      STT_INC_DEC       Incident déclencheur
+      STT_PIVOT_1       Premier pivot
+      STT_DEV_PART1     Première partie de développement
+      STT_CLE_DE_VOUTE  Clé de voûte
+      STT_DEV_PART2     Seconde partie de dveloppement
+      STT_PIVOT_2       Second pivot
+      STT_CRISE         Crise
+      STT_DENOUEMENT    Début du dénouement
+      STT_CLIMAX        Climax
+</code></pre>
+
+<p>Consulter le livre Narration sur la structure pour la définition de ces points.</p>
 
 <h3 id="cration-de-la-scne--laide-du-bundle-textmate">Création de la scène à l’aide du bundle TextMate</h3>
 
@@ -786,6 +884,11 @@ nav#__tdm__{border:1px solid #CCC;padding:1em;font-size:.85em;width:75%;backgrou
 
 </code></pre>
 
+<p>Pour produire tous les brins, on utilise <code>--brins</code> seul, sans argument :</p>
+
+<pre><code>      $ collecte extract --brins
+</code></pre>
+
 <blockquote>
   <p>Cf. la <a href="#designationbrins">désignation des brins</a>.</p>
 </blockquote>
@@ -800,7 +903,40 @@ nav#__tdm__{border:1px solid #CCC;padding:1em;font-size:.85em;width:75%;backgrou
 </code></pre>
 
 <blockquote>
-  <p>Cf. la <a href="#designationbrins">désignation des brins</a>.</p>
+  <p>Cf. la <a href="#designationbrins">désignation des brins</a> pour voir comment désigner les brins à voir.</p>
+</blockquote>
+
+<p>Exemple :</p>
+
+<pre><code class="language-ruby">      coll = Collecte.new('dossier/collecte')
+      coll.extract(
+        as:     :brins,
+        brins:  '2+(4,12)'
+      )
+</code></pre>
+
+<h2 id="extraire-le-fichier-statistiques-extraire-statistiques">Extraire le fichier statistiques {#extraire statistiques}</h2>
+
+<p>Le fichier <em>statistiques</em> contient des données statistiques sur le film, telles que le nombre de scènes, leur durée moyenne, les temps de présence des personnages, etc.</p>
+
+<p><strong>Options en ligne de commande</strong></p>
+
+<pre><code>      --statistiques ou -stats
+</code></pre>
+
+<p>Par exemple :</p>
+
+<pre><code>      $ collecte extract -stats
+</code></pre>
+
+<p><strong>Programmation ruby</strong></p>
+
+<pre><code class="language-ruby">      coll = Collecte.new('dossier/collecte')
+      coll.extract(as: :statistiques)
+</code></pre>
+
+<blockquote>
+  <p>On peut tout à fait obtenir les statistiques seulement pour une portion de temps, ou pour un brin en particulier, en définissant ces paramètres.</p>
 </blockquote>
 
 <h2 id="set_from_and_to_time">Définir le temps de début et le temps de fin</h2>
@@ -846,7 +982,75 @@ nav#__tdm__{border:1px solid #CCC;padding:1em;font-size:.85em;width:75%;backgrou
       )
 </code></pre>
 
-<h2 id="forcerparsing">Forcer le parsing avant l’extraction</h2>
+<h2 id="setformatsortie">Définir le format de sortie</h2>
+
+<p>Pour le moment, la sortie la plus sûre est en <code>HTML</code> (format par défaut), mais elle le sera plus tard en <code>XML</code> et en <code>TEXT</code>.</p>
+
+<p><strong>Options en ligne de commande</strong></p>
+
+<pre><code>      --html  ou  --output_format=html  ou -o=html
+      --xml   ou  --output_format=xml   ou -o=xml
+      --text  ou  --output_format=text  ou -o=text
+</code></pre>
+
+<p>Par exemple :</p>
+
+<pre><code>      $ collecte extract --all --xml
+      ou
+      $ collecte extract -a -o=xml
+</code></pre>
+
+<p><strong>Programmation ruby</strong></p>
+
+<pre><code class="language-ruby">      coll = Collecte.new('dossier/collecte')
+      coll.extract(:all, format: :xml)
+</code></pre>
+
+<h2 id="optionsextraction">Options de l’extraction</h2>
+
+<h3 id="option_notimeline">Option : ne pas afficher la timeline</h3>
+
+<p>Par défaut, lorsque l’on produit un séquencier en <code>html</code>, une <em>timeline</em> est écrite en haut du document, qui permet de visualiser l’emplacement des scènes.</p>
+
+<p>Cette timeline peut être supprimée à l’extraction avec l’option <code>--no_timeline</code> ou <code>-ntl</code>.</p>
+
+<p>Par exemple, en ligne de commande :</p>
+
+<pre><code>      $ collecte extract -seq --no_timeline
+</code></pre>
+
+<p>En ruby :</p>
+
+<pre><code class="language-ruby">      coll = Collecte.new('dossier/collecte')
+      coll.extract(
+        as: :sequencier,
+        no_timeline: true
+      )
+</code></pre>
+
+<h3 id="option_suggeststructure">Option : suggérer la structure</h3>
+
+<p>Au moment de l’analyse, avant le placement des [points structurels], il peut être intéressant de demander à l’extraction de suggérer les positions de ces points structurels (mettre en relief les quarts-temps, les tiers-temps, etc.).</p>
+
+<p>Pour ce faire, on utilise l’option <code>--suggest_structure</code> ou <code>--stt</code>.</p>
+
+<p>Par exemple, en ligne de commande :</p>
+
+<pre><code>      $ collecte extract --sequencier --suggest_structure
+      ou
+      $ collecte extract -seq -stt
+</code></pre>
+
+<p>Ou en ruby :</p>
+
+<pre><code class="language-ruby">      coll = Collecte.new('dossier/collecte')
+      coll.extract(
+        as: :sequencier,
+        suggest_structure: true
+      )
+</code></pre>
+
+<h3 id="forcerparsing">Option : forcer le parsing avant l’extraction</h3>
 
 <p>Parfois des données sont modifiées dans les fichiers de collecte. Mais si un <em>parsing</em> a déjà eu lieu, les nouvelles données ne seront pas prises en compte. Pour qu’elles le soient, il faut <em>forcer à novueau le parsing</em>. On utilise pour ça l’option <code>force_parsing</code>.</p>
 
@@ -884,6 +1088,64 @@ nav#__tdm__{border:1px solid #CCC;padding:1em;font-size:.85em;width:75%;backgrou
         format:         :xml,
         force_parsing:  true
       )
+</code></pre>
+
+<h3 id="option_horloge_synopsis">Option : mettre une horloge au synopsis</h3>
+
+<p>On peut ajouter une horloge en regard des scènes du synopsis, pour les situer dans le temps, à l’aide de l’option <code>--horloge</code> ou <code>-h</code>.</p>
+
+<p>Par exemple, en ligne de commande :</p>
+
+<pre><code>      $ collecte extract --synopsis --horloge
+      ou
+      $ collecte extract -syn -h
+</code></pre>
+
+<p>Ou en ruby :</p>
+
+<pre><code class="language-ruby">      coll = Collecte.new('dossier/collecte')
+      coll.extract(
+        as:       :synopsis,
+        horloge:  true
+      )
+</code></pre>
+
+<h3 id="option_ouvrirfichierextrait">Option : ouvrir le fichier extrait</h3>
+
+<p>On peut ouvrir directement le fichier produit, en fin d’extraction, à l’aide de l’option <code>--open_file</code> ou <code>-open</code>.</p>
+
+<p>Par exemple :</p>
+
+<pre><code>      $ collecte extract --brins=2 --open_file
+      ou
+      $ collecte extract -b=2 -open
+</code></pre>
+
+<p>Ou en ruby :</p>
+
+<pre><code class="language-ruby">      coll = Collecte.new('dossier/collecte')
+      coll.extract(
+        as:         :brin,
+        brins:      '2',
+        open_file:  true
+      )
+</code></pre>
+
+<h3 id="option_debugger">Option : débugger</h3>
+
+<p>On peut ouvrir le fichier log en fin d’opération (parsing, extraction) à l’aide de l’option <code>--debug</code> ou <code>-d</code>.</p>
+
+<p>Par exemple, en ligne de programme :</p>
+
+<pre><code>      $ collecte parse --debug
+      ou
+      $ collecte parse -d
+</code></pre>
+
+<p>Ou, en ruby :</p>
+
+<pre><code class="language-ruby">      coll = Collecte.new('dossier/collecte')
+      coll.parse(debug: true)
 </code></pre>
 
 <h1 id="annexes">Annexes</h1>
