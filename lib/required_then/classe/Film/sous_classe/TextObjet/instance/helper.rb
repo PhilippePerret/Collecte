@@ -7,7 +7,8 @@ class TextObjet
   # destination, :sequencier ou :synopsis
   # Note : c'est dans la classe que sont testés le fait qu'il
   # faut ajouter les relatifs ou non.
-  def to_html
+  def to_html options = nil
+    options ||= Hash.new
     only_str != nil || (return '')
     c = only_str.dup
 
@@ -16,7 +17,7 @@ class TextObjet
       c = Film::Personnage.traite_balises_in(c)
     end
 
-    if self.class.add_relatifs?
+    if self.class.add_relatifs? && !options[:no_relatifs]
       objets_relatifs = Array.new
 
       # Traitement des notes du texte-objet

@@ -11,8 +11,8 @@ class Extractor
     # On ne prend que les scènes filtrées
     write '<section class="resumes">'
     scenes.each do |scene|
-      write span(scene.resume.only_str, {class: 'resume'})
-      write '<br>' if scene.premiere_scene_acte?
+      write '<p></p>' if scene.premiere_scene_acte?
+      write span(scene.resume.to_html(no_relatifs: true), {class: 'resume'})
     end
     write '</section>' #/synopsis
     final_file.flush

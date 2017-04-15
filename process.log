@@ -1,38 +1,37 @@
-15/04 17:57:30 Fin du chargement des librairies (lib/required.rb)
-15/04 17:57:30 INSTANCIATION COLLECTE "/Users/philippeperret/Desktop/Everest_collect"
-15/04 17:57:30 Parsing préparé avec succès.
-15/04 17:57:30 PARSING DES MÉTADONNÉES…
-15/04 17:57:30 Métadata parsées ({:id=>"Everest2016", :titre=>"Éverest", :auteurs=>["Phil"], :debut=>"3/04/2017"})
-15/04 17:57:30 PARSING DES PERSONNAGES…
-15/04 17:57:30 PARSING DES BRINS…
-15/04 17:57:30 PARSING DES SCÈNES…
-15/04 17:57:30 Point structurel trouvé dans la scène : :inc_pert
-15/04 17:57:30 Point structurel trouvé dans la scène : :inc_dec
-15/04 17:57:30 Point structurel trouvé dans la scène : :pivot_1
-15/04 17:57:30 Point structurel trouvé dans la scène : :dev_part1
-15/04 17:57:30 Point structurel trouvé dans la scène : :cle_de_voute
-15/04 17:57:30 Point structurel trouvé dans la scène : :pivot_2
-15/04 17:57:30 Point structurel trouvé dans la scène : :denouement
-15/04 17:57:30 FIN DU FILM TROUVÉE à 1:54:00
-15/04 17:57:30 Calcul de la durée des scènes
-15/04 17:57:30 Sauvegarde des scènes
-15/04 17:57:30 Parsing préparé avec succès.
-15/04 17:57:30 PARSING DES MÉTADONNÉES…
-15/04 17:57:30 Métadata parsées ({:id=>"Everest2016", :titre=>"Éverest", :auteurs=>["Phil"], :debut=>"3/04/2017"})
-15/04 17:57:30 PARSING DES PERSONNAGES…
-15/04 17:57:30 PARSING DES BRINS…
-15/04 17:57:30 PARSING DES SCÈNES…
-15/04 17:57:30 Point structurel trouvé dans la scène : :inc_pert
-15/04 17:57:30 Point structurel trouvé dans la scène : :inc_dec
-15/04 17:57:30 Point structurel trouvé dans la scène : :pivot_1
-15/04 17:57:30 Point structurel trouvé dans la scène : :dev_part1
-15/04 17:57:30 Point structurel trouvé dans la scène : :cle_de_voute
-15/04 17:57:30 Point structurel trouvé dans la scène : :pivot_2
-15/04 17:57:30 Point structurel trouvé dans la scène : :denouement
-15/04 17:57:30 FIN DU FILM TROUVÉE à 1:54:00
-15/04 17:57:30 Calcul de la durée des scènes
-15/04 17:57:30 Sauvegarde des scènes
-15/04 17:57:30   -> prepare [path="/Users/philippeperret/Desktop/Everest_collect/extraction/full_synopsis.html"]
-15/04 17:57:30   <- prepare
-15/04 17:57:30 Méthode d'extraction à utiliser : :extract_synopsis
-15/04 17:57:30 SASSisation du fichier CSS `synopsis.css`
+15/04 18:10:11 Fin du chargement des librairies (lib/required.rb)
+15/04 18:10:11 INSTANCIATION COLLECTE "/Users/philippeperret/Desktop/Everest_collect"
+15/04 18:10:11 Parsing préparé avec succès.
+15/04 18:10:11 PARSING DES MÉTADONNÉES…
+15/04 18:10:11 Métadata parsées ({:id=>"Everest2016", :titre=>"Éverest", :auteurs=>["Phil"], :debut=>"3/04/2017"})
+15/04 18:10:11 PARSING DES PERSONNAGES…
+15/04 18:10:11 PARSING DES BRINS…
+15/04 18:10:11 PARSING DES SCÈNES…
+15/04 18:10:11 Point structurel trouvé dans la scène : :inc_pert
+15/04 18:10:11 Point structurel trouvé dans la scène : :inc_dec
+15/04 18:10:11 Point structurel trouvé dans la scène : :pivot_1
+15/04 18:10:11 Point structurel trouvé dans la scène : :dev_part1
+15/04 18:10:11 Point structurel trouvé dans la scène : :cle_de_voute
+15/04 18:10:11 Point structurel trouvé dans la scène : :pivot_2
+15/04 18:10:11 Point structurel trouvé dans la scène : :denouement
+15/04 18:10:11 FIN DU FILM TROUVÉE à 1:54:00
+15/04 18:10:11 Calcul de la durée des scènes
+15/04 18:10:11 Sauvegarde des scènes
+15/04 18:10:11 Parsing préparé avec succès.
+15/04 18:10:11 PARSING DES MÉTADONNÉES…
+15/04 18:10:11 Métadata parsées ({:id=>"Everest2016", :titre=>"Éverest", :auteurs=>["Phil"], :debut=>"3/04/2017"})
+15/04 18:10:11 PARSING DES PERSONNAGES…
+15/04 18:10:11 PARSING DES BRINS…
+15/04 18:10:11 PARSING DES SCÈNES…
+15/04 18:10:11 Point structurel trouvé dans la scène : :inc_pert
+15/04 18:10:11 Point structurel trouvé dans la scène : :inc_dec
+15/04 18:10:11 Point structurel trouvé dans la scène : :pivot_1
+15/04 18:10:11 Point structurel trouvé dans la scène : :dev_part1
+15/04 18:10:11 Point structurel trouvé dans la scène : :cle_de_voute
+15/04 18:10:11 Point structurel trouvé dans la scène : :pivot_2
+15/04 18:10:11 Point structurel trouvé dans la scène : :denouement
+15/04 18:10:11 FIN DU FILM TROUVÉE à 1:54:00
+15/04 18:10:11 Calcul de la durée des scènes
+15/04 18:10:11 Sauvegarde des scènes
+15/04 18:10:11   -> prepare [path="/Users/philippeperret/Desktop/Everest_collect/extraction/resume.html"]
+15/04 18:10:11   <- prepare
+15/04 18:10:11 Méthode d'extraction à utiliser : :extract_resume
