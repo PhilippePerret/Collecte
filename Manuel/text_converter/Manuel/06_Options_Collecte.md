@@ -152,6 +152,13 @@ Exemple :
 
 ~~~
 
+Pour produire tous les brins, on utilise `--brins` seul, sans argument :
+
+~~~
+      $ collecte extract --brins
+~~~
+
+
 > Cf. la [désignation des brins].
 
 **Programmation ruby**
@@ -164,8 +171,43 @@ Exemple :
       )
 ~~~
 
-> Cf. la [désignation des brins].
+> Cf. la [désignation des brins] pour voir comment désigner les brins à voir.
 
+Exemple :
+
+~~~ruby
+      coll = Collecte.new('dossier/collecte')
+      coll.extract(
+        as:     :brins,
+        brins:  '2+(4,12)'
+      )
+~~~
+
+
+## Extraire le fichier statistiques {#extraire statistiques}
+
+Le fichier *statistiques* contient des données statistiques sur le film, telles que le nombre de scènes, leur durée moyenne, les temps de présence des personnages, etc.
+
+**Options en ligne de commande**
+
+~~~
+      --statistiques ou -stats
+~~~
+
+Par exemple :
+
+~~~
+      $ collecte extract -stats
+~~~
+
+**Programmation ruby**
+
+~~~ruby
+      coll = Collecte.new('dossier/collecte')
+      coll.extract(as: :statistiques)
+~~~
+
+> On peut tout à fait obtenir les statistiques seulement pour une portion de temps, ou pour un brin en particulier, en définissant ces paramètres.
 
 ## Définir le temps de début et le temps de fin {#set_from_and_to_time}
 
@@ -215,7 +257,82 @@ Exemple :
       )
 ~~~
 
-## Forcer le parsing avant l'extraction {#forcerparsing}
+## Définir le format de sortie {#setformatsortie}
+
+Pour le moment, la sortie la plus sûre est en `HTML` (format par défaut), mais elle le sera plus tard en `XML` et en `TEXT`.
+
+**Options en ligne de commande**
+
+~~~
+      --html  ou  --output_format=html  ou -o=html
+      --xml   ou  --output_format=xml   ou -o=xml
+      --text  ou  --output_format=text  ou -o=text
+~~~
+
+Par exemple :
+
+~~~
+      $ collecte extract --all --xml
+      ou
+      $ collecte extract -a -o=xml
+~~~
+
+**Programmation ruby**
+
+~~~ruby
+      coll = Collecte.new('dossier/collecte')
+      coll.extract(:all, format: :xml)
+~~~
+
+## Options de l'extraction {#optionsextraction}
+
+### Option : ne pas afficher la timeline {#option_notimeline}
+
+Par défaut, lorsque l'on produit un séquencier en `html`, une *timeline* est écrite en haut du document, qui permet de visualiser l'emplacement des scènes.
+
+Cette timeline peut être supprimée à l'extraction avec l'option `--no_timeline` ou `-ntl`.
+
+Par exemple, en ligne de commande :
+
+~~~
+      $ collecte extract -seq --no_timeline
+~~~
+
+En ruby :
+
+~~~ruby
+      coll = Collecte.new('dossier/collecte')
+      coll.extract(
+        as: :sequencier,
+        no_timeline: true
+      )
+~~~
+
+### Option : suggérer la structure {#option_suggeststructure}
+
+Au moment de l'analyse, avant le placement des [points structurels], il peut être intéressant de demander à l'extraction de suggérer les positions de ces points structurels (mettre en relief les quarts-temps, les tiers-temps, etc.).
+
+Pour ce faire, on utilise l'option `--suggest_structure` ou `--stt`.
+
+Par exemple, en ligne de commande :
+
+~~~
+      $ collecte extract --sequencier --suggest_structure
+      ou
+      $ collecte extract -seq -stt
+~~~
+
+Ou en ruby :
+
+~~~ruby
+      coll = Collecte.new('dossier/collecte')
+      coll.extract(
+        as: :sequencier,
+        suggest_structure: true
+      )
+~~~
+
+### Option : forcer le parsing avant l'extraction {#forcerparsing}
 
 Parfois des données sont modifiées dans les fichiers de collecte. Mais si un *parsing* a déjà eu lieu, les nouvelles données ne seront pas prises en compte. Pour qu'elles le soient, il faut *forcer à novueau le parsing*. On utilise pour ça l'option `force_parsing`.
 
@@ -255,4 +372,68 @@ Par exemple :
         format:         :xml,
         force_parsing:  true
       )
+~~~
+
+### Option : mettre une horloge au synopsis {#option_horloge_synopsis}
+
+On peut ajouter une horloge en regard des scènes du synopsis, pour les situer dans le temps, à l'aide de l'option `--horloge` ou `-h`.
+
+Par exemple, en ligne de commande :
+
+~~~
+      $ collecte extract --synopsis --horloge
+      ou
+      $ collecte extract -syn -h
+~~~
+
+Ou en ruby :
+
+~~~ruby
+      coll = Collecte.new('dossier/collecte')
+      coll.extract(
+        as:       :synopsis,
+        horloge:  true
+      )
+~~~
+
+### Option : ouvrir le fichier extrait {#option_ouvrirfichierextrait}
+
+On peut ouvrir directement le fichier produit, en fin d'extraction, à l'aide de l'option `--open_file` ou `-open`.
+
+Par exemple :
+
+~~~
+      $ collecte extract --brins=2 --open_file
+      ou
+      $ collecte extract -b=2 -open
+~~~
+
+Ou en ruby :
+
+~~~ruby
+      coll = Collecte.new('dossier/collecte')
+      coll.extract(
+        as:         :brin,
+        brins:      '2',
+        open_file:  true
+      )
+~~~
+
+### Option : débugger {#option_debugger}
+
+On peut ouvrir le fichier log en fin d'opération (parsing, extraction) à l'aide de l'option `--debug` ou `-d`.
+
+Par exemple, en ligne de programme :
+
+~~~
+      $ collecte parse --debug
+      ou
+      $ collecte parse -d
+~~~
+
+Ou, en ruby :
+
+~~~ruby
+      coll = Collecte.new('dossier/collecte')
+      coll.parse(debug: true)
 ~~~

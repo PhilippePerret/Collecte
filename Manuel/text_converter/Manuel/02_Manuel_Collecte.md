@@ -2,11 +2,16 @@
 
 La *Collecte* est la première opération à exécuter. Elle consiste à rassembler toutes les informations du film dans un dossier appelé *dossier de collecte*.
 
-Ce dossier contient :
+Ce dossier contient tous les [fichiers de collecte].
 
-* le fichier des personnages (cf. [fichier des personnages]),
-* le fichier des brins (cf. [fichier des brins]),
-* le fichier des scènes (cf. [fichier des scènes]).
+## Les fichiers de collecte {#fichiersdecollecte}
+
+On peut trouver dans la [dossier de collecte] les fichiers suivants :
+
+* le fichier des personnages (-> le [fichier des personnages]),
+* le fichier des brins (-> le [fichier des brins]),
+* le fichier des scènes (-> le [fichier des scènes]),
+* le fichier des métadonnées (-> le [fichier des métadonnées]).
 
 ## Dossier de collecte {#dossiercollecte}
 

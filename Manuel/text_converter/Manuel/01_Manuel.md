@@ -1,34 +1,27 @@
+# Le programme `Collecte` {#leprogrammecollecte}
 
-<!-- COLLECTE -->
-[dossier de la collecte]:     #dossiercollecte
-[dossier de collecte]:        #dossiercollecte
-[fichier des scènes]:         #collectedesscenes
-[fichier des personnages]:    #gestiondespersonnages
-[fichier des brins]:          #gestiondesbrins
-[fichier des métadonnées]:    #fichiermetadata
-[définition des actes]:       #definitionstructure
-[définition de la structure]: #definitionstructure
-[la commande collecte]:       #collectecommand
-[la commande `collecte`]:     #collectecommand
-[collecte des scènes]:        #collectedesscenes
-[gestion des brins]:          #gestiondesbrins
-[collecte des brins]:         #gestiondesbrins
-[gestion des personnages]:    #gestiondespersonnages
-[collecte des personnages]:   #gestiondespersonnages
+Le programme `Collecte` permet de collecter les informations d'un film afin de produire des séquenciers, des synopsis, de sortir des statistiques, etc., tout fichier pouvant être utile pour les analyses.
 
-<!-- EXTRACTION -->
-[fichier résumé]:           #fichierresume
-[fichier synopsis]:         #fichiersynopsis
-[fichiers séquencier]:      #fichierssequencier
-[fichiers brins]:           #fichiersbrins
-[désignation des brins]:    #designationbrins
-[le fichier statistiques]:  #fichierstatistiques
+## Les trois modes d'utilisation de `Collecte` {#troismodesutilisation}
 
-[explication sur les temps réels et relatifs]: #tempsreelsetrelatifs
-[formatage des horloges]: #formatagedeshorloges
-[nom des fichiers extraits]: #nomfichiersextraits
-[options de collecte]: #optionscommandcollecte
+* le mode d'aide : `collecte help`,
+* le mode de parsing. Pour *parser* les [fichiers de collecte]
+* le mode d'extraction. Pour extraire les fichiers des données collectées, on parle d'*extraction*.
 
-<!-- ANNEXE -->
-[bundle TextMate]: #bundletextmate
-[outil de collecte en ligne]: #outilcollecteenligne
+~~~
+
+      $ collecte help[ pdf|html]
+
+      $ collecte parse[ options][ chemin/vers/dossier/collecte]
+
+      $ collecte extract [options][ chemin/vers/dossier/collecte]
+
+~~~
+
+Par exemple en ruby :
+
+~~~ruby
+      coll = Collecte.new('dossier/collecte')
+      coll.parse
+      coll.extract(:all)
+~~~

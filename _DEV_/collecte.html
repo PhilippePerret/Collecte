@@ -14,163 +14,51 @@
     <style media="screen">
     body{width:680px;font-size:15.4pt;margin:4em;}
       p.note {font-style: italic;font-size:0.85em}
+      .tiny{font-size:0.7em}
       pre{font-size:0.9em;}
+      a{text-decoration:none;color:#005;}
+      li{margin-bottom:1em}
+      div#boutons{text-align:center;padding:2em}
+      div#boutons a.bouton, div#boutons a.lien{
+        border: 1px solid green;
+        border-radius:1em;
+        display:inline-block;
+        width:auto;
+        margin-top:1em;
+      }
+      div#boutons a.bouton{
+        background-color: green;
+        color:#CFC;
+        padding:1em 1.5em;
+      }
+      div#boutons a.lien {
+        padding:4px 1.5em;
+      }
     </style>
   </head>
   <body>
     <h1>Application Collecte (de film)</h1>
+    <adminonly>
+    <p class='tiny'>Ce fichier se trouve à l'adresse `Collecte/_DEV/collecte.html`</p></adminonly>
     <p class="note">Note : ce fichier s'ouvre lorsque la commande `Collecte` est appelée sans argument ou lorsqu'on double-clique sur l'application dans le dossier `/Applications`.</p>
-    <p>L'application « Collecte » permet de procéder à la collecte des informations d'un film (à commencer par les scènes, les brins et les personnages) pour produire ensuite des fichiers ou des portions de ficchiers utiles aux analyses de film.</p>
-    <p>Elle permet également de produire des statistiques sur le film collecté.</p>
-    <pre>
-usage :
+    <p>L'application « Collecte » permet de procéder à la collecte des informations d'un film (à commencer par les scènes, les brins et les personnages) pour produire ensuite des fichiers ou des portions de fichiers utilisables ensuite pour les analyses de film.</p>
+    <p>Elle permet également de produire des statistiques sur le film collecté, d'autant plus précises que la collecte est détaillée.</p>
 
-  collecte [command] [options] [mon/dossier/collecte]
+    <div id="boutons">
+      <div>
+        <a href="../Manuel/Manuel.htm" class="bouton" target="_blank">MANUEL HTML</a>
+        <a href="../Manuel/Manuel.pdf" class="bouton" target="_blank">MANUEL PDF</a>
+      </div>
+      <div>
+        <a href="../Manuel/Manuel.htm#collectecommand" target="_blank" class="lien">Rejoindre l'aide de la commande `Collecte`<br>(dans le manuel HTML)</a>
+      </div>
+      <div>
+        <a href="http://localhost/writertoolbox/" target="_blank" class="lien">Rejoindre le formulaire de collecte LOCAL<br>(s'il existe)</a>
+      </div>
+      <div>
+        <a href="http://www.laboiteaoutilsdelauteur.fr/analyse/collecteur" target="_blank" class="lien">Rejoindre le formulaire de collecte en ligne<br>(vous devez être identifié/e)</a>
+      </div>
+    </div>
 
-command
-
-    parse       Par parser des fichiers de collecte
-    extract     Pour extraire les fichiers d'analyse
-    help        Ouvre le manuel de l'application
-
-Exemple :
-
-    cd mon/dossier/collecte
-    collecte parse
-
-    cd mon/dossier/collecte
-    collecte extract --all
-
-options
-
-    --from=&lt;horloge>
-    -f=&lt;horloge>
-            Extraire depuis le temps (réel) défini par
-            l'horloge
-            Par exemple : -from=0:01:20
-    --to=&lt;horloge>
-    -t=&lt;horloge>
-            Extraire jusqu'au temps (réel) défini par l'horloge
-            Par exemple : -to=1:2:4
-
-    --all   Pour tout extraire, en fichier HTML
-    -a      Produit tous les fichiers qui peuvent être produit
-            par l'extraction, séquencier, résumé, brins, etc.
-
-    --html  Au format HTML (défaut)
-    --output_format=html
-    -o=html
-
-    --text  Sortie au format Text
-    --output_format=text
-    -o=text
-
-    --xml   Sortie au format XML
-    --output_format=xml
-    -o=xml
-
-    --sequencier
-    -seq
-            Extraction d'un séquencier
-
-    --statistiques
-    -stats
-            Extraction du fichier statistiques.
-
-    --no_timeline
-    --ntm   N'inscrit pas la timeline dans les fichiers
-            qui l'utilisent, comme les séquenciers.
-
-    --suggest_structure
-    -stt
-            En conjugaison avec l'option -seq, produit un
-            séquencier où les divisions sont indiquées, pour
-            pouvoir définir les pivots, et autres parties.
-
-    --brins=&lt;brins spec>
-    -b=&lt;brins spec>
-            Extraction d'un ou plusieurs brins définis par
-            &lt;brins spec> qui est de la forme :
-            2+3       Les scènes doivent appartenir aux brins
-                      2 ET 3 (les deux absolument)
-            2,3       Les scènes doivent appartenir aux brins
-                      2 OU 3 (seulement un des deux ou les deux)
-            2,(4+5)   Les scènes doivent appartenir au brin
-                      2 OU aux deux brins 4 ET 5.
-            2+(4,5)   Les scènes doivent appartenir aux brins
-                      2 ET aux brins (4 OU 5), donc appartenir
-                      aux brins 2 ET 4 ou aux brins 2 ET 5.
-
-    --horloge Ajoute l'horloge au synopsis
-    -h        Si l'option est précisée, une horloge sera
-              ajoutée dans la marge gauche des synopsis.
-
-
-    --force_parsing
-    -fp       Si cette option est précisée avec la commande
-              extract, alors on procède d'abord à un nouveau
-              parse des données avec d'extraire les fichiers
-
-    --open_file
-    -open
-
-              Ouvre le ou les fichiers extraits de la
-              collecte.
-
-    --debug   Pour débugger
-    -d
-
-    --verbose Mode verbeux (tout est dit)
-    -v
-
-Exemples
-========
-
-  Obtenir le manuel en HTML
-
-    collecte help
-
-  Obtenir le manuel en PDF
-
-    collecte help pdf
-
-  Produire tous les fichiers possibles, en HTML
-
-    collecte extract --all
-    ou
-    collecte extract -a
-
-  Production d'un séquencier complet du film en HTML.
-
-    collecte extract --sequencier
-    ou
-    collecte extract -seq
-
-  Production d'un séquencier complet du film en XML.
-
-    collecte extract --sequencier --xml
-    ou
-    collecte extract -seq -o=xml
-
-  Production de tous les brins du film, en HTML
-
-    collecte extract --brins
-
-  Production d'un séquencier ne contenant que les scènes
-  des brins 4 ou 12, depuis la 12e minute du film jusqu'à
-  la 45e minute
-
-    collecte extract --brins=4,12 --from=12:0 --to=45:0
-    ou
-    collecte extract --b=4,12 -f=12:0 -t=45:0
-
-  Produire un séquencier qui indique où peuvent se trouver
-  la clé de voûte, les pivots, les débuts de développement
-  et de dénouement, etc.
-
-    collecte extract -seq -stt
-
-    </pre>
-    <p>Consulter le manuel pour le détail des options.</p>
   </body>
 </html>
