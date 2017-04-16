@@ -1,0 +1,18 @@
+ID:                 divisions2017
+TITRE:              Film pour divisions
+AUTEURS_COLLECTE:   Phil, Marion
+DEBUT_COLLECTE:     11/4/2017
+FIN_COLLECTE:       11/4/2017
+# STRUCTURE
+Définir le temps des points de structure ci-dessous ou
+copier-coller les marques en fin de scène.
+STT_INC_PERT:
+STT_INC_DEC:
+STT_PIVOT_1:
+STT_DEV_PART1:
+STT_CLE_DE_VOUTE:
+STT_DEV_PART2:
+STT_PIVOT_2:
+STT_DENOUEMENT:
+STT_CRISE:
+STT_CLIMAX:

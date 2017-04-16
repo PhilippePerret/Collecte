@@ -31,17 +31,13 @@ class Film
   def pstore_save
     # Les métadonnées
     store_metadata
-
-    # Scenes#save
+    # Scenes
     store_data :scene
-
-    # Personnages#save
-    store_data :personnage
-
-    # Brins#save
+    # Décors
+    store_data :decor
+    # Brins
     store_data :brin
-
-    # Notes#save
+    # Notes
     store_data :note
   end
 

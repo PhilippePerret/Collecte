@@ -73,8 +73,9 @@ class Scene
       @decor,
       @decor_alt =
         first_line.match(REG_FIRST_LINE_SCENE).to_a[1..-1]
-      @decor && @decor = @decor.strip
-      @decor_alt && @decor_alt = @decor_alt.strip
+
+      @decor      && @decor = @decor.strip
+      @decor_alt  && @decor_alt = @decor_alt.strip
     elsif first_line.match(REG_FIRST_LINE_SCENE_SIMPLE)
       @horloge,
       @lieu,
@@ -91,13 +92,15 @@ class Scene
 
     @horloge = Film::Horloge.new(film, @horloge)
 
-    # Ajouter le décor
-    decor = Film::Decor.new(film, {lieu: @lieu, decor: @decor})
-    film.decors << decor
-    # S'il y a un décor alternatif, il faut l'ajouter
-    if @decor_alt
-      decoralt = Film::Decor.new(film, {lieu: @lieu_alt || @lieu, decor: @decor_alt})
-      film.decors << decoralt
+    # Ajouter le décor s'il existe
+    if @decor
+      decor = Film::Decor.new(film, {lieu: @lieu, decor: @decor})
+      film.decors << decor
+      # S'il y a un décor alternatif, il faut l'ajouter
+      if @decor_alt
+        decoralt = Film::Decor.new(film, {lieu: @lieu_alt || @lieu, decor: @decor_alt})
+        film.decors << decoralt
+      end
     end
 
   end

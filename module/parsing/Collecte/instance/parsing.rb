@@ -63,6 +63,8 @@ class Collecte
     File.exist?(data_folder) || build_data_folder
     # Initialisation des scènes
     Film::Scene.init
+    # Initialisation des décors
+    Film::Decor.init
     log "Parsing préparé avec succès."
   rescue Exception => e
     log "ERREUR AU COURS DE LA PRÉPARATION DU PARSING", fatal_error: e

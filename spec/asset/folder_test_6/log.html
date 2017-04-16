@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>
+    Log du 16 04 2017 - 07:14
+  </title>
+  <style type="text/css">
+    div.error{color:red}
+  </style>
+  <script type="text/javascript">
+    
+  </script>
+</head>
+<body>
+  <h2>Log du 16 04 2017 - 07:14</h2>
+  <h3>Erreurs survenues</h3><div class="error">16/04 07:14:01 ### ERREUR au cours du parsing des scènes : undefined method `match' for nil:NilClass
+</div>
+<h3>Journal complet</h3>
+<pre>
+16/04 07:14:01 Fin du chargement des librairies (lib/required.rb)
+16/04 07:14:01 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_6"
+16/04 07:14:01 Parsing préparé avec succès.
+16/04 07:14:01 PARSING DES MÉTADONNÉES…
+16/04 07:14:01 Métadata parsées ({:id=>"divisions2017", :titre=>"Film pour divisions", :auteurs=>["Phil", "Marion"], :debut=>"11/4/2017", :fin=>"11/4/2017"})
+16/04 07:14:01 PARSING DES PERSONNAGES…
+16/04 07:14:01 PARSING DES BRINS…
+16/04 07:14:01 PARSING DES SCÈNES…
+16/04 07:14:01 ### ERREUR au cours du parsing des scènes : undefined method `match' for nil:NilClass
+Did you mean?  catch
+/Users/philippeperret/Programmation/Collecte/lib/required_then/classe/Film/Decor/Decor/instance/data.rb:20:in `decompose_decor'
+/Users/philippeperret/Programmation/Collecte/lib/required_then/classe/Film/Decor/Decor/instance/inst.rb:13:in `initialize'
+/Users/philippeperret/Programmation/Collecte/module/parsing/Film/Scene/Scene/instance/parse.rb:95:in `new'
+/Users/philippeperret/Programmation/Collecte/module/parsing/Film/Scene/Scene/instance/parse.rb:95:in `parse_first_line'
+/Users/philippeperret/Programmation/Collecte/module/parsing/Film/Scene/Scene/instance/parse.rb:28:in `parse'
+/Users/philippeperret/Programmation/Collecte/module/parsing/Film/Scene/Scenes/instance/parse.rb:13:in `add'
+/Users/philippeperret/Programmation/Collecte/module/parsing/_first_required_/CollecteFile/parse.rb:15:in `block in parse'
+/Users/philippeperret/Programmation/Collecte/module/parsing/_first_required_/CollecteFile/parse.rb:15:in `each'
+/Users/philippeperret/Programmation/Collecte/module/parsing/_first_required_/CollecteFile/parse.rb:15:in `parse'
+/Users/philippeperret/Programmation/Collecte/module/parsing/Collecte/instance/parsing.rb:48:in `parse_scenes'
+/Users/philippeperret/Programmation/Collecte/module/parsing/Collecte/instance/parsing.rb:11:in `parse_all'
+/Users/philippeperret/Programmation/Collecte/lib/required_then/classe/Collecte/Collecte/instance/parse.rb:21:in `parse'
+/Users/philippeperret/Programmation/Collecte/spec/support/collecte/collecte.rb:9:in `parse_collecte'
+/Users/philippeperret/Programmation/Collecte/spec/unit/Collecte/Parsing/Decors/parse_decors_spec.rb:3:in `block (2 levels) in <top (required)>'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/hooks.rb:350:in `instance_exec'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/hooks.rb:350:in `run'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/hooks.rb:514:in `block in run_owned_hooks_for'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/hooks.rb:513:in `each'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/hooks.rb:513:in `run_owned_hooks_for'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/hooks.rb:466:in `run'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:536:in `block in run_before_context_hooks'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/memoized_helpers.rb:186:in `block in isolate_for_context_hook'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/memoized_helpers.rb:182:in `instance_exec'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/memoized_helpers.rb:182:in `isolate_for_context_hook'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:535:in `run_before_context_hooks'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/example_group.rb:588:in `run'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/runner.rb:113:in `block (3 levels) in run_specs'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/runner.rb:113:in `map'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/runner.rb:113:in `block (2 levels) in run_specs'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/configuration.rb:1836:in `with_suite_hooks'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/runner.rb:112:in `block in run_specs'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/reporter.rb:77:in `report'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/runner.rb:111:in `run_specs'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/runner.rb:87:in `run'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/runner.rb:71:in `run'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/lib/rspec/core/runner.rb:45:in `invoke'
+/Users/philippeperret/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/rspec-core-3.5.2/exe/rspec:4:in `<top (required)>'
+/Users/philippeperret/.rbenv/versions/2.3.0/bin/rspec:23:in `load'
+/Users/philippeperret/.rbenv/versions/2.3.0/bin/rspec:23:in `<main>'
+
+</pre>
+</body>
+</html>

@@ -52,6 +52,7 @@ class Extractor
     Film::TextObjet.init if format == :html
     Film::Personnage.init
     Film::Brin.init
+    Film::Decor.init
 
     final_file.prepare || return
 

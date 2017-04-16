@@ -9,6 +9,8 @@ class Decor
   def initialize film, data = nil
     @film   = film
     data.nil? || data.each{|k,v|instance_variable_set("@#{k}",v)}
+    @id     = self.class.new_id
+    decompose_decor
   end
 
 end #/Decor
