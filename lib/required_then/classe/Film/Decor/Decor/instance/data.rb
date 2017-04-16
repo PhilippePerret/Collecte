@@ -3,7 +3,7 @@ class Film
 class Decor
 
 
-  def hash_data
+  def to_hash
     {
       id:           id,
       decor:        decor,

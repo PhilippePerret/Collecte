@@ -58,7 +58,7 @@ module ListElementsMethods
   # Pour fonctionner, l'instance doit définir :
   #   @marshal_file     Path au fichier marshal
   # Les instances des éléments doivent définir
-  #   #hash_data      Hash des données à enregistrer
+  #   #to_hash      Hash des données à enregistrer
   def save
     File.open(marshal_file,'wb'){|f| f.write Marshal.dump(data2save)}
   end
@@ -69,7 +69,7 @@ module ListElementsMethods
       else
         d2s = Hash.new
         @hash.each do |k, inst|
-          d2s.merge!(k => inst.hash_data)
+          d2s.merge!(k => inst.to_hash)
         end
       end
 

@@ -68,7 +68,7 @@ class Extractor
       write "\t\t<paragraphes>"
       (scene.paragraphes|[]).each_with_index do |paragraphe, i|
         write "\t\t\t<paragraphe id=\"#{i}\">"
-        paragraphe.hash_data.each do |prop, valeur|
+        paragraphe.to_hash.each do |prop, valeur|
           write "#{prop}", "#{valeur}"
         end
         write "\t\t\t</paragraphes>"

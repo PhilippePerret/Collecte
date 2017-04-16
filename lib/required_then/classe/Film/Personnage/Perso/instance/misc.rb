@@ -4,7 +4,7 @@ class Personnage
 
   # Les données qui seront enregistrées dans le fichier
   # marshal.
-  def hash_data
+  def to_hash
     {
       id:             id,
       line:           line,

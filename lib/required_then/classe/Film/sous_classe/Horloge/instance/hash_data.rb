@@ -3,7 +3,7 @@ class Film
 class Horloge
 
   # Pour l'enregistrement de l'horloge
-  def hash_data
+  def to_hash
     {
       horloge:        horloge,
       time:           time,

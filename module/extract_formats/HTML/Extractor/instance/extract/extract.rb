@@ -70,7 +70,7 @@ class Extractor
     when Film::Horloge
       value.horloge
     when Film::TextObjet
-      value.hash_data
+      value.to_hash
       # Retourne un Hash
     else
       value.to_s
@@ -103,7 +103,7 @@ class Extractor
       # Sauvegarde des paragraphes de la scène
       (scene.paragraphes|[]).each_with_index do |paragraphe, i|
         write "Paragraphe #{i}", nil, {div_class: 'stitre'}
-        paragraphe.hash_data.each do |prop, valeur|
+        paragraphe.to_hash.each do |prop, valeur|
           write "#{prop}", "#{valeur}"
         end
       end

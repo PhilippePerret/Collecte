@@ -5,7 +5,7 @@ class Scene
     id:               { value: nil },
     numero:           { value: nil },
     horloge:          { value: :horloge },
-    resume:           { value: :hash_data },
+    resume:           { value: :to_hash },
     effet:            { value: nil },
     effet_alt:        { value: nil },
     lieu:             { value: nil },

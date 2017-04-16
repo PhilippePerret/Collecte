@@ -4,11 +4,11 @@ class Note
 
   # Les données qui seront enregistrées dans le fichier
   # marshal.
-  def hash_data
+  def to_hash
     {
       id:             id,
       scene_id:       scene_id,
-      content:        content.hash_data
+      content:        content.to_hash
     }
   end
 

@@ -4,9 +4,9 @@ class Scene
 
   # Les données qui seront enregistrées dans le fichier
   # marshal.
-  def hash_data
-    hor = horloge.nil? ? nil : horloge.hash_data
-    res = resume.nil? ? nil : resume.hash_data
+  def to_hash
+    hor = horloge.nil? ? nil : horloge.to_hash
+    res = resume.nil? ? nil : resume.to_hash
     # TODO Mais contrôler la ligne ci-dessus car ça ne
     # devrait pas arriver que le résumé n'existe pas.
     if resume.nil?
@@ -27,15 +27,15 @@ class Scene
       fonction:         fonction,
       brins_ids:        brins_ids,
       personnages_ids:  personnages_ids,
-      paragraphes:      paragraphes_as_hash_data,
+      paragraphes:      paragraphes_as_to_hash,
       notes_ids:        notes_ids,
       stt_points_ids:   stt_points_ids
     }
   end
 
   # Les paragraphes pour l'enregistrement
-  def paragraphes_as_hash_data
-    (@paragraphes||[]).collect{|p|p.hash_data}
+  def paragraphes_as_to_hash
+    (@paragraphes||[]).collect{|p|p.to_hash}
   end
 
 end #/Scene

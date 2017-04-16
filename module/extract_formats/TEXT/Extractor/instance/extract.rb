@@ -65,7 +65,7 @@ class Extractor
       # Sauvegarde des paragraphes de la scène
       (scene.paragraphes|[]).each_with_index do |paragraphe, i|
         write "\tParagraphe #{i}"
-        paragraphe.hash_data.each do |prop, valeur|
+        paragraphe.to_hash.each do |prop, valeur|
           write "#{prop}", "#{valeur}", {before_label: "\t\t"}
         end
       end

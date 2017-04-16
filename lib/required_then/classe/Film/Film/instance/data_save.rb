@@ -65,7 +65,7 @@ class Film
 
       # On enregistre tous les objets du type
       self.send("#{type}s".to_sym).each do |oid, objet|
-        ps[type][:items][oid] = objet.hash_data
+        ps[type][:items][oid] = objet.to_hash
         liste_ids_of_type << oid
       end
 
