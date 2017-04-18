@@ -166,7 +166,7 @@ nav#__tdm__{border:1px solid #CCC;padding:1em;font-size:.85em;width:75%;backgrou
 
 <p>Dans le fichier <code>scenes.collecte</code>, une scène se présente sous la forme :</p>
 
-<pre><code>      H:MM:SS LIEU EFFET DÉCOR
+<pre><code>      H:MM:SS LIEU EFFET Décor
       Résumé de la scène. brins et notes
       Premier paragraphe. brins et notes
       Deuxième paragraphe. brins et notes
@@ -184,18 +184,22 @@ nav#__tdm__{border:1px solid #CCC;padding:1em;font-size:.85em;width:75%;backgrou
 
 <p>Ou, pour une scène <em>en parallèle</em> dans deux décors différents :</p>
 
-<pre><code>      1:45:12 INT./EXT. JOUR/NUIT VAISSEAU / BASE TERRESTRE
+<pre><code>      1:45:12 INT./EXT. JOUR/NUIT Vaisseau / Base terrestre
       Le capitaine [PERSO#anatoli] lance un appel au secours
       à la base. b45 (2)
       (2) On joue ici sur le contraste jour/nuit.
 </code></pre>
 
+<blockquote>
+  <p>Noter qu’il vaut mieux écrire l’intitulé de la scène en minuscule. Il sera toujours converti en majuscule pour l’affichage.</p>
+</blockquote>
+
 <p>Chaque scène doit être <strong>impérativement séparée de la précédente par une ligne vide</strong> :</p>
 
-<pre><code>      0:00:06 INT. JOUR MAISON
+<pre><code>      0:00:06 INT. JOUR Maison
       Première scène.
 
-      0:00:42 EXT. NUIT JARDIN
+      0:00:42 EXT. NUIT Jardin
       La scène suivante doit être séparée par une ligne.
 </code></pre>
 
@@ -796,7 +800,7 @@ nav#__tdm__{border:1px solid #CCC;padding:1em;font-size:.85em;width:75%;backgrou
       )
 </code></pre>
 
-<p>Si les actes sont définis (cf. <a href="#definitionstructure">définition des actes</a>), un retour à ligne est ajouté à chaque changement d’acte.</p>
+<p>Si les actes sont définis (cf. <a href="#definitionstructure">définition des actes</a>), une séparation est ajoutée à chaque changement d’acte.</p>
 
 <h2 id="extrairesynopsis">Extraire le synopsis</h2>
 
@@ -832,6 +836,10 @@ nav#__tdm__{border:1px solid #CCC;padding:1em;font-size:.85em;width:75%;backgrou
       )
 
 </code></pre>
+
+<blockquote>
+  <p>Note : comme pour les résumés, si les actes sont définis (cf. <a href="#definitionstructure">définition des actes</a>), une séparation est faite suivant les différentes parties.</p>
+</blockquote>
 
 <h2 id="extraire_sequenciers">Extraire des séquenciers</h2>
 
