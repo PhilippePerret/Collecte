@@ -8,9 +8,6 @@ class Decor
   # {Fixnum} Identifiant du décor
   attr_reader :id
 
-  # {String} Parent du décor et sous-décor
-  # {Fixnum} ID du décor parent
-  attr_reader :parent_id
   # {String} Sous décor dans la décor parent.
   # Par exemple, si le décor est "MAISON DE JOE : JARDIN",
   # Le décor parent est "MAISON DE JOE" et le sous-décor est

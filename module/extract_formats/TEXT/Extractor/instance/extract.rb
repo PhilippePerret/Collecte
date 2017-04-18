@@ -46,6 +46,26 @@ class Extractor
   end
   # /extract_brins_data
 
+  def extract_decors_data
+    write RC*2 + '=== DÉCORS ==='
+    film.decors.each do |decor_id, decor|
+      write "#{RC}Scene #{decor.id}"
+      Film::Decor::PROPERTIES.each do |prop, dprop|
+        val_init = decor.send(prop)
+        if val_init != nil && dprop[:value]
+          if dprop[:args]
+            val_init = val_init.send(dprop[:value], dprop[:args])
+          else
+            val_init = val_init.send(dprop[:value])
+          end
+        end
+        write "#{prop}", "#{val_init}", {before_label: "\t"}
+      end
+    end
+    final_file.flush
+  end
+  # /extract_decors_data
+
   def extract_scenes_data
     write RC*2 + '=== SCENES ==='
     film.scenes.each do |scene_id, scene|

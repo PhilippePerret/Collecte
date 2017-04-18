@@ -119,6 +119,29 @@ describe 'Extraction au format :html' do
       end
       # /Brins
 
+      describe 'les données des décors' do
+        it 'le titre de la section' do
+          expect(code).to include '=== DÉCORS ==='
+        end
+        [
+          {
+            id: 1,
+            decor: 'MAISON DE JOE',
+            scenes_ids: '[1, 3, 4]',
+          },
+          {
+            id: 2, decor: 'JARDIN PUBLIC',
+            scenes_ids: '[2, 3]'
+          }
+        ].each do |hdecor|
+          it "les données du décors #{hdecor.inspect}" do
+            expect(code).to match /<div(.*?)>Décor #{hdecor[:id]}<\/div>/
+            hdecor.each do |prop,valu|
+              expect(code).to include div_libval(prop, valu)
+            end
+          end
+        end
+      end
       describe 'les données des scènes' do
         it 'le titre de la section' do
           expect(code).to include '=== SCENES ==='
@@ -126,16 +149,17 @@ describe 'Extraction au format :html' do
         [
           {
             id:1, numero:1,
-            resume: {:raw=>"Résumé de la première scène. b1 (6)", :notes_ids=>'6', :brins_ids=>'1', :scene_id=>'1'},
+            resume: {:raw=>"Résumé de la première scène. b1 (6)", :notes_ids=>'[6]', :brins_ids=>'[1]', :scene_id=>'1'},
             horloge:'0:00:30',
-            lieu:'INT.', effet:'JOUR', decor:'MAISON DE JOE',
-            brins_ids: '1', notes_ids: '6'
+            effet:'JOUR', decors_ids: '[1]',
+            brins_ids: '[1]', notes_ids: '[6]'
           },
           {
             id:2, numero:2,
-            resume:{:raw=>'Résumé de la deuxième scène avec [PERSO#prota]. b2 b1', :brins_ids=>'2,1', :scene_id=>'2'},
-            horloge: '0:01:40', lieu:'EXT.', effet:'NUIT', decor:'JARDIN PUBLIC',
-            brins_ids: '2,1', notes_ids: '4,5,6',
+            resume:{:raw=>'Résumé de la deuxième scène avec [PERSO#prota]. b2 b1', :brins_ids=>'[2, 1]', :scene_id=>'2'},
+            horloge: '0:01:40', effet:'NUIT',
+            decors_ids: '[2]',
+            brins_ids: '[2, 1]', notes_ids: '[4, 5, 6]',
             paragraphes: [
               {index:0, raw:'Premier beat de la deuxième scène avec [PERSO#anta].'},
               {index:1, raw:'Deuxième beat de la deuxième scène avec [PERSO#prota]. (4)(5)(6)'},
@@ -144,12 +168,11 @@ describe 'Extraction au format :html' do
           },
           {
             id:3, numero:3,
-            resume:{:raw=>'Résumé de la troisième. (3) b1 b3', :notes_ids=>'3', :brins_ids=>'1,3', :scene_id=>3},
+            resume:{:raw=>'Résumé de la troisième. (3) b1 b3', :notes_ids=>'[3]', :brins_ids=>'[1, 3]', :scene_id=>3},
             horloge:'0:03:20',
-            lieu:'INT.', lieu_alt:'EXT.',
             effet:'JOUR',
-            decor:'MAISON DE JOE', decor_alt:'JARDIN PUBLIC',
-            brins_ids:'1,3,2', notes_ids:'3,1',
+            decors_ids:'[1, 2]',
+            brins_ids:'[1, 3, 2]', notes_ids:'[3, 1]',
             paragraphes: [
               {index:0, raw:'Paragraphe 1 de troisième. Avec première note. (1)'},
               {index:1, raw:'Paragraphe 2 de troisième. Avec deuxième brin. b2'}

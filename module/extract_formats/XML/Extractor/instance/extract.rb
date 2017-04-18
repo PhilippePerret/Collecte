@@ -48,6 +48,27 @@ class Extractor
     final_file.flush
   end
 
+  def extract_decors_data
+    write '<decors>'
+    film.decors.each do |decor_id, decor|
+      write "\t<decor id=\"#{decor_id}\">"
+      Film::Decor::PROPERTIES.each do |prop, dprop|
+        val_init = decor.send(prop)
+        if val_init != nil && dprop[:value]
+          if dprop[:args]
+            val_init = val_init.send(dprop[:value], dprop[:args])
+          else
+            val_init = val_init.send(dprop[:value])
+          end
+        end
+        write "#{prop}", "#{val_init}"
+      end
+      write "</decor>"
+    end
+    write '</decors>'
+    final_file.flush
+  end
+  
   def extract_scenes_data
     write '<scenes>'
     film.scenes.each do |scene_id, scene|
@@ -79,6 +100,7 @@ class Extractor
     write '</scenes>'
     final_file.flush
   end
+  # /extract_scenes_data
 
 end #/Extractor
 end #/Collecte

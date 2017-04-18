@@ -80,6 +80,7 @@ class Extractor
     extract_personnages_data
     extract_brins_data
     extract_scenes_data
+    extract_decors_data
   end
 
   def default_options opts

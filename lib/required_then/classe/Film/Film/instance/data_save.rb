@@ -96,6 +96,7 @@ class Film
       personnages:    personnages.data2save,
       brins:          brins.data2save,
       notes:          notes.data2save,
+      decors:         decors.data2save,
       # DATES
       # -----
       created_at:     (created_at || Time.now.to_i)

@@ -7,10 +7,6 @@ class << self
   # (parent) à partirde son libellé
   attr_reader :decor_to_id
 
-  def init
-    @decor_to_id = Hash.new
-  end
-
   # Ajouter un décor parent à la liste des parents, notamment
   # pour obtenir la table qui permet d'avoir l'ID à partir du
   # nom du décor

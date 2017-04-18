@@ -61,21 +61,57 @@ class Extractor
   end
   # /extract_brins_data
 
+  # Traitement de la valeur +value+ en fonction de sa
+  # classe
+  # Traitement en fonction de la valeur
+  # finale (une valeur string, un nil, ou un hash)
+  def treate_per_value prop, value
+    value.instance_of?(Film::TextObjet) && value = value.to_hash
+
+    case value
+    when NilClass
+      return
+    when Hash
+      value.each do |k,v|
+        treate_per_value(k, v)
+      end
+      return
+    when Film::Horloge
+      value = value.horloge
+    else
+      as_string_value(value)
+    end
+
+    write "#{prop}", "#{value}"
+  end
+
   def as_string_value value
     case value
     when Hash
       value.to_json
     when Array
       value.join(',')
-    when Film::Horloge
-      value.horloge
-    when Film::TextObjet
-      value.to_hash
-      # Retourne un Hash
     else
       value.to_s
     end
   end
+
+  def extract_decors_data
+    log "-> extract_decors_data (HTML)"
+    log "   Nombre de décors : #{film.decors.count}"
+    write '<decors class="liste_objets_relatifs">'
+    write '=== DÉCORS ===', nil, {div_class: 'titre'}
+    film.decors.each do |decor_id, decor|
+      write "Décor #{decor_id}", nil, {div_class: 'stitre'}
+      Film::Decor::PROPERTIES.each do |prop, dprop|
+        treate_per_value prop, decor.send(prop)
+      end
+    end
+    write '</decors>'
+    log "<- extract_decors_data (HTML)"
+    final_file.flush
+  end
+  # /extract_decors_data
 
   def extract_scenes_data
     write '<scenes class="liste_objets_relatifs">'
@@ -83,21 +119,8 @@ class Extractor
     film.scenes.each do |scene_id, scene|
       write "Scene #{scene.numero}", nil, {div_class: 'stitre'}
       Film::Scene::PROPERTIES.each do |prop, dprop|
-        # Traitement de la valeur en fonction de sa
-        # classe.
-        value = as_string_value(scene.send(prop))
-        # Traitement en fonction de la valeur
-        # finale (une valeur string, un nil, ou un hash)
-        case value
-        when NilClass
-          next
-        when Hash
-          value.each do |k,v|
-            write "#{k}", "#{as_string_value(v)}"
-          end
-          next
-        end
-        write "#{prop}", "#{value}"
+        value = scene.send(prop)
+        treate_per_value prop, value
       end
 
       # Sauvegarde des paragraphes de la scène

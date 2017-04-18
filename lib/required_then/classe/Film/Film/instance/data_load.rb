@@ -51,7 +51,7 @@ class Film
   def load_from_pstore
     log "-> Film#load_from_pstore"
     destore_metadata
-    [:personnage, :brin, :note, :scene].each do |ktype|
+    [:personnage, :brin, :note, :scene, :decor].each do |ktype|
       destore_data ktype
     end
     log "<- Film#load_from_pstore OK"
@@ -99,7 +99,7 @@ class Film
 
     # ÉLÉMENTS
     # --------
-    [:Note, :Personnage, :Brin, :Scene].each do |elclass|
+    [:Note, :Personnage, :Brin, :Scene, :Decor].each do |elclass|
       elkey   = "#{elclass.to_s.downcase}s".to_sym # p.e. :notes
       classe  = Object.const_get("Film::#{elclass}")
 
