@@ -140,17 +140,19 @@ class Scene
   # ---------------------------------------------------------------------
   #   Sous-sous-méthodes
   # ---------------------------------------------------------------------
-  def lieux
-    lieu_alt || (return lieu)
-    "#{lieu} / #{lieu_alt}"
-  end
   def effets
     effet_alt || (return effet)
     "#{effet} / #{effet_alt}"
   end
+  def lieux
+    decors_ids.collect do |decor_id|
+      film.decors[decor_id].lieu_as_str
+    end.join(' / ')
+  end
   def decors
-    decor_alt || (return decor)
-    "#{decor} / #{decor_alt}"
+    decors_ids.collect do |decor_id|
+      film.decors[decor_id].decor
+    end.join(' / ')
   end
 
 end #/Scene

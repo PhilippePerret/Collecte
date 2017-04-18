@@ -49,7 +49,7 @@ class Extractor
   def extract_decors_data
     write RC*2 + '=== DÉCORS ==='
     film.decors.each do |decor_id, decor|
-      write "#{RC}Scene #{decor.id}"
+      write "#{RC}Décor #{decor.id}"
       Film::Decor::PROPERTIES.each do |prop, dprop|
         val_init = decor.send(prop)
         if val_init != nil && dprop[:value]

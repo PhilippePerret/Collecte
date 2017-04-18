@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>
+    Fichier statistiques complet
+  </title>
+  <style type="text/css">div.fiche{position:fixed;width:280px;top:12px;right:12px;color:#fff;border-radius:1em;padding:2em;letter-spacing:2.3px;line-height:1.3em;text-align:justify;z-index:2000}div.fiche a:link,div.fiche a:hover,div.fiche a:visited{color:#B5B5FF}div.fiche.personnage,div.fiche.personnage div{background-color:#585482 !important}div.fiche.brin,div.fiche.brin div{background-color:#896953 !important}div.fiche.note,div.fiche.note div{background-color:#006B69 !important}div.fiche.hidden{display:none}div.fiche div.titre{font-size:1.1em;font-weight:bold;margin-bottom:1em;text-align:left !important}div.fiche span.label{display:inline-block;width:120px !important;color:#CCC !important;font-style:italic}div.fiche span.value{color:inherit}div.fiche a.closebox{position:absolute;font-family:Helvetica,Arial;top:12px;right:12px;background-color:red;color:#fff;padding:0 5px 1px;border-radius:5px}body{margin:2em;margin-top:3em;position:relative;font-size:11.8pt}a{text-decoration:none;color:#007}.red{color:red}.blue{color:blue}.center{text-align:center}.justify{text-align:justify}.right{text-align:right}.left{text-align:left}div#titre{font-size:1.9em;margin:2.5em 0 .3em .5em}div#titre div.lib_brin{font-size:.75em;margin-left:3em}a.tmlink{float:right;font-size:9.1pt;font-family:Arial,Helvetica;opacity:.5;border:1px solid;border-radius:1.5em;padding:3px;letter-spacing:-0.3px}a.tmlink:hover{opacity:1}div.libval{padding:4px .5em}div.libval:nth-child(even){background:#FFF}div.libval:nth-child(odd){background:#CCF}div.libval span.label,div.libval span.value{display:inline-block;vertical-align:top}div.libval span.label{width:200px;color:#555;font-style:italic;font-size:1.1em}div.libval span.value{color:#000;width:400px}div.libvalval{margin-left:4em;width:auto;padding:12px .5em}div.libvalval:nth-child(odd){background-color:#CCF}div.libvalval:nth-child(even){background-color:#fff}div.libvalval span.label,div.libvalval span.value1,div.libvalval span.value2{display:inline-block;vertical-align:top}div.libvalval span.label{width:180px;font-style:italic;color:#777;text-align:right;padding-right:1em}div.libvalval span.value1{width:160px;text-align:center}div.libvalval span.value2{width:400px}div.libvalval.libelles{font-style:italic;font-weight:normal;color:#A7A7A7;font-family:Arial,Helvetica;padding:4px 20px;background-color:#616161}div.libvalval.libelles span.label{color:#A7A7A7;font-size:1em;text-align:left}section.statistiques{margin-left:4em}section.statistiques div.titre{margin:2em 0 .5em 0;font-size:1.5em}section.statistiques section.groupe{border:1px solid;display:inline-block;width:auto;margin-left:4em}section.statistiques section.groupe div.libvalval{margin-left:0 !important}
+</style>
+  <script type="text/javascript">var curfid = null;function ShowPersonnage(oid){return TraiteFiche(oid, 'personnage')}function ShowNote(oid){return TraiteFiche(oid, 'note')}function ShowBrin(oid){return TraiteFiche(oid, 'brin')}function TraiteFiche(oid, otype){  var fid = 'fiche-'+otype+'-'+oid;  var other_fiche = fid != curfid;  if(curfid){HideCurFiche()}  if(other_fiche){ShowFiche(fid, otype)}  return false;}function DOMObject(fid){return document.getElementById(fid)}function ShowFiche(fid, ftype){  DOMObject(fid).classList='fiche '+ftype;  curfid=fid;}function HideCurFiche(){  var obj = document.getElementById(curfid);  obj.classList=obj.classList+' hidden';  curfid=null;  return false;}</script>
+</head>
+<body>
+  
+  <!--
+EXTRACTION DU 18 04 2017 - 10:41
+FILM : 
+-->
+<div id="titre">Fichier statistiques complet</div>
+<section class="statistiques">
+<div class='titre'>DONNÉES GÉNÉRALES</div>
+<div class='titre'>Le film en chiffres</div>
+<section class="groupe">
+<div class="libvalval libelles"><span class="label">nombre de…</span><span class="value1">nombre</span><span class="value2"></span></div>
+<div class="libvalval"><span class="label">… scènes</span><span class="value1">3</span><span class="value2"></span></div>
+<div class="libvalval"><span class="label">… personnages</span><span class="value1">0</span><span class="value2"></span></div>
+<div class="libvalval"><span class="label">… brins</span><span class="value1">1</span><span class="value2"></span></div>
+<div class="libvalval"><span class="label">… points structurels définis</span><span class="value1">3 sur 10</span><span class="value2"><div>Points définis : incident déclencheur, incident perturbateur, dénouement.</div><div>Points non définis : Pivot 1, Pivot 2, Clé de voûte, Développement, partie 1, Développement, partie 2, Climax, Crise.downcase</div></span></div>
+</section>
+<div class='titre'>POSITION DES POINTS PAR RAPPORT AU MODÈLE DE FIELD (PFA)</div>
+<section class="groupe">
+<div class="libvalval libelles"><span class="label">Point structurel</span><span class="value1">position absolue</span><span class="value2">position dans le film</span></div>
+<div class="libvalval"><span class="label">Incident perturbateur</span><span class="value1">0:00:00 à 0:00:50</span><span class="value2">0:00:00 à 0:01:10 => OK</span></div>
+<div class="libvalval"><span class="label">Incident déclencheur</span><span class="value1">0:00:00 à 0:00:50</span><span class="value2">0:00:00 à 0:01:10 => OK</span></div>
+<div class="libvalval"><span class="label">Dénouement</span><span class="value1">0:02:26 à 0:02:34</span><span class="value2"><span class="red center">HORS-ZONE (0:02:50 à 0:03:20)<br>Trop tard de 16 secs</span></span></div>
+</section>
+<div class='titre'>SCÈNES</div>
+<section class="groupe">
+<div class="libvalval"><span class="label">Temps moyen par scène</span><span class="value1">0:01:06</span><span class="value2"></span></div>
+<div class="libvalval"><span class="label">Plus courte scène</span><span class="value1">0:00:30</span><span class="value2"><div>Scène 3</div>Résumé de la troisième.</span></div>
+<div class="libvalval"><span class="label">Plus longue scène</span><span class="value1">0:01:40</span><span class="value2"><div>Scène 2</div>Résumé de la deuxième scène.</span></div>
+</section>
+<div class='titre'>Dix plus longues scènes du film</div>
+<div class="libvalval libelles"><span class="label">numéro</span><span class="value1">durée</span><span class="value2">résumé</span></div>
+<div class="libvalval"><span class="label">Scène 1<br>à 0:00:00</span><span class="value1">0:01:10</span><span class="value2">Résumé de la première scène.</span></div>
+<div class="libvalval"><span class="label">Scène 3<br>à 0:02:50</span><span class="value1">0:00:30</span><span class="value2">Résumé de la troisième.</span></div>
+
+<div class='titre'>PERSONNAGES</div>
+<div class='titre'>Classement des personnages par temps de présence</div>
+<section class="groupe">
+<div class="libvalval libelles"><span class="label">ID</span><span class="value1">Présence</span><span class="value2">Patronyme</span></div>
+</section>
+
+<div class='titre'>BRINS</div>
+<div class='titre'>Classement des brins par importance temporelle</div>
+<section class="groupe">
+<div class="libvalval libelles"><span class="label">ID</span><span class="value1">Durée totale</span><span class="value2">Libellé</span></div>
+<div class="libvalval"><span class="label">2</span><span class="value1">0:00:30</span><span class="value2">Deuxième brin</span></div>
+</section>
+
+</section>
+<div class="fiche personnage hidden" id="fiche-personnage-prota"><a href="#" onclick="return HideCurFiche()" class="closebox">x</a><adminonly><a href="txmt://open/?url=file:///Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_1/personnages.collecte&line=1&column=1" class="tmlink">TM</a></adminonly><div class="titre">Le Protagoniste</div><div class="description"><div class="libval"><span class="label">Fonction</span><span class="value">Protagoniste</span></div><div class="libval"><span class="label">Année de naissance</span><span class="value">2000</span></div><div class="libval"><span class="label">Description</span><span class="value">Description du protagoniste.</span></div></div></div>
+<div class="fiche personnage hidden" id="fiche-personnage-anta"><a href="#" onclick="return HideCurFiche()" class="closebox">x</a><adminonly><a href="txmt://open/?url=file:///Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_1/personnages.collecte&line=10&column=1" class="tmlink">TM</a></adminonly><div class="titre">Prénom2 Nom De l'Antagoniste</div><div class="description"><div class="libval"><span class="label">Fonction</span><span class="value">Antagoniste</span></div><div class="libval"><span class="label">Description</span><span class="value">Description de l'antagoniste.</span></div></div></div>
+<div class="fiche brin hidden" id="fiche-brin-1"><a href="#" onclick="return HideCurFiche()" class="closebox">x</a><adminonly><a href="txmt://open/?url=file:///Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_1/brins.collecte&line=1&column=1" class="tmlink">TM</a></adminonly><div class="titre">Premier brin</div><div class="libval"><span class="label">Brin</span><span class="value">1</span></div></div>
+<div class="fiche brin hidden" id="fiche-brin-2"><a href="#" onclick="return HideCurFiche()" class="closebox">x</a><adminonly><a href="txmt://open/?url=file:///Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_1/brins.collecte&line=4&column=1" class="tmlink">TM</a></adminonly><div class="titre">Deuxième brin</div><div class="libval"><span class="label">Brin</span><span class="value">2</span></div><div class="description"><span class="label">Description</span><span class="value">Une description du deuxième brin.</span></div></div>
+<div class="fiche brin hidden" id="fiche-brin-3"><a href="#" onclick="return HideCurFiche()" class="closebox">x</a><adminonly><a href="txmt://open/?url=file:///Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_1/brins.collecte&line=8&column=1" class="tmlink">TM</a></adminonly><div class="titre">Troisième brin</div><div class="libval"><span class="label">Brin</span><span class="value">3</span></div></div>
+
+</body>
+</html>
