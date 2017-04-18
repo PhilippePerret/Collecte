@@ -1,47 +1,39 @@
-18/04 14:30:33 Fin du chargement des librairies (lib/required.rb)
-18/04 14:30:33 INSTANCIATION COLLECTE "/Users/philippeperret/Desktop/Everest_collect"
-18/04 14:30:33 Parsing préparé avec succès.
-18/04 14:30:33 PARSING DES MÉTADONNÉES…
-18/04 14:30:33 Métadata parsées ({:id=>"Everest2016", :titre=>"Éverest", :auteurs=>["Phil"], :debut=>"3/04/2017"})
-18/04 14:30:33 PARSING DES PERSONNAGES…
-18/04 14:30:33 PARSING DES BRINS…
-18/04 14:30:33 PARSING DES SCÈNES…
-18/04 14:30:33 Point structurel trouvé dans la scène : :inc_pert
-18/04 14:30:33 Point structurel trouvé dans la scène : :inc_dec
-18/04 14:30:33 Point structurel trouvé dans la scène : :pivot_1
-18/04 14:30:33 Point structurel trouvé dans la scène : :dev_part1
-18/04 14:30:33 Point structurel trouvé dans la scène : :cle_de_voute
-18/04 14:30:33 Point structurel trouvé dans la scène : :pivot_2
-18/04 14:30:33 Point structurel trouvé dans la scène : :denouement
-18/04 14:30:33 FIN DU FILM TROUVÉE à 1:54:00
-18/04 14:30:33 Calcul de la durée des scènes
-18/04 14:30:33 Sauvegarde des scènes
-18/04 14:30:33 Parsing préparé avec succès.
-18/04 14:30:33 PARSING DES MÉTADONNÉES…
-18/04 14:30:33 Métadata parsées ({:id=>"Everest2016", :titre=>"Éverest", :auteurs=>["Phil"], :debut=>"3/04/2017"})
-18/04 14:30:33 PARSING DES PERSONNAGES…
-18/04 14:30:33 PARSING DES BRINS…
-18/04 14:30:33 PARSING DES SCÈNES…
-18/04 14:30:33 Point structurel trouvé dans la scène : :inc_pert
-18/04 14:30:33 Point structurel trouvé dans la scène : :inc_dec
-18/04 14:30:33 Point structurel trouvé dans la scène : :pivot_1
-18/04 14:30:33 Point structurel trouvé dans la scène : :dev_part1
-18/04 14:30:33 Point structurel trouvé dans la scène : :cle_de_voute
-18/04 14:30:34 Point structurel trouvé dans la scène : :pivot_2
-18/04 14:30:34 Point structurel trouvé dans la scène : :denouement
-18/04 14:30:34 FIN DU FILM TROUVÉE à 1:54:00
-18/04 14:30:34 Calcul de la durée des scènes
-18/04 14:30:34 Sauvegarde des scènes
-18/04 14:30:34   -> prepare [path="/Users/philippeperret/Desktop/Everest_collect/extraction/full_statistiques.html"]
-18/04 14:30:34   <- prepare
-18/04 14:30:34 Méthode d'extraction à utiliser : :extract_statistiques
-18/04 14:30:34 Liste des IDs de personnages retenus : ["rob", "helen", "guy", "harold", "mike", "jan", "krakauer", "doug", "beck", "yasuko", "ang", "scott", "ianwoodall", "sandy", "caro", "peach", "anatoli", "neal", "lopsang", "david"]
-18/04 14:30:34 Liste des IDs de brins retenus : [5, 10, 11, 1, 3, 2, 4, 6, 7, 8, 12, 9]
-18/04 14:30:34 La scène 1 contient les points structurels : [:inc_pert]
-18/04 14:30:34 La scène 42 contient les points structurels : [:inc_dec, :pivot_1]
-18/04 14:30:34 La scène 43 contient les points structurels : [:dev_part1]
-18/04 14:30:34 La scène 70 contient les points structurels : [:cle_de_voute]
-18/04 14:30:34 La scène 127 contient les points structurels : [:pivot_2]
-18/04 14:30:34 La scène 128 contient les points structurels : [:denouement]
-18/04 14:30:34 STATISTIQUES : constitution du code
-18/04 14:30:34 STATISTIQUES : /fin de constitution du code
+18/04 15:11:09 Fin du chargement des librairies (lib/required.rb)
+18/04 15:11:09 INSTANCIATION COLLECTE "/Users/philippeperret/Desktop/Everest_collect"
+18/04 15:11:09 Parsing préparé avec succès.
+18/04 15:11:09 PARSING DES MÉTADONNÉES…
+18/04 15:11:09 Métadata parsées ({:id=>"Everest2016", :titre=>"Éverest", :auteurs=>["Phil"], :debut=>"3/04/2017"})
+18/04 15:11:09 PARSING DES PERSONNAGES…
+18/04 15:11:09 PARSING DES BRINS…
+18/04 15:11:09 PARSING DES SCÈNES…
+18/04 15:11:09 Point structurel trouvé dans la scène : :inc_pert
+18/04 15:11:09 Point structurel trouvé dans la scène : :inc_dec
+18/04 15:11:09 Point structurel trouvé dans la scène : :pivot_1
+18/04 15:11:09 Point structurel trouvé dans la scène : :dev_part1
+18/04 15:11:09 Point structurel trouvé dans la scène : :cle_de_voute
+18/04 15:11:09 Point structurel trouvé dans la scène : :pivot_2
+18/04 15:11:09 Point structurel trouvé dans la scène : :denouement
+18/04 15:11:09 FIN DU FILM TROUVÉE à 1:54:00
+18/04 15:11:09 Calcul de la durée des scènes
+18/04 15:11:09 Sauvegarde des scènes
+18/04 15:11:09 Parsing préparé avec succès.
+18/04 15:11:09 PARSING DES MÉTADONNÉES…
+18/04 15:11:09 Métadata parsées ({:id=>"Everest2016", :titre=>"Éverest", :auteurs=>["Phil"], :debut=>"3/04/2017"})
+18/04 15:11:09 PARSING DES PERSONNAGES…
+18/04 15:11:09 PARSING DES BRINS…
+18/04 15:11:09 PARSING DES SCÈNES…
+18/04 15:11:09 Point structurel trouvé dans la scène : :inc_pert
+18/04 15:11:09 Point structurel trouvé dans la scène : :inc_dec
+18/04 15:11:09 Point structurel trouvé dans la scène : :pivot_1
+18/04 15:11:09 Point structurel trouvé dans la scène : :dev_part1
+18/04 15:11:09 Point structurel trouvé dans la scène : :cle_de_voute
+18/04 15:11:09 Point structurel trouvé dans la scène : :pivot_2
+18/04 15:11:09 Point structurel trouvé dans la scène : :denouement
+18/04 15:11:09 FIN DU FILM TROUVÉE à 1:54:00
+18/04 15:11:09 Calcul de la durée des scènes
+18/04 15:11:09 Sauvegarde des scènes
+18/04 15:11:09   -> prepare [path="/Users/philippeperret/Desktop/Everest_collect/extraction/full_sequencier_suggest_stt.html"]
+18/04 15:11:09   <- prepare
+18/04 15:11:09 Méthode d'extraction à utiliser : :extract_sequencier
+18/04 15:11:09 -> extract_sequencier(as_brin = false)
+18/04 15:11:09 Nombre de scènes passant le filtre : 169

@@ -66,7 +66,7 @@ Grâce au [bundle TextMate], ce fichier peut être créé à l'aide de la comman
 Dans le fichier `scenes.collecte`, une scène se présente sous la forme :
 
 ~~~
-      H:MM:SS LIEU EFFET DÉCOR
+      H:MM:SS LIEU EFFET Décor
       Résumé de la scène. brins et notes
       Premier paragraphe. brins et notes
       Deuxième paragraphe. brins et notes
@@ -76,7 +76,7 @@ Dans le fichier `scenes.collecte`, une scène se présente sous la forme :
 Par exemple :
 
 ~~~
-      1:25:52 INT. JOUR MAISON DE JOE
+      1:25:52 INT. JOUR Maison de Joe
       [PERSO#joe] rentre chez lui. b12 (25)
       Joe se gare devant chez lui.
       Joe sort de sa voiture et traverse le parking.
@@ -86,19 +86,21 @@ Par exemple :
 Ou, pour une scène *en parallèle* dans deux décors différents :
 
 ~~~
-      1:45:12 INT./EXT. JOUR/NUIT VAISSEAU / BASE TERRESTRE
+      1:45:12 INT./EXT. JOUR/NUIT Vaisseau / Base terrestre
       Le capitaine [PERSO#anatoli] lance un appel au secours
       à la base. b45 (2)
       (2) On joue ici sur le contraste jour/nuit.
 ~~~
 
+> Noter qu'il vaut mieux écrire l'intitulé de la scène en minuscule. Il sera toujours converti en majuscule pour l'affichage.
+
 Chaque scène doit être **impérativement séparée de la précédente par une ligne vide** :
 
 ~~~
-      0:00:06 INT. JOUR MAISON
+      0:00:06 INT. JOUR Maison
       Première scène.
 
-      0:00:42 EXT. NUIT JARDIN
+      0:00:42 EXT. NUIT Jardin
       La scène suivante doit être séparée par une ligne.
 ~~~
 
@@ -120,7 +122,7 @@ Cette ligne comportera simplement les marques de ces appartenances, avec `b<id b
 Par exemple, cette scène appartiendra au brin 12 et à la note 4 :
 
 ~~~
-      0:23:54 INT. JOUR MAISON DE JOE
+      0:23:54 INT. JOUR Maison de Joe
       [PERSO#joe] rentre chez lui.
       b12 n4
 ~~~
@@ -132,7 +134,7 @@ Les *points structurels*, ce sont les `pivots`, les `clé de voûte`, le début 
 On peut indiquer la présence de tels points structurels en mettant sur une ligne, plutôt à la fin, la *marque du point structurel* **et seulement cette marque**. Par exemple :
 
 ~~~
-      0:23:54 INT. JOUR MAISON DE JOE
+      0:23:54 INT. JOUR Maison de Joe
       [PERSO#joe] rentre chez lui.
       STT_CLE_DE_VOUTE
       b12 n4    
@@ -141,7 +143,7 @@ On peut indiquer la présence de tels points structurels en mettant sur une lign
 Si la scène contient plusieurs points structurels, ils doivent impérativement être spécifiés *sur des lignes différentes*. Par exemple :
 
 ~~~
-      0:12:54 INT. JOUR MAISON DE JOE
+      0:12:54 INT. JOUR Maison de Joe
       [PERSO#joe] rentre chez lui.
       STT_INC_PERT
       STT_INC_DEC

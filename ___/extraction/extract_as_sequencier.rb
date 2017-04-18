@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby -wU
 # encoding: UTF-8
 #
+#  E X T R A C T I O N   D U   S É Q U E N C I E R
+#
 # Pour lancer le parse d'un dossier de collecte.
 #
 # Le path absolu du dossier doit être défini ci-dessous.

@@ -145,15 +145,18 @@ class Scene
     "#{effet} / #{effet_alt}"
   end
   def lieux
+    decors_ids || (return '')
     decors_ids.collect do |decor_id|
       film.decors[decor_id].lieu_as_str
     end.join(' / ')
   end
   def decors
+    decors_ids || (return '')
     decors_ids.collect do |decor_id|
       film.decors[decor_id].decor
-    end.join(' / ')
+    end.join(' / ').my_upcase
   end
+
 
 end #/Scene
 end #/Film

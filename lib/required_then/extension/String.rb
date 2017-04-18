@@ -34,4 +34,15 @@ class String
     end
   end
 
+  DATA_UPCASE = {
+    :maj => "ÀÁÂÃÄÅĀĂĄÇĆĈĊČÐĎÈÉÊËĒĔĖĘĚĜĞĠĢĤĦÌÍÎÏĨĪĬĮİĴĶĸĺļľŀÑŃŅŇŊÒÓÔÕÖØŌŎŐŔŖŘŚŜŞŠÙÚÛÜŨŪŬŮŰŲŴÝŹŻŽ",
+    :min => "àáâãäåāăąçćĉċčðďèéêëēĕėęěĝğġģĥħìíîïĩīĭįıĵķĹĻĽĿŁñńņňŋòóôõöøōŏőŕŗřśŝşšùúûüũūŭůűųŵýźżž"
+  }
+  def my_upcase
+    self.tr(DATA_UPCASE[:min], DATA_UPCASE[:maj]).upcase
+  end
+  def my_downcase
+    self.tr(DATA_UPCASE[:maj], DATA_UPCASE[:min]).downcase
+  end
+
 end #/String

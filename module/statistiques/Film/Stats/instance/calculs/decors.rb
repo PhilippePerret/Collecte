@@ -82,11 +82,22 @@ class Statistiques
         is_main = sdecor.sous_decor.nil?
         plusieurs_sdecors = hdecor[:sous_decors].count > 1
 
+        if !is_main && !hdecor[:ecrit_seul]
+          # Un décor qui n'est pas main mais qui n'est
+          # jamais utilisé seul, sans sous-décor => Il
+          # faut lui faire une première ligne grasse
+          arr << {
+            data1: nil,
+            data2: (plusieurs_sdecors ? 'Durée totale : ':'') + "#{hdecor[:duree].s2h}",
+            data3: "<decor class='bold'>#{sdecor.decor}</decor>"
+          }
+          hdecor[:ecrit_seul] = true
+        end
         if is_main
           arr << {
             data1: (plusieurs_sdecors ? '' : sdecor.id),
             data2: (plusieurs_sdecors ? 'Durée totale : ':'') + "#{hdecor[:duree].s2h}",
-            data3: "<strong>#{sdecor.decor}</strong>"
+            data3: "<decor class='bold'>#{sdecor.decor}</decor>"
           }
           # Utilisation du décor principal seul, mais seulement
           # s'il a des sous-décors
@@ -96,7 +107,9 @@ class Statistiques
               data3: '(décor seul)', data2: sdecor.duree.s2h
             }
           end
+          hdecor[:ecrit_seul] = true
         else
+          # Un sous-décor du décor principal
           arr << {
             # data1: nil, # main décor
             data1: sdecor.id,
