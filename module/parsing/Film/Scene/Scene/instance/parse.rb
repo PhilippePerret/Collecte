@@ -94,15 +94,42 @@ class Scene
 
     # Ajouter le décor s'il existe
     if @decor
-      decor = Film::Decor.new(film, {lieu: @lieu, decor: @decor})
-      film.decors << decor
-      # S'il y a un décor alternatif, il faut l'ajouter
+      parse_decor @decor, @lieu
       if @decor_alt
-        decoralt = Film::Decor.new(film, {lieu: @lieu_alt || @lieu, decor: @decor_alt})
-        film.decors << decoralt
+        parse_decor @decor_alt, @lieu_alt
       end
     end
+  end
 
+  # Analyse du décor, principalement pour voir s'il
+  # est composé d'un décor parent et d'un sous-décor et
+  # savoir si ce décor parent existe déjà ou non.
+  # La méthode définit dans tous les cas que la scène courante
+  # appartiendra au décor.
+  def parse_decor dec, int_ext
+    decor_parent, sous_decor = dec.split(':').collect{|d|d.nil_if_empty}
+    idecor = film.decors.get_by_decor(decor_parent, sous_decor)
+    if idecor.instance_of?(Film::Decor)
+      #
+      # Le décor existe déjà (donc, pour être clair : même
+      # décor parent et même sous-décor, en sachant que le sous
+      # décor peut être nil).
+      #
+    else
+      #
+      # Décor inconnu => il faut le créer et l'ajouter
+      # à la liste des décors.
+      #
+      idecor = Film::Decor.new(film, {lieu: int_ext, decor: decor_parent, sous_decor: sous_decor})
+      film.decors << idecor
+    end
+
+    # Dans tous les cas, on doit ajouter la scène courante
+    # au décor (nouveau ou existant) et le decor à la scène
+    # courante
+    idecor.add_scene self
+    @decors_ids ||= Array.new
+    @decors_ids << idecor.id
   end
 
   RELATIVE_MARK_TO_RELATIVE = {

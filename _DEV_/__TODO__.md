@@ -1,3 +1,5 @@
+* Réflexion
+  Faut-il enregistrer les décors parents seuls, et définir les sous-décors à l'intérieur d'eux, ou plutôt définir un décor parent toujours avec ses sous-décors s'ils existent (en sachant qu'alors un décor parent peut exister sans sous décor et exister avec un sous-decor)
 * Poursuivre le test des décors
   -> créer un décor parent (Film::Decor) si le décor possède ":"
   -> Le décor parent est mémorisé dans la classe avec la méthode Film::Decor::add_decor_parent qu'il faut appeler.
