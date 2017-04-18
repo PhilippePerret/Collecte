@@ -34,9 +34,11 @@ class Extractor
       [:titre, 'Le film en chiffres'],
       [:section_in],
       [:libelles, 'nombre de…', 'nombre'],
-      [:data, '… scènes', stats.nombre_scenes.to_s],
-      [:data, '… personnages', stats.nombre_personnages],
-      [:data, '… brins', stats.nombre_brins],
+      [:data, 'Scènes', stats.nombre_scenes.to_s],
+      [:data, 'Personnages', stats.nombre_personnages],
+      [:data, 'Décors principaux', stats.nombre_decors_principaux],
+      [:data, '       totaux', stats.nombre_total_decors],
+      [:data, 'Brins', stats.nombre_brins],
       [:data, '… points structurels définis', stats.nombre_points_structurels, stats.points_in_et_out],
       [:section_out]
     ] + stats.helper_pfa + [
@@ -59,6 +61,14 @@ class Extractor
     ] + stats.personnages_par_temps_presence.collect do |perso|
       # Données statistiques pour les personnages
       [:data, perso.id, perso.presence.s2h, perso.as_link]
+    end + [
+      [:section_out],
+      [:empty],
+      [:titre, 'DÉCORS'],
+      [:titre, 'Classement des décors par temps d’utilisation'],
+      [:section_in],
+    ] + stats.decors_par_temps_utilisation.collect do |hdecor|
+      [:data, hdecor[:data1], hdecor[:data2], hdecor[:data3]]
     end + [
       [:section_out],
       [:empty],

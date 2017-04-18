@@ -23,5 +23,13 @@ class Decor
   # {Array} Liste des IDs des scènes
   attr_reader :scenes_ids
 
+  # Durée d'utilisation du décor courant
+  # Noter qu'il s'agit du décor + sous-décor
+  def duree
+    @duree ||= begin
+      s = 0 ; scenes.each{|sid, scene| s += scene.duree } ; s
+    end
+  end
+
 end #/Decor
 end #/Film
