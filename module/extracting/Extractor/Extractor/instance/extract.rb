@@ -34,12 +34,24 @@ class Extractor
       # Pour le fichier de tous les brins, il faut rappeler
       # cette méthode
       return extract_data(@options.merge(as: :all_brins))
+
     elsif @options[:as].to_s.start_with?('all_')
+      #
+      # Extraction d'un ensemble d'objets
+      #
       as_splited = @options[:as].to_s.split('_')
       objet = as_splited[1]
       @options[:format] = (as_splited[2] || @options[:format] || 'html').to_sym
       log "*** Traitement d'un ensemble d'objets #{objet} ***"
       case objet
+      when 'relations'
+        @options[:as] = :brin_relation
+        film.relations_personnages.each do |rel_id, relation|
+          log "* Traitement de la relation #{rel_id}…"
+          @options.merge!(relation: relation)
+          proceed_extract_data
+          log "  = Relation #{rel_id} traitée."
+        end
       when 'brins'
         @options[:as] = :brin
         @options.key?(:filter) || @options.merge!(filter: Hash.new)
@@ -47,22 +59,22 @@ class Extractor
         # Traitement des brins définis en tant que tels
         #
         film.brins.each do |brin_id, brin|
-          log ''
-          log "* Traitement de l'objet brin ##{brin_id}"
+          log "* Traitement de l'objet brin ##{brin_id}…"
           @options[:filter][:brins] = brin_id.to_s
           proceed_extract_data
+          log "  = Objet brin ##{brin_id} traité."
         end
         #
         # Traitement des brins par personnages
         #
         film.personnages.each do |perso_id, perso|
-          log ''
-          log "* Traitement du brin personnage #{perso.pseudo}"
+          log "* Traitement du brin personnage #{perso.pseudo}…"
           @options.merge!(
             as:         :brin_personnage,
             personnage: perso
           )
           proceed_extract_data
+          log "  = Brin personnage #{perso.pseudo} traité."
         end
         #
         # Traitement des brins de type "relation entre personnages"
