@@ -1,13 +1,13 @@
 describe '--all en ligne de commande' do
   let(:dossier_extraction) { @dossier_extraction }
   FILE_LIST = [
-    # ['statistiques', 'full_statistiques'],
-    # ['résumé', 'resume'],
-    # ['synopsis', 'full_synopsis'],
-    # ['séquencier', 'full_sequencier'],
-    # ['séquencier (suggestion structure)', 'full_sequencier_suggest_stt'],
-    # ['du brin 1', 'full_brin_1'],
-    # ['du brin 2', 'full_brin_2'],
+    ['statistiques', 'full_statistiques'],
+    ['résumé', 'resume'],
+    ['synopsis', 'full_synopsis'],
+    ['séquencier', 'full_sequencier'],
+    ['séquencier (suggestion structure)', 'full_sequencier_suggest_stt'],
+    ['du brin 1', 'full_brin_1'],
+    ['du brin 2', 'full_brin_2'],
     ['brin de Jan', 'full_brin_jan'],
     ['brin de Joe', 'full_brin_joe'],
     ['brin relation Jan et Joe', 'full_brin_relation_jan_joe']

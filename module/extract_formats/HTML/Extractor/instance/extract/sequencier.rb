@@ -14,24 +14,27 @@ class Extractor
 
   def extract_brin
     log "-> Film::Extractor#extract_brin"
-    extract_sequencier(true)
+    extract_sequencier
+    log "<- Film::Extractor#extract_brin"
   end
 
   # Pour l'extraction d'un brin personnage
   def extract_brin_personnage
+    log "-> Film::Extractor#extract_brin_personnage"
     @scenes = options[:personnage].scenes
-    extract_sequencier(true)
+    extract_sequencier
+    log "<- Film::Extractor#extract_brin_personnage"
   end
 
   def extract_brin_relation
-
+    log "-> Film::Extractor#extract_brin_relation"
+    @scenes = options[:relation].scenes
+    extract_sequencier
+    log "<- Film::Extractor#extract_brin_relation"
   end
 
-  # +as_brin+ ne sert pour le moment que pour savoir s'il
-  # faut utiliser la méthode Scene#as_sequence ou Scene#as_brin
-  def extract_sequencier as_brin = nil
-    as_brin ||= false
-    log "-> extract_sequencier(as_brin = #{as_brin.inspect})"
+  def extract_sequencier
+    log "-> extract_sequencier"
 
     # On calcule le template de l'intitulé en fonction
     # des choix d'options

@@ -41,6 +41,7 @@ class RelationsPersonnages
     # au moins deux scènes pour considérer que c'est une
     # relation
     film.personnages.each do |perso_id, perso|
+      perso.relations || next
       perso.relations.each do |prid, scenes_ids|
         # scenes_ids est une liste des ID de scène
         scenes_ids.count > 1 || next
