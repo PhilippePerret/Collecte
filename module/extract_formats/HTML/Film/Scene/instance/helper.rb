@@ -120,9 +120,10 @@ class Scene
   # à chaque sortie (cf. méthode `as_brin` plus haut)
   def paragraphes_in_brins
     @paragraphes_in_brins ||= begin
+      # log "options = #{options.inspect}"
       parsok = Array.new
       paragraphes.each_with_index do |parag, ipar|
-        if (parag.brins_ids||[]).passe_filtre?(options[:filter][:brins])
+        if !options.key?(:filter) || (parag.brins_ids||[]).passe_filtre?(options[:filter][:brins])
           parsok << {content: parag.to_html, index: (ipar+1)}
         end
       end

@@ -38,6 +38,10 @@ class Extractor
           "Résumé"
         when :statistiques
           "Fichier statistiques"
+        when :brin_personnage
+          "Brin de #{options[:personnage].pseudo}"
+        when :brin_relation
+          "Brin de la relation entre " + options[:relation].human_personnage_list
         else
           "Extraction des données du #{collecte.extractor.date}"
         end
@@ -61,10 +65,11 @@ class Extractor
   def set_javascripts_by_type
     js_files = Array.new
     case options[:as]
-    when :sequencier, :synopsis, :brin, :statistiques
-      js_files << "#{folder_js}/fiches.js"
     when :resume
       # Rien du tout
+    else
+      # Tous les autres
+      js_files << "#{folder_js}/fiches.js"
     end
     js_files.empty? || final_file.javascript_files = js_files
   end
@@ -72,7 +77,7 @@ class Extractor
   def set_css_by_type
     final_file.css_files =
       case options[:as]
-      when :sequencier, :brin
+      when :sequencier, :brin, :brin_personnage, :brin_relation
         ["#{folder_css}/sequencier.css"]
       when :synopsis
         ["#{folder_css}/synopsis.css"]
@@ -97,6 +102,10 @@ class Extractor
         'resume'
       when :synopsis
         'synopsis'
+      when :brin_personnage
+        "brin_#{options[:personnage].id}"
+      when :brin_relation
+        "brin_relation_#{options[:relation].id}"
       when :brin
         "brin_#{options[:filter][:brins].gsub(/[\(\),\+]/,'_').gsub(/ /,'')}"
       when :statistiques

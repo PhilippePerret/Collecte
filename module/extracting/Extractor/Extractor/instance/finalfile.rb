@@ -3,9 +3,7 @@ class Collecte
 class Extractor
 
   def final_file
-    @final_file ||= begin
-      FinalFile.new(collecte)
-    end
+    @final_file ||= FinalFile.new(collecte)
   end
 
   # Prépare le fichier en vue de l'extraction

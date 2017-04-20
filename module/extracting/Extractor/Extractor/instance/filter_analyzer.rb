@@ -26,6 +26,8 @@ class Extractor
   # le processus qui permettra à la méthode passe_filtre?
   # de renvoyer la bonne valeur
   def filter_str_to_proc filtre
+    filtre.instance_of?(String) || (return filtre)
+    # log "[filter_str_to_proc] filtre = #{filtre.inspect}"
     code_filtre =
       filtre.as_filter_str_to_array.collect do |cond|
         cond.collect{|v| "a.include?(#{v})"}.join(' || ') + ' || raise'

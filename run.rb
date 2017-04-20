@@ -43,5 +43,7 @@ when 'parse', 'extract'
     collecte.extract(Collecte.command_options)
   end
 else
-  `open "#{MAIN_FOLDER}/_DEV_/collecte.html"`
+  Collecte.mode_test? || begin
+    `open "#{MAIN_FOLDER}/_DEV_/collecte.html"`
+  end
 end

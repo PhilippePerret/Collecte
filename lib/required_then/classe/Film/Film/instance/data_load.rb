@@ -11,17 +11,17 @@ class Film
     if MODE_DATA_LOAD == :marshal
       if File.exist?(marshal_file)
         load_from_marshal
-        return true
+        resultat = true
       else
-        return false
+        resultat = false
       end
     elsif MODE_DATA_LOAD == :pstore
       # Version avec PStore
       if File.exist?(pstore_file)
         load_from_pstore
-        return true
+        resultat = true
       else
-        return false
+        resultat = false
       end
     else
       raise "Le mode de chargement des données #{MODE_DATA_LOAD.inspect} (MODE_DATA_LOAD) est inconnu. Impossible de charger les données du film."
@@ -33,12 +33,17 @@ class Film
     if MODE_DATA_LOAD != MODE_DATA_SAVE
       save
     end
-  end
 
-  # Charger les données du fichier PStore ou Marshal
-  def load
-    load_if_exist
+    # Les opérations qu'il faut faire au chargement des
+    # données, à propos des données volatiles
+    # =================================================
+    # Définir les relations de personnages
+    relations_personnages.define
+
+    return resultat
   end
+  alias :load :load_if_exist
+
 
   def load_from_marshal
     log "-> load_from_marshal"

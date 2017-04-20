@@ -3,7 +3,7 @@ class Collecte
 class Extractor
 class FinalFile
 
-  # Préparation du fichier
+  # Préparation du fichier final
   def prepare
     log "  -> prepare [path=#{path.inspect}]"
     File.exist?(folder) || Dir.mkdir(folder, 0755)

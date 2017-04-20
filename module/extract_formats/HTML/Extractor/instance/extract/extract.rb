@@ -53,7 +53,7 @@ class Extractor
       write "Brin #{brin_id}", nil, {div_class: 'stitre'}
       write "id", brin.id
       [:libelle, :description].each do |prop|
-        write "#{prop}", "#{brin.send(prop).to_html}"
+        write "#{prop}", brin.send(prop).to_s
       end
     end
     write '</brins>'

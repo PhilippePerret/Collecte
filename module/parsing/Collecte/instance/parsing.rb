@@ -29,6 +29,8 @@ class Collecte
     log "PARSING DES PERSONNAGES…"
     film.personnages.parse
     film.personnages.save
+    log "Définition des relations de personnages"
+    film.relations_personnages.define
   rescue Exception => e
     log "au cours du parsing des personnages", error: e
   end

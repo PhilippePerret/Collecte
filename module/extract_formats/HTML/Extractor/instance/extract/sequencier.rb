@@ -16,6 +16,17 @@ class Extractor
     log "-> Film::Extractor#extract_brin"
     extract_sequencier(true)
   end
+
+  # Pour l'extraction d'un brin personnage
+  def extract_brin_personnage
+    @scenes = options[:personnage].scenes
+    extract_sequencier(true)
+  end
+
+  def extract_brin_relation
+
+  end
+
   # +as_brin+ ne sert pour le moment que pour savoir s'il
   # faut utiliser la méthode Scene#as_sequence ou Scene#as_brin
   def extract_sequencier as_brin = nil
@@ -85,7 +96,15 @@ class Extractor
           write scene.as_sequence
         end
       else
-        methode_as = as_brin ? :as_brin : :as_sequence
+        methode_as =
+          case options[:as]
+          when :brin
+            :as_brin
+          else
+            # Donc pour le séquencier, les brins personnages,
+            # les brins relations
+            :as_sequence
+          end
         log "Méthode Scene à utiliser : #{methode_as.inspect}"
         scenes.each do |scene|
           write scene.send(methode_as)
@@ -102,7 +121,9 @@ class Extractor
     extract_fiches_brins
     extract_fiches_notes
 
+    log '<- /extract_sequencier'
   end
+  # /extract_sequencier
 
   def write_point_structurel index_ptstt
     ptstt = points_structurels[index_ptstt]

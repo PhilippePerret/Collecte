@@ -6,18 +6,19 @@ class Personnage
   # marshal.
   def to_hash
     {
-      id:             id,
-      line:           line,
-      prenom:         prenom,
-      nom:            nom,
-      pseudo:         pseudo,
-      sexe:           sexe,
-      annee:          annee,
-      fonction:       fonction,
-      description:    description,
-      nom_acteur:     nom_acteur,
-      prenom_acteur:  prenom_acteur,
-      scenes_ids:     scenes_ids
+      id:                 id,
+      line:               line,
+      prenom:             prenom,
+      nom:                nom,
+      pseudo:             pseudo,
+      sexe:               sexe,
+      annee:              annee,
+      fonction:           fonction,
+      description:        description,
+      nom_acteur:         nom_acteur,
+      prenom_acteur:      prenom_acteur,
+      scenes_ids:         scenes_ids,
+      relations:          relations
     }
   end
 

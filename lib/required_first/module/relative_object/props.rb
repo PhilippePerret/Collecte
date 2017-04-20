@@ -77,11 +77,17 @@ module RelativeObjectMethods
     @type_element ||= self.class.name.to_s.split('::').last.downcase.to_sym
   end
 
+  # {Array de Film::Scene} Liste des scènes de l'objet
   def scenes
     @scenes ||= begin
-      a = Array.new
-      # TODO à définir
-      a
+      scenes_ids.nil? ? nil : scenes_ids.collect{|sid|film.scenes[sid]}
+    end
+  end
+
+  # {Array de Film::Personnage} Liste des personnages de l'objet
+  def personnages
+    @personnages ||= begin
+      personnages_ids.nil? ? nil : personnages_ids.collect{|pid|film.personnages[pid]}
     end
   end
 
