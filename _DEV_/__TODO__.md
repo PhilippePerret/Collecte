@@ -1,18 +1,9 @@
-* Décors : ajouter le nombre de scènes par décor dans les statistiques et peut-être visualiser sur une timeline.
-
 * Mettre en place l'utilisation (déjà documentée) des options -p (personnages) et -b (brins) pour la commande `collecte parse` qui permet de ne parser que les personnages ou que les brins.
 
-* Mémoriser les décors (class Film::Decor, film.decors)
-* Ajouter le nombre de décors aux statistiques
-
-
 * Ajouter au fichier statistique :
-  - le nombre de décors
   - le pourcentage de temps par personnage
   - le pourcentage de temps par décor
   - le pourcentage de temps par brin
-
-* Indiquer qu'il ne faut pas ouvrir les fichiers log en mode test
 
 * Implémenter la commande `collect extract --all`
 

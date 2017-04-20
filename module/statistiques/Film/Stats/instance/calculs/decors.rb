@@ -13,13 +13,20 @@ class Statistiques
           decor:        decor.decor,
           lieu:         decor.lieu,
           sous_decors:  Array.new,
-          duree:        0
+          duree:        0,
+          nombre_scenes:0
           })
       end
 
       # On mémorise le sous-décor, même s'il est nil. Noter que
       # ce sous-décor est forcément unique.
       @main_decors[decor.decor][:sous_decors] << decor
+
+      # On mémorise le nombre de scènes.
+      # Noter qu'on pourra toujours repasser en revue les
+      # sous-décor si on veut obtenir les scènes précisément. Ici,
+      # on ne prend que leur nombre.
+      @main_decors[decor.decor][:nombre_scenes] += decor.scenes_ids.count
 
       # On calcule la durée d'utilisation de ce décor et
       # de ce sous-décor
@@ -82,13 +89,24 @@ class Statistiques
         is_main = sdecor.sous_decor.nil?
         plusieurs_sdecors = hdecor[:sous_decors].count > 1
 
+        # Le nombre de scènes
+        # -------------------
+        # Par sous-décor
+        nombre_scenes = sdecor.scenes_ids.count
+        s_nombre_scenes = nombre_scenes > 1 ? 's' : ''
+        nombre_scenes = "#{nombre_scenes} scène#{s_nombre_scenes}"
+        # Totale
+        snt = hdecor[:nombre_scenes]
+        s_snt = snt > 1 ? 's' : ''
+        nombre_scenes_total = "#{snt} scène#{s_snt}"
+
         if !is_main && !hdecor[:ecrit_seul]
           # Un décor qui n'est pas main mais qui n'est
           # jamais utilisé seul, sans sous-décor => Il
           # faut lui faire une première ligne grasse
           arr << {
             data1: nil,
-            data2: (plusieurs_sdecors ? 'Durée totale : ':'') + "#{hdecor[:duree].s2h}",
+            data2: (plusieurs_sdecors ? 'Durée totale : ':'') + "#{hdecor[:duree].s2h}<br>#{nombre_scenes_total}",
             data3: "<decor class='bold'>#{sdecor.decor}</decor>"
           }
           hdecor[:ecrit_seul] = true
@@ -96,7 +114,7 @@ class Statistiques
         if is_main
           arr << {
             data1: (plusieurs_sdecors ? '' : sdecor.id),
-            data2: (plusieurs_sdecors ? 'Durée totale : ':'') + "#{hdecor[:duree].s2h}",
+            data2: (plusieurs_sdecors ? 'Durée totale : ':'') + "#{hdecor[:duree].s2h}<br>#{nombre_scenes_total}",
             data3: "<decor class='bold'>#{sdecor.decor}</decor>"
           }
           # Utilisation du décor principal seul, mais seulement
@@ -104,7 +122,8 @@ class Statistiques
           if plusieurs_sdecors
             arr << {
               data1: sdecor.id,
-              data3: '(décor seul)', data2: sdecor.duree.s2h
+              data3: '(décor seul)',
+              data2: sdecor.duree.s2h + "<br>#{nombre_scenes}"
             }
           end
           hdecor[:ecrit_seul] = true
@@ -113,7 +132,7 @@ class Statistiques
           arr << {
             # data1: nil, # main décor
             data1: sdecor.id,
-            data2: sdecor.duree.s2h, # durée
+            data2: sdecor.duree.s2h + "<br>#{nombre_scenes}", # durée
             data3: "<decor>#{sdecor.decor} : #{sdecor.sous_decor}</decor>" # sous-décor
           }
         end
