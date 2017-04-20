@@ -60,7 +60,7 @@ class Extractor
       [:libelles, 'ID', 'Présence', 'Patronyme']
     ] + stats.personnages_par_temps_presence.collect do |perso|
       # Données statistiques pour les personnages
-      [:data, perso.id, perso.presence.s2h, perso.as_link]
+      [:data, perso.id, perso.info_presence_stats, perso.as_link]
     end + [
       [:section_out],
       [:empty],
@@ -78,7 +78,7 @@ class Extractor
       [:libelles, 'ID', 'Durée totale', 'Libellé']
     ] + stats.brins_par_temps_presence.collect do |brin|
       # Données statistiques pour les brins
-      [:data, brin.id, brin.presence.s2h, brin.libelle.to_html]
+      [:data, brin.id, brin.info_duree_statistiques, brin.libelle.to_html]
     end + [
       [:section_out],
       [:empty]

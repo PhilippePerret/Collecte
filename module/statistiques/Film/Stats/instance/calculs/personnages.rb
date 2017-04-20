@@ -27,6 +27,11 @@ end #/Film
 class Film
 class Personnage
 
+  # Texte écrit dans le fichier statistique pour la
+  # présence du personnage
+  def info_presence_stats
+    presence.s2h + div("(#{pourcentage_presence})", class: 'small')
+  end
   # Retourne le temps de présence dans les scènes
   # spécifiées
   # Noter qu'il s'agit d'une variable définie une seule fois,
@@ -34,6 +39,10 @@ class Personnage
   # particulier.
   def presence in_scenes = nil
     @presence ||= calcule_temps_presence_in_scenes(in_scenes)
+  end
+
+  def pourcentage_presence
+    @pourcentage_presence ||= film.pourcentage_duree_for(presence)
   end
 
   def calcule_temps_presence_in_scenes in_scenes

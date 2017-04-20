@@ -100,13 +100,20 @@ class Statistiques
         s_snt = snt > 1 ? 's' : ''
         nombre_scenes_total = "#{snt} scène#{s_snt}"
 
+        # Pourcentage de durée
+        durpct = film.pourcentage_duree_for(hdecor[:duree])
+        div_durpct = div("(#{durpct})", class: 'small')
+        pctdur_sdecor = film.pourcentage_duree_for(sdecor.duree)
+        pctdur_sdecor = div("(#{pctdur_sdecor})", class: 'small')
+        info_duree_sdecor = "#{sdecor.duree.s2h} #{pctdur_sdecor}"
+
         if !is_main && !hdecor[:ecrit_seul]
           # Un décor qui n'est pas main mais qui n'est
           # jamais utilisé seul, sans sous-décor => Il
           # faut lui faire une première ligne grasse
           arr << {
             data1: nil,
-            data2: (plusieurs_sdecors ? 'Durée totale : ':'') + "#{hdecor[:duree].s2h}<br>#{nombre_scenes_total}",
+            data2: (plusieurs_sdecors ? 'Total : ':'') + "#{hdecor[:duree].s2h} #{div_durpct}#{nombre_scenes_total}",
             data3: "<decor class='bold'>#{sdecor.decor}</decor>"
           }
           hdecor[:ecrit_seul] = true
@@ -114,7 +121,7 @@ class Statistiques
         if is_main
           arr << {
             data1: (plusieurs_sdecors ? '' : sdecor.id),
-            data2: (plusieurs_sdecors ? 'Durée totale : ':'') + "#{hdecor[:duree].s2h}<br>#{nombre_scenes_total}",
+            data2: (plusieurs_sdecors ? 'Total : ':'') + "#{hdecor[:duree].s2h} #{div_durpct}#{nombre_scenes_total}",
             data3: "<decor class='bold'>#{sdecor.decor}</decor>"
           }
           # Utilisation du décor principal seul, mais seulement
@@ -123,7 +130,7 @@ class Statistiques
             arr << {
               data1: sdecor.id,
               data3: '(décor seul)',
-              data2: sdecor.duree.s2h + "<br>#{nombre_scenes}"
+              data2: info_duree_sdecor + "#{nombre_scenes}"
             }
           end
           hdecor[:ecrit_seul] = true
@@ -132,7 +139,7 @@ class Statistiques
           arr << {
             # data1: nil, # main décor
             data1: sdecor.id,
-            data2: sdecor.duree.s2h + "<br>#{nombre_scenes}", # durée
+            data2: info_duree_sdecor + "#{nombre_scenes}", # durée
             data3: "<decor>#{sdecor.decor} : #{sdecor.sous_decor}</decor>" # sous-décor
           }
         end

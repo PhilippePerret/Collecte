@@ -1,10 +1,5 @@
 * Mettre en place l'utilisation (déjà documentée) des options -p (personnages) et -b (brins) pour la commande `collecte parse` qui permet de ne parser que les personnages ou que les brins.
 
-* Ajouter au fichier statistique :
-  - le pourcentage de temps par personnage
-  - le pourcentage de temps par décor
-  - le pourcentage de temps par brin
-
 * Implémenter la commande `collect extract --all`
 
 * Faire une sortie de brin par personnage (ce sont les scènes d'un personnage). => Brins automatiques.

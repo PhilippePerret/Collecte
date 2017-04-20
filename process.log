@@ -1,47 +1,47 @@
-20/04 06:29:24 Fin du chargement des librairies (lib/required.rb)
-20/04 06:29:24 INSTANCIATION COLLECTE "/Users/philippeperret/Desktop/Everest_collect"
-20/04 06:29:24 Parsing préparé avec succès.
-20/04 06:29:24 PARSING DES MÉTADONNÉES…
-20/04 06:29:24 Métadata parsées ({:id=>"Everest2016", :titre=>"Éverest", :auteurs=>["Phil"], :debut=>"3/04/2017"})
-20/04 06:29:24 PARSING DES PERSONNAGES…
-20/04 06:29:24 PARSING DES BRINS…
-20/04 06:29:24 PARSING DES SCÈNES…
-20/04 06:29:24 Point structurel trouvé dans la scène : :inc_pert
-20/04 06:29:24 Point structurel trouvé dans la scène : :inc_dec
-20/04 06:29:24 Point structurel trouvé dans la scène : :pivot_1
-20/04 06:29:24 Point structurel trouvé dans la scène : :dev_part1
-20/04 06:29:24 Point structurel trouvé dans la scène : :cle_de_voute
-20/04 06:29:24 Point structurel trouvé dans la scène : :pivot_2
-20/04 06:29:24 Point structurel trouvé dans la scène : :denouement
-20/04 06:29:24 FIN DU FILM TROUVÉE à 1:54:00
-20/04 06:29:24 Calcul de la durée des scènes
-20/04 06:29:24 Sauvegarde des scènes
-20/04 06:29:24 Parsing préparé avec succès.
-20/04 06:29:24 PARSING DES MÉTADONNÉES…
-20/04 06:29:24 Métadata parsées ({:id=>"Everest2016", :titre=>"Éverest", :auteurs=>["Phil"], :debut=>"3/04/2017"})
-20/04 06:29:24 PARSING DES PERSONNAGES…
-20/04 06:29:24 PARSING DES BRINS…
-20/04 06:29:24 PARSING DES SCÈNES…
-20/04 06:29:24 Point structurel trouvé dans la scène : :inc_pert
-20/04 06:29:24 Point structurel trouvé dans la scène : :inc_dec
-20/04 06:29:24 Point structurel trouvé dans la scène : :pivot_1
-20/04 06:29:24 Point structurel trouvé dans la scène : :dev_part1
-20/04 06:29:24 Point structurel trouvé dans la scène : :cle_de_voute
-20/04 06:29:24 Point structurel trouvé dans la scène : :pivot_2
-20/04 06:29:24 Point structurel trouvé dans la scène : :denouement
-20/04 06:29:24 FIN DU FILM TROUVÉE à 1:54:00
-20/04 06:29:24 Calcul de la durée des scènes
-20/04 06:29:24 Sauvegarde des scènes
-20/04 06:29:24   -> prepare [path="/Users/philippeperret/Desktop/Everest_collect/extraction/full_statistiques.html"]
-20/04 06:29:24   <- prepare
-20/04 06:29:24 Méthode d'extraction à utiliser : :extract_statistiques
-20/04 06:29:24 Liste des IDs de personnages retenus : ["rob", "helen", "guy", "harold", "mike", "jan", "krakauer", "doug", "beck", "yasuko", "ang", "scott", "ianwoodall", "sandy", "caro", "peach", "anatoli", "neal", "lopsang", "david"]
-20/04 06:29:24 Liste des IDs de brins retenus : [5, 10, 11, 1, 3, 2, 4, 6, 7, 8, 12, 9]
-20/04 06:29:24 La scène 1 contient les points structurels : [:inc_pert]
-20/04 06:29:24 La scène 42 contient les points structurels : [:inc_dec, :pivot_1]
-20/04 06:29:24 La scène 43 contient les points structurels : [:dev_part1]
-20/04 06:29:24 La scène 70 contient les points structurels : [:cle_de_voute]
-20/04 06:29:24 La scène 127 contient les points structurels : [:pivot_2]
-20/04 06:29:24 La scène 128 contient les points structurels : [:denouement]
-20/04 06:29:24 STATISTIQUES : constitution du code
-20/04 06:29:24 STATISTIQUES : /fin de constitution du code
+20/04 06:56:53 Fin du chargement des librairies (lib/required.rb)
+20/04 06:56:53 INSTANCIATION COLLECTE "/Users/philippeperret/Desktop/Everest_collect"
+20/04 06:56:53 Parsing préparé avec succès.
+20/04 06:56:53 PARSING DES MÉTADONNÉES…
+20/04 06:56:53 Métadata parsées ({:id=>"Everest2016", :titre=>"Éverest", :auteurs=>["Phil"], :debut=>"3/04/2017"})
+20/04 06:56:53 PARSING DES PERSONNAGES…
+20/04 06:56:53 PARSING DES BRINS…
+20/04 06:56:53 PARSING DES SCÈNES…
+20/04 06:56:53 Point structurel trouvé dans la scène : :inc_pert
+20/04 06:56:53 Point structurel trouvé dans la scène : :inc_dec
+20/04 06:56:53 Point structurel trouvé dans la scène : :pivot_1
+20/04 06:56:53 Point structurel trouvé dans la scène : :dev_part1
+20/04 06:56:53 Point structurel trouvé dans la scène : :cle_de_voute
+20/04 06:56:53 Point structurel trouvé dans la scène : :pivot_2
+20/04 06:56:53 Point structurel trouvé dans la scène : :denouement
+20/04 06:56:53 FIN DU FILM TROUVÉE à 1:54:00
+20/04 06:56:53 Calcul de la durée des scènes
+20/04 06:56:53 Sauvegarde des scènes
+20/04 06:56:53 Parsing préparé avec succès.
+20/04 06:56:53 PARSING DES MÉTADONNÉES…
+20/04 06:56:53 Métadata parsées ({:id=>"Everest2016", :titre=>"Éverest", :auteurs=>["Phil"], :debut=>"3/04/2017"})
+20/04 06:56:53 PARSING DES PERSONNAGES…
+20/04 06:56:53 PARSING DES BRINS…
+20/04 06:56:53 PARSING DES SCÈNES…
+20/04 06:56:53 Point structurel trouvé dans la scène : :inc_pert
+20/04 06:56:53 Point structurel trouvé dans la scène : :inc_dec
+20/04 06:56:53 Point structurel trouvé dans la scène : :pivot_1
+20/04 06:56:53 Point structurel trouvé dans la scène : :dev_part1
+20/04 06:56:53 Point structurel trouvé dans la scène : :cle_de_voute
+20/04 06:56:53 Point structurel trouvé dans la scène : :pivot_2
+20/04 06:56:53 Point structurel trouvé dans la scène : :denouement
+20/04 06:56:53 FIN DU FILM TROUVÉE à 1:54:00
+20/04 06:56:53 Calcul de la durée des scènes
+20/04 06:56:53 Sauvegarde des scènes
+20/04 06:56:53   -> prepare [path="/Users/philippeperret/Desktop/Everest_collect/extraction/full_statistiques.html"]
+20/04 06:56:53   <- prepare
+20/04 06:56:53 Méthode d'extraction à utiliser : :extract_statistiques
+20/04 06:56:53 Liste des IDs de personnages retenus : ["rob", "helen", "guy", "harold", "mike", "jan", "krakauer", "doug", "beck", "yasuko", "ang", "scott", "ianwoodall", "sandy", "caro", "peach", "anatoli", "neal", "lopsang", "david"]
+20/04 06:56:53 Liste des IDs de brins retenus : [5, 10, 11, 1, 3, 2, 4, 6, 7, 8, 12, 9]
+20/04 06:56:53 La scène 1 contient les points structurels : [:inc_pert]
+20/04 06:56:53 La scène 42 contient les points structurels : [:inc_dec, :pivot_1]
+20/04 06:56:53 La scène 43 contient les points structurels : [:dev_part1]
+20/04 06:56:53 La scène 70 contient les points structurels : [:cle_de_voute]
+20/04 06:56:53 La scène 127 contient les points structurels : [:pivot_2]
+20/04 06:56:53 La scène 128 contient les points structurels : [:denouement]
+20/04 06:56:53 STATISTIQUES : constitution du code
+20/04 06:56:53 STATISTIQUES : /fin de constitution du code
