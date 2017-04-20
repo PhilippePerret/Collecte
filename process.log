@@ -1,46 +1,50 @@
-20/04 12:25:38 Fin du chargement des librairies (lib/required.rb)
-20/04 12:25:39 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_5"
-20/04 12:25:39 Parsing préparé avec succès.
-20/04 12:25:39 PARSING DES MÉTADONNÉES…
-20/04 12:25:39 Métadata parsées ({:id=>"divisions2017", :titre=>"Film pour divisions", :auteurs=>["Phil", "Marion"], :debut=>"11/4/2017", :fin=>"11/4/2017"})
-20/04 12:25:39 PARSING DES PERSONNAGES…
-20/04 12:25:39 Définition des relations de personnages
-20/04 12:25:39 -> Film::RelationsPersonnages::define
-20/04 12:25:39    NOMBRE RELATIONS CRÉÉES : 0
-20/04 12:25:39 <- Film::RelationsPersonnages::define
-20/04 12:25:39 PARSING DES BRINS…
-20/04 12:25:39 PARSING DES SCÈNES…
-20/04 12:25:39 FIN DU FILM TROUVÉE à 1:00:30
-20/04 12:25:39 Calcul de la durée des scènes
-20/04 12:25:39 Sauvegarde des scènes
-20/04 12:25:39 -> Film#load_from_pstore
-20/04 12:25:39 <- Film#load_from_pstore OK
-20/04 12:25:39 -> Film::RelationsPersonnages::define
-20/04 12:25:39    Création de la relation entre Joe Prota (#joe) et Troisième Perso (#trois) (relation #joe_trois)
-20/04 12:25:39    Création de la relation entre Troisième Perso (#trois) et Cento (#quatre) (relation #quatre_trois)
-20/04 12:25:39    NOMBRE RELATIONS CRÉÉES : 2
-20/04 12:25:39 <- Film::RelationsPersonnages::define
-20/04 12:25:39 -> extract_data(options = {:as=>:all_relations_html})
-20/04 12:25:39 *** Traitement d'un ensemble d'objets relations ***
-20/04 12:25:39 * Traitement de la relation joe_trois…
-20/04 12:25:39   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_5/extraction/full_brin_relation_joe_trois.html"]
-20/04 12:25:39   <- prepare
-20/04 12:25:39 Méthode d'extraction à utiliser : :extract_brin_relation
-20/04 12:25:39 -> Film::Extractor#extract_brin_relation
-20/04 12:25:39 -> extract_sequencier
-20/04 12:25:39 Nombre de scènes passant le filtre : 8
-20/04 12:25:39 Méthode Scene à utiliser : :as_sequence
-20/04 12:25:39 <- /extract_sequencier
-20/04 12:25:39 <- Film::Extractor#extract_brin_relation
-20/04 12:25:39   = Relation joe_trois traitée.
-20/04 12:25:39 * Traitement de la relation quatre_trois…
-20/04 12:25:39   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_5/extraction/full_brin_relation_quatre_trois.html"]
-20/04 12:25:39   <- prepare
-20/04 12:25:39 Méthode d'extraction à utiliser : :extract_brin_relation
-20/04 12:25:39 -> Film::Extractor#extract_brin_relation
-20/04 12:25:39 -> extract_sequencier
-20/04 12:25:39 Nombre de scènes passant le filtre : 8
-20/04 12:25:39 Méthode Scene à utiliser : :as_sequence
-20/04 12:25:39 <- /extract_sequencier
-20/04 12:25:39 <- Film::Extractor#extract_brin_relation
-20/04 12:25:39   = Relation quatre_trois traitée.
+20/04 16:22:21 Fin du chargement des librairies (lib/required.rb)
+20/04 16:22:22 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_5"
+20/04 16:22:22 Parsing préparé avec succès.
+20/04 16:22:22 PARSING DES MÉTADONNÉES…
+20/04 16:22:22 Métadata parsées ({:id=>"divisions2017", :titre=>"Film pour divisions", :auteurs=>["Phil", "Marion"], :debut=>"11/4/2017", :fin=>"11/4/2017"})
+20/04 16:22:22 PARSING DES PERSONNAGES…
+20/04 16:22:22 Définition des relations de personnages
+20/04 16:22:22 -> Film::RelationsPersonnages::define
+20/04 16:22:22    NOMBRE RELATIONS CRÉÉES : 0
+20/04 16:22:22 <- Film::RelationsPersonnages::define
+20/04 16:22:22 PARSING DES BRINS…
+20/04 16:22:22 PARSING DES SCÈNES…
+20/04 16:22:22 FIN DU FILM TROUVÉE à 1:00:30
+20/04 16:22:22 Calcul de la durée des scènes
+20/04 16:22:22 Sauvegarde des scènes
+20/04 16:22:22 -> Film#load_from_pstore
+20/04 16:22:22 <- Film#load_from_pstore OK
+20/04 16:22:22 -> Film::RelationsPersonnages::define
+20/04 16:22:22    Création de la relation entre Joe Prota (#joe) et Troisième Perso (#trois) (relation #joe_trois)
+20/04 16:22:22    Création de la relation entre Troisième Perso (#trois) et Cento (#quatre) (relation #quatre_trois)
+20/04 16:22:22    NOMBRE RELATIONS CRÉÉES : 2
+20/04 16:22:22 <- Film::RelationsPersonnages::define
+20/04 16:22:22 -> extract_data(options = {:as=>:all_relations_html})
+20/04 16:22:22 *** Traitement d'un ensemble d'objets relations ***
+20/04 16:22:22 * Traitement de la relation joe_trois…
+20/04 16:22:22   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_5/extraction/full_brin_relation_joe_trois.html"]
+20/04 16:22:22   <- prepare
+20/04 16:22:22 Méthode d'extraction à utiliser : :extract_brin_relation
+20/04 16:22:22 -> Film::Extractor#extract_brin_relation
+20/04 16:22:22    scenes_ids de la relation : [7, 8]
+20/04 16:22:22 -> extract_sequencier
+20/04 16:22:22 Nombre de scènes passant le filtre : 2
+20/04 16:22:22 Méthode Scene à utiliser : :as_sequence
+20/04 16:22:22 Numéros des scènes à écrire : 7, 8
+20/04 16:22:22 <- /extract_sequencier
+20/04 16:22:22 <- Film::Extractor#extract_brin_relation
+20/04 16:22:22   = Relation joe_trois traitée.
+20/04 16:22:22 * Traitement de la relation quatre_trois…
+20/04 16:22:22   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_5/extraction/full_brin_relation_quatre_trois.html"]
+20/04 16:22:22   <- prepare
+20/04 16:22:22 Méthode d'extraction à utiliser : :extract_brin_relation
+20/04 16:22:22 -> Film::Extractor#extract_brin_relation
+20/04 16:22:22    scenes_ids de la relation : [6, 7]
+20/04 16:22:22 -> extract_sequencier
+20/04 16:22:22 Nombre de scènes passant le filtre : 2
+20/04 16:22:22 Méthode Scene à utiliser : :as_sequence
+20/04 16:22:22 Numéros des scènes à écrire : 6, 7
+20/04 16:22:22 <- /extract_sequencier
+20/04 16:22:22 <- Film::Extractor#extract_brin_relation
+20/04 16:22:22   = Relation quatre_trois traitée.

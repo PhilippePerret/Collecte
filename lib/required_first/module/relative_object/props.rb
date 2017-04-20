@@ -26,7 +26,7 @@ module RelativeObjectMethods
 
   # {Array de Fixnum} Liste des Identifiants de scènes
   # auxquelles appartient l'objet
-  attr_reader :scenes_ids
+  attr_accessor :scenes_ids
 
   # {Film::Horloge} Horloge de l'objet. Permet de
   # le « temporiser ».

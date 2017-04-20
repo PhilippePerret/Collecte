@@ -28,6 +28,7 @@ class Extractor
 
   def extract_brin_relation
     log "-> Film::Extractor#extract_brin_relation"
+    log "   scenes_ids de la relation : #{options[:relation].scenes_ids.inspect}"
     @scenes = options[:relation].scenes
     extract_sequencier
     log "<- Film::Extractor#extract_brin_relation"
@@ -109,6 +110,7 @@ class Extractor
             :as_sequence
           end
         log "Méthode Scene à utiliser : #{methode_as.inspect}"
+        log "Numéros des scènes à écrire : #{scenes.collect{|s|s.numero}.join(', ')}"
         scenes.each do |scene|
           write scene.send(methode_as)
         end

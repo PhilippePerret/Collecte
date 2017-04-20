@@ -51,7 +51,9 @@ class RelationsPersonnages
         # inutile de créer la relation.
         film.relations_personnages[rel_id].nil? || next
         log "   Création de la relation entre #{perso.pseudo} (##{perso_id}) et #{film.personnages[prid].pseudo} (##{prid}) (relation ##{rel_id})"
-        self << Film::RelationPersonnage.new(film, rel_id, [perso_id, prid])
+        irelation = Film::RelationPersonnage.new(film, rel_id, [perso_id, prid])
+        irelation.scenes_ids = scenes_ids
+        self << irelation
       end
     end
     log "   NOMBRE RELATIONS CRÉÉES : #{film.relations_personnages.count}"
