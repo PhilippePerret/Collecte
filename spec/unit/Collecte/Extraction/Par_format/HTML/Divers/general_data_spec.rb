@@ -94,22 +94,24 @@ describe 'Extraction au format :html' do
       describe 'les données des brins' do
         it 'le titre de la section' do
           expect(code).to include '=== BRINS ==='
-          [
-            {
-              id:1, libelle:'Premier brin',
-              description:'Description du premier brin.'
-            },
-            {
-              id:2, libelle:'Deuxième brin',
-              description:'Une description du deuxième brin.'
-            },
-            {id:3, libelle:'Troisième brin', description:''},
-            {id:4, libelle:'Quatrième brin', description:''},
-            {
-              id:5, libelle:'Cinquième brin inutilisé par la collecte.',
-              description:''
-            }
-          ].each do |hbrin|
+        end
+        [
+          {
+            id:1, libelle:'Premier brin',
+            description:'Description du premier brin.'
+          },
+          {
+            id:2, libelle:'Deuxième brin',
+            description:'Une description du deuxième brin.'
+          },
+          {id:3, libelle:'Troisième brin', description:''},
+          {id:4, libelle:'Quatrième brin', description:''},
+          {
+            id:5, libelle:'Cinquième brin inutilisé par la collecte.',
+            description:''
+          }
+        ].each do |hbrin|
+          it "le brin #{hbrin.inspect} est affiché correctement" do
             expect(code).to match /<div(.*?)>Brin #{hbrin[:id]}<\/div>/
             hbrin.each do |prop,valu|
               expect(code).to include div_libval(prop, valu)

@@ -47,16 +47,18 @@ class Extractor
 
 
   def extract_brins_data
+    log "-> extract_brins_data (HTML)"
     write '<brins class="liste_objets_relatifs">'
     write '=== BRINS ===', nil, {div_class: 'titre'}
     film.brins.each do |brin_id, brin|
       write "Brin #{brin_id}", nil, {div_class: 'stitre'}
       write "id", brin.id
       [:libelle, :description].each do |prop|
-        write "#{prop}", brin.send(prop).to_s
+        write "#{prop}", brin.send(prop).to_html
       end
     end
     write '</brins>'
+    log "<- extract_brins_data (HTML)"
     final_file.flush
   end
   # /extract_brins_data
@@ -114,6 +116,7 @@ class Extractor
   # /extract_decors_data
 
   def extract_scenes_data
+    log "-> extract_scenes_data (HTML)"
     write '<scenes class="liste_objets_relatifs">'
     write '=== SCENES ===', nil, {div_class: 'titre'}
     film.scenes.each do |scene_id, scene|
@@ -132,6 +135,7 @@ class Extractor
       end
     end
     write '</scenes>'
+    log "<- extract_scenes_data (HTML)"
     final_file.flush
   end
   # /extract_scenes_data

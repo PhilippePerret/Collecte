@@ -101,7 +101,7 @@ class Extractor
       else
         methode_as =
           case options[:as]
-          when :brin
+          when :brin, :brins
             :as_brin
           else
             # Donc pour le séquencier, les brins personnages,
