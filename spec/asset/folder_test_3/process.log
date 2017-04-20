@@ -1,131 +1,131 @@
-18/04 10:50:29 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
-18/04 10:50:29 -> Film#load_from_pstore
-18/04 10:50:29 <- Film#load_from_pstore OK
-18/04 10:50:29   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_3.html"]
-18/04 10:50:29   <- prepare
-18/04 10:50:29 Méthode d'extraction à utiliser : :extract_brin
-18/04 10:50:29 -> Film::Extractor#extract_brin
-18/04 10:50:29 -> extract_sequencier(as_brin = true)
-18/04 10:50:29 Scène 1 (0:00:30) filtrée : hors conditions
-18/04 10:50:29 Scène 2 (0:01:40) filtrée : hors conditions
-18/04 10:50:29 Scène 6 (0:11:45) filtrée : hors conditions
-18/04 10:50:29 Scène 7 (0:15:15) filtrée : hors conditions
-18/04 10:50:29 Nombre de scènes passant le filtre : 3
-18/04 10:50:29 Méthode Scene à utiliser : :as_brin
-18/04 10:50:29 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
-18/04 10:50:29 -> Film#load_from_pstore
-18/04 10:50:29 <- Film#load_from_pstore OK
-18/04 10:50:29   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_3.html"]
-18/04 10:50:29   <- prepare
-18/04 10:50:29 Méthode d'extraction à utiliser : :extract_brin
-18/04 10:50:29 -> Film::Extractor#extract_brin
-18/04 10:50:29 -> extract_sequencier(as_brin = true)
-18/04 10:50:29 Scène 1 (0:00:30) filtrée : hors conditions
-18/04 10:50:29 Scène 2 (0:01:40) filtrée : hors conditions
-18/04 10:50:29 Scène 6 (0:11:45) filtrée : hors conditions
-18/04 10:50:29 Scène 7 (0:15:15) filtrée : hors conditions
-18/04 10:50:29 Nombre de scènes passant le filtre : 3
-18/04 10:50:29 Méthode Scene à utiliser : :as_brin
-18/04 10:50:30 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
-18/04 10:50:30 -> Film#load_from_pstore
-18/04 10:50:30 <- Film#load_from_pstore OK
-18/04 10:50:30   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_2_4.html"]
-18/04 10:50:30   <- prepare
-18/04 10:50:30 Méthode d'extraction à utiliser : :extract_brin
-18/04 10:50:30 -> Film::Extractor#extract_brin
-18/04 10:50:30 -> extract_sequencier(as_brin = true)
-18/04 10:50:30 Scène 1 (0:00:30) filtrée : hors conditions
-18/04 10:50:30 Scène 3 (0:03:20) filtrée : hors conditions
-18/04 10:50:30 Scène 5 (0:07:23) filtrée : hors conditions
-18/04 10:50:30 Scène 6 (0:11:45) filtrée : hors conditions
-18/04 10:50:30 Nombre de scènes passant le filtre : 3
-18/04 10:50:30 Méthode Scene à utiliser : :as_brin
-18/04 10:50:30 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
-18/04 10:50:30 -> Film#load_from_pstore
-18/04 10:50:30 <- Film#load_from_pstore OK
-18/04 10:50:30   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_2_4.html"]
-18/04 10:50:30   <- prepare
-18/04 10:50:30 Méthode d'extraction à utiliser : :extract_brin
-18/04 10:50:30 -> Film::Extractor#extract_brin
-18/04 10:50:30 -> extract_sequencier(as_brin = true)
-18/04 10:50:30 Scène 1 (0:00:30) filtrée : hors conditions
-18/04 10:50:30 Scène 3 (0:03:20) filtrée : hors conditions
-18/04 10:50:30 Scène 5 (0:07:23) filtrée : hors conditions
-18/04 10:50:30 Scène 6 (0:11:45) filtrée : hors conditions
-18/04 10:50:30 Nombre de scènes passant le filtre : 3
-18/04 10:50:30 Méthode Scene à utiliser : :as_brin
-18/04 10:50:30 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
-18/04 10:50:30 -> Film#load_from_pstore
-18/04 10:50:30 <- Film#load_from_pstore OK
-18/04 10:50:30   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_1.html"]
-18/04 10:50:30   <- prepare
-18/04 10:50:30 Méthode d'extraction à utiliser : :extract_brin
-18/04 10:50:30 -> Film::Extractor#extract_brin
-18/04 10:50:30 -> extract_sequencier(as_brin = true)
-18/04 10:50:30 Scène 6 (0:11:45) filtrée : hors conditions
-18/04 10:50:30 Scène 7 (0:15:15) filtrée : hors conditions
-18/04 10:50:30 Nombre de scènes passant le filtre : 5
-18/04 10:50:30 Méthode Scene à utiliser : :as_brin
-18/04 10:50:30 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
-18/04 10:50:30 -> Film#load_from_pstore
-18/04 10:50:30 <- Film#load_from_pstore OK
-18/04 10:50:30   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_2_4.html"]
-18/04 10:50:30   <- prepare
-18/04 10:50:30 Méthode d'extraction à utiliser : :extract_brin
-18/04 10:50:30 -> Film::Extractor#extract_brin
-18/04 10:50:30 -> extract_sequencier(as_brin = true)
-18/04 10:50:30 Scène 1 (0:00:30) filtrée : hors conditions
-18/04 10:50:30 Scène 3 (0:03:20) filtrée : hors conditions
-18/04 10:50:30 Scène 5 (0:07:23) filtrée : hors conditions
-18/04 10:50:30 Scène 6 (0:11:45) filtrée : hors conditions
-18/04 10:50:30 Nombre de scènes passant le filtre : 3
-18/04 10:50:30 Méthode Scene à utiliser : :as_brin
-18/04 10:50:30 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
-18/04 10:50:30 -> Film#load_from_pstore
-18/04 10:50:30 <- Film#load_from_pstore OK
-18/04 10:50:30   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_1_3.html"]
-18/04 10:50:30   <- prepare
-18/04 10:50:30 Méthode d'extraction à utiliser : :extract_brin
-18/04 10:50:30 -> Film::Extractor#extract_brin
-18/04 10:50:30 -> extract_sequencier(as_brin = true)
-18/04 10:50:30 Scène 1 (0:00:30) filtrée : hors conditions
-18/04 10:50:30 Scène 2 (0:01:40) filtrée : hors conditions
-18/04 10:50:30 Scène 6 (0:11:45) filtrée : hors conditions
-18/04 10:50:30 Scène 7 (0:15:15) filtrée : hors conditions
-18/04 10:50:30 Nombre de scènes passant le filtre : 3
-18/04 10:50:30 Méthode Scene à utiliser : :as_brin
-18/04 10:50:30 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
-18/04 10:50:30 -> Film#load_from_pstore
-18/04 10:50:30 <- Film#load_from_pstore OK
-18/04 10:50:30   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin__2_3__1.html"]
-18/04 10:50:30   <- prepare
-18/04 10:50:30 Méthode d'extraction à utiliser : :extract_brin
-18/04 10:50:30 -> Film::Extractor#extract_brin
-18/04 10:50:30 -> extract_sequencier(as_brin = true)
-18/04 10:50:30 Scène 1 (0:00:30) filtrée : hors conditions
-18/04 10:50:30 Scène 6 (0:11:45) filtrée : hors conditions
-18/04 10:50:30 Scène 7 (0:15:15) filtrée : hors conditions
-18/04 10:50:30 Nombre de scènes passant le filtre : 4
-18/04 10:50:30 Méthode Scene à utiliser : :as_brin
-18/04 10:50:30 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
-18/04 10:50:30 -> Film#load_from_pstore
-18/04 10:50:30 <- Film#load_from_pstore OK
-18/04 10:50:30   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_1__2_3_.html"]
-18/04 10:50:30   <- prepare
-18/04 10:50:30 Méthode d'extraction à utiliser : :extract_brin
-18/04 10:50:30 -> Film::Extractor#extract_brin
-18/04 10:50:30 -> extract_sequencier(as_brin = true)
-18/04 10:50:30 Scène 1 (0:00:30) filtrée : hors conditions
-18/04 10:50:30 Scène 6 (0:11:45) filtrée : hors conditions
-18/04 10:50:30 Scène 7 (0:15:15) filtrée : hors conditions
-18/04 10:50:30 Nombre de scènes passant le filtre : 4
-18/04 10:50:30 Méthode Scene à utiliser : :as_brin
-18/04 10:50:30 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_5"
-18/04 10:50:30 Parsing préparé avec succès.
-18/04 10:50:30 PARSING DES MÉTADONNÉES…
-18/04 10:50:30 Métadata parsées ({:id=>"divisions2017", :titre=>"Film pour divisions", :auteurs=>["Phil", "Marion"], :debut=>"11/4/2017", :fin=>"11/4/2017"})
-18/04 10:50:30 PARSING DES PERSONNAGES…
-18/04 10:50:30 PARSING DES BRINS…
-18/04 10:50:30 PARSING DES SCÈNES…
-18/04 10:50:30 FIN DU FILM TROUVÉE à 1:00:30
-18/04 10:50:30 Calcul de la durée des scènes
+20/04 06:12:53 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
+20/04 06:12:53 -> Film#load_from_pstore
+20/04 06:12:53 <- Film#load_from_pstore OK
+20/04 06:12:53   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_3.html"]
+20/04 06:12:53   <- prepare
+20/04 06:12:53 Méthode d'extraction à utiliser : :extract_brin
+20/04 06:12:53 -> Film::Extractor#extract_brin
+20/04 06:12:53 -> extract_sequencier(as_brin = true)
+20/04 06:12:53 Scène 1 (0:00:30) filtrée : hors conditions
+20/04 06:12:53 Scène 2 (0:01:40) filtrée : hors conditions
+20/04 06:12:53 Scène 6 (0:11:45) filtrée : hors conditions
+20/04 06:12:53 Scène 7 (0:15:15) filtrée : hors conditions
+20/04 06:12:53 Nombre de scènes passant le filtre : 3
+20/04 06:12:53 Méthode Scene à utiliser : :as_brin
+20/04 06:12:53 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
+20/04 06:12:53 -> Film#load_from_pstore
+20/04 06:12:53 <- Film#load_from_pstore OK
+20/04 06:12:53   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_3.html"]
+20/04 06:12:53   <- prepare
+20/04 06:12:53 Méthode d'extraction à utiliser : :extract_brin
+20/04 06:12:53 -> Film::Extractor#extract_brin
+20/04 06:12:53 -> extract_sequencier(as_brin = true)
+20/04 06:12:53 Scène 1 (0:00:30) filtrée : hors conditions
+20/04 06:12:53 Scène 2 (0:01:40) filtrée : hors conditions
+20/04 06:12:53 Scène 6 (0:11:45) filtrée : hors conditions
+20/04 06:12:53 Scène 7 (0:15:15) filtrée : hors conditions
+20/04 06:12:53 Nombre de scènes passant le filtre : 3
+20/04 06:12:53 Méthode Scene à utiliser : :as_brin
+20/04 06:12:53 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
+20/04 06:12:53 -> Film#load_from_pstore
+20/04 06:12:53 <- Film#load_from_pstore OK
+20/04 06:12:53   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_2_4.html"]
+20/04 06:12:53   <- prepare
+20/04 06:12:53 Méthode d'extraction à utiliser : :extract_brin
+20/04 06:12:53 -> Film::Extractor#extract_brin
+20/04 06:12:53 -> extract_sequencier(as_brin = true)
+20/04 06:12:53 Scène 1 (0:00:30) filtrée : hors conditions
+20/04 06:12:53 Scène 3 (0:03:20) filtrée : hors conditions
+20/04 06:12:53 Scène 5 (0:07:23) filtrée : hors conditions
+20/04 06:12:53 Scène 6 (0:11:45) filtrée : hors conditions
+20/04 06:12:53 Nombre de scènes passant le filtre : 3
+20/04 06:12:53 Méthode Scene à utiliser : :as_brin
+20/04 06:12:53 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
+20/04 06:12:53 -> Film#load_from_pstore
+20/04 06:12:53 <- Film#load_from_pstore OK
+20/04 06:12:53   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_2_4.html"]
+20/04 06:12:53   <- prepare
+20/04 06:12:53 Méthode d'extraction à utiliser : :extract_brin
+20/04 06:12:53 -> Film::Extractor#extract_brin
+20/04 06:12:53 -> extract_sequencier(as_brin = true)
+20/04 06:12:53 Scène 1 (0:00:30) filtrée : hors conditions
+20/04 06:12:53 Scène 3 (0:03:20) filtrée : hors conditions
+20/04 06:12:53 Scène 5 (0:07:23) filtrée : hors conditions
+20/04 06:12:53 Scène 6 (0:11:45) filtrée : hors conditions
+20/04 06:12:53 Nombre de scènes passant le filtre : 3
+20/04 06:12:53 Méthode Scene à utiliser : :as_brin
+20/04 06:12:53 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
+20/04 06:12:53 -> Film#load_from_pstore
+20/04 06:12:53 <- Film#load_from_pstore OK
+20/04 06:12:53   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_1.html"]
+20/04 06:12:53   <- prepare
+20/04 06:12:53 Méthode d'extraction à utiliser : :extract_brin
+20/04 06:12:53 -> Film::Extractor#extract_brin
+20/04 06:12:53 -> extract_sequencier(as_brin = true)
+20/04 06:12:53 Scène 6 (0:11:45) filtrée : hors conditions
+20/04 06:12:53 Scène 7 (0:15:15) filtrée : hors conditions
+20/04 06:12:53 Nombre de scènes passant le filtre : 5
+20/04 06:12:53 Méthode Scene à utiliser : :as_brin
+20/04 06:12:53 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
+20/04 06:12:53 -> Film#load_from_pstore
+20/04 06:12:53 <- Film#load_from_pstore OK
+20/04 06:12:53   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_2_4.html"]
+20/04 06:12:53   <- prepare
+20/04 06:12:53 Méthode d'extraction à utiliser : :extract_brin
+20/04 06:12:53 -> Film::Extractor#extract_brin
+20/04 06:12:53 -> extract_sequencier(as_brin = true)
+20/04 06:12:53 Scène 1 (0:00:30) filtrée : hors conditions
+20/04 06:12:53 Scène 3 (0:03:20) filtrée : hors conditions
+20/04 06:12:53 Scène 5 (0:07:23) filtrée : hors conditions
+20/04 06:12:53 Scène 6 (0:11:45) filtrée : hors conditions
+20/04 06:12:53 Nombre de scènes passant le filtre : 3
+20/04 06:12:53 Méthode Scene à utiliser : :as_brin
+20/04 06:12:53 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
+20/04 06:12:53 -> Film#load_from_pstore
+20/04 06:12:53 <- Film#load_from_pstore OK
+20/04 06:12:53   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_1_3.html"]
+20/04 06:12:53   <- prepare
+20/04 06:12:53 Méthode d'extraction à utiliser : :extract_brin
+20/04 06:12:53 -> Film::Extractor#extract_brin
+20/04 06:12:53 -> extract_sequencier(as_brin = true)
+20/04 06:12:53 Scène 1 (0:00:30) filtrée : hors conditions
+20/04 06:12:53 Scène 2 (0:01:40) filtrée : hors conditions
+20/04 06:12:53 Scène 6 (0:11:45) filtrée : hors conditions
+20/04 06:12:53 Scène 7 (0:15:15) filtrée : hors conditions
+20/04 06:12:53 Nombre de scènes passant le filtre : 3
+20/04 06:12:53 Méthode Scene à utiliser : :as_brin
+20/04 06:12:53 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
+20/04 06:12:53 -> Film#load_from_pstore
+20/04 06:12:53 <- Film#load_from_pstore OK
+20/04 06:12:53   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin__2_3__1.html"]
+20/04 06:12:53   <- prepare
+20/04 06:12:53 Méthode d'extraction à utiliser : :extract_brin
+20/04 06:12:53 -> Film::Extractor#extract_brin
+20/04 06:12:53 -> extract_sequencier(as_brin = true)
+20/04 06:12:53 Scène 1 (0:00:30) filtrée : hors conditions
+20/04 06:12:53 Scène 6 (0:11:45) filtrée : hors conditions
+20/04 06:12:53 Scène 7 (0:15:15) filtrée : hors conditions
+20/04 06:12:53 Nombre de scènes passant le filtre : 4
+20/04 06:12:53 Méthode Scene à utiliser : :as_brin
+20/04 06:12:53 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4"
+20/04 06:12:53 -> Film#load_from_pstore
+20/04 06:12:53 <- Film#load_from_pstore OK
+20/04 06:12:53   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_4/extraction/full_brin_1__2_3_.html"]
+20/04 06:12:53   <- prepare
+20/04 06:12:53 Méthode d'extraction à utiliser : :extract_brin
+20/04 06:12:53 -> Film::Extractor#extract_brin
+20/04 06:12:53 -> extract_sequencier(as_brin = true)
+20/04 06:12:53 Scène 1 (0:00:30) filtrée : hors conditions
+20/04 06:12:53 Scène 6 (0:11:45) filtrée : hors conditions
+20/04 06:12:53 Scène 7 (0:15:15) filtrée : hors conditions
+20/04 06:12:53 Nombre de scènes passant le filtre : 4
+20/04 06:12:53 Méthode Scene à utiliser : :as_brin
+20/04 06:12:53 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_5"
+20/04 06:12:53 Parsing préparé avec succès.
+20/04 06:12:53 PARSING DES MÉTADONNÉES…
+20/04 06:12:53 Métadata parsées ({:id=>"divisions2017", :titre=>"Film pour divisions", :auteurs=>["Phil", "Marion"], :debut=>"11/4/2017", :fin=>"11/4/2017"})
+20/04 06:12:53 PARSING DES PERSONNAGES…
+20/04 06:12:53 PARSING DES BRINS…
+20/04 06:12:53 PARSING DES SCÈNES…
+20/04 06:12:53 FIN DU FILM TROUVÉE à 1:00:30
+20/04 06:12:53 Calcul de la durée des scènes

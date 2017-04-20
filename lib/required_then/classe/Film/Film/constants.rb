@@ -11,7 +11,8 @@ class Film
   # Lorsque les deux types sont différents, on sait qu'on
   # doit sauver les données dans l'autre type après
   # chargement du film.
-  MODE_DATA_LOAD = :pstore # ou :marshal
-  MODE_DATA_SAVE = :pstore # ou :marshal
-
+  defined?(MODE_DATA_SAVE) || begin
+    MODE_DATA_LOAD = :pstore # ou :marshal
+    MODE_DATA_SAVE = :pstore # ou :marshal
+  end
 end

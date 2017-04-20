@@ -115,7 +115,16 @@ RSpec.configure do |config|
 
   # À faire avant chaque module de test (donc chaque fichier)
   config.before :all do
-    Collecte.current = nil
+    Collecte.current        = nil
+    # Pour empêcher certaines opérations, comme l'ouverture des fichiers dans
+    # le navigateur, non précise à l'application qu'on est en mode test.
+    # Si on doit tester l'ouverture dans le navigateur, alors il faut passer
+    # provisoirement le mode test en off et le remettre après le test.
+    Collecte.set_mode_test true
+  end
+
+  config.after :all do
+    Collecte.set_mode_test false
   end
 
 end

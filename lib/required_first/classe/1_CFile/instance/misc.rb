@@ -2,6 +2,7 @@
 class CFile
 
   def open
+    Collecte.mode_test? && return
     `open "#{path}"`
   end
 

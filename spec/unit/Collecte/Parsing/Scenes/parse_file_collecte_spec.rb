@@ -65,7 +65,6 @@ describe 'Parsing du collecte des scènes' do
     describe 'troisième scène' do
       let(:scene3) { @scene3 ||= datam[:items][3] }
       it 'définit bien la scène' do
-        puts "scène 3 : #{scene3.inspect}"
         expect(scene3).not_to eq nil
         {
           id: 3, numero: 3,

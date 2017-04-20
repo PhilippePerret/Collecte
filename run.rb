@@ -19,7 +19,6 @@ when 'help'
   extension = ARGV[1] || 'htm'
   ['pdf', 'htm'].include?(extension) || extension = 'htm'
   `open "#{MAIN_FOLDER}/Manuel/Manuel.#{extension}"`
-
 when 'parse', 'extract'
 
   Collecte.parse_commande

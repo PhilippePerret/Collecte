@@ -67,12 +67,13 @@ class Extractor
     final_file.finalise || return
 
     # S'il faut ouvrir le fichier à la fin
-    if options[:open_file]
-      `open "#{final_file.path}"`
-    else
-      puts "#{RC}#{RC}=== Extraction effectuée avec succès ===#{RC}#{RC}"
+    Collecte.mode_test? || begin
+      if options[:open_file]
+        `open "#{final_file.path}"`
+      else
+        puts "#{RC}#{RC}=== Extraction effectuée avec succès ===#{RC}#{RC}"
+      end
     end
-
   end
 
   def extract_data_as_whole

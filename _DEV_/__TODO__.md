@@ -1,14 +1,4 @@
-* Réflexion
-  Faut-il enregistrer les décors parents seuls, et définir les sous-décors à l'intérieur d'eux, ou plutôt définir un décor parent toujours avec ses sous-décors s'ils existent (en sachant qu'alors un décor parent peut exister sans sous décor et exister avec un sous-decor)
-* Poursuivre le test des décors
-  -> créer un décor parent (Film::Decor) si le décor possède ":"
-  -> Le décor parent est mémorisé dans la classe avec la méthode Film::Decor::add_decor_parent qu'il faut appeler.
-  -> Voir s'il faut faire un test de proximité (leveitchen)
-  -> Ajouter les @scenes_ids aux décors à la fin du parsing, ou les ajouter en même temps en envoyant cette donnée à l'instanciation
-  -> En fait, au parsing, il faut vérifier que ce soit un nouveau décor ou non. Si non, ne pas faire de nouvelle instance.
-  => Donc il faut une table qui mémorise tous les décors.
-  -> Traiter les décors dans les statistiques
-
+* Décors : ajouter le nombre de scènes par décor dans les statistiques et peut-être visualiser sur une timeline.
 
 * Mettre en place l'utilisation (déjà documentée) des options -p (personnages) et -b (brins) pour la commande `collecte parse` qui permet de ne parser que les personnages ou que les brins.
 
