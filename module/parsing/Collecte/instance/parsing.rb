@@ -18,7 +18,7 @@ class Collecte
 
   # Méthode qui lance le parsing des métadonnées
   def parse_metadata
-    log "PARSING DES MÉTADONNÉES…"
+    log "* PARSING DES MÉTADONNÉES…"
     metadata.exist? || return
     metadata.parse
   rescue Exception => e
@@ -26,10 +26,12 @@ class Collecte
   end
 
   def parse_personnages
-    log "PARSING DES PERSONNAGES…"
+    log "* PARSING DES PERSONNAGES…"
     film.personnages.parse
-    film.personnages.save
-    log "Définition des relations de personnages"
+    # NOTE On ne doit sauver les personnage qu'après le
+    # parsing des scènes, lorsque leur appartenance aux
+    # scènes (et autres) ont été définis.
+    log "  Définition des relations de personnages"
     film.relations_personnages.define
   rescue Exception => e
     log "au cours du parsing des personnages", error: e
@@ -37,7 +39,7 @@ class Collecte
 
   # Méthode qui lance le parsing des brins
   def parse_brins
-    log 'PARSING DES BRINS…'
+    log '* PARSING DES BRINS…'
     film.brins.parse
     film.brins.save
   rescue Exception => e
@@ -46,12 +48,18 @@ class Collecte
 
 
   def parse_scenes
-    log "PARSING DES SCÈNES…"
+    log "* PARSING DES SCÈNES…"
     film.scenes.parse
-    log "Calcul de la durée des scènes"
+    log "  * Calcul de la durée des scènes"
     film.scenes.calcule_durees
-    log "Sauvegarde des scènes"
+    log "  * Présence des personnages dans les scènes"
+    film.scenes.parse_presence_personnages
+    log "  * Sauvegarde des scènes"
     film.scenes.save
+    # C'est ici seulement qu'on doit sauver les personnages
+    # pour que leurs scènes soient définies.
+    log "  * Sauvegarde des personnages"
+    film.personnages.save
   rescue Exception => e
     log "au cours du parsing des scènes", error: e
   end

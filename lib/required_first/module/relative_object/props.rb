@@ -44,7 +44,9 @@ module RelativeObjectMethods
   attr_reader :brins_ids
   # {Array de String} Liste des identifiants de personnages
   # que contient l'objet
-  attr_reader :personnages_ids
+  # Note : les identifiants de personnage sont bien des
+  # String(s)
+  attr_accessor :personnages_ids
 
   # {Array de Fixnum} Liste des identifiants de notes
   # auquel l'objet appartient

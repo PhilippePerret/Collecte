@@ -22,6 +22,7 @@ class Extractor
   def extract_brin_personnage
     log "-> Film::Extractor#extract_brin_personnage"
     @scenes = options[:personnage].scenes
+    log "Scènes de #{options[:personnage].pseudo} : #{@scenes.inspect}"
     extract_sequencier
     log "<- Film::Extractor#extract_brin_personnage"
   end

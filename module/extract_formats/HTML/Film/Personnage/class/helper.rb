@@ -9,22 +9,10 @@ class << self
       pid = $1
       perso = film.personnages[pid]
       perso != nil || begin
-        log "### ERREUR Personnage inconnu : `#{pid}'"
-        # On tente de reparser le fichier personnage ?
-        log '# PERSONNAGES COURANTS'
-        film.personnages.each do |perid, per|
-          log "#   Perso ##{perid} (#{per.prenom} #{per.nom})"
-        end
-        log '# FIN PERSONNAGES'
-        log "# Dossier de collecte : #{Collecte.current.path.inspect}"
-        # On tente de re-collecter les personnages
-        # Collecte.require_module 'parsing'
-        log 'Tentative de rechargement des données du film…'
-        film.load
-        film.personnages[pid] || begin
-          # Cette fois, on est sûr que le personnage n'existe pas…
-          raise("Impossible d'obtenir le personnage ##{pid}. Il faut le définir impérativement (voir dans le log la liste des personnages courants).")
-        end
+        # Maintenant que le check est fait au parse du
+        # fichier ou à l'enregistrement des données,
+        # le personnage existe forcément. Il ne peut donc
+        # pas être nil
       end
       perso.as_link
     }

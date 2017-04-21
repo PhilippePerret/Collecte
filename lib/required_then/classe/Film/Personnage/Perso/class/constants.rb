@@ -2,6 +2,7 @@
 class Film
 class Personnage
 
+  # Propriétés du personnage qui seront extraites
   PROPERTIES = [
     :id,
     :prenom,

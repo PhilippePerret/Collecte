@@ -33,6 +33,8 @@ class Film
     store_metadata
     # Scenes
     store_data :scene
+    # Personnages
+    store_data :personnage
     # Décors
     store_data :decor
     # Brins

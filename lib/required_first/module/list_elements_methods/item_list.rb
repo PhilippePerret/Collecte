@@ -74,9 +74,9 @@ module ListElementsMethods
       end
 
       # # DEBUG
-      # if self.class.name.to_s == 'Film::Scenes'
-      #   log "Nombre de scènes sauvées : #{d2s.count}"
-      #   log "            dans le film : #{film.scenes.count}"
+      # if self.class.name.to_s == 'Film::Personnages'
+      #   log "data2save[:items] de #{self.class.name}"
+      #   log d2s.inspect
       # end
       # # /DEBUG
 

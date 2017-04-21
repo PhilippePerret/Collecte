@@ -22,5 +22,17 @@ class Personnage
     }
   end
 
+  # Ajoute une scène au personnage (c'est donc une scène
+  # où le personnage est présent)
+  # +sc_id+ peut être un numéro (Fixnum) ou une instance
+  # Film::Scene.
+  #
+  # N'ajoute la scène que si le personnage ne lui appartient
+  # pas déjà (ça pourrait arriver).
+  def add_scene sc_id
+    sc_id.instance_of?(Fixnum) || sc_id = sc_id.numero
+    @scenes_ids ||= Array.new
+    @scenes_ids.include?(sc_id) || @scenes_ids << sc_id
+  end
 end #/Personnage
 end #/Film

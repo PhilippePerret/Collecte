@@ -17,7 +17,7 @@ class Scenes
     # @nombre_scenes_added ||= 0
     if item.lieu == 'FIN'
       film.fin = item.horloge
-      log "FIN DU FILM TROUVÉE à #{film.fin.horloge}"
+      log "  = FIN DU FILM TROUVÉE à #{film.fin.horloge}"
     else
       item.line = bloc.line
       # @nombre_scenes_added += 1

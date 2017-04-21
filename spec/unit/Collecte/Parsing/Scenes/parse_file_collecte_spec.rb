@@ -44,9 +44,9 @@ describe 'Parsing du collecte des scènes' do
       expect(scene1).not_to eq nil
       {
         numero:   1,
-        lieu: 'INT.',
-        effet: 'JOUR', decors_ids: [1],
-        line: 1,
+        lieu:     'INT.',
+        effet:    'JOUR', decors_ids: [1],
+        line:     1,
         stt_points_ids: [:inc_pert, :inc_dec]
       }.each do |prop, expected|
         expect(scene1[prop]).to eq expected

@@ -15,9 +15,9 @@ class Scene
   # {String} Lieu
   attr_reader :lieu, :lieu_alt
 
-  # {String} Décor
-  # OBSOLÈTE
-  attr_reader :decor, :decor_alt
+  # # {String} Décor
+  # # OBSOLÈTE
+  # attr_reader :decor, :decor_alt
 
   # {Array de Fixnum} Liste des ID de décors
   # (un seul en général)

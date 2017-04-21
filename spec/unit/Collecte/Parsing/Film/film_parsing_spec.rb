@@ -132,6 +132,9 @@ describe 'Film au cours du parsing' do
     it 'contient les données notes' do
       expect(totale).to have_key :notes
     end
+    it 'contient les données des décors' do
+      expect(totale).to have_key :decors
+    end
     it 'contient toutes les scènes' do
       expect(totale[:scenes][:items].count).to eq 4
     end

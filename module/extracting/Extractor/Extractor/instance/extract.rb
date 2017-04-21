@@ -44,7 +44,21 @@ class Extractor
       @options[:format] = (as_splited[2] || @options[:format] || 'html').to_sym
       log "*** Traitement d'un ensemble d'objets #{objet} ***"
       case objet
+      when 'personnages'
+        #
+        # Traitement des brins de personnage
+        #
+        @options[:as] = :brin_personnage
+        film.personnages.each do |pid, perso|
+          log "* Traitement du brin personnage #{perso.pseudo}…"
+          @options.merge!(personnage: perso)
+          proceed_extract_data
+          log "  = Brin personnage ##{perso.id} traité."
+        end
       when 'relations'
+        #
+        # Traitement des relations de personnages
+        #
         @options[:as] = :brin_relation
         film.relations_personnages.each do |rel_id, relation|
           log "* Traitement de la relation #{rel_id}…"
