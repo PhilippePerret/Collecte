@@ -1,125 +1,125 @@
-22/04 12:33:17 Fin du chargement des librairies (lib/required.rb)
-22/04 12:33:17 -> Collecte::parse_commande
-22/04 12:33:17 Analyse de la ligne de commande
-22/04 12:33:17 Option :all mise à true
-22/04 12:33:17 Format de sortie : :html
-22/04 12:33:17 <- Collecte::parse_commande
-22/04 12:33:17 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3"
-22/04 12:33:17 EXTRACTION DEMANDÉE PAR LIGNE DE COMMANDE
-22/04 12:33:17 Commande : collecte.extract({:all=>true, :format=>:html})
-22/04 12:33:17 Collecte#extract(options:{:all=>true, :format=>:html}, options_alt:nil)
-22/04 12:33:17    options finales: {:all=>true, :format=>:html}
-22/04 12:33:17 -> Film#load_from_pstore
-22/04 12:33:17 <- Film#load_from_pstore OK
-22/04 12:33:17 -> Film::RelationsPersonnages::define
-22/04 12:33:17    Création de la relation entre Joe Prota (#joe) et Jan (#jan) (relation #jan_joe)
-22/04 12:33:17    NOMBRE RELATIONS CRÉÉES : 1
-22/04 12:33:17 <- Film::RelationsPersonnages::define
-22/04 12:33:17 -> extract_data(options = {:all=>true})
-22/04 12:33:17 *** Extraction de tous les fichiers possibles ***
-22/04 12:33:17 Proceed extract data avec @options = {:format=>:html, :open_file=>false, :full_file=>true, :as=>:sequencier}
-22/04 12:33:17   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3/extraction/full_sequencier.html"]
-22/04 12:33:17   <- prepare
-22/04 12:33:17 Méthode d'extraction à utiliser : :extract_sequencier
-22/04 12:33:17 -> extract_sequencier
-22/04 12:33:17 Nombre de scènes passant le filtre : 4
-22/04 12:33:17 Méthode Scene à utiliser : :as_sequence
-22/04 12:33:17 Numéros des scènes à écrire : 1, 2, 3, 4
-22/04 12:33:17 <- /extract_sequencier
-22/04 12:33:17 Proceed extract data avec @options = {:format=>:html, :open_file=>false, :full_file=>true, :as=>:sequencier, :suggest_structure=>true}
-22/04 12:33:17   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3/extraction/full_sequencier_suggest_stt.html"]
-22/04 12:33:17   <- prepare
-22/04 12:33:17 Méthode d'extraction à utiliser : :extract_sequencier
-22/04 12:33:17 -> extract_sequencier
-22/04 12:33:17 Nombre de scènes passant le filtre : 4
-22/04 12:33:17 <- /extract_sequencier
-22/04 12:33:17 Proceed extract data avec @options = {:format=>:html, :open_file=>false, :full_file=>true, :as=>:resume}
-22/04 12:33:17   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3/extraction/resume.html"]
-22/04 12:33:17   <- prepare
-22/04 12:33:17 Méthode d'extraction à utiliser : :extract_resume
-22/04 12:33:17 Proceed extract data avec @options = {:format=>:html, :open_file=>false, :full_file=>true, :as=>:synopsis}
-22/04 12:33:17   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3/extraction/full_synopsis.html"]
-22/04 12:33:17   <- prepare
-22/04 12:33:17 Méthode d'extraction à utiliser : :extract_synopsis
-22/04 12:33:17 Proceed extract data avec @options = {:format=>:html, :open_file=>false, :full_file=>true, :as=>:statistiques}
-22/04 12:33:17   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3/extraction/full_statistiques.html"]
-22/04 12:33:17   <- prepare
-22/04 12:33:17 Méthode d'extraction à utiliser : :extract_statistiques
-22/04 12:33:17 Liste des IDs de personnages retenus : ["joe", "jan"]
-22/04 12:33:17 Liste des IDs de brins retenus : [1, 2, 3, 4]
-22/04 12:33:17 STATISTIQUES : constitution du code
-22/04 12:33:17 STATISTIQUES : /fin de constitution du code
-22/04 12:33:17 -> extract_data(options = {:format=>:html, :open_file=>false, :full_file=>true, :as=>:all_brins})
-22/04 12:33:17 *** Traitement d'un ensemble d'objets brins ***
-22/04 12:33:17 * Traitement de l'objet brin #1…
-22/04 12:33:17   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3/extraction/full_brin_1.html"]
-22/04 12:33:17   <- prepare
-22/04 12:33:17 Méthode d'extraction à utiliser : :extract_brin
-22/04 12:33:17 -> Film::Extractor#extract_brin
-22/04 12:33:17 -> extract_sequencier
-22/04 12:33:17 Scène 4 (0:04:53) filtrée : hors conditions
-22/04 12:33:17 Nombre de scènes passant le filtre : 3
-22/04 12:33:17 Méthode Scene à utiliser : :as_brin
-22/04 12:33:17 Numéros des scènes à écrire : 1, 2, 3
-22/04 12:33:17 <- /extract_sequencier
-22/04 12:33:17 <- Film::Extractor#extract_brin
-22/04 12:33:17   = Objet brin #1 traité.
-22/04 12:33:17 * Traitement de l'objet brin #2…
-22/04 12:33:17   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3/extraction/full_brin_2.html"]
-22/04 12:33:17   <- prepare
-22/04 12:33:17 Méthode d'extraction à utiliser : :extract_brin
-22/04 12:33:17 -> Film::Extractor#extract_brin
-22/04 12:33:17 -> extract_sequencier
-22/04 12:33:17 Scène 1 (0:00:30) filtrée : hors conditions
-22/04 12:33:17 Scène 4 (0:04:53) filtrée : hors conditions
-22/04 12:33:17 Nombre de scènes passant le filtre : 2
-22/04 12:33:17 Méthode Scene à utiliser : :as_brin
-22/04 12:33:17 Numéros des scènes à écrire : 2, 3
-22/04 12:33:17 <- /extract_sequencier
-22/04 12:33:17 <- Film::Extractor#extract_brin
-22/04 12:33:17   = Objet brin #2 traité.
-22/04 12:33:17 * Traitement de l'objet brin #3…
-22/04 12:33:17   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3/extraction/full_brin_3.html"]
-22/04 12:33:17   <- prepare
-22/04 12:33:17 Méthode d'extraction à utiliser : :extract_brin
-22/04 12:33:17 -> Film::Extractor#extract_brin
-22/04 12:33:17 -> extract_sequencier
-22/04 12:33:17 Scène 1 (0:00:30) filtrée : hors conditions
-22/04 12:33:17 Scène 2 (0:01:40) filtrée : hors conditions
-22/04 12:33:17 Scène 4 (0:04:53) filtrée : hors conditions
-22/04 12:33:17 Nombre de scènes passant le filtre : 1
-22/04 12:33:17 Méthode Scene à utiliser : :as_brin
-22/04 12:33:17 Numéros des scènes à écrire : 3
-22/04 12:33:17 <- /extract_sequencier
-22/04 12:33:17 <- Film::Extractor#extract_brin
-22/04 12:33:17   = Objet brin #3 traité.
-22/04 12:33:17 * Traitement de l'objet brin #4…
-22/04 12:33:17   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3/extraction/full_brin_4.html"]
-22/04 12:33:17   <- prepare
-22/04 12:33:17 Méthode d'extraction à utiliser : :extract_brin
-22/04 12:33:17 -> Film::Extractor#extract_brin
-22/04 12:33:17 -> extract_sequencier
-22/04 12:33:17 Scène 1 (0:00:30) filtrée : hors conditions
-22/04 12:33:17 Scène 2 (0:01:40) filtrée : hors conditions
-22/04 12:33:17 Scène 3 (0:03:20) filtrée : hors conditions
-22/04 12:33:17 Nombre de scènes passant le filtre : 1
-22/04 12:33:17 Méthode Scene à utiliser : :as_brin
-22/04 12:33:17 Numéros des scènes à écrire : 4
-22/04 12:33:17 <- /extract_sequencier
-22/04 12:33:17 <- Film::Extractor#extract_brin
-22/04 12:33:17   = Objet brin #4 traité.
-22/04 12:33:17 * Traitement de l'objet brin #5…
-22/04 12:33:17   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3/extraction/full_brin_5.html"]
-22/04 12:33:17   <- prepare
-22/04 12:33:17 Méthode d'extraction à utiliser : :extract_brin
-22/04 12:33:17 -> Film::Extractor#extract_brin
-22/04 12:33:17 -> extract_sequencier
-22/04 12:33:17 Scène 1 (0:00:30) filtrée : hors conditions
-22/04 12:33:17 Scène 2 (0:01:40) filtrée : hors conditions
-22/04 12:33:17 Scène 3 (0:03:20) filtrée : hors conditions
-22/04 12:33:17 Scène 4 (0:04:53) filtrée : hors conditions
-22/04 12:33:17 Nombre de scènes passant le filtre : 0
-22/04 12:33:17 ### ERREUR  : Aucune scène n'est comprise entre le début du film et la fin du film.
+22/04 13:06:54 Fin du chargement des librairies (lib/required.rb)
+22/04 13:06:54 -> Collecte::parse_commande
+22/04 13:06:54 Analyse de la ligne de commande
+22/04 13:06:54 Option :all mise à true
+22/04 13:06:54 Format de sortie : :html
+22/04 13:06:54 <- Collecte::parse_commande
+22/04 13:06:54 INSTANCIATION COLLECTE "/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3"
+22/04 13:06:54 EXTRACTION DEMANDÉE PAR LIGNE DE COMMANDE
+22/04 13:06:54 Commande : collecte.extract({:all=>true, :format=>:html})
+22/04 13:06:54 Collecte#extract(options:{:all=>true, :format=>:html}, options_alt:nil)
+22/04 13:06:54    options finales: {:all=>true, :format=>:html}
+22/04 13:06:54 -> Film#load_from_pstore
+22/04 13:06:54 <- Film#load_from_pstore OK
+22/04 13:06:54 -> Film::RelationsPersonnages::define
+22/04 13:06:54    Création de la relation entre Joe Prota (#joe) et Jan (#jan) (relation #jan_joe)
+22/04 13:06:54    NOMBRE RELATIONS CRÉÉES : 1
+22/04 13:06:54 <- Film::RelationsPersonnages::define
+22/04 13:06:54 -> extract_data(options = {:all=>true})
+22/04 13:06:54 *** Extraction de tous les fichiers possibles ***
+22/04 13:06:54 Proceed extract data avec @options = {:format=>:html, :open_file=>false, :full_file=>true, :as=>:sequencier}
+22/04 13:06:54   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3/extraction/full_sequencier.html"]
+22/04 13:06:54   <- prepare
+22/04 13:06:54 Méthode d'extraction à utiliser : :extract_sequencier
+22/04 13:06:54 -> extract_sequencier
+22/04 13:06:54 Nombre de scènes passant le filtre : 4
+22/04 13:06:54 Méthode Scene à utiliser : :as_sequence
+22/04 13:06:54 Numéros des scènes à écrire : 1, 2, 3, 4
+22/04 13:06:54 <- /extract_sequencier
+22/04 13:06:54 Proceed extract data avec @options = {:format=>:html, :open_file=>false, :full_file=>true, :as=>:sequencier, :suggest_structure=>true}
+22/04 13:06:54   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3/extraction/full_sequencier_suggest_stt.html"]
+22/04 13:06:54   <- prepare
+22/04 13:06:54 Méthode d'extraction à utiliser : :extract_sequencier
+22/04 13:06:54 -> extract_sequencier
+22/04 13:06:54 Nombre de scènes passant le filtre : 4
+22/04 13:06:54 <- /extract_sequencier
+22/04 13:06:54 Proceed extract data avec @options = {:format=>:html, :open_file=>false, :full_file=>true, :as=>:resume}
+22/04 13:06:54   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3/extraction/resume.html"]
+22/04 13:06:54   <- prepare
+22/04 13:06:54 Méthode d'extraction à utiliser : :extract_resume
+22/04 13:06:54 Proceed extract data avec @options = {:format=>:html, :open_file=>false, :full_file=>true, :as=>:synopsis}
+22/04 13:06:54   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3/extraction/full_synopsis.html"]
+22/04 13:06:54   <- prepare
+22/04 13:06:54 Méthode d'extraction à utiliser : :extract_synopsis
+22/04 13:06:54 Proceed extract data avec @options = {:format=>:html, :open_file=>false, :full_file=>true, :as=>:statistiques}
+22/04 13:06:54   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3/extraction/full_statistiques.html"]
+22/04 13:06:54   <- prepare
+22/04 13:06:54 Méthode d'extraction à utiliser : :extract_statistiques
+22/04 13:06:54 Liste des IDs de personnages retenus : ["joe", "jan"]
+22/04 13:06:54 Liste des IDs de brins retenus : [1, 2, 3, 4]
+22/04 13:06:54 STATISTIQUES : constitution du code
+22/04 13:06:54 STATISTIQUES : /fin de constitution du code
+22/04 13:06:54 -> extract_data(options = {:format=>:html, :open_file=>false, :full_file=>true, :as=>:all_brins})
+22/04 13:06:54 *** Traitement d'un ensemble d'objets brins ***
+22/04 13:06:54 * Traitement de l'objet brin #1…
+22/04 13:06:54   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3/extraction/full_brin_1.html"]
+22/04 13:06:54   <- prepare
+22/04 13:06:54 Méthode d'extraction à utiliser : :extract_brin
+22/04 13:06:54 -> Film::Extractor#extract_brin
+22/04 13:06:54 -> extract_sequencier
+22/04 13:06:54 Scène 4 (0:04:53) filtrée : hors conditions
+22/04 13:06:54 Nombre de scènes passant le filtre : 3
+22/04 13:06:54 Méthode Scene à utiliser : :as_brin
+22/04 13:06:54 Numéros des scènes à écrire : 1, 2, 3
+22/04 13:06:54 <- /extract_sequencier
+22/04 13:06:54 <- Film::Extractor#extract_brin
+22/04 13:06:54   = Objet brin #1 traité.
+22/04 13:06:54 * Traitement de l'objet brin #2…
+22/04 13:06:54   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3/extraction/full_brin_2.html"]
+22/04 13:06:54   <- prepare
+22/04 13:06:54 Méthode d'extraction à utiliser : :extract_brin
+22/04 13:06:54 -> Film::Extractor#extract_brin
+22/04 13:06:54 -> extract_sequencier
+22/04 13:06:54 Scène 1 (0:00:30) filtrée : hors conditions
+22/04 13:06:54 Scène 4 (0:04:53) filtrée : hors conditions
+22/04 13:06:54 Nombre de scènes passant le filtre : 2
+22/04 13:06:54 Méthode Scene à utiliser : :as_brin
+22/04 13:06:54 Numéros des scènes à écrire : 2, 3
+22/04 13:06:54 <- /extract_sequencier
+22/04 13:06:54 <- Film::Extractor#extract_brin
+22/04 13:06:54   = Objet brin #2 traité.
+22/04 13:06:54 * Traitement de l'objet brin #3…
+22/04 13:06:54   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3/extraction/full_brin_3.html"]
+22/04 13:06:54   <- prepare
+22/04 13:06:54 Méthode d'extraction à utiliser : :extract_brin
+22/04 13:06:54 -> Film::Extractor#extract_brin
+22/04 13:06:54 -> extract_sequencier
+22/04 13:06:54 Scène 1 (0:00:30) filtrée : hors conditions
+22/04 13:06:54 Scène 2 (0:01:40) filtrée : hors conditions
+22/04 13:06:54 Scène 4 (0:04:53) filtrée : hors conditions
+22/04 13:06:54 Nombre de scènes passant le filtre : 1
+22/04 13:06:54 Méthode Scene à utiliser : :as_brin
+22/04 13:06:54 Numéros des scènes à écrire : 3
+22/04 13:06:54 <- /extract_sequencier
+22/04 13:06:54 <- Film::Extractor#extract_brin
+22/04 13:06:54   = Objet brin #3 traité.
+22/04 13:06:54 * Traitement de l'objet brin #4…
+22/04 13:06:54   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3/extraction/full_brin_4.html"]
+22/04 13:06:54   <- prepare
+22/04 13:06:54 Méthode d'extraction à utiliser : :extract_brin
+22/04 13:06:54 -> Film::Extractor#extract_brin
+22/04 13:06:54 -> extract_sequencier
+22/04 13:06:54 Scène 1 (0:00:30) filtrée : hors conditions
+22/04 13:06:54 Scène 2 (0:01:40) filtrée : hors conditions
+22/04 13:06:54 Scène 3 (0:03:20) filtrée : hors conditions
+22/04 13:06:54 Nombre de scènes passant le filtre : 1
+22/04 13:06:54 Méthode Scene à utiliser : :as_brin
+22/04 13:06:54 Numéros des scènes à écrire : 4
+22/04 13:06:54 <- /extract_sequencier
+22/04 13:06:54 <- Film::Extractor#extract_brin
+22/04 13:06:54   = Objet brin #4 traité.
+22/04 13:06:54 * Traitement de l'objet brin #5…
+22/04 13:06:54   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3/extraction/full_brin_5.html"]
+22/04 13:06:54   <- prepare
+22/04 13:06:54 Méthode d'extraction à utiliser : :extract_brin
+22/04 13:06:54 -> Film::Extractor#extract_brin
+22/04 13:06:54 -> extract_sequencier
+22/04 13:06:54 Scène 1 (0:00:30) filtrée : hors conditions
+22/04 13:06:54 Scène 2 (0:01:40) filtrée : hors conditions
+22/04 13:06:54 Scène 3 (0:03:20) filtrée : hors conditions
+22/04 13:06:54 Scène 4 (0:04:53) filtrée : hors conditions
+22/04 13:06:54 Nombre de scènes passant le filtre : 0
+22/04 13:06:54 ### ERREUR  : Aucune scène n'est comprise entre le début du film et la fin du film.
 /Users/philippeperret/Programmation/Collecte/module/extract_formats/HTML/Extractor/instance/extract/sequencier.rb:55:in `extract_sequencier'
 /Users/philippeperret/Programmation/Collecte/module/extract_formats/HTML/Extractor/instance/extract/sequencier.rb:17:in `extract_brin'
 /Users/philippeperret/Programmation/Collecte/module/extracting/Extractor/Extractor/instance/set_by_type.rb:129:in `call_extract_methode_by_type'
@@ -136,43 +136,43 @@ run.rb:43:in `<top (required)>'
 /usr/local/bin/collecte:10:in `block in <main>'
 /usr/local/bin/collecte:9:in `chdir'
 /usr/local/bin/collecte:9:in `<main>'
-22/04 12:33:17 <- /extract_sequencier
-22/04 12:33:17 <- Film::Extractor#extract_brin
-22/04 12:33:17   = Objet brin #5 traité.
-22/04 12:33:17 * Traitement du brin personnage Joe Prota…
-22/04 12:33:17   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3/extraction/full_brin_joe.html"]
-22/04 12:33:17   <- prepare
-22/04 12:33:17 Méthode d'extraction à utiliser : :extract_brin_personnage
-22/04 12:33:17 -> Film::Extractor#extract_brin_personnage
-22/04 12:33:17 -> extract_sequencier
-22/04 12:33:17 Nombre de scènes passant le filtre : 2
-22/04 12:33:17 Méthode Scene à utiliser : :as_sequence
-22/04 12:33:17 Numéros des scènes à écrire : 1, 4
-22/04 12:33:17 <- /extract_sequencier
-22/04 12:33:17 <- Film::Extractor#extract_brin_personnage
-22/04 12:33:17   = Brin personnage Joe Prota traité.
-22/04 12:33:17 * Traitement du brin personnage Jan…
-22/04 12:33:17   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3/extraction/full_brin_jan.html"]
-22/04 12:33:17   <- prepare
-22/04 12:33:17 Méthode d'extraction à utiliser : :extract_brin_personnage
-22/04 12:33:17 -> Film::Extractor#extract_brin_personnage
-22/04 12:33:17 -> extract_sequencier
-22/04 12:33:17 Nombre de scènes passant le filtre : 4
-22/04 12:33:17 Méthode Scene à utiliser : :as_sequence
-22/04 12:33:17 Numéros des scènes à écrire : 1, 2, 3, 4
-22/04 12:33:17 <- /extract_sequencier
-22/04 12:33:17 <- Film::Extractor#extract_brin_personnage
-22/04 12:33:17   = Brin personnage Jan traité.
-22/04 12:33:17 
-22/04 12:33:17 * Traitement du brin Relation entre Joe Prota et Jan
-22/04 12:33:17   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3/extraction/full_brin_relation_jan_joe.html"]
-22/04 12:33:17   <- prepare
-22/04 12:33:17 Méthode d'extraction à utiliser : :extract_brin_relation
-22/04 12:33:17 -> Film::Extractor#extract_brin_relation
-22/04 12:33:17    scenes_ids de la relation : [1, 4]
-22/04 12:33:17 -> extract_sequencier
-22/04 12:33:17 Nombre de scènes passant le filtre : 2
-22/04 12:33:17 Méthode Scene à utiliser : :as_sequence
-22/04 12:33:17 Numéros des scènes à écrire : 1, 4
-22/04 12:33:17 <- /extract_sequencier
-22/04 12:33:17 <- Film::Extractor#extract_brin_relation
+22/04 13:06:54 <- /extract_sequencier
+22/04 13:06:54 <- Film::Extractor#extract_brin
+22/04 13:06:54   = Objet brin #5 traité.
+22/04 13:06:54 * Traitement du brin personnage Joe Prota…
+22/04 13:06:54   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3/extraction/full_brin_joe.html"]
+22/04 13:06:54   <- prepare
+22/04 13:06:54 Méthode d'extraction à utiliser : :extract_brin_personnage
+22/04 13:06:54 -> Film::Extractor#extract_brin_personnage
+22/04 13:06:54 -> extract_sequencier
+22/04 13:06:54 Nombre de scènes passant le filtre : 2
+22/04 13:06:54 Méthode Scene à utiliser : :as_sequence
+22/04 13:06:54 Numéros des scènes à écrire : 1, 4
+22/04 13:06:54 <- /extract_sequencier
+22/04 13:06:54 <- Film::Extractor#extract_brin_personnage
+22/04 13:06:54   = Brin personnage Joe Prota traité.
+22/04 13:06:54 * Traitement du brin personnage Jan…
+22/04 13:06:54   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3/extraction/full_brin_jan.html"]
+22/04 13:06:54   <- prepare
+22/04 13:06:54 Méthode d'extraction à utiliser : :extract_brin_personnage
+22/04 13:06:54 -> Film::Extractor#extract_brin_personnage
+22/04 13:06:54 -> extract_sequencier
+22/04 13:06:54 Nombre de scènes passant le filtre : 4
+22/04 13:06:54 Méthode Scene à utiliser : :as_sequence
+22/04 13:06:54 Numéros des scènes à écrire : 1, 2, 3, 4
+22/04 13:06:54 <- /extract_sequencier
+22/04 13:06:54 <- Film::Extractor#extract_brin_personnage
+22/04 13:06:54   = Brin personnage Jan traité.
+22/04 13:06:54 
+22/04 13:06:54 * Traitement du brin Relation entre Joe Prota et Jan
+22/04 13:06:54   -> prepare [path="/Users/philippeperret/Programmation/Collecte/spec/asset/folder_test_3/extraction/full_brin_relation_jan_joe.html"]
+22/04 13:06:54   <- prepare
+22/04 13:06:54 Méthode d'extraction à utiliser : :extract_brin_relation
+22/04 13:06:54 -> Film::Extractor#extract_brin_relation
+22/04 13:06:54    scenes_ids de la relation : [1, 4]
+22/04 13:06:54 -> extract_sequencier
+22/04 13:06:54 Nombre de scènes passant le filtre : 2
+22/04 13:06:54 Méthode Scene à utiliser : :as_sequence
+22/04 13:06:54 Numéros des scènes à écrire : 1, 4
+22/04 13:06:54 <- /extract_sequencier
+22/04 13:06:54 <- Film::Extractor#extract_brin_relation

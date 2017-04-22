@@ -14,3 +14,11 @@ PERSONNAGE:jan
   ANNEE:
   FONCTION: Antagoniste
   DESCRIPTION: Description de l'antagoniste Jan.
+
+PERSONNAGE:andre
+  PRENOM: André
+  NOM:    Jacque
+  PSEUDO: André
+  SEXE:   Homme
+  FONCTION: Adjuvant
+  DESCRIPTION: L'aide de camp de Joe.

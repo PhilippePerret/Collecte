@@ -28,7 +28,13 @@ end
 # retourne son path (qui peut servir aux fichiers tests
 # appelant)
 def remove_folder_extraction_of dossier
-  dosext = File.join(dossier,'extraction')
-  FileUtils.rm_rf(dosext) if File.exist? dosext
-  dosext
+  dos = File.join(dossier,'extraction')
+  FileUtils.rm_rf(dos) if File.exist? dos
+  dos
+end
+
+def remove_folder_data_of dossier
+  dos = File.join(dossier,'data')
+  FileUtils.rm_rf(dos) if File.exist? dos
+  dos
 end

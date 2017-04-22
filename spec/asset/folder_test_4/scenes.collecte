@@ -1,30 +1,35 @@
 0:00:30 INT. JOUR MAISON DE JOE
-Première scène dans brin 1 seulement. b1
+Première scène dans brin 1 seulement avec [PERSO#joe]. b1
 
 0:01:40 EXT. NUIT JARDIN PUBLIC
-Deuxième scène dans brin 2 et 1. b1
-Le premier paragraphe appartient au brin 2. b2
+Deuxième scène de [PERSO#joe] et d'[PERSO#andre] dans brin 2 et 1. b1
+Le premier paragraphe appartient au brin 2. b2 (1)
+(1) Première note expliquée.
 
 0:03:20 INT./EXT. JOUR MAISON DE JOE/JARDIN PUBLIC
-Troisième scène dans brin 1 et 3. b1 b3
+Troisième scène avec [PERSO#andre] et [PERSO#jan] dans brin 1 et 3. b1 b3
 
 0:4:53 INT. NUIT MAISON DE JOE
 Quatrième scène dans brins 1, 2, 3, 4, 6. b1 b6
-Paragraphe 1 de quatrième scène.
+Paragraphe 1 de quatrième scène. (2)(3)
 Paragraphe 2 de quatrième scène appartient au brin 3. b3
-Paragraphe 3 de quatrième scène.
+Paragraphe 3 de quatrième scène avec [PERSO#joe] et [PERSO#jan].
 Paragraphe 4 de quatrième scène appartient au brin 4. b4
 Paragraphe 5 de quatrième scène appartient au brin 2. b2
+(2) Deuxième note expliquée.
+(3) Troisième note expliquée pour [PERSO#andre]
 
 0:7:23 INT. JOUR MAISON DE JOE
-Cinquième scène dans brin 1 et 3. b1 b3
+[PERSO#joe] joue dans la cinquième scène dans brin 1 et 3. b1 b3 (5)
+(5) Cinquième note sur [PERSO#joe]
 
 0:11:45 EXT. NUIT JARDIN PUBLIC
-Sixième scène qui n'appartient à aucun brin.
+[PERSO#joe] et [PERSO#andre] sont dans la sixième scène qui n'appartient à aucun brin.
 
 0:15:15 INT. JOUR MAISON DE JOE
 Septième scène dans le brin 2 seulement. b2
-Premier paragraphe de la 7e scène.
-Second paragraphe de la 7e scène.
+Premier paragraphe de la 7e scène avec [PERSO#andre].
+Second paragraphe de la 7e scène avec [PERSO#jan]. (4)
+(4) Quatrième note concernant [PERSO#jan].
 
 0:45:00 FIN

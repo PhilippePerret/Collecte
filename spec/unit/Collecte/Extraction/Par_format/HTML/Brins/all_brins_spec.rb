@@ -131,7 +131,7 @@ describe 'Extraction HTML de tous les brins' do
         end
         it 'contient le résumé de la scène 2 (indirectement dans le brin)' do
           expect(code).to have_tag('div#scene-2') do
-            with_tag('div.resume', text: /Deuxième scène dans brin 2 et 1/)
+            with_tag('div.resume', text: /Deuxième scène de Joe Prota et d'André dans brin 2 et 1/)
           end
         end
         it 'contient le paragraphe concerné de la scène 2 (le 2e)' do
