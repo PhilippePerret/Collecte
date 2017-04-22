@@ -19,7 +19,6 @@ describe 'La commande :all_personnages_html' do
     [1,2,3,4,5,6,7,8].reject{|i|liste.include?i}
   end
 
-
   describe 'Prérequis : les données des personnages' do
     personnages_folder_5.each do |pid, pdata|
       it "correspondent pour ##{pid}" do

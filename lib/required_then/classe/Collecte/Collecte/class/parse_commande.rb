@@ -14,18 +14,19 @@ class << self
     'a'     => :all,
     'b'     => :brins,
     'd'     => :debug,
+    'f'     => :from_time,
+    'fp'    => :force_parsing,
     'h'     => :horloge,
+    'ntm'   => :no_timeline,
     'o'     => :output_format,
+    'open'  => :open_file,
+    'p'     => :personnage,
     'seq'   => :sequencier,
     'syn'   => :synopsis,
     'stats' => :statistiques,
-    'ntm'   => :no_timeline,
-    'f'     => :from_time,
-    'fp'    => :force_parsing,
-    't'     => :to_time,
-    'v'     => :verbose,
     'stt'   => :suggest_structure,
-    'open'  => :open_file
+    't'     => :to_time,
+    'v'     => :verbose
   }
 
   # = main =
@@ -69,17 +70,29 @@ class << self
     # Les options qui seront passés à la commande
     opts = Hash.new
     command_options.each do |kopt, value|
+      # log "Option: #{kopt.inspect} = #{value.inspect}"
       case kopt
       when :synopsis
-        log "Extraction du synopsis"
+        log 'Extraction du synopsis'
         opts.merge!(as: :synopsis)
         command_options['horloge'] && opts.merge!(horloge: true)
       when :sequencier
-        log "Extraction du séquencier"
+        log 'Extraction du séquencier'
         opts.merge!(as: :sequencier)
       when :brins
-        log "Extraction des brins"
+        log 'Extraction des brins'
         opts.merge!(as: :brins)
+      when :all_personnages
+        log 'Extraction des brins de tous les personnages'
+        opts.merge!(
+          as:           :brin_personnage,
+          personnages:  :all
+          )
+      when :personnages, :personnage
+        opts.merge!(
+          as:           :brin_personnage,
+          personnages:  value.split(',')
+        )
       when :statistiques
         log "Extraction des statistiques"
         opts.merge!(as: :statistiques)

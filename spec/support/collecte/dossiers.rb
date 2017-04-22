@@ -22,3 +22,13 @@ end
 def folder_test_error_1
   @folder_test_error_1 ||= File.join(MAIN_FOLDER, 'spec', 'asset', 'folder_test_error_1')
 end
+
+
+# Détruit le dossier contenant les fichiers exportés et
+# retourne son path (qui peut servir aux fichiers tests
+# appelant)
+def remove_folder_extraction_of dossier
+  dosext = File.join(dossier,'extraction')
+  FileUtils.rm_rf(dosext) if File.exist? dosext
+  dosext
+end

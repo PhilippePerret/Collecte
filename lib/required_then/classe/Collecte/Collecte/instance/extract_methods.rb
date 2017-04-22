@@ -8,7 +8,7 @@ class Collecte
   # +options+   Défini les options
   # +options_alt+ Lorsque +options+ est un raccourci-symbol,
   # on peut mettre dans +options_alt+ les options habituelles
-  # 
+  #
   def extract options = nil, options_alt = nil
     log "Collecte#extract(options:#{options.inspect}, options_alt:#{options_alt.inspect})"
     options = options_arg_to_real_options(options)
@@ -34,6 +34,14 @@ class Collecte
   # Cette méthode permet de convertir ce symbol en un hash
   # correct
   def options_arg_to_real_options opts
+
+    # Correction de certaines valeurs raccourcies
+    case opts
+    when :all_personnages
+      opts = :all_personnages_html
+    end
+
+    # Étude du premier mot, si raccourci
     if opts.to_s.match(/_(html|text|xml)$/)
       arr_opts = opts.to_s.split('_')
       fmt = arr_opts.pop.to_sym

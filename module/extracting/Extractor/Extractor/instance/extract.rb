@@ -103,7 +103,20 @@ class Extractor
           proceed_extract_data
         end
       end
+    elsif options[:as] == :brin_personnage && options.key?(:personnages)
+      #
+      # Dans le cas où il faut sortir les brins de plusieurs
+      # personnages mais pas tous.
+      #
+      personnages = options[:personnages]
+      personnages.each do |pid|
+        @options[:personnage] = film.personnages[pid]
+        proceed_extract_data
+      end
     else
+      #
+      # Dans tous les autres cas
+      #
       proceed_extract_data
     end
   end
@@ -177,6 +190,14 @@ class Extractor
         opts.delete(:all)
       else
         opts.merge!(as: :whole)
+      end
+    when :brin_personnage
+      # Quand on a passé l'identifiant du personnage au lieu de
+      # passer son instance Film::Personnage
+      if opts[:personnage].instance_of?(String)
+        opts[:personnage] = film.personnages[opts[:personnage]]
+      elsif opts[:personnages] == :all
+        opts[:personnages] = film.personnages.hash.keys
       end
     when :brin
       if opts.key?(:brin) || opts.key?(:brins)
