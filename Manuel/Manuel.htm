@@ -38,6 +38,7 @@ nav#__tdm__{border:1px solid #CCC;padding:1em;font-size:.85em;width:75%;backgrou
 <li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#fichierssequencier">Les fichiers séquencier</a></li>
 <li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#fichiersbrins">Les fichiers brins</a></li>
 <li class="__litdm__ __tdmlevel3__"><a class="__atdm__" href="#designationbrins">Désignation des brins</a></li>
+<li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#lesbrinspersonnages">Les brins personnages</a></li>
 <li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#fichierstatistiques">Le fichier Statistiques</a></li>
 <li class="__litdm__ __tdmlevel1__"><a class="__atdm__" href="#collectecommand">La commande <code>collecte</code></a></li>
 <li class="__litdm__ __tdmlevel2__"><a class="__atdm__" href="#installationcommandecollecte">Installation de la commande <code>collecte</code></a></li>
@@ -545,7 +546,11 @@ nav#__tdm__{border:1px solid #CCC;padding:1em;font-size:.85em;width:75%;backgrou
 
 <h2 id="fichiersbrins">Les fichiers brins</h2>
 
-<p>TODO</p>
+<p>Les fichiers « brins » sont des séquenciers (liste de scènes) dont on a filtré les scènes appartenant au brin en question.</p>
+
+<p>Ces brins doivent être définis dans le <a href="#gestiondesbrins">fichier des brins</a>.</p>
+
+<p>Il existe deux types de brin particuliers, qui sont construits automatiquement, ce sont les <a href="#lesbrinspersonnages">brins personnages</a> et les [brins relation de personnages]. S’y reporter pour le détail.</p>
 
 <h3 id="designationbrins">Désignation des brins</h3>
 
@@ -609,6 +614,60 @@ nav#__tdm__{border:1px solid #CCC;padding:1em;font-size:.85em;width:75%;backgrou
 </code></pre>
 
 <p>Crée un séquencier-brin des scènes qui appartiennent au brin 2 ou les scènes qui appartiennent au brin 4 ET au brin 5.</p>
+
+<h2 id="lesbrinspersonnages">Les brins personnages</h2>
+
+<p>Pour sortir les brins personnages, c’est-à-dire une liste des scènes du ou des personnages, on utilise :</p>
+
+<p><strong>En ligne de commande</strong></p>
+
+<pre><code>      // On doit se trouver dans le dossier de collecte
+      $ collecte extract --all_personnages
+      // =&gt; les brins de chaque personnage
+
+      $ collecte extract --personnage=&lt;id personnage&gt;
+      // =&gt; extrait le brin du personnage en question
+
+      $ collecte extract -p=&lt;id personnage&gt;
+      // =&gt; idem
+
+      $ collecte extract -p=&lt;id_perso_1&gt;,&lt;id_perso_2&gt;,...
+      // =&gt; Extrait les brins de chaque personnage
+      //    spécifié. Attention, ne pas mettre d'espace
+</code></pre>
+
+<blockquote>
+  <p>Les identifiants de personnage, ci-dessus, correspondent à ceux définis dans le <a href="#gestiondespersonnages">fichier des personnages</a>.</p>
+</blockquote>
+
+<p><strong>En ruby</strong></p>
+
+<pre><code class="language-ruby">
+      coll = Collecte.new('mon/dossier/collecte')
+      coll.extract(:all_personnages, format: :html)
+      # =&gt; Extrait tous les personnages (un fichier HTML par
+      #    perso)
+
+      coll.extract(
+        as: :brin_personnage, personnages: :all
+      )
+      # idem, tous les brins
+
+      coll.extract(
+        as: :brin_personnage, personnage: ID_Perso
+      )
+      # =&gt; Extrait seulement le brin du personnage ID_Perso
+
+      coll.extract(
+        as: :brin_personnage,
+        personnages: [Idperso1, Idperso2, ....]
+      )
+      # =&gt; Extrait les brins de chaque personnage de la liste.
+</code></pre>
+
+<blockquote>
+  <p>Les identifiants de personnages sont ceux définis dans le <a href="#gestiondespersonnages">fichier des personnages</a>.</p>
+</blockquote>
 
 <h2 id="fichierstatistiques">Le fichier Statistiques</h2>
 

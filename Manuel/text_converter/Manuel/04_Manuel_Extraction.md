@@ -100,7 +100,11 @@ Voir toutes les [options utilisables][options de collecte] avec cette commande.
 
 ## Les fichiers brins {#fichiersbrins}
 
-TODO
+Les fichiers « brins » sont des séquenciers (liste de scènes) dont on a filtré les scènes appartenant au brin en question.
+
+Ces brins doivent être définis dans le [fichier des brins].
+
+Il existe deux types de brin particuliers, qui sont construits automatiquement, ce sont les [brins personnages] et les [brins relation de personnages]. S'y reporter pour le détail.
 
 ### Désignation des brins {#designationbrins}
 
@@ -170,6 +174,58 @@ Avec un `+` dans la parenthèse :
 ~~~
 
 Crée un séquencier-brin des scènes qui appartiennent au brin 2 ou les scènes qui appartiennent au brin 4 ET au brin 5.
+
+## Les brins personnages {#lesbrinspersonnages}
+
+Pour sortir les brins personnages, c'est-à-dire une liste des scènes du ou des personnages, on utilise :
+
+**En ligne de commande**
+
+~~~
+      // On doit se trouver dans le dossier de collecte
+      $ collecte extract --all_personnages
+      // => les brins de chaque personnage
+
+      $ collecte extract --personnage=<id personnage>
+      // => extrait le brin du personnage en question
+
+      $ collecte extract -p=<id personnage>
+      // => idem
+
+      $ collecte extract -p=<id_perso_1>,<id_perso_2>,...
+      // => Extrait les brins de chaque personnage
+      //    spécifié. Attention, ne pas mettre d'espace
+~~~
+
+> Les identifiants de personnage, ci-dessus, correspondent à ceux définis dans le [fichier des personnages].
+
+**En ruby**
+
+~~~ruby
+
+      coll = Collecte.new('mon/dossier/collecte')
+      coll.extract(:all_personnages, format: :html)
+      # => Extrait tous les personnages (un fichier HTML par
+      #    perso)
+
+      coll.extract(
+        as: :brin_personnage, personnages: :all
+      )
+      # idem, tous les brins
+
+      coll.extract(
+        as: :brin_personnage, personnage: ID_Perso
+      )
+      # => Extrait seulement le brin du personnage ID_Perso
+
+      coll.extract(
+        as: :brin_personnage,
+        personnages: [Idperso1, Idperso2, ....]
+      )
+      # => Extrait les brins de chaque personnage de la liste.
+~~~
+
+> Les identifiants de personnages sont ceux définis dans le [fichier des personnages].
 
 ## Le fichier Statistiques {#fichierstatistiques}
 

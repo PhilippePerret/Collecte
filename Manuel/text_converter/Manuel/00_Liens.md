@@ -6,6 +6,7 @@
 [fichier des scènes]:         #collectedesscenes
 [fichier des personnages]:    #gestiondespersonnages
 [fichier des brins]:          #gestiondesbrins
+[brins personnages]:          #lesbrinspersonnages
 [fichier des métadonnées]:    #fichiermetadata
 [définition des actes]:       #definitionstructure
 [définition de la structure]: #definitionstructure
