@@ -1,5 +1,5 @@
-22/04 13:06:55 Fin du chargement des librairies (lib/required.rb)
-22/04 13:06:55 -> Collecte::parse_commande
-22/04 13:06:55 Analyse de la ligne de commande
-22/04 13:06:55 Format de sortie : :html
-22/04 13:06:55 <- Collecte::parse_commande
+23/04 10:54:46 Fin du chargement des librairies (lib/required.rb)
+23/04 10:54:46 -> Collecte::parse_commande
+23/04 10:54:46 Analyse de la ligne de commande
+23/04 10:54:46 Format de sortie : :html
+23/04 10:54:46 <- Collecte::parse_commande

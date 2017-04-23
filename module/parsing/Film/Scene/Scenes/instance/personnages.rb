@@ -11,9 +11,9 @@ class Scenes
   def parse_presence_personnages
     film.scenes.each do |sid, s|
       p_ids = Array.new
-      p_ids += Film::Personnage::personnages_ids_in(s.resume)
+      p_ids += Film::Personnage::personnages_ids_in(s.resume, film)
       s.paragraphes.each do |parag|
-        p_ids += Film::Personnage::personnages_ids_in(parag)
+        p_ids += Film::Personnage::personnages_ids_in(parag, film)
       end
       # On ajoute ces personnages à la scène
       s.personnages_ids = p_ids.uniq

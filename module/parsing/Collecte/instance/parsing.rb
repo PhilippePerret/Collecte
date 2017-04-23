@@ -31,9 +31,11 @@ class Collecte
     # NOTE On ne doit sauver les personnage qu'après le
     # parsing des scènes, lorsque leur appartenance aux
     # scènes (et autres) ont été définis.
-    log "  Définition des relations de personnages"
-    film.relations_personnages.define
+    # NOTE Même chose pour les relations de personnages,
+    # qui ne peuvent être définies qu'après avoir
+    # parsé les scènes
   rescue Exception => e
+    log 'ERREUR'
     log "au cours du parsing des personnages", error: e
   end
 
@@ -56,10 +58,13 @@ class Collecte
     film.scenes.parse_presence_personnages
     log "  * Sauvegarde des scènes"
     film.scenes.save
+    log "  Définition des relations de personnages"
+    film.relations_personnages.define
     # C'est ici seulement qu'on doit sauver les personnages
     # pour que leurs scènes soient définies.
     log "  * Sauvegarde des personnages"
     film.personnages.save
+    log "  = PARSING DES SCÈNES ACHEVÉ"
   rescue Exception => e
     log "au cours du parsing des scènes", error: e
   end

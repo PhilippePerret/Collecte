@@ -21,4 +21,4 @@ PERSONNAGE:andre
   PSEUDO: André
   SEXE:   Homme
   FONCTION: Adjuvant
-  DESCRIPTION: L'aide de camp de Joe.
+  DESCRIPTION: L'aide de camp de [PERSO#joe].

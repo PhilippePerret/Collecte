@@ -14,8 +14,11 @@ class Personnages
     item.parse(bloc.code)
     item.line = bloc.line
     @hash.merge!( item.id => item )
+    log "    = Ajout personnage #{item.id} (#{item.pseudo})"
   rescue BadBlocData => e
     log "Mauvaises données pour un bloc de personnage", error: e
+  rescue Exception => e
+    log '', fatal_error: e
   end
 
 end #/Personnages

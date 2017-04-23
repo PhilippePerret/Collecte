@@ -1,0 +1,650 @@
+---
+:metadata:
+  :id: brins2017
+  :titre: Film pour brins
+  :auteurs:
+  - Marion
+  - Benoit
+  :debut: 8/4/2017
+  :duree: 2670
+:created_at: 1492937635
+:updated_at: 1492937635
+:scene:
+  :_ids_:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  :items:
+    1:
+      :id: 1
+      :numero: 1
+      :line: 1
+      :horloge:
+        :horloge: '0:00:30'
+        :time: 30
+        :real_time: 0
+        :end_time: 100
+        :real_end_time: 70
+        :duree: 70
+      :resume:
+        :raw: Première scène dans brin 1 seulement avec [PERSO#joe]. b1
+        :only_str: Première scène dans brin 1 seulement avec [PERSO#joe].
+        :personnages_ids:
+        - joe
+        :notes_ids: []
+        :brins_ids: &1
+        - 1
+        :scene_id: 1
+        :scenes_ids: 
+        :horloge: 
+      :effet: JOUR
+      :effet_alt: 
+      :lieu: INT.
+      :lieu_alt: 
+      :decors_ids:
+      - 1
+      :fonction: 
+      :brins_ids: *1
+      :personnages_ids:
+      - joe
+      :paragraphes: []
+      :notes_ids: 
+      :stt_points_ids: 
+    2:
+      :id: 2
+      :numero: 2
+      :line: 4
+      :horloge:
+        :horloge: '0:01:40'
+        :time: 100
+        :real_time: 70
+        :end_time: 200
+        :real_end_time: 170
+        :duree: 100
+      :resume:
+        :raw: Deuxième scène de [PERSO#joe] et d'[PERSO#andre] dans brin 2 et 1. b1
+        :only_str: Deuxième scène de [PERSO#joe] et d'[PERSO#andre] dans brin 2 et
+          1.
+        :personnages_ids:
+        - joe
+        - andre
+        :notes_ids: []
+        :brins_ids:
+        - 1
+        :scene_id: 2
+        :scenes_ids: 
+        :horloge: 
+      :effet: NUIT
+      :effet_alt: 
+      :lieu: EXT.
+      :lieu_alt: 
+      :decors_ids:
+      - 2
+      :fonction: 
+      :brins_ids:
+      - 1
+      - 2
+      :personnages_ids:
+      - joe
+      - andre
+      :paragraphes:
+      - :raw: Le premier paragraphe appartient au brin 2. b2 (1)
+        :only_str: Le premier paragraphe appartient au brin 2.
+        :personnages_ids: []
+        :notes_ids:
+        - 1
+        :brins_ids:
+        - 2
+        :scene_id: 2
+        :scenes_ids: 
+        :horloge: 
+      :notes_ids:
+      - 1
+      :stt_points_ids: 
+    3:
+      :id: 3
+      :numero: 3
+      :line: 9
+      :horloge:
+        :horloge: '0:03:20'
+        :time: 200
+        :real_time: 170
+        :end_time: 293
+        :real_end_time: 263
+        :duree: 93
+      :resume:
+        :raw: Troisième scène avec [PERSO#andre] et [PERSO#jan] dans brin 1 et 3.
+          b1 b3
+        :only_str: Troisième scène avec [PERSO#andre] et [PERSO#jan] dans brin 1 et
+          3.
+        :personnages_ids:
+        - andre
+        - jan
+        :notes_ids: []
+        :brins_ids: &2
+        - 1
+        - 3
+        :scene_id: 3
+        :scenes_ids: 
+        :horloge: 
+      :effet: JOUR
+      :effet_alt: 
+      :lieu: INT.
+      :lieu_alt: EXT.
+      :decors_ids:
+      - 1
+      - 2
+      :fonction: 
+      :brins_ids: *2
+      :personnages_ids:
+      - andre
+      - jan
+      :paragraphes: []
+      :notes_ids: 
+      :stt_points_ids: 
+    4:
+      :id: 4
+      :numero: 4
+      :line: 12
+      :horloge:
+        :horloge: '0:04:53'
+        :time: 293
+        :real_time: 263
+        :end_time: 443
+        :real_end_time: 413
+        :duree: 150
+      :resume:
+        :raw: Quatrième scène dans brins 1, 2, 3, 4, 6. b1 b6
+        :only_str: Quatrième scène dans brins 1, 2, 3, 4, 6.
+        :personnages_ids: []
+        :notes_ids: []
+        :brins_ids:
+        - 1
+        - 6
+        :scene_id: 4
+        :scenes_ids: 
+        :horloge: 
+      :effet: NUIT
+      :effet_alt: 
+      :lieu: INT.
+      :lieu_alt: 
+      :decors_ids:
+      - 1
+      :fonction: 
+      :brins_ids:
+      - 1
+      - 6
+      - 3
+      - 4
+      - 2
+      :personnages_ids:
+      - joe
+      - jan
+      :paragraphes:
+      - :raw: Paragraphe 1 de quatrième scène. (2)(3)
+        :only_str: Paragraphe 1 de quatrième scène.
+        :personnages_ids: []
+        :notes_ids:
+        - 2
+        - 3
+        :brins_ids: []
+        :scene_id: 4
+        :scenes_ids: 
+        :horloge: 
+      - :raw: Paragraphe 2 de quatrième scène appartient au brin 3. b3
+        :only_str: Paragraphe 2 de quatrième scène appartient au brin 3.
+        :personnages_ids: []
+        :notes_ids: []
+        :brins_ids:
+        - 3
+        :scene_id: 4
+        :scenes_ids: 
+        :horloge: 
+      - :raw: Paragraphe 3 de quatrième scène avec [PERSO#joe] et [PERSO#jan].
+        :only_str: Paragraphe 3 de quatrième scène avec [PERSO#joe] et [PERSO#jan].
+        :personnages_ids:
+        - joe
+        - jan
+        :notes_ids: []
+        :brins_ids: []
+        :scene_id: 4
+        :scenes_ids: 
+        :horloge: 
+      - :raw: Paragraphe 4 de quatrième scène appartient au brin 4. b4
+        :only_str: Paragraphe 4 de quatrième scène appartient au brin 4.
+        :personnages_ids: []
+        :notes_ids: []
+        :brins_ids:
+        - 4
+        :scene_id: 4
+        :scenes_ids: 
+        :horloge: 
+      - :raw: Paragraphe 5 de quatrième scène appartient au brin 2. b2
+        :only_str: Paragraphe 5 de quatrième scène appartient au brin 2.
+        :personnages_ids: []
+        :notes_ids: []
+        :brins_ids:
+        - 2
+        :scene_id: 4
+        :scenes_ids: 
+        :horloge: 
+      :notes_ids:
+      - 2
+      - 3
+      :stt_points_ids: 
+    5:
+      :id: 5
+      :numero: 5
+      :line: 22
+      :horloge:
+        :horloge: '0:07:23'
+        :time: 443
+        :real_time: 413
+        :end_time: 705
+        :real_end_time: 675
+        :duree: 262
+      :resume:
+        :raw: "[PERSO#joe] joue dans la cinquième scène dans brin 1 et 3. b1 b3 (5)"
+        :only_str: "[PERSO#joe] joue dans la cinquième scène dans brin 1 et 3."
+        :personnages_ids:
+        - joe
+        :notes_ids: &4
+        - 5
+        :brins_ids: &3
+        - 1
+        - 3
+        :scene_id: 5
+        :scenes_ids: 
+        :horloge: 
+      :effet: JOUR
+      :effet_alt: 
+      :lieu: INT.
+      :lieu_alt: 
+      :decors_ids:
+      - 1
+      :fonction: 
+      :brins_ids: *3
+      :personnages_ids:
+      - joe
+      :paragraphes: []
+      :notes_ids: *4
+      :stt_points_ids: 
+    6:
+      :id: 6
+      :numero: 6
+      :line: 26
+      :horloge:
+        :horloge: '0:11:45'
+        :time: 705
+        :real_time: 675
+        :end_time: 915
+        :real_end_time: 885
+        :duree: 210
+      :resume:
+        :raw: "[PERSO#joe] et [PERSO#andre] sont dans la sixième scène qui n'appartient
+          à aucun brin."
+        :only_str: "[PERSO#joe] et [PERSO#andre] sont dans la sixième scène qui n'appartient
+          à aucun brin."
+        :personnages_ids:
+        - joe
+        - andre
+        :notes_ids: []
+        :brins_ids: []
+        :scene_id: 6
+        :scenes_ids: 
+        :horloge: 
+      :effet: NUIT
+      :effet_alt: 
+      :lieu: EXT.
+      :lieu_alt: 
+      :decors_ids:
+      - 2
+      :fonction: 
+      :brins_ids: 
+      :personnages_ids:
+      - joe
+      - andre
+      :paragraphes: []
+      :notes_ids: 
+      :stt_points_ids: 
+    7:
+      :id: 7
+      :numero: 7
+      :line: 29
+      :horloge:
+        :horloge: '0:15:15'
+        :time: 915
+        :real_time: 885
+        :end_time: 2700
+        :real_end_time: 2670
+        :duree: 1785
+      :resume:
+        :raw: Septième scène dans le brin 2 seulement. b2
+        :only_str: Septième scène dans le brin 2 seulement.
+        :personnages_ids: []
+        :notes_ids: []
+        :brins_ids:
+        - 2
+        :scene_id: 7
+        :scenes_ids: 
+        :horloge: 
+      :effet: JOUR
+      :effet_alt: 
+      :lieu: INT.
+      :lieu_alt: 
+      :decors_ids:
+      - 1
+      :fonction: 
+      :brins_ids:
+      - 2
+      :personnages_ids:
+      - andre
+      - jan
+      :paragraphes:
+      - :raw: Premier paragraphe de la 7e scène avec [PERSO#andre].
+        :only_str: Premier paragraphe de la 7e scène avec [PERSO#andre].
+        :personnages_ids:
+        - andre
+        :notes_ids: []
+        :brins_ids: []
+        :scene_id: 7
+        :scenes_ids: 
+        :horloge: 
+      - :raw: Second paragraphe de la 7e scène avec [PERSO#jan]. (4)
+        :only_str: Second paragraphe de la 7e scène avec [PERSO#jan].
+        :personnages_ids:
+        - jan
+        :notes_ids:
+        - 4
+        :brins_ids: []
+        :scene_id: 7
+        :scenes_ids: 
+        :horloge: 
+      :notes_ids:
+      - 4
+      :stt_points_ids: 
+:personnage:
+  :_ids_:
+  - joe
+  - jan
+  - andre
+  :items:
+    joe:
+      :id: joe
+      :line: 1
+      :prenom: Joe
+      :nom: Prota
+      :pseudo: Joe Prota
+      :sexe: Homme
+      :annee: '2000'
+      :fonction: Protagoniste
+      :description: Description du protagoniste Joe.
+      :nom_acteur: 
+      :prenom_acteur: 
+      :scenes_ids:
+      - 1
+      - 2
+      - 4
+      - 5
+      - 6
+      :relations:
+        andre:
+        - 2
+        - 6
+        jan:
+        - 4
+    jan:
+      :id: jan
+      :line: 9
+      :prenom: Jan
+      :nom: Anta
+      :pseudo: Jan
+      :sexe: Femme
+      :annee: 
+      :fonction: Antagoniste
+      :description: Description de l'antagoniste Jan.
+      :nom_acteur: 
+      :prenom_acteur: 
+      :scenes_ids:
+      - 3
+      - 4
+      - 7
+      :relations:
+        andre:
+        - 3
+        - 7
+        joe:
+        - 4
+    andre:
+      :id: andre
+      :line: 18
+      :prenom: André
+      :nom: Jacque
+      :pseudo: André
+      :sexe: Homme
+      :annee: 
+      :fonction: Adjuvant
+      :description: L'aide de camp de [PERSO#joe].
+      :nom_acteur: 
+      :prenom_acteur: 
+      :scenes_ids:
+      - 2
+      - 3
+      - 6
+      - 7
+      :relations:
+        joe:
+        - 2
+        - 6
+        jan:
+        - 3
+        - 7
+:decor:
+  :_ids_:
+  - 1
+  - 2
+  :items:
+    1:
+      :id: 1
+      :decor: MAISON DE JOE
+      :sous_decor: 
+      :lieu: I
+      :scenes_ids:
+      - 1
+      - 3
+      - 4
+      - 5
+      - 7
+    2:
+      :id: 2
+      :decor: JARDIN PUBLIC
+      :sous_decor: 
+      :lieu: E
+      :scenes_ids:
+      - 2
+      - 3
+      - 6
+:brin:
+  :_ids_:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  :items:
+    1:
+      :id: 1
+      :line: 1
+      :libelle:
+        :raw: Premier brin
+        :only_str: Premier brin
+        :personnages_ids: []
+        :notes_ids: []
+        :brins_ids: []
+        :scene_id: 
+        :scenes_ids: 
+        :horloge: 
+      :description:
+        :raw: Description du premier brin.
+        :only_str: Description du premier brin.
+        :personnages_ids: []
+        :notes_ids: []
+        :brins_ids: []
+        :scene_id: 
+        :scenes_ids: 
+        :horloge: 
+      :scenes_ids: 
+    2:
+      :id: 2
+      :line: 5
+      :libelle:
+        :raw: Deuxième brin
+        :only_str: Deuxième brin
+        :personnages_ids: []
+        :notes_ids: []
+        :brins_ids: []
+        :scene_id: 
+        :scenes_ids: 
+        :horloge: 
+      :description:
+        :raw: Une description du deuxième brin.
+        :only_str: Une description du deuxième brin.
+        :personnages_ids: []
+        :notes_ids: []
+        :brins_ids: []
+        :scene_id: 
+        :scenes_ids: 
+        :horloge: 
+      :scenes_ids: 
+    3:
+      :id: 3
+      :line: 9
+      :libelle:
+        :raw: Troisième brin
+        :only_str: Troisième brin
+        :personnages_ids: []
+        :notes_ids: []
+        :brins_ids: []
+        :scene_id: 
+        :scenes_ids: 
+        :horloge: 
+      :description: 
+      :scenes_ids: 
+    4:
+      :id: 4
+      :line: 12
+      :libelle:
+        :raw: Quatrième brin
+        :only_str: Quatrième brin
+        :personnages_ids: []
+        :notes_ids: []
+        :brins_ids: []
+        :scene_id: 
+        :scenes_ids: 
+        :horloge: 
+      :description: 
+      :scenes_ids: 
+    5:
+      :id: 5
+      :line: 15
+      :libelle:
+        :raw: Cinquième brin inutilisé par la collecte.
+        :only_str: Cinquième brin inutilisé par la collecte.
+        :personnages_ids: []
+        :notes_ids: []
+        :brins_ids: []
+        :scene_id: 
+        :scenes_ids: 
+        :horloge: 
+      :description: 
+      :scenes_ids: 
+    6:
+      :id: 6
+      :line: 18
+      :libelle:
+        :raw: Sixième brin pour le dossier de test 4.
+        :only_str: Sixième brin pour le dossier de test 4.
+        :personnages_ids: []
+        :notes_ids: []
+        :brins_ids: []
+        :scene_id: 
+        :scenes_ids: 
+        :horloge: 
+      :description: 
+      :scenes_ids: 
+:note:
+  :_ids_:
+  - 1
+  - 2
+  - 3
+  - 5
+  - 4
+  :items:
+    1:
+      :id: 1
+      :scene_id: 
+      :content:
+        :raw: Première note expliquée.
+        :only_str: Première note expliquée.
+        :personnages_ids: []
+        :notes_ids: []
+        :brins_ids: []
+        :scene_id: 
+        :scenes_ids: 
+        :horloge: 
+    2:
+      :id: 2
+      :scene_id: 
+      :content:
+        :raw: Deuxième note expliquée.
+        :only_str: Deuxième note expliquée.
+        :personnages_ids: []
+        :notes_ids: []
+        :brins_ids: []
+        :scene_id: 
+        :scenes_ids: 
+        :horloge: 
+    3:
+      :id: 3
+      :scene_id: 
+      :content:
+        :raw: Troisième note expliquée pour [PERSO#andre]
+        :only_str: Troisième note expliquée pour [PERSO#andre]
+        :personnages_ids:
+        - andre
+        :notes_ids: []
+        :brins_ids: []
+        :scene_id: 
+        :scenes_ids: 
+        :horloge: 
+    5:
+      :id: 5
+      :scene_id: 
+      :content:
+        :raw: Cinquième note sur [PERSO#joe]
+        :only_str: Cinquième note sur [PERSO#joe]
+        :personnages_ids:
+        - joe
+        :notes_ids: []
+        :brins_ids: []
+        :scene_id: 
+        :scenes_ids: 
+        :horloge: 
+    4:
+      :id: 4
+      :scene_id: 
+      :content:
+        :raw: Quatrième note concernant [PERSO#jan].
+        :only_str: Quatrième note concernant [PERSO#jan].
+        :personnages_ids:
+        - jan
+        :notes_ids: []
+        :brins_ids: []
+        :scene_id: 
+        :scenes_ids: 
+        :horloge: 
