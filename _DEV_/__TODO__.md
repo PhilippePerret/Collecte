@@ -1,4 +1,5 @@
-* Test l'enregistrement des données dans le pstore de la collecte du film.
+* Après la collecte, le parsing et l'extraction, on peut ajouter l'édition des données. Ce serait la possibilité de travailler directement avec les données enregistrées et non plus les données collectées. Mais est-ce réellement intéressant, en considérant que parser les données collectées ne représente pas grand chose… Alors qu'éditer serait compliqué dans le sens où il faudrait trouver le moyen d'éditer par le navigateur (on ne pourrait donc plus passer par un protocole file://). En plus, tous les liens sont déjà établis vers les fichiers de collecte, ce qui simplifie bien l'édition.
+  Mais en faveur de l'édition des données, on pourrait voir qu'il serait beaucoup plus facile de mettre les scènes dans des brins et inversement à partir d'un affichage dans le navigateur. On pourrait définir les appartenances par simple glisser-déposer.
 
 * Pouvoir mettre des balises [SCENE#<horloge>]. Bien préciser dans le manuel que c'est l'horloge de la collecte, pas l'horloge réelle (bien qu'une vérification pourra être faite quand la scène ne sera pas trouvée).
   La balise sera remplacée par le numéro de la scène et en HTML par un lien qui permettra de se rendre à la scène (ou d'afficher sa fiche ? avec seulement le résumé, le temps et l'intitulé simple ?)
